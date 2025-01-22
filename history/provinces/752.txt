@@ -27,8 +27,6 @@ add_core = XJG
 	owner = ORL
 	controller = ORL
 	add_core = ORL
-	remove_core = FRA
-	remove_core = CHP
 }
 1477.8.4 = {
 	owner = FRA

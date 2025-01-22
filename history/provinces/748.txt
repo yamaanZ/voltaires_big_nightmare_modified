@@ -45,7 +45,6 @@ add_core = XCC
 	owner = ATO
 	controller = ATO
 	add_core = ATO
-	remove_core = FRA
 	remove_core = BOU
 	fort_15th = yes
 }

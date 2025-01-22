@@ -28,7 +28,6 @@ add_core = EUU
 	owner = ATO
 	controller = ATO
 	add_core = ATO
-	remove_core = FRA
 	remove_core = EUU
 }
 1472.7.25 = {

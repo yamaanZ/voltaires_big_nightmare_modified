@@ -27,7 +27,6 @@ add_core = DAU
 	owner = LYO
 	controller = LYO
 	add_core = LYO
-	remove_core = FRA
 	remove_core = BOU
 }
 1523.1.1 = {

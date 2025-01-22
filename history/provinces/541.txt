@@ -32,7 +32,6 @@ center_of_trade = 2
 	controller = LYO
 	add_core = LYO
 	remove_core = FRA
-	remove_core = BOU
 	add_base_tax = 4
 	add_base_production = 4
 	add_base_manpower = 7
