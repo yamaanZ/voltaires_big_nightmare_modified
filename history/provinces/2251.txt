@@ -1,0 +1,71 @@
+capital = "Noli" 
+culture = ligurian
+religion = catholic
+trade_goods = naval_supplies
+base_tax = 3
+base_production = 3
+base_manpower = 2
+is_city = yes
+hre = yes
+owner = SVO
+controller = SVO
+add_core = SVO	
+add_core = NLI
+extra_cost = 8
+center_of_trade = 1
+
+1162.6.10 = {
+	owner = XFI
+	controller = XFI
+	add_core = XFI
+	remove_core = SVO
+}
+1192.1.1 = {
+	owner = NLI
+	controller = NLI
+	remove_core = XFI
+
+}
+1444.11.12 = {	#BERTUS MOD
+	add_base_tax = 2
+	add_base_production = 2
+	add_base_manpower = 3
+	fort_15th = yes
+	trade_depot = yes
+	add_center_of_trade_level = 1
+	add_province_modifier = {
+		name = strong_city
+		duration = -1
+	}
+}
+1495.1.1 = { hre = no }
+1797.6.14 = {
+	owner = GEN
+	controller = GEN
+	add_core = GEN
+	remove_core = NLI
+}
+1805.6.10 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+}
+1814.4.11 = {
+	owner = SPI
+	controller = SPI
+	add_core = SPI
+	remove_core = FRA
+}
+1861.3.20 = {
+	owner = ITA
+	controller = ITA
+	add_core = ITA
+	remove_core = GEN
+}
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

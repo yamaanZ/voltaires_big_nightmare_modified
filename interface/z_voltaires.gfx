@@ -1,0 +1,209 @@
+spriteTypes = {	
+	# Religions
+	
+	# Incidents
+	spriteType = {
+		name = "GFX_incident_western_schism.2.a"
+		texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_incident_western_schism.2.b"
+		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+		loadType = "INGAME"
+	}
+
+	# Ideas
+	spriteType = {
+		name = "GFX_idea_piracy_ideas"
+		texturefile = "gfx//interface//ideas//idea_piracy_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	# Factions
+	spriteType = {
+		name = "GFX_faction_bg_abb_cluniacs"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_cluniacs"	
+		texturefile = "gfx//interface//abb_cluniacs.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_abb_augustinians"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_augustinians"	
+		texturefile = "gfx//interface//abb_augustinians.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_abb_benedictines"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_benedictines"	
+		texturefile = "gfx//interface//abb_benedictines.tga"
+	}
+
+	spriteType = {
+		name = "GFX_faction_bg_pap_orsini"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_orsini"	
+		texturefile = "gfx//interface//pap_orsini.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pap_colonna"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_colonna"	
+		texturefile = "gfx//interface//pap_colonna.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pap_roman_mob"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_roman_mob"	
+		texturefile = "gfx//interface//pap_roman_mob.tga"
+	}
+
+	#Ages
+	spriteType = {
+		name = "GFX_obj_centralized"
+		texturefile = "gfx/interface/ages/obj_centralized.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_large_treasury"
+		texturefile = "gfx/interface/ages/obj_large_treasury.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_trade_leader"
+		texturefile = "gfx/interface/ages/obj_trade_leader.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_papal_controller"
+		texturefile = "gfx/interface/ages/obj_papal_controller.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_defender"
+		texturefile = "gfx/interface/ages/obj_defender.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_bavarian_talent"
+		texturefile = "gfx/interface/ages/ab_bavarian_talent.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_bohemian_reformation"
+		texturefile = "gfx/interface/ages/ab_bohemian_reformation.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_burgundy_reduced_lib_desire"
+		texturefile = "gfx/interface/ages/ab_burgundy_reduced_lib_desire.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_papal_reunions"
+		texturefile = "gfx/interface/ages/ab_papal_reunions.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_brandenburg_efficiency"
+		texturefile = "gfx/interface/ages/ab_brandenburg_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_swiss_mercenaries"
+		texturefile = "gfx/interface/ages/ab_swiss_mercenaries.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_tuscan_banking"
+		texturefile = "gfx/interface/ages/ab_tuscan_banking.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_saxon_legitimacy"
+		texturefile = "gfx/interface/ages/ab_saxon_legitimacy.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_piedmont_risorgimento"
+		texturefile = "gfx/interface/ages/ab_piedmont_risorgimento.dds"
+	}
+	spriteType = {
+		name = "GFX_ab_bavarian_talent"
+		texturefile = "gfx/interface/ages/ab_bavarian_talent.dds"
+	}
+
+	#Disasters
+	spriteType = {
+		name = "GFX_disaster_estate_holy_orders_disaster"
+		texturefile = "gfx//interface//disasters//estate_holy_orders_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_estate_jews_disaster"
+		texturefile = "gfx//interface//disasters//estate_jews_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	#Estate Privileges
+    spriteType = {
+		name = "privilege_monopoly_of_goods_beer"
+		texturefile = "gfx/interface/privileges/privilege_monopoly_of_goods_beer.dds"
+	}
+	spriteType = {
+		name = "privilege_heir_knight"
+		texturefile = "gfx/interface/privileges/privilege_heir_knight.dds"
+	}
+	spriteType = {
+		name = "privilege_order_court"
+		texturefile = "gfx/interface/privileges/privilege_order_court.dds"
+	}
+	spriteType = {
+		name = "privilege_settle_templars"
+		texturefile = "gfx/interface/privileges/privilege_settle_templars.dds"
+	}
+	spriteType = {
+		name = "privilege_holy_orders_enable"
+		texturefile = "gfx/interface/privileges/privilege_holy_orders_enable.dds"
+	}
+	spriteType = {
+		name = "privilege_female"
+		texturefile = "gfx/interface/privileges/privilege_female.dds"
+	}
+
+	#Great Projects
+	spriteType = {
+		name = "GFX_great_project_piazza_san_marco"	
+		texturefile = "gfx//interface//great_projects//great_project_doges_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_tower_of_pisa"	
+		texturefile = "gfx//interface//great_projects//great_project_tower_of_pisa.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_florence_duomo"	
+		texturefile = "gfx//interface//great_projects//great_project_santa_maria_del_fiore.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_holstentor"	
+		texturefile = "gfx//interface//great_projects//great_project_holstentor.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_frauenkirche"	
+		texturefile = "gfx//interface//great_projects//great_project_frauenkirche.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_charles_bridge"	
+		texturefile = "gfx//interface//great_projects//great_project_prague.dds"
+	}
+}

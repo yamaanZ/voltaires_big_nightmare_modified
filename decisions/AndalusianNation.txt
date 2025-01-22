@@ -1,0 +1,105 @@
+country_decisions = {
+
+	andalusian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = ADU }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			primary_culture = andalucian
+			religion_group = muslim
+			NOT = { exists = ADU }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2670 # Cordoba
+				AND = {
+					region = south_castille_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = south_castille_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ADU }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_tribal = no
+			owns_core_province = 2670 # Cordoba
+			development_in_provinces = {
+				value = 500
+				region = south_castille_region
+			}
+		}
+		effect = {
+			change_tag = ADU
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 3650
+			}
+			set_capital = 2670 # Cordoba
+			if = {
+				limit = { 
+					NOT = { government = monarchy }
+					is_revolutionary = no
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = al_andalusia_government
+			}
+			south_castille_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+		}
+		ai_will_do = {
+			factor = 400
+		}
+	}
+}

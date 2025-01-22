@@ -1,0 +1,449 @@
+# Great Britain
+GBR = {
+	always = no
+}
+
+# Scandinavia
+SCA = {
+	always = no
+}
+
+# Austrian Empire
+EAH = {
+	always = no
+}
+
+# Arles
+XAP = {
+	always = no
+}
+
+# Francia
+FKE = {
+	always = no
+}
+
+# Lotharingia
+LOT = {
+	always = no
+}
+
+# NGC
+NGC = {
+	always = no
+}
+
+# SGC
+SGC = {
+	always = no
+}
+
+# Holy Roman Empire
+HLR = {
+	always = no
+}
+
+# Germany
+GER = {
+	always = no
+}
+
+# Italy
+ITA = {
+	always = no
+}
+
+# Netherlands
+NED = {
+	is_core = NED
+}
+
+# Timurids
+TIM = {
+	is_core = TIM
+}
+
+# Draa
+DAA = {
+	is_core = DAA
+}
+
+# Byzantium
+BYZ = {
+	NOT = { exists = NKA }
+	OR = {
+		exists = BYZ
+		is_core = BYZ
+	}
+}
+
+# Nicaea
+NKA = {
+	is_core = NKA
+}
+
+# Latin Empire
+LAE = {
+	always = no
+}
+
+# Poland
+POL = { 
+	OR = {
+		exists = POL
+		is_core = POL
+	}
+}
+
+# Silesia
+SIL = { 
+	OR = {
+		exists = SIL
+		is_core = SIL
+	}
+}
+
+# Lithuania
+LIT = { 
+	OR = {
+		exists = LIT
+		is_core = LIT
+	}
+}
+
+# Hungary
+HUN = { 
+	OR = {
+		exists = HUN
+		is_core = HUN
+	}
+}
+
+# Westphalia
+WES = { 
+	OR = {
+		exists = WES
+		is_core = WES
+	}
+}
+
+# Brandenburg
+BRA = { 
+	OR = {
+		exists = BRA
+		is_core = BRA
+	}
+}
+
+# Bavaria
+BAV = { 
+	OR = {
+		exists = BAV
+		is_core = BAV
+	}
+}
+
+# Swabia
+SWA = { 
+	OR = {
+		exists = SWA
+		is_core = SWA
+	}
+}
+
+# Morocco
+MOR = { 
+	OR = {
+		exists = MOR
+		is_core = MOR
+	}
+}
+
+# Sardinia
+SAR = { 
+	OR = {
+		exists = SAR
+		is_core = SAR
+	}
+}
+
+# Syria
+SYR = { 
+	OR = {
+		exists = SYR
+		is_core = SYR
+	}
+}
+
+# Iraq
+IRQ = { 
+	OR = {
+		exists = IRQ
+		is_core = IRQ
+	}
+}
+
+# Epirus
+EPI = {
+	is_core = EPI
+}
+
+# Georgia
+GEO = {
+	is_core = GEO
+}
+
+# Cumans
+CMN = {
+	NOT = { is_core = GOL }
+	NOT = { is_core = CRI }
+	NOT = { is_core = KAZ }
+	NOT = { is_core = NOG }
+	NOT = { is_core = AST }
+}
+
+# Kipchak
+QYP = {
+	NOT = { is_core = GOL }
+	NOT = { is_core = CRI }
+	NOT = { is_core = KAZ }
+	NOT = { is_core = NOG }
+	NOT = { is_core = AST }
+}
+
+# Armenia
+ARM = {
+	OR = {
+		exists = ARM
+		is_core = ARM
+	}
+}
+
+# Wales
+WLS = { 
+	OR = {
+		exists = WLS
+		is_core = WLS
+	}
+}
+
+# Circassia
+CIR = {
+	OR = {
+		exists = CIR
+		is_core = CIR
+	}
+}
+
+# Finland
+FIN = {
+	OR = {
+		exists = FIN
+		is_core = FIN
+	}
+}
+
+# Scotland
+HSC = {
+	NOT = { exists = SCO }
+}
+
+SCO = {
+	NOT = { exists = HSC }
+}
+
+# Portugal
+POR = {
+	NOT = { exists = PCA }
+}
+
+PCA = {
+	NOT = { exists = POR }
+}
+
+# Serbia
+SER = {
+	NOT = { exists = KSV }
+}
+
+KSV = {
+	NOT = { exists = SER }
+}
+
+#Qahira
+MAM = {
+	NOT = { exists = FTM }
+}
+
+FTM = {
+	NOT = { exists = MAM }
+}
+
+# Cilicia
+CLC = {
+	is_core = CLC
+}
+
+# Edessa
+EDE = {
+	is_core = EDE
+}
+
+# Tuscany
+TUS = {
+	is_core = TUS
+}
+
+# Persia
+PER = {
+	OR = {
+		is_core = PER
+		is_permanent_claim = PER
+		is_claim = PER
+	}
+}
+
+# Spain
+SPA = {
+	OR = {
+		is_core = SPA
+		owner = {
+			capital_scope = {
+				is_core = SPA
+			}
+		}
+	}
+	NOT = { exists = CAS }
+	NOT = { exists = ARA }
+}
+
+# Aragon
+ARA = {
+	NOT = { is_core = SPA }
+	NOT = { exists = SPA }
+}
+
+# Castille
+CAS = {
+	NOT = { is_core = SPA }
+	NOT = { exists = SPA }
+}
+
+# Greece
+GRE = {
+	any_country = {
+		adm_tech = 56
+	}
+	NOT = { exists = BYZ }
+}
+
+# Sicily
+SIC = {
+	NOT = { exists = APL }
+}
+
+# Sardinia-Piedmont
+SPI = {
+	OR = {
+		is_core = SPI
+		owner = {
+			capital_scope = {
+				is_core = SPI
+			}
+		}
+	}
+}
+
+# Russia
+RUS = {
+	OR = {
+		is_core = RUS
+		owner = {
+			capital_scope = {
+				is_core = RUS
+			}
+		}
+	}
+}
+
+# Prussia
+PRU = {
+	OR = {
+		is_core = PRU
+		owner = {
+			capital_scope = {
+				is_core = PRU
+			}
+		}
+	}
+}
+
+# Ireland
+IRE = {
+	OR = {
+		is_core = IRE
+		owner = {
+			capital_scope = {
+				is_core = IRE
+			}
+		}
+	}
+}
+
+# Romania
+RMN = {
+	OR = {
+		is_core = RMN
+		owner = {
+			capital_scope = {
+				is_core = RMN
+			}
+		}
+	}
+}
+
+# Wallachia
+WAL = {
+	NOT = { is_core = RMN }
+}
+
+# Moldavia
+MOL = {
+	NOT = { is_core = RMN }
+}
+
+# Ottomans
+TUR = {
+	is_year = 1300
+	religion = sunni
+}
+
+# Ruthenia
+UKR = {
+	always = no
+}
+
+#Al - Andalus
+ADU = {
+	always = no
+}
+
+# Golden Horde
+GLH = {
+	always = no
+}
+
+# Ilkhanate
+ILK = {
+	always = no
+}
+
+# Great Mongol Empire
+MGE = {
+	always = no
+}
+
+# Sultanate of Rum
+RUM = {
+	always = no
+}

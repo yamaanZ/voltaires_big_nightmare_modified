@@ -1,0 +1,59 @@
+owner = MON
+controller = MON
+culture = serbian
+religion = orthodox
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = pigs
+base_manpower = 2
+capital = "Ribnica"
+is_city = yes
+add_core = MON
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = western
+discovered_by = muslim
+discovered_by = nomad_group
+discovered_by = north_american
+center_of_trade = 1
+extra_cost = 8
+
+1162.1.1 = {
+	owner = SER
+	controller = SER
+	add_core = SER
+}
+1163.1.1 = {
+	owner = MON
+	controller = MON
+	remove_core = SER
+}
+1186.1.1 = {
+	owner = SER
+	controller = SER
+	add_core = SER
+}
+1326.1.1 = { capital = "Podgorica" }
+1355.12.20 = {
+	owner = HRZ
+	controller = HRZ
+	add_core = HRZ
+	remove_core = MON
+}
+1373.1.1 = {
+	owner = MON
+	controller = MON
+	add_core = MON
+	remove_core = HRZ
+}
+1484.1.1 = {
+	remove_core = SER
+	owner = TUR
+	controller = TUR
+	add_core = TUR
+}
+1555.1.1 = { unrest = 5 }
+1556.1.1 = { unrest = 0 }
+1687.1.1 = { unrest = 6 }
+1690.1.1 = { unrest = 0 }

@@ -1,0 +1,143 @@
+#Seigneury
+investigate_country_action = {
+	category = covert
+
+	alert_index = 17
+	alert_tooltip = investigate_country_alert_tooltip
+
+	require_acceptance = no
+
+	is_visible = {
+		
+	}
+
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = need_40_spy_network_tt
+			has_spy_network_in = {who = FROM value = 40}
+		}
+	}
+
+	on_accept = {
+		ROOT = {
+			add_spy_network_in = {
+				who = FROM
+				value = -40
+			}
+		}
+		FROM = {
+			set_country_flag = infiltrated_administration_flag
+			country_event = { id = bertus_events.0001}
+		}
+	}
+
+	on_decline = { }
+
+	ai_acceptance = {}
+}
+
+spy_steal_treasury_action = {
+	category = covert 
+	require_acceptance = no
+	
+	is_visible = {
+    }
+	
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = need_75_spy_network_tt
+			has_spy_network_in = {who = FROM value = 75}
+		}
+	}
+
+    on_accept = {
+		ROOT = {
+			get_treasury_fraction = { fraction = 0.10 }
+			add_spy_network_in = {
+				who = FROM
+				value = -75
+			}
+		}
+		FROM = {country_event = {id = bertus_events.0003}}
+    }
+    
+    on_decline = {}
+	ai_will_do = {always = no}
+}
+send_bonus_action = {
+	category = relation 
+	require_acceptance = no
+	
+	is_visible = {
+		start_date = 1444.11.13
+		TAG = CNA
+		ai = no
+    }
+	
+	is_allowed = {
+	}
+
+    on_accept = {
+		hidden_effect = {FROM = {country_event = {id = bertus_events.1000}}}
+    }
+    
+    on_decline = {}
+	ai_will_do = {always = no}
+}
+
+#
+turn_vassal_into_appanage = {
+	category = influence
+
+	require_acceptance = no
+
+	is_visible = {
+		has_government_attribute = has_appanages
+		FROM = {
+			capital_scope = {
+				superregion = french_superregion
+			}
+			is_subject_of = ROOT
+			is_subject_of_type = vassal
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = {
+				FROM = { liberty_desire = 50 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_REBELLIOUS_TT
+				FROM = { liberty_desire = 50 }
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = appanage
+			subject = FROM
+			keep_liberty_desire = yes
+		}
+		FROM = {
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = appanage_reform
+			}
+		}
+		if = {
+			limit = {
+				marriage_with = FROM
+			}
+			break_marriage = FROM
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = { # this is a trigger
+		always = yes
+	}
+}

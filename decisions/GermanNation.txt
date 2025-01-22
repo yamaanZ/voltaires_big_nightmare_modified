@@ -1,0 +1,112 @@
+country_decisions = {
+
+	german_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			is_free_or_tributary_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = GER }
+			OR = {
+				tag = NGC
+				tag = SGC
+			}
+			culture_group = germanic
+		}
+		provinces_to_highlight = {
+			OR = {
+				superregion = germany_superregion
+			}
+			root = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						is_core = ROOT
+						OR = {
+							superregion = germany_superregion
+						}
+						value = 500	#	 germany superregion
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			is_emperor = no
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				OR = {
+					superregion = germany_superregion
+				}
+				value = 500	#	 germany superregion
+			}
+		}
+		effect = {
+			change_tag = GER
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			restore_country_name_effect = yes
+			if = {
+				limit = {
+					is_emperor = yes
+				}
+				dismantle_hre = yes
+			}
+			else = {
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = {
+					country_event = { id = hre_event.5 }
+				}
+			}
+			set_government_rank = 6
+			germany_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GER
+			}	
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				tag = HAB
+			}
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 54 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_owned_provinces_with = { OR = { superregion = germany_superregion } value = 25 } }
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+name = "Siege of Sevilla"
+
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 1867
+}
+
+1247.1.1 = {
+	add_attacker = CAS
+	add_attacker = LON
+	add_attacker = GAL
+	add_attacker = POR
+	add_attacker = XMA
+	add_defender = SEV
+	add_defender = NIE
+	add_defender = AGB
+	add_defender = OHI
+	add_defender = LRC
+	add_defender = MOR
+}
+1248.11.23 = {
+	rem_attacker = CAS
+	rem_attacker = LON
+	rem_attacker = GAL
+	rem_attacker = POR
+	rem_attacker = XMA
+	rem_defender = SEV
+	rem_defender = NIE
+	rem_defender = AGB
+	rem_defender = OHI
+	rem_defender = LRC
+	rem_defender = MOR
+}

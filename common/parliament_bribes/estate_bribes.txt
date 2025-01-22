@@ -1,0 +1,414 @@
+estate_church_bribe = {
+	name = estate_bribe
+	estate = estate_church
+
+	trigger = {
+		has_reached_seat_threshold = no
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_church modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_church
+			territory = 15
+		}
+	}
+	
+	effect = {
+		bribe_estate_effect = {
+			estate = estate_church
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_church influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_church influence = 85 }
+		}
+	}
+}
+
+estate_nobles_bribe = {
+	name = estate_bribe
+	estate = estate_nobles
+
+	trigger = {
+		has_reached_seat_threshold = no
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_nobles modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_nobles
+			territory = 15
+		}
+	}
+	
+	effect = {
+		bribe_estate_effect = {
+			estate = estate_nobles
+		}
+	}
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_nobles influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_nobles influence = 85 }
+		}
+	}
+}
+
+estate_burghers_bribe = {
+	name = estate_bribe
+	estate = estate_burghers
+
+	trigger = {
+		has_reached_seat_threshold = no
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_burghers modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_burghers
+			territory = 15
+		}
+	}
+	
+	effect = {
+		bribe_estate_effect = {
+			estate = estate_burghers
+		}
+	}
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_burghers influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_burghers influence = 85 }
+		}
+	}
+}
+
+estate_holy_orders_bribe = {
+	name = estate_bribe
+	estate = estate_holy_orders
+
+	trigger = {
+		has_reached_seat_threshold = no
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_holy_orders modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_holy_orders
+			territory = 15
+		}
+	}
+	
+	effect = {
+		bribe_estate_effect = {
+			estate = estate_holy_orders
+		}
+	}
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_holy_orders influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_holy_orders influence = 85 }
+		}
+	}
+}
+
+estate_jews_bribe = {
+	name = estate_bribe
+	estate = estate_jews
+
+	trigger = {
+		has_reached_seat_threshold = no
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_jews modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_jews
+			territory = 15
+		}
+	}
+	
+	effect = {
+		bribe_estate_effect = {
+			estate = estate_jews
+		}
+	}
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_jews influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_jews influence = 85 }
+		}
+	}
+}
+
+national_estate_church_bribe = {
+	name = national_estate_bribe
+	estate = estate_church
+
+	trigger = {
+		has_reached_seat_threshold = yes
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_church modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_church
+			territory = 15
+		}
+	}
+	
+	effect = {
+		back_seats_of_bribe_type = {
+			bribe = estate_church_bribe
+		}
+		national_bribe_estate_effect = {
+			estate = estate_church
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_church influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_church influence = 85 }
+		}
+	}
+}
+
+national_estate_nobles_bribe = {
+	name = national_estate_bribe
+	estate = estate_nobles
+
+	trigger = {
+		has_reached_seat_threshold = yes
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_nobles modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_nobles
+			territory = 15
+		}
+	}
+	
+	effect = {
+		back_seats_of_bribe_type = {
+			bribe = estate_nobles_bribe
+		}
+		national_bribe_estate_effect = {
+			estate = estate_nobles
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_nobles influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_nobles influence = 85 }
+		}
+	}
+}
+
+national_estate_burghers_bribe = {
+	name = national_estate_bribe
+	estate = estate_burghers
+
+	trigger = {
+		has_reached_seat_threshold = yes
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_burghers modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_burghers
+			territory = 15
+		}
+	}
+	
+	effect = {
+		back_seats_of_bribe_type = {
+			bribe = estate_burghers_bribe
+		}
+		national_bribe_estate_effect = {
+			estate = estate_burghers
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_burghers influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_burghers influence = 85 }
+		}
+	}
+}
+
+national_estate_holy_orders_bribe = {
+	name = national_estate_bribe
+	estate = estate_holy_orders
+
+	trigger = {
+		has_reached_seat_threshold = yes
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_holy_orders modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_holy_orders
+			territory = 15
+		}
+	}
+	
+	effect = {
+		back_seats_of_bribe_type = {
+			bribe = estate_holy_orders_bribe
+		}
+		national_bribe_estate_effect = {
+			estate = estate_holy_orders
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_holy_orders influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_holy_orders influence = 85 }
+		}
+	}
+}
+
+national_estate_jews_bribe = {
+	name = national_estate_bribe
+	estate = estate_jews
+
+	trigger = {
+		has_reached_seat_threshold = yes
+		has_not_bribe_blocking_debate_active = {
+			type = estate
+		}
+		NOT = { has_estate_influence_modifier = { estate = estate_jews modifier = EST_VAL_SEAT_BRIBED value = 30 } }
+		estate_territory = {
+			estate = estate_jews
+			territory = 15
+		}
+	}
+	
+	effect = {
+		back_seats_of_bribe_type = {
+			bribe = estate_jews_bribe
+		}
+		national_bribe_estate_effect = {
+			estate = estate_jews
+		}
+	}
+
+	chance = {
+		factor = 1
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			estate_influence = { estate = estate_jews influence = 70 }
+		}
+
+		modifier = {
+			factor = 0
+			estate_influence = { estate = estate_jews influence = 85 }
+		}
+	}
+}

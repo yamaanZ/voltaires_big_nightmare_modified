@@ -1,0 +1,242 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = schlesian
+capital = 818
+
+1201.12.8 = { add_accepted_culture = saxon }
+1321.1.1 = {
+	monarch = {
+		name = "Bolko II"
+		dynasty = "Piast"
+		birth_date = 1300.2.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1327.1.1 = {
+	heir = {
+		name = "Mikolaj"
+		monarch_name = "Mikolaj I"
+		dynasty = "Piast"
+		birth_date = 1327.1.1
+		death_date = 1358.4.23
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1341.6.11 = {
+	monarch = {
+		name = "Mikolaj I"
+		dynasty = "Piast"
+		birth_date = 1327.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1343.1.1 = {
+	heir = {
+		name = "Bolko"
+		monarch_name = "Bolko III"
+		dynasty = "Piast"
+		birth_date = 1343.1.1
+		death_date = 1410.6.13
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1351.1.1 = {
+	monarch = {
+		name = "Bolko III"
+		dynasty = "Piast"
+		birth_date = 1343.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1380.1.1 = {
+	heir = {
+		name = "Jan"
+		monarch_name = "Jan I"
+		dynasty = "Piast"
+		birth_date = 1380.1.1
+		death_date = 1428.8.27
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+1410.6.13 = {
+	monarch = {
+		name = "Jan I"
+		dynasty = "Piast"
+		birth_date = 1380.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+1428.12.27 = {
+	monarch = {
+		name = "Puta"
+		dynasty = "z Castolovice"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1434.1.1 = {
+	monarch = {
+		name = "Eufemia"
+		dynasty = "Piast"
+		birth_date = 1385.1.1
+		female = yes
+		adm = 0
+		dip = 3
+		mil = 2
+	}
+}
+1437.1.1 = {
+	monarch = {
+		name = "Anna"
+		dynasty = "z Koldice"
+		birth_date = 1400.1.1
+		female = yes
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+}
+1440.9.6 = {
+	monarch = {
+		name = "Hynek Kruszina"
+		dynasty = "z Lichtenburka"
+		birth_date = 1392.1.1
+		religion = hussite
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = ZIE
+		name = "Anna"
+		dynasty = "z Koldice"
+		birth_date = 1400.1.1
+		death_date = 1454.3.4
+		female = yes
+		adm = 2
+		dip = 4
+		mil = 0
+	}
+	heir = {
+		name = "Wilhelm"
+		monarch_name = "Wilhelm I"
+		dynasty = "z Lichtenburka"
+		birth_date = 1430.1.1
+		death_date = 1487.1.1
+		claim = 70
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+1443.4.25 = { capital = 2820 }
+1454.3.4 = {
+	monarch = {
+		name = "Jerzy"
+		dynasty = "z Podebrad"
+		birth_date = 1420.4.23
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Wiktoryn"
+		monarch_name = "Wiktoryn"
+		dynasty = "z Podebrad"
+		birth_date = 1443.5.29
+		death_date = 1500.8.30
+		claim = 70
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1456.1.1 = { capital = 818 }
+1457.11.23 = {
+	monarch = {
+		name = "Wiktoryn"
+		dynasty = "z Podebrad"
+		birth_date = 1443.5.29
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1476.5.4 = {
+	heir = {
+		name = "Karel"
+		monarch_name = "Karel"
+		dynasty = "z Podebrad"
+		birth_date = 1476.5.4
+		death_date = 1536.5.31
+		claim = 95
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+1498.1.1 = {
+	monarch = {
+		name = "Karel"
+		dynasty = "z Podebrad"
+		birth_date = 1476.5.4
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+1503.1.18 = {
+	heir = {
+		name = "Jáchym"
+		monarch_name = "Jáchym"
+		dynasty = "z Podebrad"
+		birth_date = 1503.1.18
+		death_date = 1562.12.27
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1536.5.31 = {
+	monarch = {
+		name = "Jáchym"
+		dynasty = "z Podebrad"
+		birth_date = 1503.1.18
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1542.1.1 = {
+	monarch = {
+		name = "Hanuš"
+		dynasty = "z Podebrad"
+		birth_date = 1509.11.4
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+#1565.2.28 done

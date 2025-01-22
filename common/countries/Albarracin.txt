@@ -1,0 +1,76 @@
+graphical_culture = westerngfx
+color = { 78 166 72 }
+
+historical_idea_groups = {
+	
+	
+	maritime_ideas
+	quantity_ideas
+	religious_ideas
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	
+	
+	
+	
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+	
+	
+}
+
+monarch_names = {
+	"Fortun #0" = 10
+	"Taur #0" = 10
+	"Amrus #0" = 10
+	"Faradi #0" = 10
+	"Gharsiya #0" = 10
+	"Quzman #0" = 10
+	"Pesencano #0" = 10
+	"Gafif #0" = 10
+	"Mardanish #0" = 10
+	"Faranda #0" = 10
+	"Lubb #0" = 10
+	
+	"Toda #0" = -1
+	"Teresa #0" = -1
+	"Isabel #0" = -1
+}
+
+leader_names = {
+	"Beni Turjali" "Beni Qasi" "Beni 'l Longo" "Beni Qabturno"
+	"Beni Sabarico" "Beni Angelino" "Beni Laridi" "Beni Mastanna"
+	"Beni Shaliya" "Beni Humeya" "Beni Quti" "Beni Bashkunsi"
+	Torres Loubaris Bargachi Buano Sordo Denia Lucas "de Arévalo"
+	Pérez "Beni Gharsiya" "Beni Mardanish" "Beni Faranda"
+}
+
+ship_names = {  
+	Al-Banu-Razin Albarracín
+}
+
+army_names = {
+	"Terç de $PROVINCE$" "Jaish Al $PROVINCE$"
+}
+
+fleet_names = {
+	"Flota de $PROVINCE$" "Sarie Al $PROVINCE$" 
+}

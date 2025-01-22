@@ -1,0 +1,180 @@
+great_fitna = {
+	potential = {
+		tag = FTM
+		has_reform = fatimid_caliphate_reform
+		religion_group = muslim
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
+		always = no
+		NOT = { has_country_flag = had_great_fitna }
+	}
+
+	
+	can_start = {
+		has_any_disaster = no
+		has_government_power = {
+			mechanic_type = fatimid_irreverence_mechanic 
+			power_type = fatimid_irreverence 
+			value = 100
+		}
+		OR = {
+			exists = KOJ
+			NOT = { stability = 3 }
+			NOT = { legitimacy = 50 }
+			war_exhaustion = 10
+			NOT = { ruler_total_stats = { amount = 10 } }
+			is_bankrupt = yes
+		}
+	}
+	
+	
+	can_stop = {
+		NOT = {
+			has_government_power = {
+				mechanic_type = fatimid_irreverence_mechanic 
+				power_type = fatimid_irreverence 
+				value = 80
+			}
+		}
+		stability = 3
+		legitimacy = 50
+		NOT = { war_exhaustion = 10 }
+		ruler_total_stats = { amount = 10 }
+		is_bankrupt = no
+	}
+
+	progress = {
+		modifier = {
+			factor = 0.5
+			exists = KOJ
+		}
+		modifier = {
+			factor = 0.5
+			corruption = 5
+		}
+		modifier = {
+			factor = 0.5
+			corruption = 10
+		}
+		modifier = {
+			factor = 0.5
+			corruption = 15
+		}
+		modifier = {
+			factor = 0.5
+			corruption = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy = 75 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy = 50 }
+		}	
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy = 25 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 60 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 50 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 40 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 30 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 20 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { estate_loyalty = { estate = estate_mamluks loyalty = 10 } }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 3 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 1
+			is_bankrupt = yes
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 15
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 20
+		}
+	}
+	
+	can_end = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = great_fitna.tt
+				has_country_flag = ended_fitna_by_high_authority
+			}
+			custom_trigger_tooltip = {
+				tooltip = great_fitna.tt2
+				has_country_flag = ended_fitna_by_low_authority
+			}
+		}
+	}
+
+	modifier = {
+		global_unrest = 10
+		mercenary_cost = 0.25
+		mercenary_manpower = -0.25
+		stability_cost_modifier = 0.5
+	}	
+	
+	on_start = great_fitna.1
+	on_end = great_fitna.100
+	on_start_effect = {
+		freeze_government_power = {
+			mechanic_type = fatimid_irreverence_mechanic
+			power_type = fatimid_irreverence
+		}
+	}
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = great_fitna.2 # Sacking Of The Treasuries
+			100 = great_fitna.3 # Corruption At Court
+			100 = great_fitna.4 # Crop Failure
+			100 = great_fitna.5 # Rebellious Bedouins
+			100 = great_fitna.6 # Apostasy In Hejaz
+			100 = great_fitna.7 # Rise of Badr al-Jamali
+			500 = great_fitna.8	# The Ominous Banquet
+			200 = great_fitna.9 # Army Dissension
+			200 = great_fitna.10 # Incompetent Viziers
+			100 = great_fitna.11 # Increasing Sunni Influence
+			100 = great_fitna.12 # Autonomous Governors
+		}
+	}
+}

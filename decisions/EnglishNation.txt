@@ -1,0 +1,124 @@
+country_decisions = {
+
+	english_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = ENG }
+			NOT = { exists = GBR }
+			NOT = { tag = AVE }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			was_never_end_game_tag_trigger = yes
+			primary_culture = english
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2268	# London
+				AND = {
+					OR = {
+						region = british_isles_region
+					}
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								is_core = ROOT
+								region = british_isles_region
+								value = 80	#	 british region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			is_free_or_tributary_trigger = yes	
+			NOT = { exists = ENG }
+			owns_core_province = 2268		# London
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = british_isles_region
+				value = 80	#	 britain region
+			}
+			2268 = { is_state = yes }
+		}
+		effect = {
+			change_tag = ENG
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ENG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+					NOT = { has_government_attribute = locked_government_type }
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = {
+					OR = {
+						government = monarchy
+						NOT = { has_government_attribute = locked_government_type }
+					}
+					has_not_locked_first_tier_reform = yes
+				}
+				add_government_reform = english_monarchy 
+			}
+			ENG = {
+				set_capital = 2268
+			}
+			if = {
+				limit = { 
+					has_custom_ideas = no 
+					NOT = { has_idea_group = ENG_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+}

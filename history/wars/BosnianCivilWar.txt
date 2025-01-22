@@ -1,0 +1,24 @@
+name = "Bosnian Civil War"
+
+war_goal = {
+	type = defend_capital_independence
+	casus_belli = cb_independence_war
+	tag = HRZ
+}
+
+1443.6.23 = {
+	add_attacker = HRZ
+	add_attacker = KRJ
+	add_defender = BOS
+}
+
+1444.8.15 = {
+	add_defender = XSO
+}
+
+1446.1.1 = {
+	rem_attacker = HRZ
+	rem_attacker = KRJ
+	rem_defender = BOS
+	rem_defender = XSO
+}

@@ -1,0 +1,19 @@
+government = native
+add_government_reform = native_clan_council_reform
+government_rank = 3
+technology_group = north_american
+primary_culture = polabian
+religion = slavic_pagan
+capital = 589
+
+1000.1.1 = { set_country_flag = natives_flag }
+1054.1.1 = {
+	override_country_name = LIEZIZI
+	monarch = {
+		name = "Liezizi"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

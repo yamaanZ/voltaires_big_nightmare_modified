@@ -1,0 +1,88 @@
+#Dhimmi
+country_decisions = {	
+	estate_jews_recruit_minister = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_JEWS
+			}
+			has_estate = estate_jews
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_jews
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_MINISTER_JEWS
+				days = 10950
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_JEWS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_JEWS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jews
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	estate_jews_demand_contribution = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = DEMAND_CONTRIBUTION_JEWS
+			}
+			has_estate = estate_jews
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_jews
+				influence = 20
+			}
+			estate_loyalty = {
+				estate = estate_jews
+				loyalty = 30
+			}
+			estate_action_off_cooldown = {
+				estate_action = DEMAND_CONTRIBUTION_JEWS
+				days = 3650
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_CONTRIBUTION_JEWS
+			}
+			estate_action = {
+				estate_action = DEMAND_CONTRIBUTION_JEWS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jews
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					estate_loyalty = {
+						estate = estate_dhimmi
+						loyalty = 50
+					}	
+				}
+			}
+			modifier = {
+				factor = 0
+				treasury = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,632 @@
+
+
+#Holy Oders
+add_estate_holy_orders_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_holy_orders
+		}
+		add_estate_loyalty = {
+			estate = estate_holy_orders
+			loyalty = 10
+		}
+	}
+}
+
+reduce_estate_holy_orders_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_holy_orders
+		}
+		add_estate_loyalty = {
+			estate = estate_holy_orders
+			loyalty = -10
+		}
+	}
+}
+
+#Mamluks
+add_estate_mamluks_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_mamluks
+		}
+		add_estate_loyalty = {
+			estate = estate_mamluks
+			loyalty = 10
+		}
+	}
+}
+
+reduce_estate_mamluks_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_mamluks
+		}
+		add_estate_loyalty = {
+			estate = estate_mamluks
+			loyalty = -10
+		}
+	}
+}
+
+#Inversely scales reform desire with # of catholic tags.
+add_reform_desire_effect = {
+	hidden_effect = {
+		REB = {
+			ROOT = {
+				change_variable = {
+					which = num_of_tags_catholic
+					which = PREV
+				}
+			}
+		}
+		set_variable = {
+			which = reform_desire_gain
+			value = $base_reform_desire$
+		}
+		multiply_variable = {
+			which = reform_desire_gain
+			value = 100
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = num_of_tags_catholic
+					value = 100
+				}
+			}
+			divide_variable = {
+				which = reform_desire_gain
+				which = num_of_tags_catholic
+			}
+		}
+		else = {
+			divide_variable = {
+				which = reform_desire_gain
+				value = 100
+			}
+		}
+		divide_variable = {
+			which = reform_desire_gain
+			value = 2
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = reform_desire_gain
+					value = 0.01
+				}
+			}
+			add_reform_desire = 0.01
+			subtract_variable = {
+				which = reform_desire_gain
+				value = 0.01
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = reform_desire_gain
+					value = 0.001
+				}
+			}
+			add_reform_desire = 0.001
+			subtract_variable = {
+				which = reform_desire_gain
+				value = 0.001
+			}
+		}
+		set_variable = {
+			which = reform_desire_gain
+			value = 0
+		}
+		set_variable = {
+			which = num_of_tags_catholic
+			value = 0
+		}
+	}
+}
+
+#Inversely scales reform desire with # of catholic tags.
+remove_reform_desire_effect = {
+	hidden_effect = {
+		REB = {
+			ROOT = {
+				change_variable = {
+					which = num_of_tags_catholic
+					which = PREV
+				}
+			}
+		}
+		set_variable = {
+			which = reform_desire_gain
+			value = $base_reform_desire$
+		}
+		multiply_variable = {
+			which = reform_desire_gain
+			value = 100
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = num_of_tags_catholic
+					value = 100
+				}
+			}
+			divide_variable = {
+				which = reform_desire_gain
+				which = num_of_tags_catholic
+			}
+		}
+		else = {
+			divide_variable = {
+				which = reform_desire_gain
+				value = 100
+			}
+		}
+		divide_variable = {
+			which = reform_desire_gain
+			value = 2
+		}
+		while = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = reform_desire_gain
+						value = -0.01
+					}
+				}
+			}
+			add_reform_desire = -0.01
+			change_variable = {
+				which = reform_desire_gain
+				value = 0.01
+			}
+		}
+		while = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = reform_desire_gain
+						value = -0.001
+					}
+				}
+			}
+			add_reform_desire = -0.001
+			change_variable = {
+				which = reform_desire_gain
+				value = 0.001
+			}
+		}
+		set_variable = {
+			which = reform_desire_gain
+			value = 0
+		}
+		set_variable = {
+			which = num_of_tags_catholic
+			value = 0
+		}
+	}
+}
+
+#Number of Catholic tags
+calc_catholic_tags = {
+	REB = {
+		set_variable = {
+			which = num_of_tags_catholic
+			value = 0
+		}
+		every_country = {
+			limit = {
+				religion = catholic
+			}
+			REB = {
+				change_variable = {
+					which = num_of_tags_catholic
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+#Should only be called by on_startup
+init_centre_of_reformation = {
+	if = {
+		limit = {
+			NOT = {
+				is_year = 1600
+			}
+		}
+		if = {
+			limit = {
+				4061 = {
+					religion = cathar
+				}
+			}
+			4061 = {
+				add_reform_center = cathar
+			}
+		}
+		if = {
+			limit = {
+				2433 = {
+					religion = bogomilist
+				}
+				is_year = 1248
+				NOT = {
+					is_year = 1305
+				}
+			}
+			2433 = {
+				add_reform_center = bogomilist
+			}
+		}
+		if = {
+			limit = {
+				1837 = {
+					religion = fraticelli
+				}
+			}
+			1837 = {
+				add_reform_center = fraticelli
+			}
+		}
+		if = {
+			limit = {
+				2272 = {
+					religion = lollardy
+				}
+			}
+			2272 = {
+				add_reform_center = lollardy
+			}
+		}
+		if = {
+			limit = {
+				541 = {
+					religion = waldensian
+				}
+			}
+			541 = {
+				add_reform_center = waldensian
+			}
+		}
+		if = {
+			limit = {
+				781 = {
+					religion = hussite
+				}
+				NOT = {
+					is_year = 1471
+				}
+			}
+			781 = {
+				add_reform_center = hussite
+			}
+		}
+		if = {
+			limit = {
+				781 = {
+					religion = protestant
+				}
+			}
+			781 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				59 = {
+					religion = protestant
+				}
+			}
+			59 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				656 = {
+					religion = protestant
+				}
+			}
+			656 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				2458 = {
+					religion = protestant
+				}
+			}
+			2458 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				81 = {
+					religion = protestant
+				}
+			}
+			81 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				2230 = {
+					religion = protestant
+				}
+			}
+			2230 = {
+				add_reform_center = protestant
+			}
+		}
+		if = {
+			limit = {
+				2467 = {
+					religion = reformed
+				}
+			}
+			2467 = {
+				add_reform_center = reformed
+			}
+		}
+		if = {
+			limit = {
+				2621 = {
+					religion = reformed
+				}
+			}
+			2621 = {
+				add_reform_center = reformed
+			}
+		}
+		if = {
+			limit = {
+				328 = {
+					religion = reformed
+				}
+			}
+			328 = {
+				add_reform_center = reformed
+			}
+		}
+		if = {
+			limit = {
+				1123 = {
+					religion = reformed
+				}
+			}
+			1123 = {
+				add_reform_center = reformed
+			}
+		}
+		if = {
+			limit = {
+				2359 = {
+					religion = reformed
+				}
+			}
+			2359 = {
+				add_reform_center = reformed
+			}
+		}
+	}
+}
+
+add_religious_influence_effect_small = {
+	if = {
+		limit = {
+			uses_papacy = yes
+		}
+		add_papal_influence = 10
+	}
+	if = {
+		limit = {
+			uses_church_aspects = yes
+		}
+		add_church_power = 25
+	}
+	if = {
+		limit = {
+			uses_fervor = yes
+		}
+		add_fervor = 10
+	}
+	if = {
+		limit = {
+			religion = orthodox
+		}
+		add_patriarch_authority = 0.05
+	}
+	if = {
+		limit = {
+			uses_piety = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					piety = 0
+				}
+			}
+			add_piety = -0.1
+		}
+		else = {
+			add_piety = 0.1
+		}
+	}
+	if = {
+		limit = {
+			religion = uatsdin
+		}
+		add_doom = -5
+	}
+	if = {
+		limit = {
+			religion = uatsdin
+		}
+		add_authority = -5
+	}
+}
+
+add_religious_influence_effect_large = {
+	if = {
+		limit = {
+			uses_papacy = yes
+		}
+		add_papal_influence = 25
+	}
+	if = {
+		limit = {
+			uses_church_aspects = yes
+		}
+		add_church_power = 50
+	}
+	if = {
+		limit = {
+			uses_fervor = yes
+		}
+		add_fervor = 25
+	}
+	if = {
+		limit = {
+			religion = orthodox
+		}
+		add_patriarch_authority = 0.1
+	}
+	if = {
+		limit = {
+			religion_group = muslim
+		}
+		if = {
+			limit = {
+				NOT = {
+					piety = 0
+				}
+			}
+			add_piety = -0.25
+		}
+		else = {
+			add_piety = 0.25
+		}
+	}
+	if = {
+		limit = {
+			religion = uatsdin
+		}
+		add_doom = -10
+	}
+	if = {
+		limit = {
+			religion = uatsdin
+		}
+		add_authority = 10
+	}
+}
+
+annex_canton_or_clear_flag_effect = {
+	if = {
+		limit = {
+			any_country = {
+				NOT = {
+					tag = SWI
+				}
+				has_reform = canton_government
+				capital_scope = {
+					superregion = switzerland_superregion
+				}
+				is_free_or_tributary_trigger = yes
+				ai = yes
+			}
+		}
+		random_country = {
+			limit = {
+				NOT = {
+					tag = SWI
+				}
+				has_reform = canton_government
+				capital_scope = {
+					superregion = switzerland_superregion
+				}
+				is_free_or_tributary_trigger = yes
+				ai = yes
+			}
+		}
+	}
+	else = {
+		clr_global_flag = swi_formed_flag
+	}
+}
+
+
+change_mongol_culture_effect = {
+	if = {
+		limit = { is_core = GOL }
+		change_culture = mishary
+	}
+	else_if = {
+		limit = { is_core = CRI }
+		change_culture = crimean
+	}
+	else_if = {
+		limit = { is_core = KAZ }
+		change_culture = kazani
+	}
+	else_if = {
+		limit = { is_core = NOG }
+		change_culture = nogaybak
+	}
+	else_if = {
+		limit = { is_core = AST }
+		change_culture = astrakhani
+	}
+}
+
+on_province_medical_building_destroyed_estate_privileges_effect = {
+	if = {
+		limit = {
+			has_province_modifier = estate_holy_orders_development_of_hospitals_mod
+		}
+		remove_province_modifier = estate_holy_orders_development_of_hospitals_mod
+	}
+}
+
+on_province_medical_building_built_estate_privileges_effect = {
+	if = {
+		limit = {
+			owner = { has_estate_privilege = estate_holy_orders_development_of_hospitals }
+			religion_group = christian
+		}
+		add_province_modifier = {
+			name = estate_holy_orders_development_of_hospitals_mod
+			duration = -1
+		}
+	}
+}
+
+on_province_manpower_building_destroyed_estate_privileges_effect = {
+	if = {
+		limit = {
+			has_province_modifier = estate_mamluks_development_of_barracks_mod
+		}
+		remove_province_modifier = estate_mamluks_development_of_barracks_mod
+	}
+}
+
+on_province_manpower_building_built_estate_privileges_effect = {
+	if = {
+		limit = {
+			owner = { has_estate_privilege = estate_mamluks_development_of_barracks }
+			has_owner_accepted_culture = yes
+		}
+		add_province_modifier = {
+			name = estate_mamluks_development_of_barracks_mod
+			duration = -1
+		}
+	}
+}

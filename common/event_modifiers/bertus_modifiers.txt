@@ -1,0 +1,829 @@
+papal_fanatics_reform_modifier = {
+	discipline = 0.10
+	infantry_power = 0.20
+	is_mamluks_modifier = yes
+}
+trade_buildings_boost_modifier = {
+	trade_value_modifier = 0.10
+	local_development_cost = -0.10
+}
+tercios_basic_modifier = {
+	cavalry_power = -1.0
+	shock_damage_received = -0.30
+	is_mamluks_modifier = yes
+	picture = "has_tercio"
+}
+musketeer_basic_modifier = {
+	cavalry_power = -1.0
+	fire_damage = 0.30
+	is_mamluks_modifier = yes
+	picture = "has_musketeer"
+}
+redcoats_basic_modifier = {
+	cavalry_power = -1.0
+	land_morale = 0.15
+	is_mamluks_modifier = yes
+	picture = "land_morale"
+}
+gallowglasses_basic_modifier = {
+	cavalry_power = -1.0
+	shock_damage = 0.30
+	is_mamluks_modifier = yes
+	picture = "infantry_shock"
+}
+condottieri_basic_modifier = {
+	cavalry_power = -1.0
+	discipline = 0.05
+	is_mamluks_modifier = yes
+	picture = "possible_condottieri"
+}
+jaegerkorps_basic_modifier = {
+	cavalry_power = -1.0
+	infantry_power = 0.15
+	is_mamluks_modifier = yes
+	picture = "morale_damage"
+}
+carolean_basic_modifier = {
+	cavalry_power = -1.0
+	regiment_manpower_usage = -0.30
+	is_mamluks_modifier = yes
+	picture = "has_carolean"
+}
+hussars_basic_modifier = {
+	infantry_power = -1.0
+	cavalry_shock = 0.50
+	is_mamluks_modifier = yes
+	picture = "has_hussars"
+}
+streltsy_basic_modifier = {
+	cavalry_power = -1.0
+	fire_damage_received = -0.15
+	land_attrition = -0.25
+	regiment_manpower_usage = -0.20
+	is_mamluks_modifier = yes
+	picture = "has_streltsy"
+}
+corsairs_basic_modifier = {
+	cavalry_power = -1.0
+	infantry_power = 0.10
+	regiment_disembark_speed = 0.50
+	assault_fort_ability = 1.0
+	is_mamluks_modifier = yes
+}
+mamluks_basic_modifier = {
+	infantry_power = -1.0
+	shock_damage = 0.20
+	is_mamluks_modifier = yes
+	picture = "has_mamluks"
+}
+maratha_basic_modifier = {
+	cavalry_power = -1.0
+	fire_damage_received = -0.15
+	shock_damage_received = -0.15
+	land_attrition = -0.50
+	is_mamluks_modifier = yes
+	picture = "infantry_fire"
+}
+rajputs_basic_modifier = {
+	cavalry_power = -1.0
+	infantry_fire = 0.20
+	is_mamluks_modifier = yes
+	picture = "infantry_fire"
+}
+qizilbash_basic_modifier = {
+	shock_damage_received = -0.30
+	infantry_power = -1.0
+	is_mamluks_modifier = yes
+	picture = "cavalry_shock"
+}
+cawa_basic_modifier = {
+	cavalry_power = -1.0
+	shock_damage_received = -0.15
+	land_attrition = -0.25
+	regiment_manpower_usage = -0.20
+	is_mamluks_modifier = yes
+	picture = "amount_of_cawa"
+}
+gm_bonus = {
+	diplomats = 10
+	improve_relation_modifier = 10.0
+	envoy_travel_time = -1.0
+	global_manpower = 1000.0
+	land_forcelimit = 2000.0
+	global_sailors = 1000.0
+	naval_forcelimit = 1000.0
+	global_tax_income = 1200.0
+}
+boosted_country_economic_malus = {
+	global_tax_modifier = -0.05
+	production_efficiency = -0.05
+	trade_efficiency = -0.05
+	interest = 0.25
+	build_cost = 0.05
+	build_time = 0.05
+}
+boosted_country_economic_malus_2 = {
+	global_tax_modifier = -0.10
+	production_efficiency = -0.10
+	trade_efficiency = -0.10
+	interest = 0.50
+	build_cost = 0.10
+	build_time = 0.10
+}
+boosted_country_economic_malus_3 = {
+	global_tax_modifier = -0.20
+	production_efficiency = -0.20
+	trade_efficiency = -0.20
+	interest = 1.0
+	build_cost = 0.20
+	build_time = 0.20
+}
+boosted_country_administration_malus = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	advisor_cost = 0.10
+	all_estate_loyalty_equilibrium = -0.05
+	global_autonomy = 0.05
+	max_absolutism = -10
+}
+boosted_country_administration_malus_2 = {
+	country_admin_power = -2
+	country_diplomatic_power = -2
+	country_military_power = -2
+	advisor_cost = 0.20
+	all_estate_loyalty_equilibrium = -0.10
+	global_autonomy = 0.10
+	max_absolutism = -20
+}
+boosted_country_administration_malus_3 = {
+	country_admin_power = -4
+	country_diplomatic_power = -4
+	country_military_power = -4
+	advisor_cost = 0.40
+	all_estate_loyalty_equilibrium = -0.20
+	global_autonomy = 0.20
+	max_absolutism = -40
+}
+boosted_country_military_malus = {
+	discipline = -0.025
+	land_morale = -0.05
+	manpower_recovery_speed = -0.10
+}
+boosted_country_military_malus_2 = {
+	discipline = -0.05
+	land_morale = -0.10
+	manpower_recovery_speed = -0.20
+}
+boosted_country_military_malus_3 = {
+	discipline = -0.10
+	land_morale = -0.20
+	manpower_recovery_speed = -0.40
+}
+boosted_country_development = {
+	development_cost = -0.10
+	development_cost_modifier = -0.10
+}
+boosted_country_development_2 = {
+	development_cost = -0.20
+	development_cost_modifier = -0.20
+}
+boosted_country_development_3 = {
+	development_cost = -0.30
+	development_cost_modifier = -0.30
+}
+boosted_country_economy = {
+	global_tax_modifier = 0.10
+	production_efficiency = 0.10
+	interest = -0.5
+	build_cost = -0.10
+	build_time = -0.10
+}
+boosted_country_economy_2 = {
+	global_tax_modifier = 0.20
+	production_efficiency = 0.20
+	interest = -1.0
+	build_cost = -0.20
+	build_time = -0.20
+}
+boosted_country_economy_3 = {
+	global_tax_modifier = 0.30
+	production_efficiency = 0.30
+	interest = -1.5
+	build_cost = -0.30
+	build_time = -0.30
+}
+boosted_country_trade = {
+	trade_efficiency = 0.10
+	global_trade_power = 0.10
+}
+boosted_country_trade_2 = {
+	trade_efficiency = 0.20
+	global_trade_power = 0.20
+}
+boosted_country_trade_2 = {
+	trade_efficiency = 0.30
+	global_trade_power = 0.30
+}
+boosted_country_administration = {
+	administrative_efficiency = 0.05
+	governing_capacity_modifier = 0.15
+}
+boosted_country_administration_2 = {
+	administrative_efficiency = 0.10
+	governing_capacity_modifier = 0.30
+}
+boosted_country_administration_3 = {
+	administrative_efficiency = 0.15
+	governing_capacity_modifier = 0.45
+}
+boosted_country_powers = {
+	country_admin_power = 2
+	country_diplomatic_power = 2
+	country_military_power = 2
+}
+boosted_country_powers_2 = {
+	country_admin_power = 4
+	country_diplomatic_power = 4
+	country_military_power = 4
+}
+boosted_country_powers_2 = {
+	country_admin_power = 6
+	country_diplomatic_power = 6
+	country_military_power = 6
+}
+boosted_country_absolutism = {
+	global_autonomy = -0.10
+	yearly_absolutism = 3
+	max_absolutism = 20
+}
+boosted_country_absolutism_2 = {
+	global_autonomy = -0.20
+	yearly_absolutism = 6
+	max_absolutism = 40
+}
+boosted_country_absolutism_3 = {
+	global_autonomy = -0.30
+	yearly_absolutism = 12
+	max_absolutism = 60
+}
+boosted_country_estates = {
+	all_estate_loyalty_equilibrium = 0.10
+	all_estate_influence_modifier = 0.05
+	all_estate_possible_privileges = 1
+	estate_interaction_cooldown_modifier = -0.2
+}
+boosted_country_estates_2 = {
+	all_estate_loyalty_equilibrium = 0.20
+	all_estate_influence_modifier = 0.10
+	loyalty_change_on_revoked = 0.05
+	estate_interaction_cooldown_modifier = -0.40
+	all_estate_possible_privileges = 1
+}
+boosted_country_estates_3 = {
+	all_estate_loyalty_equilibrium = 0.30
+	all_estate_influence_modifier = 0.15
+	loyalty_change_on_revoked = 0.10
+	estate_interaction_cooldown_modifier = -0.60
+	all_estate_possible_privileges = 1
+	allow_free_estate_privilege_revocation = yes
+}
+boosted_country_religion = {
+	tolerance_own = 2
+	global_missionary_strength = 0.02
+	missionaries = 1
+	papal_influence = 2
+	monthly_fervor_increase = 2
+	church_power_modifier = 0.20
+	monthly_piety_accelerator = 0.005
+	yearly_patriarch_authority = 0.005
+	monthly_karma_accelerator = 0.05
+}
+boosted_country_religion_2 = {
+	tolerance_own = 4
+	global_missionary_strength = 0.04
+	missionaries = 2
+	papal_influence = 4
+	monthly_fervor_increase = 4
+	church_power_modifier = 0.40
+	monthly_piety_accelerator = 0.010
+	yearly_patriarch_authority = 0.010
+	monthly_karma_accelerator = 0.10
+}
+boosted_country_religion_3 = {
+	tolerance_own = 6
+	global_missionary_strength = 0.06
+	missionaries = 3
+	papal_influence = 6
+	monthly_fervor_increase = 6
+	church_power_modifier = 0.60
+	monthly_piety_accelerator = 0.015
+	yearly_patriarch_authority = 0.015
+	monthly_karma_accelerator = 0.15
+}
+boosted_country_manpower = {
+	manpower_recovery_speed = 0.20
+}
+boosted_country_manpower_2 = {
+	manpower_recovery_speed = 0.40
+	#slacken 50% more
+}
+boosted_country_manpower_3 = {
+	manpower_recovery_speed = 0.60
+	#slacken 100% more
+}
+boosted_country_forcelimit = {
+	land_forcelimit_modifier = 0.333
+}
+boosted_country_forcelimit_2 = {
+	land_forcelimit_modifier = 0.666
+}
+boosted_country_forcelimit_3 = {
+	land_forcelimit_modifier = 1.0
+}
+boosted_country_morale = {
+	land_morale_constant = 0.50
+}
+boosted_country_morale_2 = {
+	land_morale_constant = 1.0
+}
+boosted_country_morale_3 = {
+	land_morale_constant = 1.5
+}
+boosted_country_discipline = {
+	discipline = 0.05
+	drill_gain_modifier = 0.50
+}
+boosted_country_discipline_2 = {
+	discipline = 0.10
+	drill_gain_modifier = 1.0
+}
+boosted_country_discipline_3 = {
+	discipline = 0.15
+	drill_gain_modifier = 2.0
+}
+strong_city = {
+	land_forcelimit = 10
+	local_manpower = 10
+	tax_income = 36
+}
+great_artisans = {
+	trade_goods_size = 2
+}
+great_plantations = {
+	trade_goods_size = 2
+}
+great_mine = {
+	trade_goods_size = 2
+}
+cultural_bureaucracy_20 = {
+	governing_capacity = 500
+}
+cultural_bureaucracy_19 = {
+	governing_capacity = 475
+}
+cultural_bureaucracy_18 = {
+	governing_capacity = 450
+}
+cultural_bureaucracy_17 = {
+	governing_capacity = 425
+}
+cultural_bureaucracy_16 = {
+	governing_capacity = 400
+}
+cultural_bureaucracy_15 = {
+	governing_capacity = 375
+}
+cultural_bureaucracy_14 = {
+	governing_capacity = 350
+}
+cultural_bureaucracy_13 = {
+	governing_capacity = 325
+}
+cultural_bureaucracy_12 = {
+	governing_capacity = 300
+}
+cultural_bureaucracy_11 = {
+	governing_capacity = 275
+}
+cultural_bureaucracy_10 = {
+	governing_capacity = 250
+}
+cultural_bureaucracy_9 = {
+	governing_capacity = 225
+}
+cultural_bureaucracy_8 = {
+	governing_capacity = 200
+}
+cultural_bureaucracy_7 = {
+	governing_capacity = 175
+}
+cultural_bureaucracy_6 = {
+	governing_capacity = 150
+}
+cultural_bureaucracy_5 = {
+	governing_capacity = 125
+}
+cultural_bureaucracy_4 = {
+	governing_capacity = 100
+}
+cultural_bureaucracy_3 = {
+	governing_capacity = 75
+}
+cultural_bureaucracy_2 = {
+	governing_capacity = 50
+}
+cultural_bureaucracy_1 = {
+	governing_capacity = 25
+}
+napoleonic_tactics_country_ideas_tech_1 = {
+    military_tactics = 0.05
+}
+napoleonic_tactics_country_ideas_tech_4 = {
+    military_tactics = 0.075
+}
+napoleonic_tactics_country_ideas_tech_7 = {
+    military_tactics = 0.100
+}
+napoleonic_tactics_country_ideas_tech_9 = {
+    military_tactics = 0.125
+}
+napoleonic_tactics_country_ideas_tech_12 = {
+    military_tactics = 0.150
+}
+napoleonic_tactics_country_ideas_tech_15 = {
+    military_tactics = 0.175
+}
+napoleonic_tactics_country_ideas_tech_19 = {
+    military_tactics = 0.200
+}
+napoleonic_tactics_country_ideas_tech_21 = {
+    military_tactics = 0.225
+}
+napoleonic_tactics_country_ideas_tech_23 = {
+    military_tactics = 0.250
+}
+napoleonic_tactics_country_ideas_tech_24 = {
+    military_tactics = 0.275
+}
+napoleonic_tactics_country_ideas_tech_30 = {
+    military_tactics = 0.300
+}
+napoleonic_tactics_country_ideas_tech_32 = {
+    military_tactics = 0.65
+}
+platoon_fire_country_ideas_tech_1 = {
+    infantry_fire = 0.14
+}
+platoon_fire_country_ideas_tech_6 = {
+    infantry_fire = 0.22
+}
+platoon_fire_country_ideas_tech_8 = {
+    infantry_fire = 0.32
+}
+platoon_fire_country_ideas_tech_14 = {
+    infantry_fire = 0.44
+}
+platoon_fire_country_ideas_tech_20 = {
+    infantry_fire = 0.64
+}
+platoon_fire_country_ideas_tech_27 = {
+    infantry_fire = 0.84
+}
+platoon_fire_country_ideas_tech_31 = {
+    infantry_fire = 1.24
+}
+timariot_system_country_ideas_tech_2 = {
+    cavalry_shock = 0.20
+	is_mamluks_modifier = yes
+}
+timariot_system_country_ideas_tech_5 = {
+    cavalry_shock = 0.22
+	is_mamluks_modifier = yes
+}
+timariot_system_country_ideas_tech_8 = {
+    cavalry_shock = 0.40
+	is_mamluks_modifier = yes
+}
+timariot_system_country_ideas_tech_17 = {
+    cavalry_shock = 0.60
+	is_mamluks_modifier = yes
+}
+timariot_system_country_ideas_tech_23 = {
+    cavalry_shock = 0.80
+	is_mamluks_modifier = yes
+}
+timariot_system_country_ideas_tech_31 = {
+    cavalry_shock = 1.00
+	is_mamluks_modifier = yes
+}
+rhenish_victrix_country_ideas_tech_1 = {
+    infantry_shock = 0.09
+}
+rhenish_victrix_country_ideas_tech_2 = {
+    infantry_shock = 0.15
+}
+rhenish_victrix_country_ideas_tech_5 = {
+    infantry_shock = 0.195
+}
+rhenish_victrix_country_ideas_tech_6 = {
+    infantry_shock = 0.285
+}
+rhenish_victrix_country_ideas_tech_11 = {
+    infantry_shock = 0.345
+}
+rhenish_victrix_country_ideas_tech_21 = {
+    infantry_shock = 0.495
+}
+rhenish_victrix_country_ideas_tech_28 = {
+    infantry_shock = 0.645
+}
+military_investment_infantry_power_1_modifier = {
+	infantry_power = 0.03
+}
+military_investment_infantry_power_2_modifier = {
+	infantry_power = 0.06
+}
+military_investment_infantry_power_3_modifier = {
+	infantry_power = 0.09
+}
+military_investment_infantry_power_4_modifier = {
+	infantry_power = 0.12
+}
+military_investment_infantry_power_5_modifier = {
+	infantry_power = 0.15
+}
+military_investment_infantry_power_6_modifier = {
+	infantry_power = 0.18
+}
+military_investment_infantry_power_7_modifier = {
+	infantry_power = 0.21
+}
+military_investment_infantry_power_8_modifier = {
+	infantry_power = 0.24
+}
+military_investment_infantry_power_9_modifier = {
+	infantry_power = 0.27
+}
+military_investment_infantry_power_10_modifier = {
+	infantry_power = 0.30
+}
+military_investment_cavalry_power_1_modifier = {
+	cavalry_power = 0.03
+	cav_to_inf_ratio = 0.03
+}
+military_investment_cavalry_power_2_modifier = {
+	cavalry_power = 0.06
+	cav_to_inf_ratio = 0.06
+}
+military_investment_cavalry_power_3_modifier = {
+	cavalry_power = 0.09
+	cav_to_inf_ratio = 0.09
+}
+military_investment_cavalry_power_4_modifier = {
+	cavalry_power = 0.12
+	cav_to_inf_ratio = 0.12
+}
+military_investment_cavalry_power_5_modifier = {
+	cavalry_power = 0.15
+	cav_to_inf_ratio = 0.15
+}
+military_investment_cavalry_power_6_modifier = {
+	cavalry_power = 0.18
+	cav_to_inf_ratio = 0.18
+}
+military_investment_cavalry_power_7_modifier = {
+	cavalry_power = 0.21
+	cav_to_inf_ratio = 0.21
+}
+military_investment_cavalry_power_8_modifier = {
+	cavalry_power = 0.24
+	cav_to_inf_ratio = 0.24
+}
+military_investment_cavalry_power_9_modifier = {
+	cavalry_power = 0.27
+	cav_to_inf_ratio = 0.27
+}
+military_investment_cavalry_power_10_modifier = {
+	cavalry_power = 0.30
+	cav_to_inf_ratio = 0.30
+}
+military_investment_artillery_power_1_modifier = {
+	artillery_power = 0.03
+}
+military_investment_artillery_power_2_modifier = {
+	artillery_power = 0.06
+}
+military_investment_artillery_power_3_modifier = {
+	artillery_power = 0.09
+}
+military_investment_artillery_power_4_modifier = {
+	artillery_power = 0.12
+}
+military_investment_artillery_power_5_modifier = {
+	artillery_power = 0.15
+}
+military_investment_artillery_power_6_modifier = {
+	artillery_power = 0.18
+}
+military_investment_artillery_power_7_modifier = {
+	artillery_power = 0.21
+}
+military_investment_artillery_power_8_modifier = {
+	artillery_power = 0.24
+}
+military_investment_artillery_power_9_modifier = {
+	artillery_power = 0.27
+}
+military_investment_artillery_power_10_modifier = {
+	artillery_power = 0.30
+}
+military_investment_discipline_1_modifier = {
+	discipline = 0.01
+}
+military_investment_discipline_2_modifier = {
+	discipline = 0.02
+}
+military_investment_discipline_3_modifier = {
+	discipline = 0.03
+}
+military_investment_discipline_4_modifier = {
+	discipline = 0.04
+}
+military_investment_discipline_5_modifier = {
+	discipline = 0.05
+}
+military_investment_discipline_6_modifier = {
+	discipline = 0.06
+}
+military_investment_discipline_7_modifier = {
+	discipline = 0.07
+}
+military_investment_discipline_8_modifier = {
+	discipline = 0.08
+}
+military_investment_discipline_9_modifier = {
+	discipline = 0.09
+}
+military_investment_discipline_10_modifier = {
+	discipline = 0.10
+}
+military_investment_morale_1_modifier = {
+	land_morale_constant = 0.075
+}
+military_investment_morale_2_modifier = {
+	land_morale_constant = 0.15
+}
+military_investment_morale_3_modifier = {
+	land_morale_constant = 0.225
+}
+military_investment_morale_4_modifier = {
+	land_morale_constant = 0.30
+}
+military_investment_morale_5_modifier = {
+	land_morale_constant = 0.375
+}
+military_investment_morale_6_modifier = {
+	land_morale_constant = 0.45
+}
+military_investment_morale_7_modifier = {
+	land_morale_constant = 0.525
+}
+military_investment_morale_8_modifier = {
+	land_morale_constant = 0.60
+}
+military_investment_morale_9_modifier = {
+	land_morale_constant = 0.675
+}
+military_investment_morale_10_modifier = {
+	land_morale_constant = 0.75
+}
+military_investment_shock_reduction_1_modifier = {
+	shock_damage_received = -0.03
+	fire_damage_received = -0.03
+}
+military_investment_shock_reduction_2_modifier = {
+	shock_damage_received = -0.06
+	fire_damage_received = -0.06
+}
+military_investment_shock_reduction_3_modifier = {
+	shock_damage_received = -0.09
+	fire_damage_received = -0.09
+}
+military_investment_shock_reduction_4_modifier = {
+	shock_damage_received = -0.12
+	fire_damage_received = -0.12
+}
+military_investment_shock_reduction_5_modifier = {
+	shock_damage_received = -0.15
+	fire_damage_received = -0.15
+}
+military_investment_shock_reduction_6_modifier = {
+	shock_damage_received = -0.18
+	fire_damage_received = -0.18
+}
+military_investment_shock_reduction_7_modifier = {
+	shock_damage_received = -0.21
+	fire_damage_received = -0.21
+}
+military_investment_shock_reduction_8_modifier = {
+	shock_damage_received = -0.24
+	fire_damage_received = -0.24
+}
+military_investment_shock_reduction_9_modifier = {
+	shock_damage_received = -0.27
+	fire_damage_received = -0.27
+}
+military_investment_shock_reduction_10_modifier = {
+	shock_damage_received = -0.30
+	fire_damage_received = -0.30
+}
+bavaria_unification = {
+	fabricate_claims_cost = -0.50 	#0→-0.50
+	fort_maintenance_modifier = -0.50	#0→-0.50
+}
+knight_specialization_reform_modifier = {
+	cavalry_shock = 0.50
+	is_cossack_modifier = yes
+}
+establish_gaituguiliu_decision_modifier = {
+	global_autonomy = -0.025
+	state_maintenance_modifier = -0.25
+}
+seaban_decision_modifier = {
+	mercenary_discipline = 0.025
+	mercenary_manpower = 0.20
+}
+reform_land_tax_decision_modifier = {
+	republican_tradition = 0.2
+	global_unrest = -1
+}
+military_governors_decision_modifier = {
+	global_own_trade_power = 0.20
+	mercantilism_cost = -0.10
+}
+establish_silver_standard_decision_modifier = {
+	monthly_gold_inflation_modifier = -0.20
+	interest = -0.25 
+}
+inclusive_monarchy_decision_modifier = {
+	religious_unity = 0.20
+	monthly_fervor_increase = 0.5
+}
+promote_bureaucratic_faction_decision_modifier = {
+	church_loyalty_modifier = 0.10
+	tolerance_own = 2
+}
+promote_military_faction_decision_modifier = {
+	nobles_loyalty_modifier = 0.10
+	army_tradition = 0.5
+}
+unifed_trade_market_decision_modifier = {
+	global_trade_power = 0.1
+	global_trade_goods_size_modifier = 0.05
+}
+reform_civil_registration_decision_modifier = {
+	adm_advisor_cost = -0.10
+	country_admin_power = 1
+}
+tributary_embassies_decision_modifier = {
+	dip_advisor_cost = -0.10
+	country_diplomatic_power = 1
+}
+reform_the_military_branch_decision_modifier = {
+	mil_advisor_cost = -0.10
+	country_military_power = 1
+}
+centralizing_top_government_decision_modifier = {
+	max_absolutism = 20
+}
+DEMAND_CONTRIBUTION_JEWS_level_1 = {
+	local_unrest = 1
+}
+DEMAND_CONTRIBUTION_JEWS_level_2 = {
+	local_unrest = 2
+}
+DEMAND_CONTRIBUTION_JEWS_level_3 = {
+	local_unrest = 3
+}
+DEMAND_CONTRIBUTION_JEWS_level_4 = {
+	local_unrest = 4
+}
+expanded_infrastructure_lvl_1 = {
+	land_forcelimit = 0.25
+}
+expanded_infrastructure_lvl_2 = {
+	land_forcelimit = 0.5
+}
+expanded_infrastructure_lvl_3 = {
+	land_forcelimit = 0.75
+}
+expanded_infrastructure_lvl_4 = {
+	land_forcelimit = 1.0
+}
+expanded_infrastructure_lvl_5 = {
+	land_forcelimit = 1.25
+}
+lowlands_superregion_polders = {
+	local_development_cost = -0.35
+}

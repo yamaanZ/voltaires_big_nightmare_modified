@@ -1,0 +1,125 @@
+country_decisions = {
+	switzerland_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = SWI }
+			NOT = { has_country_flag = formed_switzerland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = SWI }
+			}
+			OR = {
+				primary_culture = swiss
+				primary_culture = suisse
+				primary_culture = romansh
+			}
+			OR = {
+				NOT = { has_dlc = "Mandate of Heaven" }
+				has_global_flag = empire_of_china_dismantled
+				is_emperor_of_china = yes
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1869
+				AND = {
+					culture = swiss
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 50
+								culture = swiss
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes	
+			NOT = { exists = SWI }
+			if = {
+				limit = { is_emperor_of_china = yes }
+				custom_trigger_tooltip = {
+					tooltip = swiss_unification_tt
+					has_country_flag = swiss_unification_flag
+				}
+			}
+			else = {
+				owns_core_province = 1869
+				num_of_owned_provinces_with = {
+					value = 50
+					OR = {
+						culture = swiss
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = SWI
+			swap_non_generic_missions = yes
+			every_country = {
+				limit = {
+					NOT = { tag = SWI }
+					OR = {
+						has_reform = canton_reform
+						is_subject_of_type = tributary_state
+					}
+					capital_scope = { superregion = switzerland_region }
+					is_free_or_tributary_trigger = yes
+				}
+				country_event = { id = mod_triggered_events.52 days = 1 }
+			}
+			switzerland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = SWI
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					OR = {
+						government = theocracy
+						government = republic
+					}
+					is_revolutionary = no
+				}
+				add_government_reform = united_cantons_reform
+			}
+			else = {
+				if = {
+					limit = { is_revolutionary = no }
+					change_government = republic
+					add_government_reform = united_cantons_reform
+				}
+			}
+			set_country_flag = formed_switzerland_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

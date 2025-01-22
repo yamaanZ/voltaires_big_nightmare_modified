@@ -1,0 +1,83 @@
+country_decisions = {
+	silesia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = SIL }
+			NOT = { has_country_flag = formed_silesia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			OR = {
+				ai = no
+				NOT = { exists = SIL }
+			}
+			OR = {
+				primary_culture = schlesian
+				primary_culture = lusatian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 822
+				AND = {
+					region = silesia_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = silesia_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			owns_core_province = 822 #Wroclaw
+			development_in_provinces = {
+				value = 500
+				region = silesia_region
+			}
+			NOT = { exists = SIL }
+		}
+		effect = {
+			change_tag = SIL
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			silesia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = SIL
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = SIL_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_silesia_flag
+		}
+	}
+}

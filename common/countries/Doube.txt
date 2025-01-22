@@ -1,0 +1,76 @@
+graphical_culture = easterngfx
+color = { 210 148 67 }
+
+historical_idea_groups = {
+	
+	
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	aristocracy_ideas
+	spy_ideas
+	religious_ideas
+}
+
+historical_units = {
+	
+	
+	
+	
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	hungarian_hussar
+	polish_musketeer
+	polish_hussar
+	polish_tercio
+	polish_winged_hussar
+	russian_lancer
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	
+	
+}
+
+leader_names = {
+	Viestardis
+	Nameisis
+	Detzkitis
+	Jakitis
+	Kuitis
+	Purwinis
+}
+
+ship_names = {
+	Zemgali Tervete Zagare Doube
+	Silene Sparnene Duobele Upmale
+}
+
+monarch_names = {
+	"Viestards #0" = 10
+	"Nameis #0" = 10
+	"Detzkit #0" = 10
+	"Jakit #0" = 10
+	"Kuit #0" = 10
+	"Purwin #0" = 10
+	"Klavess #0" = 10
+	
+	"Savna #0" = -1
+	"Brita #0" = -1
+	"Kordula #0" = -1
+	"Maria #0" = -1
+	"Elmede #0" = -1
+	"Helgi #0" = -1
+	"Helvi #0" = -1
+	"Ilma #0" = -1
+	"Imetra #0" = -1
+	"Leili #0" = -1
+	"Maimu #0" = -1
+	"Vanema #0" = -1
+	"Raili #0" = -1
+}

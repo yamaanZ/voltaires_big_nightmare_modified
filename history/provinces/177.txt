@@ -1,0 +1,73 @@
+owner = BAV
+controller = BAV
+culture = bavarian
+religion = catholic
+hre = yes
+base_tax = 10
+base_production = 10
+trade_goods = cloth
+base_manpower = 6
+capital = "Regensburg"
+is_city = yes
+add_core = BAV	
+add_core = RBB
+extra_cost = 16
+center_of_trade = 2
+
+1207.1.1 = {
+	owner = RBB
+	controller = RBB
+	remove_core = BAV
+}
+1444.11.12 = {
+	fort_14th = no
+	add_base_tax = 5
+	add_base_production = 5
+	add_base_manpower = 7
+	fort_15th = yes
+	ramparts = yes
+	post_office = yes
+	conscription_center = yes
+	trade_depot = yes
+	add_permanent_province_modifier = {
+		name = great_artisans
+		duration = -1
+	}
+	add_province_modifier = {
+		name = strong_city
+		duration = -1
+	}
+}
+1486.1.1 = {
+	owner = XMU
+	controller = XMU
+}
+1492.1.1 = {
+	owner = RBB
+	controller = RBB
+}
+1803.4.27 = {
+	owner = BGS
+	controller = BGS
+	add_core = BGS
+	remove_core = RBB
+}
+1810.2.16 = {
+	owner = BAV
+	controller = BAV
+	add_core = BAV
+	remove_core = BGS
+}
+1866.8.23 = { hre = no }
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+}
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

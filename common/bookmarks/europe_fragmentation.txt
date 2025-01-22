@@ -1,0 +1,8 @@
+bookmark =
+{
+	name = "EUROPE_FRAGMENTATION"
+	desc = "EUROPE_FRAGMENTATION_DESC"
+	date = 1444.11.13
+	effect = {
+    }
+}

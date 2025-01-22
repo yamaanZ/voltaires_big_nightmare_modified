@@ -1,0 +1,80 @@
+has_fort_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_fort_trigger.tt
+		OR = {
+			has_building = fort_14th
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+	}
+}
+
+has_fort_15th_trigger = {
+	OR = {
+		has_building = fort_15th
+		has_building = fort_16th
+		has_building = fort_17th
+		has_building = fort_18th
+	}
+}
+
+has_fort_16th_trigger = {
+	OR = {
+		has_building = fort_16th
+		has_building = fort_17th
+		has_building = fort_18th
+	}
+}
+
+has_fort_17th_trigger = {
+	OR = {
+		has_building = fort_17th
+		has_building = fort_18th
+	}
+}
+
+has_medical_building_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_medical_building_trigger_tt
+		OR = {
+			has_building = customs_house
+			has_building = arsenal
+		}
+	}
+}
+
+has_3_advisors_trigger = {
+	has_adm_advisor = yes
+	has_dip_advisor = yes
+	has_mil_advisor = yes
+}
+
+has_3_lv2_advisors_trigger = {
+	has_adm_advisor_2 = yes
+	has_dip_advisor_2 = yes
+	has_mil_advisor_2 = yes
+}
+
+has_3_lv3_advisors_trigger = {
+	has_adm_advisor_3 = yes
+	has_dip_advisor_3 = yes
+	has_mil_advisor_3 = yes
+}
+
+has_education_building_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_education_building_trigger_tt
+		OR = {
+			has_building = college
+			has_building = university
+		}
+	}
+}
+
+consolidated_region_trigger = {
+	NOT = { local_autonomy = 30 }
+	NOT = { unrest = 1 }
+	NOT = { controlled_by = REB }
+}

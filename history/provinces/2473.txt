@@ -1,0 +1,42 @@
+owner = VRG
+controller = VRG
+culture = swabian
+religion = catholic
+hre = yes
+base_tax = 1
+base_production = 1
+trade_goods = vegetables
+base_manpower = 1
+capital = "Bad Schussenried" 
+is_city = yes	
+add_core = VRG
+add_core = SRR
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = western
+discovered_by = muslim
+
+1227.1.1 = {
+	owner = SRR
+	controller = SRR
+	remove_core = VRG
+}
+1444.11.12 = {	#BERTUS MOD
+	owner = AUG
+	controller = AUG
+	add_core = AUG
+}
+1806.7.12 = {
+	owner = WUR
+	controller = WUR
+	add_core = WUR
+	remove_core = SRR
+}
+1866.8.23 = { hre = no }
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+}
+discovered_by = nomad_group
+discovered_by = north_american

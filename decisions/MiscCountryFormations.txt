@@ -1,0 +1,98 @@
+country_decisions = {
+
+	greek_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = BYZ }
+			NOT = { exists = BYZ }
+			NOT = { exists = GRE }
+			OR = {
+				primary_culture = greek
+				primary_culture = maniot
+				primary_culture = peloponnesian
+			}
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1209
+				province_id = 611
+				province_id = 2828
+				province_id = 2686
+				province_id = 601
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1209 #Aitolia
+			owns_core_province = 611  #Morea
+			owns_core_province = 2828 #Athens
+			owns_core_province = 2686 #Naxos
+			owns_core_province = 601  #Achaea
+		}
+		effect = {
+			change_tag = GRE
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			random_owned_province = {
+				limit = { culture = greek }
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			set_capital = 2828
+			if = {
+				limit = {
+					NOT = { has_idea_group = greek_ideas } 
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

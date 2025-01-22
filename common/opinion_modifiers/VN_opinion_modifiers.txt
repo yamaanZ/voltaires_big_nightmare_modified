@@ -1,0 +1,361 @@
+is_church_vassal = {
+	opinion = 50
+}
+is_partial_principality = {
+	opinion = 15
+}
+is_seigneury = {
+	opinion = 15
+}
+converted_seigneury_into_vassal_opinion = {
+	opinion = -30
+	yearly_decay = 2
+}
+
+#HistoryPerson
+karling_frank_coronation_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+lux_french_alliance_opinion= {
+	opinion = 100
+	yearly_decay = 2
+}
+lux_golden_bull_opinion = {
+	opinion = -200
+	yearly_decay = 2
+}
+swi_papal_relations_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_incident_elevation_of_bohemia_rejection = {
+	opinion = -200
+	yearly_decay = 2
+}
+opinion_incident_elevation_of_bohemia_compromise = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_incident_elevation_of_bohemia = {
+	opinion = 100
+	yearly_decay = 2
+}
+opinion_incident_elevation_of_bohemia_rejection_a = {
+	opinion = -100
+	yearly_decay = 2
+}
+opinion_incident_elevation_of_bohemia_rejection_b = {
+	opinion = -200
+	yearly_decay = 2
+}
+pis_carmen_in_victoriam_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+pis_liber_maiorichinus_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+ath_crusader_legacy_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+sax_papal_recognition_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+sax_head_the_guelphs_opinion = {
+	opinion = 25
+	yearly_decay = 2
+}
+
+#Isildur
+crn_diplomacy_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+nrm_high_king_opinion = {
+	opinion = -100
+	yearly_decay = 3
+}
+opinion_refused_sale_lubusz = {
+	opinion = -75
+	yearly_decay = 2
+}
+fragpol_halychian_raid_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+vespers_tyrant_rule = {
+	opinion = -200
+	yearly_decay = 5
+}
+trier_coronation = {
+	opinion = 100
+	yearly_decay = 2
+}
+nrm_refused_troops = {
+	opinion = -50
+	yearly_decay = 2
+}
+nrm_gave_troops = {
+	opinion = 75
+	yearly_decay = 2
+}
+ase_scandinavian_diplomacy_opinion = {
+    opinion = 50
+    yearly_decay = 2
+}
+mlo_cast_out_emperor_opinion = {
+    opinion = -100
+    yearly_decay = 2
+}
+lor_kingdom_of_lotharingia_opinion = {
+    opinion = -100
+    yearly_decay = 2
+}
+bri_breizh_kingdom_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+bra_fate_of_bishoprics_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+fra_march_on_rome_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+fra_march_on_rome_opinion2 = {
+	opinion = -25
+	yearly_decay = 3
+}
+fra_march_on_rome_opinion3 = {
+	opinion = -10
+	yearly_decay = 3
+}
+fra_franco_turkish_alliance_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+dan_nor_london_raid_strong_opinion = {
+	opinion = -75
+	yearly_decay = 2
+}
+dan_nor_london_raid_medium_opinion = {
+	opinion = -50
+	yearly_decay = 2
+}
+dan_nor_london_raid_weak_opinion = {
+	opinion = -25
+	yearly_decay = 2
+}
+fra_franco_turkish_alliance_mission = {
+	opinion = 50
+	yearly_decay = 2
+}
+fra_fate_of_hre_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+spa_spanish_emperorship_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+pru_counter_kleinstaaterei_mission = {
+	opinion = 50
+	yearly_decay = 2
+}
+pru_establish_zollverein_mission2 = {
+	opinion = 50
+	yearly_decay = 2
+}
+pal_deter_french_aggression_mission = {
+	opinion = 75
+	yearly_decay = 3
+}
+slz_gain_imperial_favors_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+mediatize_fightback_malus = {
+	opinion = -50
+	yearly_decay = 2
+}
+mediatize_survive_malus = {
+	opinion = -50
+	yearly_decay = 2
+}
+mediatization_malus = {
+	opinion = -50
+	yearly_decay = 3
+}
+mediatization_bonus = {
+	opinion = 50
+	yearly_decay = 3
+}
+lombard_league_dishonored = {
+	opinion = -50
+	yearly_decay = 3
+}
+emperor_dishonored = {
+	opinion = -50
+	yearly_decay = 3
+}
+is_lombard_league_member = {
+	opinion = 25
+	yearly_decay = 0.5
+}
+mongol_raids_knowledge_shared = {
+	opinion = -25
+	yearly_decay = 2
+}
+mongol_raids_submitted = {
+	opinion = -50
+	yearly_decay = 2
+}
+
+#Katharevousa
+opinion_guelph_ghib = {
+	opinion = 20
+	yearly_decay = 5
+}
+hrema59_opinion = {
+	opinion = 100
+	yearly_decay = 2
+}
+hrema60_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+hrema62_opinion = {
+	opinion = -40
+	yearly_decay = 2
+}
+
+#Shyguy
+opinion_investiture_controversy = {
+	opinion = -200
+}
+opinion_made_pope_to_elector = {
+	opinion = -25
+	yearly_decay = 1
+}
+opinion_imperial_papal_ties = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_legitimazed_ruler = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_claimed_our_duchy = {
+	opinion = -50
+	yearly_decay = 2
+}
+opinion_hohenstaufer_relations = {
+	opinion = 100
+	yearly_decay = 2
+}
+opinion_adopted_christianity = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_kept_slavic_faith = {
+	opinion = 50
+	yearly_decay = 2
+}
+opinion_support_in_hussite_wars = {
+	opinion = 100
+	yearly_decay = 4
+}
+hrema24_opinion = {
+	opinion = -50
+	yearly_decay = 2
+}
+hremb24_opinion = {
+	opinion = 100
+	yearly_decay = 4
+}
+hrema65_opinion = {
+	opinion = 75
+	yearly_decay = 2
+}
+hremb65_opinion = {
+	opinion = -75
+	yearly_decay = 2
+}
+hrema83_opinion = {
+	opinion = -75
+	yearly_decay = 2
+}
+hremb83_opinion = {
+	opinion = 100
+	yearly_decay = 2
+}
+hrema105_opinion = {
+	opinion = 75
+	yearly_decay = 3
+}
+lem_sent_reparations_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+lem_refused_reparations_opinion = {
+	opinion = -50
+	yearly_decay = 2
+}
+spi_evicted_from_romagna_opinion = {
+	opinion = -50
+	yearly_decay = 1
+}
+tou_principality_of_toulouse_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+tou_french_subject_opinion = {
+	opinion = 100
+	yearly_decay = 2
+}
+tou_lead_the_fiefs_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+lit_converted_to_our_faith_opinion = {
+	opinion = -50
+	yearly_decay = 2
+}
+bav_french_alliance_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+sax_schmalkaldic_league_opinion = {
+	opinion = 50
+	yearly_decay = 2
+}
+pap_accepted_franciscans_opinion = {
+	opinion = 100
+	yearly_decay = 3
+}
+die_impressed_italians_opinion = {
+	opinion = 25
+	yearly_decay = 1
+}
+teu_liv_a_new_focus_opinion = {
+	opinion = 100
+	yearly_decay = 4
+}
+thu_luther_heresy_opinion = {
+	opinion = -100
+	yearly_decay = 2
+}
+thu_sued_luther_opinion = {
+	opinion = 100
+	yearly_decay = 2
+}
+opinion_theocracy_noble_bonus = {
+	opinion = 100
+	years = 50
+	yearly_decay = 2
+}

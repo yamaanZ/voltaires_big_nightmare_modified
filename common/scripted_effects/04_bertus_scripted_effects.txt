@@ -1,0 +1,337 @@
+
+
+bertus_setup = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = bertus_setup_flag }
+			ai = no
+		}
+		set_country_flag = bertus_setup_flag
+		on_action_culture_promotion_effect = yes
+		every_province = {
+			limit = {
+				is_city = no
+				OR = {
+					base_tax = 2
+					base_production = 2
+					base_manpower = 2
+				}
+			}
+			set_base_tax = 1
+			set_base_production = 1
+			set_base_manpower = 1
+		}
+	}
+}
+get_boosted_bonus = {
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = boosted_country_$modifier$_2
+				has_country_modifier = boosted_country_$modifier$_3
+			}
+		}
+		remove_country_modifier = boosted_country_$modifier$_2
+		remove_country_modifier = boosted_country_$modifier$_3
+		add_country_modifier = {
+			name = boosted_country_$modifier$_3
+			duration = 3650
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = boosted_country_$modifier$
+		}
+		remove_country_modifier = boosted_country_$modifier$
+		add_country_modifier = {
+			name = boosted_country_$modifier$_2
+			duration = 3650
+		}
+	}
+	else = {
+		add_country_modifier = {
+			name = boosted_country_$modifier$
+			duration = 3650
+		}
+	}
+}
+get_treasury_fraction = {
+	FROM = {
+		set_variable = { which = current_treasury value = 0 }
+		set_variable = { which = treasury_to_transfer value = 1 }
+		subtract_variable = { which = treasury_to_transfer value = $fraction$ }
+		export_to_variable = { which = current_treasury value = treasury }
+		multiply_variable = { which = treasury_to_transfer which = current_treasury }
+		while = {
+			limit = { check_variable = { which = current_treasury which = treasury_to_transfer } }
+			subtract_variable = { which = current_treasury value = 1 }
+			add_treasury = -1
+			ROOT = {add_treasury = 1}
+		}
+	}
+}
+on_action_culture_promotion_effect = {
+	remove_country_modifier = cultural_bureaucracy_20
+	remove_country_modifier = cultural_bureaucracy_19
+	remove_country_modifier = cultural_bureaucracy_18
+	remove_country_modifier = cultural_bureaucracy_17
+	remove_country_modifier = cultural_bureaucracy_16
+	remove_country_modifier = cultural_bureaucracy_15
+	remove_country_modifier = cultural_bureaucracy_14
+	remove_country_modifier = cultural_bureaucracy_13
+	remove_country_modifier = cultural_bureaucracy_12
+	remove_country_modifier = cultural_bureaucracy_11
+	remove_country_modifier = cultural_bureaucracy_10
+	remove_country_modifier = cultural_bureaucracy_9
+	remove_country_modifier = cultural_bureaucracy_8
+	remove_country_modifier = cultural_bureaucracy_7
+	remove_country_modifier = cultural_bureaucracy_6
+	remove_country_modifier = cultural_bureaucracy_5
+	remove_country_modifier = cultural_bureaucracy_4
+	remove_country_modifier = cultural_bureaucracy_3
+	remove_country_modifier = cultural_bureaucracy_2
+	remove_country_modifier = cultural_bureaucracy_1
+	remove_country_modifier = tercios_basic_modifier
+	remove_country_modifier = musketeer_basic_modifier
+	remove_country_modifier = redcoats_basic_modifier
+	remove_country_modifier = gallowglasses_basic_modifier
+	remove_country_modifier = condottieri_basic_modifier
+	remove_country_modifier = jaegerkorps_basic_modifier
+	remove_country_modifier = carolean_basic_modifier
+	remove_country_modifier = hussars_basic_modifier
+	remove_country_modifier = streltsy_basic_modifier
+	remove_country_modifier = corsairs_basic_modifier
+	remove_country_modifier = mamluks_basic_modifier
+	if = {
+		limit = {
+			OR = {
+				has_idea = cultural_ties
+				has_idea = lot_european_empire
+			}
+		}
+		trigger_switch = {
+			on_trigger = num_accepted_cultures
+			20 = {add_country_modifier = {name = cultural_bureaucracy_20 duration = -1 hidden = yes}}
+			19 = {add_country_modifier = {name = cultural_bureaucracy_19 duration = -1 hidden = yes}}
+			18 = {add_country_modifier = {name = cultural_bureaucracy_18 duration = -1 hidden = yes}}
+			17 = {add_country_modifier = {name = cultural_bureaucracy_17 duration = -1 hidden = yes}}
+			16 = {add_country_modifier = {name = cultural_bureaucracy_16 duration = -1 hidden = yes}}
+			15 = {add_country_modifier = {name = cultural_bureaucracy_15 duration = -1 hidden = yes}}
+			14 = {add_country_modifier = {name = cultural_bureaucracy_14 duration = -1 hidden = yes}}
+			13 = {add_country_modifier = {name = cultural_bureaucracy_13 duration = -1 hidden = yes}}
+			12 = {add_country_modifier = {name = cultural_bureaucracy_12 duration = -1 hidden = yes}}
+			11 = {add_country_modifier = {name = cultural_bureaucracy_11 duration = -1 hidden = yes}}
+			10 = {add_country_modifier = {name = cultural_bureaucracy_10 duration = -1 hidden = yes}}
+			9 = {add_country_modifier = {name = cultural_bureaucracy_9 duration = -1 hidden = yes}}
+			8 = {add_country_modifier = {name = cultural_bureaucracy_8 duration = -1 hidden = yes}}
+			7 = {add_country_modifier = {name = cultural_bureaucracy_7 duration = -1 hidden = yes}}
+			6 = {add_country_modifier = {name = cultural_bureaucracy_6 duration = -1 hidden = yes}}
+			5 = {add_country_modifier = {name = cultural_bureaucracy_5 duration = -1 hidden = yes}}
+			4 = {add_country_modifier = {name = cultural_bureaucracy_4 duration = -1 hidden = yes}}
+			3 = {add_country_modifier = {name = cultural_bureaucracy_3 duration = -1 hidden = yes}}
+			2 = {add_country_modifier = {name = cultural_bureaucracy_2 duration = -1 hidden = yes}}
+			1 = {add_country_modifier = {name = cultural_bureaucracy_1 duration = -1 hidden = yes}}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = iberian
+			}
+		}
+		add_country_modifier = {name = tercios_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = french
+				culture_group = dutch_group
+			}
+		}
+		add_country_modifier = {name = musketeer_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = { culture_group = british }
+		add_country_modifier = {name = redcoats_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = celtic
+				culture_group = basquegroup
+				culture_group = vlach
+				culture_group = south_slavic
+				culture_group = albanian_group
+				culture_group = baltic
+			}
+		}
+		add_country_modifier = {name = gallowglasses_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = latin
+				culture_group = byzantine
+			}
+		}
+		add_country_modifier = {name = condottieri_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = germanic
+				culture_group = rhaetic
+			}
+		}
+		add_country_modifier = {name = jaegerkorps_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = scandinavian
+				culture_group = finno_ugric
+			}
+		}
+		add_country_modifier = {name = carolean_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = west_slavic
+				culture_group = magyar
+			}
+		}
+		add_country_modifier = {name = hussars_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = { culture_group = east_slavic }
+		add_country_modifier = {name = streltsy_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				culture_group = maghrebi
+				culture = moroccan
+				culture = andalucian
+				culture = tunisian
+				culture = algerian
+			}
+		}
+		add_country_modifier = {name = corsairs_basic_modifier duration = -1 }
+	}
+	if = {
+		limit = { 
+			OR = {
+				culture = al_misr_arabic
+				culture = al_suryah_arabic
+				culture = al_iraqiya_arabic
+				culture = bedouin_arabic
+				culture = gulf_arabic
+				culture = hejazi_culture
+			}
+		}
+		add_country_modifier = {name = mamluks_basic_modifier duration = -1 }
+	}
+}
+update_tech_bonuses = {
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_1
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_4
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_7
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_9
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_12
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_15
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_19
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_21
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_23
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_24
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_30
+	remove_country_modifier = napoleonic_tactics_country_ideas_tech_32
+	if = {
+		limit = { has_idea = napoleonic_tactics }
+		if = {limit = {mil_tech = 32 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_32 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 30 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_30 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 24 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_24 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 23 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_23 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 21 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_21 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 19 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_19 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 15 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_15 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 12 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_12 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 9 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_9 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 7 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_7 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 6 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_6 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 4 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_4 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 1 } add_country_modifier = {name = napoleonic_tactics_country_ideas_tech_1 duration = -1 hidden = yes}}
+	}
+	remove_country_modifier = platoon_fire_country_ideas_tech_1
+	remove_country_modifier = platoon_fire_country_ideas_tech_6
+	remove_country_modifier = platoon_fire_country_ideas_tech_8
+	remove_country_modifier = platoon_fire_country_ideas_tech_14
+	remove_country_modifier = platoon_fire_country_ideas_tech_20
+	remove_country_modifier = platoon_fire_country_ideas_tech_27
+	remove_country_modifier = platoon_fire_country_ideas_tech_31
+	if = {
+		limit = { has_idea = platoon_fire }
+		if = {limit = {mil_tech = 31 } add_country_modifier = {name = platoon_fire_country_ideas_tech_31 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 27 } add_country_modifier = {name = platoon_fire_country_ideas_tech_27 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 20 } add_country_modifier = {name = platoon_fire_country_ideas_tech_20 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 14 } add_country_modifier = {name = platoon_fire_country_ideas_tech_14 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 8 } add_country_modifier = {name = platoon_fire_country_ideas_tech_8 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 6 } add_country_modifier = {name = platoon_fire_country_ideas_tech_6 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 1 } add_country_modifier = {name = platoon_fire_country_ideas_tech_1 duration = -1 hidden = yes}}
+	}
+	remove_country_modifier = timariot_system_country_ideas_tech_2
+	remove_country_modifier = timariot_system_country_ideas_tech_5
+	remove_country_modifier = timariot_system_country_ideas_tech_8
+	remove_country_modifier = timariot_system_country_ideas_tech_17
+	remove_country_modifier = timariot_system_country_ideas_tech_23
+	remove_country_modifier = timariot_system_country_ideas_tech_31
+	if = {
+		limit = { has_idea = timariot_system }
+		if = {limit = {mil_tech = 31 } add_country_modifier = {name = timariot_system_country_ideas_tech_31 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 23 } add_country_modifier = {name = timariot_system_country_ideas_tech_23 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 17 } add_country_modifier = {name = timariot_system_country_ideas_tech_17 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 8 } add_country_modifier = {name = timariot_system_country_ideas_tech_8 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 5 } add_country_modifier = {name = timariot_system_country_ideas_tech_5 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 2 } add_country_modifier = {name = timariot_system_country_ideas_tech_2 duration = -1 hidden = yes}}
+	}
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_1
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_2
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_5
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_6
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_11
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_21
+	remove_country_modifier = rhenish_victrix_country_ideas_tech_28
+	if = {
+		limit = { has_idea = RHI_idea_7 }
+		if = {limit = {mil_tech = 28 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_28 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 21 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_21 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 11 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_11 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 6 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_6 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 5 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_5 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 2 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_2 duration = -1 hidden = yes}}
+		else_if = {limit = {mil_tech = 1 } add_country_modifier = {name = rhenish_victrix_country_ideas_tech_1 duration = -1 hidden = yes}}
+	}
+}
+increase_military_investment = {
+	if = {
+		limit = {
+			NOT = {has_country_flag = military_investment_$type$_1_flag}
+		}
+		add_country_modifier = { name = military_investment_$type$_1_modifier duration = -1 }
+		set_country_flag = military_investment_$type$_1_flag
+	}
+	else = {
+		trigger_switch = {
+			on_trigger = has_country_flag
+			military_investment_$type$_9_flag = { add_country_modifier = { name = military_investment_$type$_10_modifier duration = -1 } remove_country_modifier = military_investment_$type$_9_modifier set_country_flag = military_investment_$type$_10_flag }
+			military_investment_$type$_8_flag = { add_country_modifier = { name = military_investment_$type$_9_modifier duration = -1 } remove_country_modifier = military_investment_$type$_8_modifier set_country_flag = military_investment_$type$_9_flag }
+			military_investment_$type$_7_flag = { add_country_modifier = { name = military_investment_$type$_8_modifier duration = -1 } remove_country_modifier = military_investment_$type$_7_modifier set_country_flag = military_investment_$type$_8_flag }
+			military_investment_$type$_6_flag = { add_country_modifier = { name = military_investment_$type$_7_modifier duration = -1 } remove_country_modifier = military_investment_$type$_6_modifier set_country_flag = military_investment_$type$_7_flag }
+			military_investment_$type$_5_flag = { add_country_modifier = { name = military_investment_$type$_6_modifier duration = -1 } remove_country_modifier = military_investment_$type$_5_modifier set_country_flag = military_investment_$type$_6_flag }
+			military_investment_$type$_4_flag = { add_country_modifier = { name = military_investment_$type$_5_modifier duration = -1 } remove_country_modifier = military_investment_$type$_4_modifier set_country_flag = military_investment_$type$_5_flag }
+			military_investment_$type$_3_flag = { add_country_modifier = { name = military_investment_$type$_4_modifier duration = -1 } remove_country_modifier = military_investment_$type$_3_modifier set_country_flag = military_investment_$type$_4_flag }
+			military_investment_$type$_2_flag = { add_country_modifier = { name = military_investment_$type$_3_modifier duration = -1 } remove_country_modifier = military_investment_$type$_2_modifier set_country_flag = military_investment_$type$_3_flag }
+			military_investment_$type$_1_flag = { add_country_modifier = { name = military_investment_$type$_2_modifier duration = -1 } remove_country_modifier = military_investment_$type$_1_modifier set_country_flag = military_investment_$type$_2_flag }
+		}
+	}
+}

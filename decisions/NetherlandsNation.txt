@@ -1,0 +1,124 @@
+country_decisions = {
+
+	netherlands_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_netherlands_flag }
+			NOT = { has_country_flag = super_formable_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			OR = {
+				NOT = { exists = NED }
+				ai = no
+			}
+			NOT = { tag = PAP }
+			NOT = { tag = NED }
+			NOT = { tag = HLR }
+			culture_group = dutch_group
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 328 # Amsterdam
+				AND = {
+					superregion = lowlands_superregion
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								is_core = ROOT
+								superregion = lowlands_superregion
+								value = 64		#	 64/97 lowlands
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = NED }
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				superregion = lowlands_superregion
+				value = 64		#	 64/97 lowlands superregion
+			}
+			328 = { owned_by = ROOT is_state = yes } # Amsterdam
+		}
+	 	effect = {
+			change_tag = NED
+			remove_non_electors_emperors_from_empire_effect = yes
+			restore_country_name = yes
+			swap_non_generic_missions = yes
+			lowlands_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = NED
+			}
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 5
+					}
+				}
+				NED = { set_government_rank = 5 }
+			}
+			set_country_flag = formed_netherlands_flag
+			set_country_flag = super_formable_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = NED_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 9 }
+			}
+			modifier = {
+				factor = 0
+				tag = BUR
+				NOT = { is_year = 1500 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 3 }
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					any_ally = {
+						OR = {
+							owns_or_non_sovereign_subject_of = 95
+							owns_or_non_sovereign_subject_of = 97
+							owns_or_non_sovereign_subject_of = 98
+							owns_or_non_sovereign_subject_of = 99
+							owns_or_non_sovereign_subject_of = 4383
+						}
+					}
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	
+}

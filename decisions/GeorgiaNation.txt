@@ -1,0 +1,182 @@
+country_decisions = {
+
+	georgia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_georgia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = GEO }
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = GEO }
+					num_of_cities = 5
+				}
+			}
+			culture_group = caucasian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3600	# Imereti
+				province_id = 3621	# Tblisi
+				province_id = 3627	# Kahketi
+				province_id = 3546	# Lomsia
+				province_id = 3608	# Kartli
+				AND = {
+                    province_id = 3597
+                    ROOT = { NOT = { owns_core_province = 3556 } }
+                    ROOT = { NOT = { owns_core_province = 3490 } }
+                }
+				AND = {
+                    province_id = 3556
+                    ROOT = { NOT = { owns_core_province = 3597 } }
+                    ROOT = { NOT = { owns_core_province = 3490 } }
+                }
+				AND = {
+                    province_id = 3490
+                    ROOT = { NOT = { owns_core_province = 3556 } }
+                    ROOT = { NOT = { owns_core_province = 3597 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = GEO }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 3600	# Imereti
+			owns_core_province = 3621	# Tblisi
+			owns_core_province = 3627	# Kahketi
+			owns_core_province = 3546	# Lomsia
+			owns_core_province = 3608	# Kartli
+			OR = {
+				owns_core_province = 3597 #Mingrelia
+				owns_core_province = 3556 #Guria
+				owns_core_province = 3490 #Tao
+			}
+		}
+		effect = {
+			change_tag = GEO
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 5 } }
+				set_government_rank = 5
+			}
+			if = {
+				limit = { 
+					NOT = { government = monarchy }
+					is_revolutionary = no
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = georgian_monarchy_reform
+			}
+			hiberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GEO
+			}
+			tao_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GEO
+			}
+			georgia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = GEO
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = GEO_ideas }
+				}
+				country_event = { id = ideagroups.1 }
+			}
+			set_country_flag = formed_georgia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	georgia_constantinople = {
+		major = yes
+		potential = {
+			OR = {
+				tag = GEO
+				was_tag = GEO
+			}
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = geo_capital_constantinople }
+			has_country_flag = geo_move_capital_flag
+		}
+		allow = {
+			is_core = 2233
+			owns = 2233
+			NOT = { capital = 2233 }
+			is_at_war = no
+		}
+		provinces_to_highlight = {
+			province_id = 2233
+		}
+		effect = {
+			set_country_flag = geo_capital_constantinople
+			2233 = {
+				move_capital_effect = yes
+			}
+			2233 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			2233 = {
+				add_province_modifier = {
+					name = "geo_city_world_desire"
+					duration = 7300
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

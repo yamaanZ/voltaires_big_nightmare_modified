@@ -1,0 +1,106 @@
+vohu_manah = {
+	fort_maintenance_modifier = -0.05
+	diplomatic_reputation = 0.5
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 103
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+asha_vahishta = {
+	hostile_attrition = 0.5
+	enemy_core_creation = 0.25
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 104
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+xshathra_vairya = {
+	legitimacy = 0.5
+	horde_unity = 0.25
+	republican_tradition = 0.25
+	devotion = 0.5
+	shock_damage = 0.05
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 105
+	ai_will_do = {
+		factor = 1		
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+spenta_armaiti = {
+	tolerance_heathen = 1
+	religious_unity = 0.1
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 106	
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
+}
+
+haurvatat = {
+	idea_cost = -0.05
+	blockade_efficiency = 0.15
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 107
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}	
+	}
+}
+
+ameretat = {
+	global_unrest = -1
+	improve_relation_modifier = 0.15
+	monthly_asha_vahishta = 0.5
+	
+	potential = { religion = zoroastrian }
+	sprite = 108
+	ai_will_do = {
+		factor = 1	
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+	}
+}

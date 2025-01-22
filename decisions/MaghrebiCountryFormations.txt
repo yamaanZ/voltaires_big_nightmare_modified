@@ -1,0 +1,449 @@
+country_decisions = {
+
+	moroccan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_morocco_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			was_never_end_game_tag_trigger = yes
+			culture_group = maghrebi
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4656 #fez
+				AND = {
+					region = morocco_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = morocco_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MOR }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 4656 #fez
+			development_in_provinces = {
+				value = 500
+				region = morocco_region
+			}
+		}
+		effect = {
+			4656 = { move_capital_effect = yes }
+			change_tag = MOR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			morocco_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			add_prestige = 25
+			if = {
+				limit = { is_tribal = yes }
+				change_government = monarchy
+			}
+			change_primary_culture = moroccan
+			set_country_flag = formed_morocco_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { has_idea_group = MOR_ideas }
+				}
+				country_event = { id = ideagroups.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	algiers_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_algiers_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			was_never_end_game_tag_trigger = yes
+			culture_group = maghrebi
+			NOT = { exists = ALG }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1946 #Algiers
+				AND = {
+					OR = {
+						area = algiers_area
+						area = saida_area
+						area = oran_area
+						area = bejaia_area
+						area = setif_area
+						area = oujda_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = algiers_area
+									area = saida_area
+									area = oran_area
+									area = bejaia_area
+									area = setif_area
+									area = oujda_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ALG }
+			is_at_war = no
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			owns_core_province = 1946 #Algiers
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = algiers_area
+					area = saida_area
+					area = oran_area
+					area = bejaia_area
+					area = setif_area
+					area = oujda_area
+				}
+			}
+		}
+		effect = {
+			set_capital = 1946 #Algiers
+			change_tag = ALG
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			change_primary_culture = algerian
+			if = {
+				limit = {
+					is_tribal = yes	#Desert tribes settling down.
+				}
+				change_government = monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_algiers_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	tunisian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_tunisia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = IFQ }
+			was_never_end_game_tag_trigger = yes
+			culture_group = maghrebi
+			NOT = { exists = TUN }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 586 #Tunis
+				AND = {
+					OR = {
+						area = tunis_area
+						area = sousse_area
+						area = mahdia_area
+						area = kef_area
+						area = kairouan_area
+						area = djerid_area
+						area = djerba_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = tunis_area
+									area = sousse_area
+									area = mahdia_area
+									area = kef_area
+									area = kairouan_area
+									area = djerid_area
+									area = djerba_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TUN }
+			is_at_war = no
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			owns_core_province = 586 #Tunis
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = tunis_area
+					area = sousse_area
+					area = mahdia_area
+					area = kef_area
+					area = kairouan_area
+					area = djerid_area
+					area = djerba_area
+				}
+			}
+		}
+		effect = {
+			set_capital = 586
+			change_tag = TUN
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			change_primary_culture = tunisian
+			if = {
+				limit = {
+					is_tribal = yes
+				}
+				change_government = monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_tunisia_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TUN_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	tripoli_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_tripoli_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = IFQ }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				primary_culture = tunisian
+				culture_group = maghrebi
+			}
+			capital_scope = {
+				OR = {
+					region = coastal_libya_region
+					region = inner_libya_region
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4920
+				province_id = 4926
+				AND = {
+                    province_id = 4929
+                    ROOT = { NOT = { owns_core_province = 4594 } }
+                }
+                AND = {
+                    province_id = 4594
+                    ROOT = { NOT = { owns_core_province = 4929 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TRP }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 4920 #Tripoli
+			owns_core_province = 4926 #Thubaqt
+			4920 = { is_state = yes }
+			OR = {
+				owns_core_province = 4929 #Sirt
+				owns_core_province = 4594 #Djerba
+			}
+		}
+		effect = {
+			4920 = { move_capital_effect = yes }
+			change_tag = TRP
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			change_primary_culture = tunisian
+			coastal_libya_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TRP
+			}
+			inner_libya_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TRP
+			}
+			if = {
+				limit = { is_tribal = yes }
+				change_government = monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_tripoli_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

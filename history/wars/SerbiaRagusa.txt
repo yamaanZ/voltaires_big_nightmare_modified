@@ -1,0 +1,24 @@
+name = "Serbian-Ragusan Conflict"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = RAG
+}
+
+1252.1.1 = {
+	add_attacker = SER
+	add_attacker = HRZ
+	add_defender = RAG
+	add_defender = BUL
+	add_defender = VDN
+	add_defender = SIA
+}
+
+1254.5.22 = {
+	rem_attacker = SER
+	rem_attacker = HRZ
+	rem_defender = RAG
+	rem_defender = BUL
+	rem_defender = VDN
+	rem_defender = SIA
+}

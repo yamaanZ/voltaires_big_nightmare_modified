@@ -1,0 +1,104 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+technology_group = western
+religion = catholic
+primary_culture = umbrian
+capital = 2484
+add_army_professionalism = 0.05
+
+#Marca Firmana
+1054.1.1 = {
+	monarch = {
+		name = "Trasmondo III"
+		dynasty = "Azzoning"
+		culture = langobardic
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+1093.1.1 = {
+	monarch = {
+		name = "Rabodo"
+		dynasty = "von Urslingen"
+		culture = swabian
+		adm = 0
+		dip = 3
+		mil = 0
+	}
+}
+1125.1.1 = {
+	monarch = {
+		name = "Rodolfo I"
+		dynasty = "da Varano"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1147.1.1 = {
+	monarch = {
+		name = "Prontaguerra I"
+		dynasty = "da Varano"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1170.1.1 = {
+	monarch = {
+		name = "Gualtieri I"
+		dynasty = "da Varano"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+#Republic
+1198.1.1 = {
+	government = republic
+	add_government_reform = italian_monarchy
+	monarch = {
+		name = "Repubblica"
+		dip = 2
+		mil = 2
+		adm = 2
+		regent = yes
+	}
+}
+1499.1.1 = {
+	monarch = {
+		name = "Giovanni"
+		dynasty = "Fogliani"
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = naive_personality
+}
+1500.1.1 = {
+	monarch = {
+		name = "Oliverotto"
+		dynasty = "Euffreducci"
+		birth_date = 1473.1.1
+		adm = 0
+		dip = 2
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = intricate_web_weaver_personality
+}
+1502.12.31 = {
+	monarch = {
+		name = "Ludovico"
+		dynasty = "Euffreducci"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#done 1520.1.1

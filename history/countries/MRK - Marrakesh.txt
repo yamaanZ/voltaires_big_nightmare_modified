@@ -1,0 +1,81 @@
+government = tribal
+add_government_reform = tribal_federation
+primary_culture = atlas_berber
+government_rank = 3
+religion = shamanism
+technology_group = muslim
+capital = 4762
+fixed_capital = 4762
+unlock_cult = yemoja_cult
+unlock_cult = roog_cult
+unlock_cult = nyame_cult
+unlock_cult = cwezi_cult
+unlock_cult = central_african_ancestor_cult
+unlock_cult = mwari_cult
+unlock_cult = enkai_cult
+unlock_cult = waaq_cult
+unlock_cult = zanahary_cult
+
+#Tribes
+1054.1.1 = {
+	override_country_name = BARGHAWATA_NAME
+	monarch = {
+		name = "Saqqût"
+		dynasty = "Banû Bûrghawâta"
+		birth_date = 1030.1.1 #est
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+}
+#done 1059
+1059.7.7 = {
+	religion = sunni
+	religious_school = maliki_school
+	restore_country_name = yes
+}
+#Hintata Emirs
+1430.1.1 = {
+	capital = 4762
+	monarch = {
+		name = "Shantuf"
+		dynasty = "Banû Hintata"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+1444.11.12 = {	#bertus mod
+	monarch = {
+		name = "Shantuf II"
+		dynasty = "Banû Hintata"
+		birth_date = 1414.1.13
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}
+1472.1.1 = {
+	monarch = {
+		name = "an-Nâsir"
+		dynasty = "Banû Hintata"
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+1514.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Banû Hintata"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+#done 1524
+1524.1.1 = {
+	government_rank = 5
+	government = monarchy
+	add_government_reform = iqta
+}

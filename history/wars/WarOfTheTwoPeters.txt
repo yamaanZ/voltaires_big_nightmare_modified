@@ -1,0 +1,29 @@
+name = "War of the Two Peters"
+war_goal = {
+	type = take_border
+	casus_belli = cb_border_war
+	province = 2693 #alicante
+}
+
+1356.1.1 = {
+	add_attacker = CAS
+	add_defender = ARA
+}
+
+1362.1.1 = {
+	add_attacker = NAV
+	add_attacker = POR
+}
+
+1366.1.1 = {
+	rem_attacker = POR
+}
+
+1367.4.3 = {
+	rem_attacker = NAV
+}
+
+1369.4.23 = {
+	rem_attacker = CAS
+	rem_defender = ARA
+}

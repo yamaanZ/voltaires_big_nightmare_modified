@@ -1,0 +1,34 @@
+name = "First Saxon Rebellion"
+war_goal = {
+	type = defend_capital_independence
+	casus_belli = cb_independence_war
+	tag = GLS
+}
+
+1073.1.1 = {
+	add_attacker = GOS
+	add_attacker = SAX
+	add_attacker = HBD
+	add_attacker = SDE
+	add_attacker = SDL
+	add_attacker = WGD
+	add_attacker = GLS
+	add_defender = DIE
+	add_defender = BRN
+	add_defender = SWA
+	add_defender = HAB
+}
+
+1075.6.9 = {
+	rem_attacker = GOS
+	rem_attacker = SAX
+	rem_attacker = HBD
+	rem_attacker = SDE
+	rem_attacker = SDL
+	rem_attacker = WGD
+	rem_attacker = GLS
+	rem_defender = DIE
+	rem_defender = BRN
+	rem_defender = SWA
+	rem_defender = HAB
+}

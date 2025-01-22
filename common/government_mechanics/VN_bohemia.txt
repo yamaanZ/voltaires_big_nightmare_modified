@@ -1,0 +1,54 @@
+utraquists_vs_taborites_mechanic = {
+	available = { }
+
+	powers = {
+		hussite_ecumene = {
+			gui = utraquists_vs_taborites_gov_mech
+			max = 100	#Utraquist direction
+			min = -100	#Taborite direction
+			base_monthly_growth = 0
+			scaled_modifier = {
+				trigger = {
+					has_government_power = { 
+						mechanic_type = utraquists_vs_taborites_mechanic
+						power_type = hussite_ecumene
+						value = 0
+					}
+				}
+				modifier = {
+					tolerance_heretic = 3
+					diplomatic_reputation = 3
+					army_tradition_decay = 0.03
+				}
+			}
+			reverse_scaled_modifier = {
+				trigger = {
+					NOT = {
+						has_government_power = { 
+							mechanic_type = utraquists_vs_taborites_mechanic
+							power_type = hussite_ecumene
+							value = 0
+						}
+					}
+				}
+				modifier = {
+					siege_ability = 0.25
+					morale_damage_received = -0.25
+					stability_cost_modifier = 1
+				}
+			}
+			on_max_reached = {
+				custom_tooltip = utraquists_vs_taborites_mechanic_at
+				hidden_effect = {
+					set_country_flag = utraquists_seize_power
+				}
+			}
+			on_min_reached = {
+				custom_tooltip = utraquists_vs_taborites_mechanic_bt
+				hidden_effect = {
+					set_country_flag = taborites_seize_power
+				}
+			}
+		}
+	}
+}

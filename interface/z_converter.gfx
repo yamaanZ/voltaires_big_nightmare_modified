@@ -1,0 +1,1561 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_papacy_action_strip"
+		texturefile = "gfx//interface//papacy_action_strip.dds"
+		noOfFrames = 10
+	}
+
+	spriteType = {
+		name = "GFX_estates_icons"
+		texturefile = "gfx//interface//estates_icons.dds"
+		noOfFrames = 17
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_icon_no_institution"
+		texturefile = "gfx//interface//estates_icons.dds"
+		noOfFrames = 15
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_estates_icons_colour-stroke"
+		texturefile = "gfx/interface/estates_icons_colour-stroke.dds"
+		noOfFrames = 17
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_icon_religion"
+		texturefile = "gfx/interface/icon_religion.tga"
+		noOfFrames = 60
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_icon_religion_small"
+		texturefile = "gfx/interface/icon_religion_small.tga"
+		noOfFrames = 60
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_religion_icon_strip"
+		texturefile = "gfx/interface/icon_religion_small.dds"
+		transparencecheck = yes
+		noOfFrames = 60
+	}
+	
+	spriteType = {
+		name = "GFX_province_view_religion"
+		texturefile = "gfx/interface/province_view_religion.tga"
+		noOfFrames = 60
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_country_icon_religion"
+		texturefile = "gfx//interface//country_icon_religion.dds"
+		noOfFrames = 60	
+	}
+
+	spriteType = {
+		name = "GFX_government_rank_strip"
+		texturefile = "gfx/interface/government_rank_strip.dds"
+		noOfFrames = 6	
+	}
+
+	spriteType = {
+		name = "GFX_resource_icon"
+		texturefile = "gfx//interface//resources.tga"
+		noOfFrames = 66
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_government_upgrade_strip"
+		texturefile = "gfx/interface/government_upgrade_strip.dds"
+		noOfFrames = 6
+	}
+	
+	spriteType = {
+		name = "GFX_resource_icon_small"
+		texturefile = "gfx//interface//resources_small.dds"
+		noOfFrames = 66
+		loadType = "INGAME"
+	}	
+	
+	spriteType = {
+		name = "GFX_resource_icon_transparent"
+		texturefile = "gfx//interface//resources.tga"
+		noOfFrames = 66
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_hindu_deities_strip"
+		texturefile = "gfx//interface//hindu_deities_strip.dds"
+		noOfFrames = 108
+	}
+
+	spriteType = {
+		name = "GFX_russian_icons_strip"
+		texturefile = "gfx//interface//russian_icons_strip.dds"
+		noOfFrames = 6
+	}	
+
+	# Turkey
+	spriteType = {
+		name = "GFX_faction_bg_tur_militarists"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_tur_militarists"	
+		texturefile = "gfx//interface//tur_militarists.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_tur_lalas"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_tur_lalas"	
+		texturefile = "gfx//interface//tur_lalas.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_tur_pacifists"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_tur_pacifists"	
+		texturefile = "gfx//interface//tur_pacifists.tga"
+	}
+
+	# Ireland
+	spriteType = {
+		name = "GFX_faction_bg_cla_flatha"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_cla_flatha"	
+		texturefile = "gfx//interface//icon_flatha.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_cla_filid"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_cla_filid"	
+		texturefile = "gfx//interface//icon_filid.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_cla_druid"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_cla_druid"	
+		texturefile = "gfx//interface//icon_druid.tga"
+	}
+
+	#Abbacies
+	spriteType = {
+		name = "GFX_faction_bg_abb_cluniacs"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_cluniacs"	
+		texturefile = "gfx//interface//cluniacs_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_abb_cistercians"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_cistercians"	
+		texturefile = "gfx//interface//cistercians_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_abb_benedictines"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_abb_benedictines"	
+		texturefile = "gfx//interface//benedictines_icon.tga"
+	}
+
+	# Papal Factions
+	spriteType = {
+		name = "GFX_faction_bg_pap_orsini"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_orsini"	
+		texturefile = "gfx//interface//pap_orsini.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pap_colonna"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_colonna"	
+		texturefile = "gfx//interface//pap_colonna.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_pap_roman_mob"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_pap_roman_mob"	
+		texturefile = "gfx//interface//pap_roman_mob.tga"
+	}
+
+	# Jerusalem
+	spriteType = {
+		name = "GFX_faction_bg_koj_barons"	
+		texturefile = "gfx//interface//faction_red_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_koj_barons"	
+		texturefile = "gfx//interface//koj_barons.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_koj_sergeants"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_koj_sergeants"	
+		texturefile = "gfx//interface//koj_sergeants.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_koj_patriarchate"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_koj_patriarchate"	
+		texturefile = "gfx//interface//koj_patriarchate.tga"
+	}
+
+	#Ideas
+	spriteType = {
+		name = "GFX_idea_manufacturing_ideas"
+		texturefile = "gfx//interface//ideas//idea_manufacturing_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_idea_logistics_ideas"
+		texturefile = "gfx//interface//ideas//idea_logistics_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_idea_cultural_ideas"
+		texturefile = "gfx//interface//ideas//idea_cultural_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_idea_piracy_ideas"
+		texturefile = "gfx//interface//ideas//idea_piracy_ideas.dds"
+		noOfFrames = 1
+		
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	# Subjects
+
+	spriteType = {
+		name = "GFX_icon_church_vassal"
+		texturefile = "gfx//interface//icon_church_vassal.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_church_vassal"
+		texturefile = "gfx//interface//icon_diplomacy_lead_church_vassal.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_church_vassal"
+		texturefile = "gfx//interface//icon_diplomacy_am_church_vassal.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_partial_principality"
+		texturefile = "gfx//interface//icon_partial_principality.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_partial_principality"
+		texturefile = "gfx//interface//icon_diplomacy_lead_partial_principality.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_partial_principality"
+		texturefile = "gfx//interface//icon_diplomacy_am_partial_principality.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_seigneury"
+		texturefile = "gfx//interface//icon_seigneury.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_seigneury"
+		texturefile = "gfx//interface//icon_diplomacy_lead_seigneury.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_seigneury"
+		texturefile = "gfx//interface//icon_diplomacy_am_seigneury.dds"
+	}
+
+	# Institutions
+
+	spriteType = {
+		name = "GFX_icon_institution_publichealth"
+		texturefile = "gfx//interface//institutions//publichealth.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_publichealth"
+		texturefile = "gfx/interface/institutions//institution_tab_publichealth.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_publichealth"
+		texturefile = "gfx/interface/institutions/tech_institution_publichealth.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_investiture"
+		texturefile = "gfx//interface//institutions//investiture.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_investiture"
+		texturefile = "gfx/interface/institutions//institution_tab_investiture.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_investiture"
+		texturefile = "gfx/interface/institutions/tech_institution_investiture.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_universities"
+		texturefile = "gfx//interface//institutions//universities.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_universities"
+		texturefile = "gfx/interface/institutions//institution_tab_universities.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_universities"
+		texturefile = "gfx/interface/institutions/tech_institution_universities.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_guilds"
+		texturefile = "gfx//interface//institutions//guilds.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_guilds"
+		texturefile = "gfx/interface/institutions//institution_tab_guilds.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_guilds"
+		texturefile = "gfx/interface/institutions/tech_institution_guilds.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_chivalry"
+		texturefile = "gfx//interface//institutions//chivalry.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_chivalry"
+		texturefile = "gfx/interface/institutions//institution_tab_chivalry.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_chivalry"
+		texturefile = "gfx/interface/institutions/tech_institution_chivalry.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_laytheology"
+		texturefile = "gfx//interface//institutions//laytheology.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_laytheology"
+		texturefile = "gfx/interface/institutions//institution_tab_laytheology.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_laytheology"
+		texturefile = "gfx/interface/institutions/tech_institution_laytheology.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_industrialization"
+		texturefile = "gfx//interface//institutions//industrialism.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_industrialization"
+		texturefile = "gfx/interface/institutions//institution_tab_industrialism.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_industrialization"
+		texturefile = "gfx/interface/institutions/tech_institution_industrialism.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_icon_institution_liberalism"
+		texturefile = "gfx//interface//institutions//liberalism.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_institution_tab_liberalism"
+		texturefile = "gfx/interface/institutions//institution_tab_liberalism.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_tech_institution_liberalism"
+		texturefile = "gfx/interface/institutions/tech_institution_liberalism.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+
+	#Schools
+	spriteType = {
+		name = "GFX_icon_muslim_school_ibadi"
+		texturefile = "gfx/interface/icon_muslim_school_ibadi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_muslim_school_sufri"
+		texturefile = "gfx/interface/icon_muslim_school_sufri.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_muslim_school_azraqi"
+		texturefile = "gfx/interface/icon_muslim_school_azraqi.dds"
+	}
+	spriteType = {
+		name = "GFX_icon_muslim_school_alevi"
+		texturefile = "gfx/interface/icon_muslim_school_alevi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_muslim_school_alawi"
+		texturefile = "gfx/interface/icon_muslim_school_alawi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_muslim_school_nizari"
+		texturefile = "gfx/interface/icon_muslim_school_nizari.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_muslim_school_qarmati"
+		texturefile = "gfx/interface/icon_muslim_school_qarmati.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_muslim_school_ashkenazi"
+		texturefile = "gfx/interface/icon_muslim_school_ashkenazi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_muslim_school_sephardi"
+		texturefile = "gfx/interface/icon_muslim_school_sephardi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_muslim_school_mizrahi"
+		texturefile = "gfx/interface/icon_muslim_school_mizrahi.dds"
+	}
+
+	#Blessings
+	spriteType = {
+		name = "GFX_holy_site_default"
+		texturefile = "gfx//interface//holy_sites//rome.dds"
+	}
+
+	spriteType = {
+		name = "GFX_holy_site_2708"
+		texturefile = "gfx//interface//holy_sites//rome.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_2233"
+		texturefile = "gfx//interface//holy_sites//constantinople.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_3053"
+		texturefile = "gfx//interface//holy_sites//antioch.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_4974"
+		texturefile = "gfx//interface//holy_sites//jerusalem.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_5022"
+		texturefile = "gfx//interface//holy_sites//alexandria.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_holy_site_394"
+		texturefile = "gfx//interface//holy_sites//chartreuse.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_727"
+		texturefile = "gfx//interface//holy_sites//bobbio.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_1837"
+		texturefile = "gfx//interface//holy_sites//assisi.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_2235"
+		texturefile = "gfx//interface//holy_sites//sabina.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_4520"
+		texturefile = "gfx//interface//holy_sites//cassino.dds"
+		loadType = "INGAME"
+	}
+
+	#Golden Bulls
+	spriteType = {
+		name = "GFX_zz_benedictus_deus"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_benedictus_deus.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_zz_ad_extirpanda"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_ad_extirpanda.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_zz_unigenitus_dei_filius"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_unigenitus_dei_filius.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_zz_parens_scientiarum"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_parens_scientiarum.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_zz_sicut_judaeis"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_sicut_judaeis.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_zz_nuper_in_concilio"
+		texturefile = "gfx/interface/the_holy_see/golden_bull_nuper_in_concilio.dds"
+		loadType = "INGAME"
+	}
+
+	#Disasters
+	spriteType = {
+		name = "GFX_disaster_estate_holy_orders_disaster"
+		texturefile = "gfx//interface//disasters//estate_holy_orders_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_estate_mamluks_disaster"
+		texturefile = "gfx//interface//disasters//estate_mamluks_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_disaster_black_death"
+		texturefile = "gfx//interface//disasters//black_death.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_fall_of_arpads"
+		texturefile = "gfx//interface//disasters//fall_of_arpads.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_peoples_spring"
+		texturefile = "gfx//interface//disasters//peoples_spring.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_revolt_of_the_earls"
+		texturefile = "gfx//interface//disasters//revolt_of_the_earls.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_disaster_hussite_wars"
+		texturefile = "gfx//interface//disasters//hussite_wars.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_byz_crisis"
+		texturefile = "gfx//interface//disasters//byz_crisis.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_fragmentation_of_poland"
+		texturefile = "gfx//interface//disasters//fragmentation_of_poland.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_sicilian_vespers"
+		texturefile = "gfx//interface//disasters//sicilian_vespers.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_collapse_of_the_khaganate"
+		texturefile = "gfx//interface//disasters//collapse_of_the_khaganate.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_norwegian_civil_war"
+		texturefile = "gfx//interface//disasters//norwegian_civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_great_fitna"
+		texturefile = "gfx//interface//disasters//great_fitna.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_russian_factionalism"
+		texturefile = "gfx//interface//disasters//russian_factionalism.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	#NewMissions
+	spriteType = {
+		name = "mission_big_city"
+		texturefile = "gfx//interface//missions//mission_big_city.dds"
+	}
+	
+	spriteType = {
+		name = "mission_buildings"
+		texturefile = "gfx//interface//missions//mission_buildings.dds"
+	}
+	
+	spriteType = {
+		name = "mission_convert_provinces"
+		texturefile = "gfx//interface//missions//mission_convert_provinces.dds"
+	}
+	
+	spriteType = {
+		name = "mission_defend_the_faith"
+		texturefile = "gfx//interface//missions//mission_defend_the_faith.dds"
+	}
+	
+	spriteType = {
+		name = "mission_duchy"
+		texturefile = "gfx//interface//missions//mission_duchy.dds"
+	}
+	
+	spriteType = {
+		name = "mission_empire_new"
+		texturefile = "gfx//interface//missions//mission_empire_new.dds"
+	}
+	
+	spriteType = {
+		name = "mission_fort"
+		texturefile = "gfx//interface//missions//mission_fort.dds"
+	}
+	
+	spriteType = {
+		name = "mission_hanseatic_cities"
+		texturefile = "gfx//interface//missions//mission_hanseatic_cities.dds"
+	}
+	
+	spriteType = {
+		name = "mission_hospital"
+		texturefile = "gfx//interface//missions//mission_hospital.dds"
+	}
+	
+	spriteType = {
+		name = "mission_king_of_franks"
+		texturefile = "gfx//interface//missions//mission_king_of_franks.dds"
+	}
+	
+	spriteType = {
+		name = "mission_kingdom"
+		texturefile = "gfx//interface//missions//mission_kingdom.dds"
+	}
+	
+	spriteType = {
+		name = "mission_large_army"
+		texturefile = "gfx//interface//missions//mission_large_army.dds"
+	}
+	
+	spriteType = {
+		name = "mission_naval_expansion"
+		texturefile = "gfx//interface//missions//mission_naval_expansion.dds"
+	}
+	
+	spriteType = {
+		name = "mission_principality"
+		texturefile = "gfx//interface//missions//mission_principality.dds"
+	}
+	
+	spriteType = {
+		name = "mission_roads"
+		texturefile = "gfx//interface//missions//mission_roads.dds"
+	}
+	
+	spriteType = {
+		name = "mission_soldiers_in_line"
+		texturefile = "gfx//interface//missions//mission_soldiers_in_line.dds"
+	}
+
+	spriteType = {
+		name = "mission_muslim_warrior"
+		texturefile = "gfx//interface//missions//mission_muslim_warrior.dds"
+	}
+	
+	spriteType = {
+		name = "mission_coronation"
+		texturefile = "gfx//interface//missions//mission_coronation.dds"
+	}
+	
+	spriteType = {
+		name = "mission_village"
+		texturefile = "gfx//interface//missions//mission_village.dds"
+	}
+	
+	spriteType = {
+		name = "mission_tribe"
+		texturefile = "gfx//interface//missions//mission_tribe.dds"
+	}
+	
+	spriteType = {
+		name = "mission_portico"
+		texturefile = "gfx//interface//missions//mission_portico.dds"
+	}
+	
+	spriteType = {
+		name = "mission_tribal_war"
+		texturefile = "gfx//interface//missions//mission_tribal_war.dds"
+	}
+	
+	spriteType = {
+		name = "mission_arabian_fort"
+		texturefile = "gfx//interface//missions//mission_arabian_fort.dds"
+	}
+
+	spriteType = {
+		name = "mission_european_castle"
+		texturefile = "gfx//interface//missions//mission_european_castle.dds"
+	}
+
+	spriteType = {
+		name = "mission_crusade"
+		texturefile = "gfx//interface//missions//mission_crusade.dds"
+	}
+
+	spriteType = {
+		name = "mission_ossetian_ritual"
+		texturefile = "gfx//interface//missions//mission_ossetian_ritual.dds"
+	}
+
+	spriteType = {
+		name = "mission_caucasian_village"
+		texturefile = "gfx//interface//missions//mission_caucasian_village.dds"
+	}
+
+	#NewGovernmentReforms
+	spriteType = {
+		name = "government_reform_basileos"
+		texturefile = "gfx//interface//government_reform_icons//basileos.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_capet"
+		texturefile = "gfx//interface//government_reform_icons//capet.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_tanist"
+		texturefile = "gfx//interface//government_reform_icons//tanist.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_italian_flag"
+		texturefile = "gfx//interface//government_reform_icons//italian_flag.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_georgian_monarchy"
+		texturefile = "gfx//interface//government_reform_icons//georgian_monarchy.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_judicate"
+		texturefile = "gfx//interface//government_reform_icons//judicate.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_gallowglass"
+		texturefile = "gfx//interface//government_reform_icons//gallowglass.dds"
+	}
+
+	spriteType = {
+		name = "government_reform_frankokratia"
+		texturefile = "gfx//interface//government_reform_icons//frankokratia.dds"
+	}
+
+	# Event Pictures Fix
+
+	spriteType = {
+		name = "BYZ_NAVAL_MILITARY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/HARBOUR_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	#Emperor Reforms
+
+	spriteType = {
+		name = "GFX_emperor_reichsreform"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_call_for_reichsreform.dds"
+		loadType = "INGAME"
+	}
+						
+	spriteType = {
+		name = "GFX_emperor_reichsregiment"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_institute_reichsregiment.dds"
+		loadType = "INGAME"
+	}
+						
+	spriteType = {
+		name = "GFX_emperor_reichsstabilitaet"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_absolute_reichsstabilitat.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_emperor_gemeinerpfennig"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_enact_gemeiner_pfennig.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_emperor_perpetual_diet"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_perpetual_diet.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_emperor_landsknechtswesen"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_create_the_landsknechtswesen.dds"
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_emperor_landfriede"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_ewiger_landfriede.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_licetiuris"
+		texturefile = "gfx/interface/imperial_diet_reforms/licetiuris.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_licetiuris"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_licetiuris.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_statutumprincipum"
+		texturefile = "gfx/interface/imperial_diet_reforms/statutumprincipum.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_statutumprincipum"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_statutumprincipum.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_chrysobull"
+		texturefile = "gfx/interface/imperial_diet_reforms/chrysobull.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_chrysobull"
+		texturefile = "gfx/interface/imperial_diet_reforms/emp_chrysobull.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_gelnhauserurkunde"
+		texturefile = "gfx/interface/imperial_diet_reforms/gelnhauserurkunde.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_gelnhauserurkunde"
+		texturefile = "gfx/interface/imperial_diet_reforms/gelnhauserurkunde.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_roncagliergesetze"
+		texturefile = "gfx/interface/imperial_diet_reforms/roncagliergesetze.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_roncagliergesetze"
+		texturefile = "gfx/interface/imperial_diet_reforms/roncagliergesetze.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_pactumcalixtinum"
+		texturefile = "gfx/interface/imperial_diet_reforms/pactumcalixtinum.dds"
+		loadType = "INGAME"
+	}
+
+	# VN imperial incidents
+
+	spriteType = {
+        name = "GFX_incident_investiture_controversy.2.a"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_investiture_controversy.2.b"
+        texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_investiture_controversy.2.c"
+        texturefile = "gfx/interface/imperial_incident_generosity.dds"
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_incident_mediatization.3.a"
+        texturefile = "gfx/interface/imperial_incident_generosity.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_mediatization.3.b"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+	}
+	
+	spriteType = {
+        name = "GFX_incident_hohenstaufer_inheritance.2.a"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_hohenstaufer_inheritance.2.b"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_hohenstaufer_inheritance.2.c"
+        texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+        loadType = "INGAME"
+	}
+	
+	spriteType = {
+        name = "GFX_incident_wendish_crusade.2.a"
+        texturefile = "gfx/interface/imperial_incident_sword.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_wendish_crusade.2.b"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_wendish_crusade.2.c"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_incident_lombard_league.3.a"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_lombard_league.3.b"
+        texturefile = "gfx/interface/imperial_incident_sword.dds"
+        loadType = "INGAME"
+	}
+	
+	spriteType = {
+        name = "GFX_incident_hussite_wars.1.a"
+        texturefile = "gfx/interface/imperial_incident_shield.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_hussite_wars.1.b"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_hussite_wars.1.c"
+        texturefile = "gfx/interface/imperial_incident_sword.dds"
+        loadType = "INGAME"
+	}
+	
+	spriteType = {
+        name = "GFX_incident_jewish_suffering.2.a"
+        texturefile = "gfx/interface/imperial_incident_shield.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_jewish_suffering.2.b"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_incident_mongol_raids.3.a"
+        texturefile = "gfx/interface/imperial_incident_shield.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_mongol_raids.3.b"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_incident_mongol_raids.3.c"
+        texturefile = "gfx/interface/imperial_incident_generosity.dds"
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_incident_elevation_of_bohemia.2.a"
+        texturefile = "gfx/interface/imperial_incident_generosity.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_elevation_of_bohemia.2.b"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_elevation_of_bohemia.2.c"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+
+	spriteType = {
+        name = "GFX_incident_external_imperial_union.2.a"
+        texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_external_imperial_union.2.b"
+        texturefile = "gfx/interface/imperial_incident_shield.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_external_imperial_union.2.c"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+
+	spriteType = {
+        name = "GFX_incident_divided_church.2.a"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_divided_church.2.b"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_incident_divided_church.2.c"
+        texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+        loadType = "INGAME"
+    }
+
+    #Estate Privileges
+    spriteType = {
+		name = "privilege_monopoly_of_goods_beer"
+		texturefile = "gfx/interface/privileges/privilege_monopoly_of_goods_beer.dds"
+	}
+	spriteType = {
+		name = "privilege_heir_knight"
+		texturefile = "gfx/interface/privileges/privilege_heir_knight.dds"
+	}
+	spriteType = {
+		name = "privilege_order_court"
+		texturefile = "gfx/interface/privileges/privilege_order_court.dds"
+	}
+	spriteType = {
+		name = "privilege_settle_templars"
+		texturefile = "gfx/interface/privileges/privilege_settle_templars.dds"
+	}
+	spriteType = {
+		name = "privilege_circassian_slaves"
+		texturefile = "gfx/interface/privileges/privilege_circassian_slaves.dds"
+	}
+	spriteType = {
+		name = "privilege_female"
+		texturefile = "gfx/interface/privileges/privilege_female.dds"
+	}
+	spriteType = {
+		name = "privilege_georgian_strong_duchies"
+		texturefile = "gfx/interface/privileges/privilege_georgian_strong_duchies.dds"
+	}
+	spriteType = {
+		name = "privilege_dutch_water_lines"
+		texturefile = "gfx/interface/privileges/privilege_dutch_water_lines.dds"
+	}
+	spriteType = {
+		name = "privilege_jewish_dhimmis"
+		texturefile = "gfx/interface/privileges/privilege_jewish_dhimmis.dds"
+	}
+
+	#Great Projects
+	spriteType = {
+		name = "GFX_great_project_kaiserdom"	
+		texturefile = "gfx//interface//great_projects//great_project_kaiserdom.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_krak_des_chevaliers"
+		texturefile = "gfx//interface//great_projects//great_project_krak_des_chevaliers.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_tsarevets"
+		texturefile = "gfx//interface//great_projects//great_project_tsarevets.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_rock_of_cashel"	
+		texturefile = "gfx//interface//great_projects//great_project_rock_of_cashel.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_theodosian_walls_g"	
+		texturefile = "gfx//interface//great_projects//great_project_theodosian_walls.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_house_of_wisdom"	
+		texturefile = "gfx//interface//great_projects//great_project_house_of_wisdom.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_binnenhof"	
+		texturefile = "gfx//interface//great_projects//great_project_binnenhof.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_cluny_abbey"	
+		texturefile = "gfx//interface//great_projects//great_project_cluny_abbey.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_pierre_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_pierre_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_torre_del_oro"	
+		texturefile = "gfx//interface//great_projects//great_project_torre_del_oro.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_santiago_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_santiago_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_wartburg"	
+		texturefile = "gfx//interface//great_projects//great_project_wartburg.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_mont_saint_michel"	
+		texturefile = "gfx//interface//great_projects//great_project_mont_saint_michel.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_siwa_oasis"	
+		texturefile = "gfx//interface//great_projects//great_project_siwa_oasis.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_chouara_tannery"	
+		texturefile = "gfx//interface//great_projects//great_project_chouara_tannery.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_lighthouse_of_alexandria"	
+		texturefile = "gfx//interface//great_projects//great_project_lighthouse_of_alexandria.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_pfullendorf_city"	
+		texturefile = "gfx//interface//great_projects//great_project_pfullendorf_city.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_three_towers"	
+		texturefile = "gfx//interface//great_projects//great_project_three_towers.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_bologna_university"	
+		texturefile = "gfx//interface//great_projects//great_project_bologna_university.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_tower_of_pisa"	
+		texturefile = "gfx//interface//great_projects//great_project_tower_of_pisa.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_holstentor"	
+		texturefile = "gfx//interface//great_projects//great_project_holstentor.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_frauenkirche"	
+		texturefile = "gfx//interface//great_projects//great_project_frauenkirche.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_kramerbrucke"	
+		texturefile = "gfx//interface//great_projects//great_project_kramerbrucke.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_german_nationalmuseum"	
+		texturefile = "gfx//interface//great_projects//great_project_german_nationalmuseum.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_venetian_arsenal"	
+		texturefile = "gfx//interface//great_projects//great_project_venetian_arsenal.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_brugge_belfry"	
+		texturefile = "gfx//interface//great_projects//great_project_brugge_belfry.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_kuklak_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_kuklak_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_ancient_center_of_paphos"	
+		texturefile = "gfx//interface//great_projects//great_project_ancient_center_of_paphos.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_gelati_monastery"	
+		texturefile = "gfx//interface//great_projects//great_project_gelati_monastery.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_cetatea_alba"	
+		texturefile = "gfx//interface//great_projects//great_project_cetatea_alba.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_rosia_montana"	
+		texturefile = "gfx//interface//great_projects//great_project_rosia_montana.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_montecassino"	
+		texturefile = "gfx//interface//great_projects//great_project_montecassino.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_upper_svaneti_towns"	
+		texturefile = "gfx//interface//great_projects//great_project_upper_svaneti_towns.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_mount_kazbek"	
+		texturefile = "gfx//interface//great_projects//great_project_mount_kazbek.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_mostar_bridge"	
+		texturefile = "gfx//interface//great_projects//great_project_mostar_bridge.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_historical_center_of_zagreb"	
+		texturefile = "gfx//interface//great_projects//great_project_historical_center_of_zagreb.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_bakhchisaray_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_bakhchisaray_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_palermo_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_palermo_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_mount_athos"	
+		texturefile = "gfx//interface//great_projects//great_project_mount_athos.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_hohenzollern_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_hohenzollern_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_wurzburg_residence"	
+		texturefile = "gfx//interface//great_projects//great_project_wurzburg_residence.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_roman_monuments_of_trier"	
+		texturefile = "gfx//interface//great_projects//great_project_roman_monuments_of_trier.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_city_de_carcassonne"	
+		texturefile = "gfx//interface//great_projects//great_project_city_de_carcassonne.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_stahleck_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_stahleck_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_diocletians_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_diocletians_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_naryn-kala"	
+		texturefile = "gfx//interface//great_projects//great_project_naryn-kala.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_saint_catherines_monastery"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_catherines_monastery.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_safranbolu_caravansary"	
+		texturefile = "gfx//interface//great_projects//great_project_safranbolu_caravansary.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_jasna_gora"	
+		texturefile = "gfx//interface//great_projects//great_project_jasna_gora.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_smolensk_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_smolensk_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_stadtamhof"	
+		texturefile = "gfx//interface//great_projects//great_project_stadtamhof.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_canterbury_cathedral"	
+		texturefile = "gfx//interface//great_projects//great_project_canterbury_cathedral.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_caernarfon_castle"	
+		texturefile = "gfx//interface//great_projects//great_project_caernarfon_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_saint_emilion_vineyards"	
+		texturefile = "gfx//interface//great_projects//great_project_saint_emilion_vineyards.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_su_nuraxi"	
+		texturefile = "gfx//interface//great_projects//great_project_su_nuraxi.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_archivo_general_de_indias"	
+		texturefile = "gfx//interface//great_projects//great_project_archivo_general_de_indias.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_house_of_the_blackheads"	
+		texturefile = "gfx//interface//great_projects//great_project_house_of_the_blackheads.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_radimlja_necropolis"	
+		texturefile = "gfx//interface//great_projects//great_project_radimlja_necropolis.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_saint_convent_of_st_gall"	
+		texturefile = "gfx//interface//great_projects//great_project_convent_of_st_gall.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_saint_old_city_of_berne"	
+		texturefile = "gfx//interface//great_projects//great_project_old_city_of_berne.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_saint_danevirke"	
+		texturefile = "gfx//interface//great_projects//great_project_danevirke.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_castel_del_monte"	
+		texturefile = "gfx//interface//great_projects//great_project_castel_del_monte.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_cathedral_of_holy_wisdom"	
+		texturefile = "gfx//interface//great_projects//great_project_cathedral_of_holy_wisdom.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_brussels_town_hall"	
+		texturefile = "gfx//interface//great_projects//great_project_brussels_town_hall.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_beiteddine_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_beiteddine_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_temple_of_uppsala"	
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_uppsala.dds"
+	}
+
+	#GOVERNMENT MECHANICS
+	spriteType = {
+		name = "GFX_french_bg"
+		texturefile = "gfx/interface/government_mechanics/france/french_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_vassal_rights"
+		texturefile = "gfx/interface/government_mechanics/france/vassal_rights.dds"
+	}
+
+	spriteType = {
+		name = "GFX_judicial_outreach"
+		texturefile = "gfx/interface/government_mechanics/france/judicial_outreach.dds"
+	}
+
+	spriteType = {
+		name = "GFX_confiscate_holdings"
+		texturefile = "gfx/interface/government_mechanics/france/confiscate_holdings.dds"
+	}
+
+	spriteType = {
+		name = "GFX_utraquists_vs_taborites_frame"
+		texturefile = "gfx/interface/government_mechanics/bohemia/utraquists_vs_taborites_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_utraquists_vs_taborites_progressbar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/bohemia/utraquists_vs_taborites_progressbar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/parliament_vs_monarchy/parliament_vs_monarchy_progressbar_frame.dds"
+		size = { x = 232 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	### VYZANDION ###
+	spriteType = {
+		name = "GFX_succession_bureaucracy_button"
+		texturefile = "gfx//interface//government_mechanics/byzantium/succession_bureaucracy_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_succession_dynasty_button"
+		texturefile = "gfx//interface//government_mechanics/byzantium/succession_dynasty_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_succession_army_button"
+		texturefile = "gfx//interface//government_mechanics/byzantium/succession_army_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	### JERUSALEM ###
+	spriteType = {
+		name = "GFX_jerusalem_ability_ADM"
+		texturefile = "gfx//interface//government_mechanics/jerusalem/jerusalem_adm_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jerusalem_ability_DIP"
+		texturefile = "gfx//interface//government_mechanics/jerusalem/jerusalem_dip_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_jerusalem_ability_MIL"
+		texturefile = "gfx//interface//government_mechanics/jerusalem/jerusalem_mil_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

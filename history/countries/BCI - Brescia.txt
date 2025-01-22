@@ -1,0 +1,84 @@
+government = republic
+add_government_reform = italian_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = lombard
+religion = catholic
+capital = 2742
+
+#Commune
+1135.1.1 = {
+	monarch = {
+		name = "Baldovino"
+		dynasty = "Casaloldo"
+		dip = 4
+		mil = 2
+		adm = 2
+	}
+}
+1180.1.1 = {
+	monarch = {
+		name = "Alberto"
+		dynasty = "Casaloldo"
+		birth_date = 1165.1.1
+		dip = 3
+		mil = 3
+		adm = 3
+	}
+}
+1200.1.1 = {
+	monarch = {
+		name = "Laudarengo"
+		dynasty = "Martinengo"
+		dip = 3
+		mil = 4
+		adm = 3
+	}
+}
+1219.1.1 = {
+	monarch = {
+		name = "Iacopo"
+		dynasty = "Poncarale"
+		dip = 3
+		mil = 4
+		adm = 3
+	}
+}
+1248.1.1 = {
+	monarch = {
+		name = "Federico"
+		dynasty = "Casaloldo"
+		dip = 3
+		mil = 3
+		adm = 3
+	}
+}
+1274.1.1 = {
+	monarch = {
+		name = "Roberto"
+		dynasty = "Casaloldo"
+		dip = 3
+		mil = 2
+		adm = 2
+	}
+}
+1301.1.1 = {
+	monarch = {
+		name = "Tommasino"
+		dynasty = "Casaloldo"
+		dip = 1
+		mil = 0
+		adm = 1
+	}
+}
+#done 1332
+1404.1.1 = {
+	monarch = {
+		name = "Antonio"
+		dynasty = "Casaloldo"
+		dip = 2
+		mil = 3
+		adm = 2
+	}
+}
+#done 1416

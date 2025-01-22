@@ -1,0 +1,102 @@
+graphical_culture = westerngfx
+color = { 241 47 15 }
+
+historical_idea_groups = {
+	
+	
+	administrative_ideas
+	diplomatic_ideas
+	quality_ideas
+	maritime_ideas
+	economic_ideas
+	expansion_ideas
+	trade_ideas
+	naval_ideas
+}
+
+historical_units = {
+	
+	
+	
+	
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+	
+	
+}
+
+monarch_names = {
+	"Icel #1" = 18
+	"Offa #1" = 18
+	"Ecgfrið #0" = 1
+	"Cnebba #1" = 18
+	"Cynewald #1" = 18
+	"Creoda #1" = 18
+	"Pybba #1" = 18
+	"Eowa #0" = 1
+	"Penda #1" = 18
+	"Peada #1" = 18
+	"Wulfhere #1" = 18
+	"Alweo #0" = 1
+	"Osmod #0" = 1
+	"ÆÞelræd #1" = 18
+	"Coenred #1" = 18
+	"Ceolred #1" = 18
+	"Ceolwald #1" = 18
+	"Eanwulf #0" = 1
+	"ÆÞelbald #1" = 18
+	"Heardberht #0" = 1
+	"Þingfrið #0" = 1
+
+	"Eadburh #0" = -1
+	"Ælfflæd #0" = -1
+	"ÆÞelswið #0" = -1
+	"ÆÞelburh #0" = -1
+	"Cyneswiða #0" = -1
+	"Cyneburh #0" = -1
+}
+
+leader_names = {
+	"of Westseaxe" "of Mierce" "of NorÞhymbre"
+	"of Cernwæle" "of Eastseaxe" "of Cent"
+	"of SuÞseaxe" "of Hwicce" "of Pecsæte"
+	"of Lindesege" "of Meonwara" "of Withwara"
+	ÆÞeling Cenwalhson Godwining Godhelming
+	Beorming Eorling Wiglafing Coenwalhing
+	Æbbing Hæsting Ælling Eadricing Eadwulfing
+	Leodwalding Ciesla Rowe Borthwick Wuffing
+	ÆÞelfrithing Yffing Ingving Offing Oswalding
+	Cerdicing Wihtgilsing Ross Beorning Iceling
+}
+
+ship_names = {
+	"$PROVINCE$" 
+	"Westseaxe" "Hwicce" "Cerdic" "Mierce" "NorÞhymbre"
+	"SuÞseaxe" "Eastseaxe" "Lindesege" "Beowulf" "Hrothgar" "Grendel"
+	"Wyrm" "Byrhtnoth" "Brut" "Arthur" "Augustine" "Middleseaxe" "Rood"
+	"Heofonrice" "Mickel" "Christe" "ÆÞelingas" "Scyld Scefing"
+	"Gardena" "Offa" "Wiglaf" "Fitela" "Freawaru" "Sigemund" "Unferth"
+	"God Cyning" "Maldon"
+}
+
+army_names = {
+	"Eorlic Here" "Mierce Here" "$PROVINCE$ Here"
+}
+
+fleet_names = {
+	"Eorlic Flotta" "Mierce Flotta"
+}

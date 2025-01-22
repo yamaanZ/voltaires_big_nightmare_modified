@@ -1,0 +1,120 @@
+country_decisions = {
+
+	portuguese_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_portugal_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { religion_group = muslim }
+			NOT = { exists = POR }
+			NOT = { tag = CAS }
+			NOT = { tag = SPA }
+			primary_culture = portugese
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1135 	#lisboa
+				AND = {
+					region = portugal_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = portugal_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = POR }
+			adm_tech = 8
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1135 	#lisboa
+			development_in_provinces = {
+				value = 500
+				region = portugal_region
+			}
+		}
+		effect = {
+			change_tag = POR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 5 } }
+				set_government_rank = 5
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_idea_group = default_ideas
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { 
+					NOT = { government = monarchy }
+					is_revolutionary = no
+				}
+				change_government = monarchy
+			}
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = portuguese_monarchy_reform
+			}
+			hidden_effect = {
+				portugal_region = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = POR
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_portugal_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

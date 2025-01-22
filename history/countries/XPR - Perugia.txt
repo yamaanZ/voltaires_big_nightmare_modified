@@ -1,0 +1,275 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = umbrian
+capital = 2607
+add_army_professionalism = 0.05
+set_estate_privilege = estate_church_papal_emissary
+
+#Counts Chiusi Orvietoque
+1038.1.1 = {
+	monarch = {
+		name = "Winildo I"
+		dynasty = "Farolfing"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1055.1.1 = {
+	monarch = {
+		name = "Pietro I"
+		dynasty = "Farolfing"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1072.1.1 = {
+	monarch = {
+		name = "Bernardo I"
+		dynasty = "Farolfing"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+1084.1.1 = {
+	monarch = {
+		name = "Ildebrando II"
+		dynasty = "Farolfing"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+1118.1.1 = {
+	monarch = {
+		name = "Pepo III"
+		dynasty = "Farolfing"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+1137.1.1 = {
+	monarch = {
+		name = "Gentile I"
+		dynasty = "Farolfing"
+		adm = 0
+		dip = 1
+		mil = 1
+	}
+}
+
+#Republic
+1162.9.7 = {
+	government = republic
+	add_government_reform = italian_monarchy
+	monarch = {
+		name = "Ludovico Oddo"
+		dynasty = "Baglioni"
+		adm = 3
+		dip = 6
+		mil = 3
+	}
+}
+1185.1.1 = {
+	monarch = {
+		name = "Guido"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1225.1.1 = {
+	monarch = {
+		name = "Baglione"
+		dynasty = "Baglioni"
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+1265.1.1 = {
+	monarch = {
+		name = "Giovanni"
+		dynasty = "Baglioni"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+1295.1.1 = {
+	monarch = {
+		name = "Gualfreduccio"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+1317.1.1 = {
+	monarch = {
+		name = "Baglione Novello"
+		dynasty = "Baglioni"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+1337.1.1 = {
+	monarch = {
+		name = "Oddo"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1356.1.1 = {
+	monarch = {
+		name = "Pandolfo"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1393.1.1 = {
+	monarch = {
+		name = "Biordo"
+		dynasty = "Michelotti"
+		birth_date = 1352.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1398.3.10 = {
+	monarch = {
+		name = "Braccio"
+		dynasty = "Fortebraccio"
+		birth_date = 1368.7.1
+		adm = 4
+		dip = 3
+		mil = 5
+		leader = {
+			name = "Braccio da Montone"
+			type = general
+			fire = 3
+			shock = 4
+			manuever = 2
+			siege = 0
+		}
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+}
+1416.1.1 = {
+	monarch = {
+		name = "Malatesta"
+		dynasty = "Baglioni"
+		birth_date = 1390.1.1
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1437.1.1 = {
+	government = monarchy
+	add_government_reform = autocracy_reform
+	monarch = {
+		name = "Braccio I"
+		dynasty = "Baglioni"
+		birth_date = 1419.1.1
+		adm = 2
+		dip = 4
+		mil = 4
+	}
+}
+1479.12.8 = {
+	monarch = {
+		name = "Guido I"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Giampaolo"
+		monarch_name = "Giampaolo I"
+		dynasty = "Baglioni"
+		birth_date = 1470.1.1
+		death_date = 1520.6.11
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+1500.1.1 = {
+	monarch = {
+		name = "Giampaolo I"
+		dynasty = "Baglioni"
+		birth_date = 1470.1.1
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+1520.6.11 = {
+	monarch = {
+		name = "Gentile I"
+		dynasty = "Baglioni"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1527.1.1 = {
+	monarch = {
+		name = "Malatesta I"
+		dynasty = "Baglioni"
+		birth_date = 1491.1.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	heir = {
+		name = "Rodolfo"
+		monarch_name = "Rodolfo I"
+		dynasty = "Baglioni"
+		birth_date = 1518.7.1
+		death_date = 1554.3.24
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+1531.12.24 = {
+	monarch = {
+		name = "Rodolfo I"
+		dynasty = "Baglioni"
+		birth_date = 1518.7.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+#1540 done
+1798.2.4 = {
+	government = republic
+	add_government_reform = oligarchy_reform
+	monarch = {
+		name = "Repubblica Tiberina"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}

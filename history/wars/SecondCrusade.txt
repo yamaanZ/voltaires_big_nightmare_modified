@@ -1,0 +1,60 @@
+name = "The Second Crusade"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 3660
+}
+
+1147.5.1 = {
+	add_attacker = EDE
+	add_attacker = KOJ
+	add_attacker = TPI
+	add_attacker = ATC
+	add_attacker = SAO
+	add_attacker = CLC
+	add_attacker = LBR
+	add_attacker = FRA
+	add_attacker = SWA
+	add_defender = MSL
+	add_defender = RUM
+	add_defender = APP
+	add_defender = DSC
+	add_defender = BBK
+}
+
+1147.10.25 = {
+	battle = { 
+		name = "Dorylaeum" 
+		location = 57
+		attacker = { 
+			commander = "Mesud"
+			infantry = 5000
+			losses = 1
+			country = RUM
+		} 
+		defender = { 
+			commander = "Konrad von Hohenstaufen"
+			infantry = 20000
+			losses = 50
+			country = SWA
+		} 
+		result = yes
+	}
+}
+
+1148.12.1 = {
+	rem_attacker = EDE
+	rem_attacker = KOJ
+	rem_attacker = TPI
+	rem_attacker = ATC
+	rem_attacker = SAO
+	rem_attacker = CLC
+	rem_attacker = LBR
+	rem_attacker = FRA
+	rem_attacker = SWA
+	rem_defender = MSL
+	rem_defender = RUM
+	rem_defender = APP
+	rem_defender = DSC
+	rem_defender = BBK
+}

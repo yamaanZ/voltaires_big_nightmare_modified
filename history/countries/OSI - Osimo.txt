@@ -1,0 +1,28 @@
+government = republic
+add_government_reform = italian_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = umbrian
+religion = catholic
+capital = 2444
+add_army_professionalism = 0.05
+
+1054.1.1 = {
+	monarch = {
+		name = "Repubblica"
+		regent = yes
+		dip = 2
+		mil = 2
+		adm = 2
+	}
+}
+1486.4.1 = {
+	monarch = {
+		name = "Boccolino"
+		dynasty = "di Guzzone"
+		birth_date = 1450.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}

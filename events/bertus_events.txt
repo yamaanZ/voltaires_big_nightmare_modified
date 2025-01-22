@@ -1,0 +1,922 @@
+namespace = bertus_events
+
+province_event = {   #add 1 RANDOM dev
+    id = bertus_events.0004
+    title = bertus_events.1.title
+    desc = bertus_events.1.desc
+    picture = MERCHANTS_TALKING_eventPicture
+
+    is_triggered_only = yes
+    hidden = yes
+    
+    option = {
+        name = bertus_events.1.a
+        add_base_tax = 1
+		ai_chance = { factor = 100 }
+    }
+    option = {
+        name = bertus_events.1.b
+        add_base_production = 1
+		ai_chance = { factor = 100 }
+    }
+    option = {
+        name = bertus_events.1.c
+        add_base_manpower = 1
+		ai_chance = { factor = 100 }
+    }
+}
+country_event = {   #military investment
+    id = bertus_events.0005
+    title = bertus_events.3.title
+    desc = bertus_events.3.desc
+    picture = MERCHANTS_TALKING_eventPicture
+
+    is_triggered_only = yes
+    
+    trigger = {}
+
+    #option = {
+    #    name = bertus_events.3.z
+	#	highlight = yes
+    #}
+    immediate = {
+    }
+    option = {
+        name = bertus_events.3.a
+        trigger = {
+			NOT = {has_country_flag = military_investment_infantry_power_10_flag}
+        }
+        increase_military_investment = {
+            type = infantry_power
+        }
+    }
+    option = {
+        name = bertus_events.3.b
+        trigger = {
+			NOT = {has_country_flag = military_investment_cavalry_power_10_flag}
+        }
+        increase_military_investment = {
+            type = cavalry_power
+        }
+    }
+    option = {
+        name = bertus_events.3.c
+        trigger = {
+			NOT = {has_country_flag = military_investment_artillery_power_10_flag}
+        }
+        increase_military_investment = {
+            type = artillery_power
+        }
+    }
+    option = {
+        name = bertus_events.3.d
+        trigger = {
+			NOT = {has_country_flag = military_investment_discipline_10_flag}
+        }
+        increase_military_investment = {
+            type = discipline
+        }
+    }
+    option = {
+        name = bertus_events.3.e
+        trigger = {
+			NOT = {has_country_flag = military_investment_morale_10_flag}
+        }
+        increase_military_investment = {
+            type = morale
+        }
+    }
+    option = {
+        name = bertus_events.3.f
+        trigger = {
+			NOT = {has_country_flag = military_investment_shock_reduction_10_flag}
+        }
+        increase_military_investment = {
+            type = shock_reduction
+        }
+    }
+}
+country_event = {
+    id = bertus_events.0006
+    title = echo.4.title
+    desc = echo.4.desc
+    picture = MERCHANTS_TALKING_eventPicture
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_owned_province = {
+            limit = {
+                area_for_scope_province = {
+                    type = all
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                }
+                NOT = {
+                    province_has_center_of_trade_of_level = 1
+                }
+                is_state = yes
+                development = 30
+                OR = {
+                    has_building = marketplace
+                    has_building = trade_depot
+                    has_building = stock_exchange
+                }
+            }
+            set_province_flag = my_center_of_trade_province_1_flag
+            save_event_target_as = my_center_of_trade_province_1
+        }
+        random_owned_province = {
+            limit = {
+                area_for_scope_province = {
+                    type = all
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                }
+                NOT = { has_province_flag = my_center_of_trade_province_1_flag }
+                NOT = { province_has_center_of_trade_of_level = 1 }
+                is_state = yes
+                development = 30
+                OR = {
+                    has_building = marketplace
+                    has_building = trade_depot
+                    has_building = stock_exchange
+                }
+            }
+            set_province_flag = my_center_of_trade_province_2_flag
+            save_event_target_as = my_center_of_trade_province_2
+        }
+        random_owned_province = {
+            limit = {
+                area_for_scope_province = {
+                    type = all
+                    NOT = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                }
+                NOT = { has_province_flag = my_center_of_trade_province_1_flag }
+                NOT = { has_province_flag = my_center_of_trade_province_2_flag }
+                NOT = { province_has_center_of_trade_of_level = 1 }
+                is_state = yes
+                development = 30
+                OR = {
+                    has_building = marketplace
+                    has_building = trade_depot
+                    has_building = stock_exchange
+                }
+            }
+            save_event_target_as = my_center_of_trade_province_3
+        }
+    }
+    option = {
+        name = echo.4.a
+        goto = my_center_of_trade_province_1
+        event_target:my_center_of_trade_province_1 = {
+            center_of_trade = 1
+        }
+    }
+    option = {
+        name = echo.4.a
+        trigger = { has_saved_event_target = my_center_of_trade_province_2 }
+        goto = my_center_of_trade_province_2
+        event_target:my_center_of_trade_province_2 = {
+            center_of_trade = 1
+        }
+    }
+    option = {
+        name = echo.4.a
+        trigger = { has_saved_event_target = my_center_of_trade_province_3 }
+        goto = my_center_of_trade_province_3
+        event_target:my_center_of_trade_province_3 = {
+            center_of_trade = 1
+        }
+    }
+    after = {
+        every_owned_province = {
+            clr_province_flag = my_center_of_trade_province_1_flag
+            clr_province_flag = my_center_of_trade_province_2_flag
+        }
+    }
+}
+country_event = {	#Show resourcess
+	id = bertus_events.0001
+	title = bertus_events.0001.t
+	desc = bertus_events.0001.desc
+	picture = DIPLOMACY_eventPicture
+			
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		set_variable = {which = current_treasury value = 0}
+		export_to_variable = {which = current_treasury value = treasury}
+		set_variable = {which = current_income value = 0}
+		export_to_variable = {which = current_income value = monthly_income}
+		set_variable = {which = current_balance value = 0}
+		export_to_variable = {which = current_balance value = trigger_value:current_income_balance}
+		set_variable = {which = current_loans value = 0}
+		export_to_variable = {which = current_loans value = trigger_value:num_of_loans}
+		set_variable = {which = current_troops value = 0}
+		export_to_variable = {which = current_troops value = army_size}
+		set_variable = {which = current_forcelimit value = 0}
+		export_to_variable = {which = current_forcelimit value = land_forcelimit}
+		set_variable = {which = current_mercs value = 0}
+		export_to_variable = {which = current_mercs value = trigger_value:num_of_mercenaries}
+		set_variable = {which = current_manpower value = 0}
+		set_variable = {which = max_manpower value = 0}
+		export_to_variable = {which = current_manpower value = manpower}
+		export_to_variable = {which = max_manpower value = max_manpower}
+		set_base_morale = yes
+		set_infantry_power = yes
+		set_cavalry_power = yes
+		set_artillery_power = yes
+		set_fire_shock_modifiers = yes		
+		set_variable = {which = current_morale_damage value = 0}
+		export_to_variable = {which = current_morale_damage value = modifier:morale_damage}
+		multiply_variable = {which = current_morale_damage value = 100}
+		set_variable = {which = current_morale_damage_received value = 0}
+		export_to_variable = {which = current_morale_damage_received value = modifier:morale_damage_received}
+		multiply_variable = {which = current_morale_damage_received value = 100}
+		set_variable = {which = current_infantry value = 0}
+		export_to_variable = {which = current_infantry value = trigger_value:num_of_infantry}
+		set_variable = {which = current_cavalry value = 0}
+		export_to_variable = {which = current_cavalry value = trigger_value:num_of_cavalry}
+		set_variable = {which = current_artillery value = 0}
+		export_to_variable = {which = current_artillery value = trigger_value:num_of_artillery}
+		set_base_discipline = yes
+		set_variable = {which = current_professionalism value = 0}
+		export_to_variable = {which = current_professionalism value = trigger_value:army_professionalism}
+		multiply_variable = {which = current_professionalism value = 100}
+		set_variable = {which = current_tech_cost value = 0}
+		export_to_variable = {which = current_tech_cost value = modifier:technology_cost}
+		multiply_variable = {which = current_tech_cost value = 100}
+		set_variable = {which = current_adm_power value = 0}
+		export_to_variable = {which = current_adm_power value = trigger_value:adm_power}
+		set_variable = {which = current_dip_power value = 0}
+		export_to_variable = {which = current_dip_power value = trigger_value:dip_power}
+		set_variable = {which = current_mil_power value = 0}
+		export_to_variable = {which = current_mil_power value = trigger_value:mil_power}
+	}
+	option = {	#
+		name = bertus_events.0001.a
+		FROM = {country_event = {id = bertus_events.0002}}		
+	}
+}
+country_event = {	#Spell Show resourcess
+	id = bertus_events.0002
+	title = bertus_events.0002.t
+	desc = bertus_events.0002.desc
+	picture = DIPLOMACY_eventPicture
+			
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_spy_network_from = { who = FROM value = 1 } }
+			custom_tooltip = "Is spying on us: YES"
+		}
+		else = {custom_tooltip = "Is spying on us: NO"}
+		custom_tooltip = show_enemy_treasury_tt
+		custom_tooltip = show_enemy_current_troops_tt
+		custom_tooltip = show_enemy_current_manpower_tt
+		custom_tooltip = show_enemy_current_damage_tt
+		custom_tooltip = show_enemy_current_damage_reduction_tt
+		custom_tooltip = show_enemy_current_infantry_tt
+		custom_tooltip = show_enemy_current_cavalry_tt
+		custom_tooltip = show_enemy_current_artillery_tt
+		custom_tooltip = show_enemy_current_discipline_tt
+		custom_tooltip = show_enemy_current_professionalism_tt
+		custom_tooltip = show_enemy_general_stats_tt
+	}
+	option = {	#
+		name = bertus_events.0002.a
+	}
+}
+country_event = {
+    id = bertus_events.0003
+    title = bertus_events.0003.title
+    desc = bertus_events.0003.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+    option = {
+        name = bertus_events.0003.a #
+    }
+}
+country_event = {   #GM menu boolean
+    id = bertus_events.1000
+    title = bertus_events.1000.title
+    desc = bertus_events.1000.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+    hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+    }
+    option = {  #
+        name = bertus_events.1000.a #
+        FROM = {
+            country_event = {
+                id = bertus_events.1001   #GM menu
+            }
+        }
+    }
+}
+country_event = {   #GM menu
+    id = bertus_events.1001
+    title = bertus_events.1001.title
+    desc = bertus_events.1001.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+    option = {  #show country
+        name = bertus_events.1001.a #
+        FROM = {
+            remove_fow = 120
+        }
+    }
+    option = {  #ruler boost
+        name = bertus_events.1010.title
+        tooltip = {
+           FROM = {
+                change_adm = 1
+                change_dip = 1
+                change_mil = 1
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1010 }
+            }
+        }
+    }
+    option = {  #legitimacy boost
+        name = bertus_events.1020.title
+        tooltip = {
+           FROM = {
+                add_legitimacy = 10
+                add_devotion = 10
+                add_republican_tradition = 5
+                add_horde_unity = 10
+                add_meritocracy = 10
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1020 }
+            }
+        }
+    }
+    option = {  #send general
+        name = bertus_events.1030.title
+        tooltip = {
+           FROM = {
+                random_list = {
+                    33 = {
+                        create_general = {
+                            tradition = 100
+                            add_shock = 2 
+                        }
+                        custom_tooltip = extra_shock_tt
+                    }
+                    33 = {
+                        create_general = {
+                            tradition = 100
+                            add_fire = 2
+                        }
+                        custom_tooltip = extra_fire_tt
+                    }
+                    33 = {
+                        create_general = {
+                            tradition = 100
+                            add_siege = 2
+                        }
+                        custom_tooltip = extra_siege_tt
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1030 }
+            }
+        }
+    }
+    option = {  #development
+        name = bertus_events.1040.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = development }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1040 }
+            }
+        }
+    }
+    option = {  #economy
+        name = bertus_events.1050.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = economy }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1050 }
+            }
+        }
+    }
+    option = {  #trade
+        name = bertus_events.1060.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = trade }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1060 }
+            }
+        }
+    }
+    option = {  #administration
+        name = bertus_events.1070.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = administration }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1070 }
+            }
+        }
+    }
+    option = {  #powers
+        name = bertus_events.1080.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = powers }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1080 }
+            }
+        }
+    }
+    option = {  #absolutism
+        name = bertus_events.1090.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = absolutism }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1090 }
+            }
+        }
+    }
+    option = {  #estates
+        name = bertus_events.1100.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = estates }
+                change_estate_land_share = {
+                    estate = all
+                    share = -5
+                }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1100 }
+            }
+        }
+    }
+    option = {  #religion
+        name = bertus_events.1110.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = religion }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1110 }
+            }
+        }
+    }
+    option = {  #manpower
+        name = bertus_events.1120.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = manpower }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1120 }
+            }
+        }
+    }
+    option = {  #forcelimit
+        name = bertus_events.1130.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = forcelimit }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1130 }
+            }
+        }
+    }
+    option = {  #morale
+        name = bertus_events.1140.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = morale }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1140 }
+            }
+        }
+    }
+    option = {  #discipline
+        name = bertus_events.1150.title
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = discipline }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1150 }
+            }
+        }
+    }
+    option = {  #economic malus
+        name = bertus_events.1160.title #
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = economic_malus }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1160 }
+            }
+        }
+    }
+    option = {  #administration malus
+        name = bertus_events.1170.title #
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = administration_malus }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1170 }
+            }
+        }
+    }
+    option = {  #military malus
+        name = bertus_events.1180.title #
+        tooltip = {
+           FROM = {
+                get_boosted_bonus = { modifier = military_malus }
+            }
+        }
+        hidden_effect = {
+           FROM = {
+                country_event = { id = bertus_events.1180 }
+            }
+        }
+    }
+    after = {
+    }
+}
+
+country_event = {   #ruler Boost notification
+    id = bertus_events.1010
+    title = bertus_events.1010.title
+    desc = bertus_events.1010.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+    option = {  #
+        name = bertus_events.1010.a #
+        change_adm = 1
+        change_dip = 1
+        change_mil = 1
+    }
+}
+country_event = {   #legitimacy boost notification
+    id = bertus_events.1020
+    title = bertus_events.1020.title
+    desc = bertus_events.1020.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+    option = {  #Yay
+        name = bertus_events.1020.a #
+        add_legitimacy = 10
+        add_devotion = 10
+        add_republican_tradition = 5
+        add_horde_unity = 10
+        add_meritocracy = 10
+    }
+}
+
+country_event = {   #Free Great General notification
+    id = bertus_events.1030
+    title = bertus_events.1030.title
+    desc = bertus_events.1030.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+    hidden = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1030.a #
+        create_general = { tradition = 100 add_shock = 2 }
+    }
+    option = {  #
+        name = bertus_events.1030.b #
+        create_general = { tradition = 100 add_fire = 2 }
+    }
+    option = {  #
+        name = bertus_events.1030.c #
+        create_general = { tradition = 100 add_siege = 2 }
+    }
+    after = {
+        country_event = {
+            id = bertus_events.1003   #Free Great General
+        }
+    }
+}
+country_event = {   #Free Great General notification
+    id = bertus_events.1003
+    title = bertus_events.1003.title
+    desc = bertus_events.1003.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1003.a #
+    }
+}
+country_event = {   #Free Great General
+    id = bertus_events.1031
+    title = bertus_events.1031.title
+    desc = bertus_events.1031.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+    option = {  #
+        name = bertus_events.1031.a #
+    }
+}
+country_event = {   #Boost development notification
+    id = bertus_events.1040
+    title = bertus_events.1040.title
+    desc = bertus_events.1040.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1040.a #
+        get_boosted_bonus = { modifier = development }
+    }
+}
+country_event = {   #Boost economy notification
+    id = bertus_events.1050
+    title = bertus_events.1050.title
+    desc = bertus_events.1050.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1050.a #
+        get_boosted_bonus = { modifier = economy }
+    }
+}
+country_event = {   #Boost trade notification
+    id = bertus_events.1060
+    title = bertus_events.1060.title
+    desc = bertus_events.1060.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1060.a #
+        get_boosted_bonus = { modifier = trade }
+    }
+}
+country_event = {   #Boost administration notification
+    id = bertus_events.1070
+    title = bertus_events.1070.title
+    desc = bertus_events.1070.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1070.a #
+        get_boosted_bonus = { modifier = administration }
+    }
+}
+country_event = {   #Boost powers notification
+    id = bertus_events.1080
+    title = bertus_events.1080.title
+    desc = bertus_events.1080.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1080.a #
+        get_boosted_bonus = { modifier = powers }
+    }
+}
+country_event = {   #Boost absolutism notification
+    id = bertus_events.1090
+    title = bertus_events.1090.title
+    desc = bertus_events.1090.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1090.a #
+        get_boosted_bonus = { modifier = absolutism }
+    }
+}
+country_event = {   #Boost estate notification
+    id = bertus_events.1100
+    title = bertus_events.1100.title
+    desc = bertus_events.1100.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1100.a #
+        change_estate_land_share = {
+            estate = all
+            share = -5
+        }
+        get_boosted_bonus = { modifier = estate }
+    }
+}
+country_event = {   #Boost religion notification
+    id = bertus_events.1110
+    title = bertus_events.1110.title
+    desc = bertus_events.1110.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1110.a #
+        get_boosted_bonus = { modifier = religion }
+    }
+}
+country_event = {   #Boost manpower notification
+    id = bertus_events.1120
+    title = bertus_events.1120.title
+    desc = bertus_events.1120.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1120.a #
+        get_boosted_bonus = { modifier = manpower }
+    }
+}
+country_event = {   #Boost forcelimit notification
+    id = bertus_events.1130
+    title = bertus_events.1130.title
+    desc = bertus_events.1130.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1130.a #
+        get_boosted_bonus = { modifier = forcelimit }
+    }
+}
+country_event = {   #Boost morale notification
+    id = bertus_events.1140
+    title = bertus_events.1140.title
+    desc = bertus_events.1140.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1140.a #
+        get_boosted_bonus = { modifier = morale }
+    }
+}
+country_event = {   #Boost morale notification
+    id = bertus_events.1150
+    title = bertus_events.1150.title
+    desc = bertus_events.1150.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1150.a #
+        get_boosted_bonus = { modifier = discipline }
+    }
+}
+country_event = {   #Boost economic malus notification
+    id = bertus_events.1160
+    title = bertus_events.1160.title
+    desc = bertus_events.1160.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1160.a #
+        get_boosted_bonus = { modifier = economic_malus }
+    }
+}
+country_event = {   #Boost economic malus notification
+    id = bertus_events.1170
+    title = bertus_events.1170.title
+    desc = bertus_events.1170.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1170.a #
+        get_boosted_bonus = { modifier = administration_malus }
+    }
+}
+country_event = {   #Boost morale notification
+    id = bertus_events.1180
+    title = bertus_events.1180.title
+    desc = bertus_events.1180.desc
+    picture = DHIMMI_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {}
+    option = {  #
+        name = bertus_events.1180.a #
+        get_boosted_bonus = { modifier = military_malus }
+    }
+}

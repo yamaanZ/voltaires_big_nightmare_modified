@@ -1,0 +1,70 @@
+owner = NCH
+controller = NCH
+culture = arpitan
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 1
+trade_goods = livestock
+base_manpower = 1
+capital = "Grandson"
+is_city = yes	
+add_core = NCH
+
+1397.1.1 = {
+	owner = SAV
+	controller = SAV
+	add_core = SAV
+	add_core = VDX
+	remove_core = NCH
+}
+1420.1.1 = {
+	owner = ORA
+	controller = ORA
+	add_core = ORA
+	remove_core = SAV
+	remove_core = VDX
+}
+1444.11.12 = {	#BERTUS MOD
+	set_base_tax = 7
+	set_base_production = 7
+	set_base_manpower = 7
+	fort_15th = yes
+	change_trade_goods = glass
+	add_permanent_province_modifier = {
+		name = great_artisans
+		duration = -1
+	}
+	add_province_modifier = {
+		name = strong_city
+		duration = -1
+	}
+}
+1476.3.2 = { 
+	owner = BRN
+	controller = BRN
+	add_core = BRN
+	add_core = VDX
+	remove_core = ORA
+}
+1513.7.3 = { unrest = 7 }
+1515.1.1 = { unrest = 0 }
+1554.1.1 = { religion = reformed }
+1648.10.24 = { 
+	hre = no
+	owner = SWI
+	controller = SWI
+	add_core = SWI
+	remove_core = BRN
+}
+1653.1.1 = { unrest = 5 }
+1654.1.1 = { unrest = 0 }
+1656.1.1 = { unrest = 7 }
+1657.1.1 = { unrest = 2 }
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

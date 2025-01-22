@@ -1,0 +1,773 @@
+###################
+# Generic Objects #
+###################
+type={
+	type="windmill"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2683.000 0.100 1702.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2659.000 0.100 1642.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2559.000 0.100 1631.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2496.000 0.100 1594.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2764.000 0.100 1745.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+}
+type={
+	type="crocodile"
+	use_animation=yes
+	scale=0.250000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4392.000 0.200 287.000 
+		}
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4444.000 0.200 268.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4409.000 0.200 166.000 
+		}
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4404.000 0.200 97.000 
+		}
+		rotation={
+			0.000 -35.000 0.000 
+		}
+	}
+}
+type={
+	type="camel"
+	use_animation=yes
+	scale=0.250000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4942.000 0.100 1517.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5403.000 0.100 335.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5575.000 0.100 56.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2636.000 0.100 356.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+}
+
+###########
+# Wonders #
+###########
+type={
+	type="pyramids"
+	use_animation=no
+	scale=0.600000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4433.800 0.100 201.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi_cologne_cathedral_entity"
+	use_animation=no
+	scale=0.730000
+	time_duration=300.000000
+	object={
+		name="cologne"
+		hidden_on_start=no
+		position={
+			2796.000 0.350 1618.000 
+		}
+		rotation={
+			0.000 -90.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi_kremlin_entity"
+	use_animation=no
+	scale=0.520000
+	time_duration=300.000000
+	object={
+		name="kremlin"
+		hidden_on_start=no
+		position={
+			4868.500 -0.150 1942.900 
+		}
+		rotation={
+			0.000 5.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi_notre_dame_cathedral_entity"
+	use_animation=no
+	scale=0.580000
+	time_duration=300.000000
+	object={
+		name="notre_dame"
+		hidden_on_start=no
+		position={
+			2478.000 0.200 1485.000 
+		}
+		rotation={
+			0.000 20.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi_stpeters_cathedral_entity"
+	use_animation=no
+	scale=0.500000
+	time_duration=300.000000
+	object={
+		name="stpeters"
+		hidden_on_start=no
+		position={
+			3165.000 0.260 1012.000 
+		}
+		rotation={
+			0.000 60.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi_tower_of_london_entity"
+	use_animation=no
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="tower_of_london"
+		hidden_on_start=no
+		position={
+			2321.000 0.200 1658.000 
+		}
+		rotation={
+			0.000 13.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi2_hagia_sophia_entity"
+	use_animation=no
+	scale=0.260000
+	time_duration=300.000000
+	object={
+		name="hagia_sophia"
+		hidden_on_start=no
+		position={
+			4278.000 0.150 949.000 
+		}
+		rotation={
+			0.000 -30.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi2_hagia_sophia_minarets_entity"
+	use_animation=no
+	scale=0.000000
+	time_duration=300.000000
+	object={
+		name="hagia_sophia"
+		hidden_on_start=no
+		position={
+			4278.000 0.150 949.000 
+		}
+		rotation={
+			0.000 -30.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi2_parthenon_entity"
+	use_animation=no
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="parthenon"
+		hidden_on_start=no
+		position={
+			3932.000 0.000 739.000 
+		}
+		rotation={
+			0.000 55.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi2_petra_entity"
+	use_animation=no
+	scale=0.150000
+	time_duration=300.000000
+	object={
+		name="petra"
+		hidden_on_start=no
+		position={
+			4727.000 0.000 226.000 
+		}
+		rotation={
+			0.000 -30.000 0.000 
+		}
+	}
+}
+type={
+	type="nammi2_stonehenge_entity"
+	use_animation=no
+	scale=0.180000
+	time_duration=300.000000
+	object={
+		name="stonehenge"
+		hidden_on_start=no
+		position={
+			2204.000 0.150 1640.000 
+		}
+		rotation={
+			0.000 -0.800 0.000 
+		}
+	}
+}
+
+##########
+# Canals #
+##########
+type={
+	type="kiel_canal"
+	use_animation=no
+	scale=0.100000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="kiel_canal"
+		hidden_on_start=yes
+		position={
+			0.100 0.100 0.100 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="suez_canal"
+	use_animation=no
+	scale=0.100000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="suez_canal"
+		hidden_on_start=yes
+		position={
+			0.100 0.100 0.100 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="panama_canal"
+	use_animation=no
+	scale=0.100000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="panama_canal"
+		hidden_on_start=yes
+		position={
+			0.100 0.100 0.100 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+
+##########
+# Frames #
+##########
+type={
+	type="frame_top_left_entity"
+	use_animation=no
+	always_visible=yes
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			0.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1024.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			512.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			4096.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			3584.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			4608.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="frame_top_right_entity"
+	use_animation=no
+	always_visible=yes
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			2048.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			2560.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1536.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			3072.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			5120.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			5632.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			6144.000 18.000 2304.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}
+type={
+	type="frame_bottom_left_entity"
+	use_animation=no
+	always_visible=yes
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			-1.000 17.000 0.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1024.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			512.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			0.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			-1.000 17.000 512.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1098.000 17.000 512.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			4096.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			3584.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			4608.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			-1.000 17.000 1024.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1098.000 17.000 1024.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			-1.000 17.000 1536.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1098.000 17.000 1536.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			-1.000 17.000 1792.000 
+		}
+		rotation={
+			0.000 90.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1098.000 17.000 2304.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1098.000 17.000 2048.000 
+		}
+		rotation={
+			0.000 270.000 0.000 
+		}
+	}
+}
+type={
+	type="frame_bottom_right_entity"
+	use_animation=no
+	always_visible=yes
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			2048.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			2560.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			1536.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			3072.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			5120.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			5632.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+	object={
+		name="frame_top_left_entity"
+		hidden_on_start=no
+		position={
+			6144.000 18.000 1.000 
+		}
+		rotation={
+			0.000 0.000 0.000 
+		}
+	}
+}

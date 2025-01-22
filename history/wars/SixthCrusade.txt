@@ -1,0 +1,28 @@
+name = "The Sixth Crusade"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 4974
+}
+
+1228.4.25 = {
+	add_attacker = KOJ
+	add_attacker = JFF
+	add_attacker = RML
+	add_attacker = BLC
+	add_attacker = ADL
+	add_attacker = CAE
+	add_attacker = ARF
+	add_defender = MAM
+}
+
+1229.2.1 = {
+	rem_attacker = KOJ
+	rem_attacker = JFF
+	rem_attacker = RML
+	rem_attacker = BLC
+	rem_attacker = ADL
+	rem_attacker = CAE
+	rem_attacker = ARF
+	rem_defender = MAM
+}

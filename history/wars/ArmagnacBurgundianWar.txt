@@ -1,0 +1,26 @@
+name = "Armagnac-Burgundian War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = AMG
+}
+
+1407.11.23 = {
+	add_attacker = BUR
+	add_attacker = BRB
+	add_attacker = FLA
+	add_attacker = NEV
+	add_defender = AMG
+	add_defender = ATI
+	add_defender = ORL
+}
+
+1412.7.15 = {
+	rem_attacker = BUR
+	rem_attacker = BRB
+	rem_attacker = FLA
+	rem_attacker = NEV
+	rem_defender = AMG
+	rem_defender = ATI
+	rem_defender = ORL
+}

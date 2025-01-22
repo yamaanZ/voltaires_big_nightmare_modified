@@ -1,0 +1,5 @@
+
+
+central_germany_region= {
+	cede_province = ROOT
+}

@@ -1,0 +1,106 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 3
+technology_group = western
+primary_culture = gascon
+religion = catholic
+capital = 2324
+
+#Contested Dukes
+1052.5.1 = {
+	monarch = {
+		name = "Guy Geoffroi"
+		dynasty = "Ramnulfing"
+		birth_date = 1025.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+1058.10.1 = {
+	monarch = {
+		name = "Bernard II"
+		dynasty = "L�pez"
+		birth_date = 1005.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#1062.1.1 loses
+
+#Duke of Gascony
+1249.1.1 = {
+	monarch = {
+		name = "�douard I"
+		dynasty = "Plantagenet"
+		birth_date = 1239.6.17
+		adm = 4
+		dip = 2
+		mil = 5
+	}
+	queen = {
+		country_of_origin = CAS
+		name = "Leonor"
+		dynasty = "de Ivrea"
+		birth_date = 1241.1.1
+		death_date = 1290.11.28
+		culture = castillian
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1266.7.13 = {
+	heir = {
+		name = "Jean"
+		monarch_name = "Jean I"
+		dynasty = "Plantagenet"
+		birth_date = 1266.7.13
+		death_date = 1271.8.3
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#to ENG 1272.11.20
+
+#Lieutenant then Prince
+1355.1.1 = {
+	monarch = {
+		name = "�douard II"
+		dynasty = "Plantagenet"
+		birth_date = 1330.6.15
+		adm = 5
+		dip = 5
+		mil = 6
+		leader = {
+			name = "The Black Prince"
+			type = general	
+			fire = 5	
+			shock = 5	
+			manuever = 3	
+			siege = 0
+		}
+	}
+}
+1362.1.1 = { government_rank = 4 }
+#resigns 1372.9.18
+1444.11.12 = {	#bertus mod
+	set_capital = 2324 #bordeu
+	every_owned_province = {
+		add_local_autonomy = 10
+	}
+	monarch = {
+		name = "Edouard III"
+		dynasty = "Plantagenet"
+		birth_date = 1414.1.13
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+	add_ruler_personality = conqueror_personality
+}
+1560.1.1 = { religion = reformed }

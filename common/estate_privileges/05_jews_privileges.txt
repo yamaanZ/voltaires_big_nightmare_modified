@@ -1,0 +1,669 @@
+estate_jews_land_rights = {
+	icon = privilege_grant_autonomy
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+		NOT = {has_estate_privilege = estate_burghers_promote_burgher_bookkeeping }
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = { always = yes }
+		modifier = {
+			inflation_action_cost = -0.5
+			interest = -0.5
+			state_maintenance_modifier = -0.25
+		}
+	}
+	on_granted = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_burghers_promote_burgher_bookkeeping
+		}
+	}
+	on_revoked = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_burghers_promote_burgher_bookkeeping
+		}
+	}
+	on_invalid = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_burghers_promote_burgher_bookkeeping
+		}
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_jews
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_jews_land_rights }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_jews_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_jews_land_rights
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { governing_capacity_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_jews_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_jews_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_holy_orders_land_rights
+		}
+	}
+}
+
+estate_jews_indebted_to_jews = {
+	icon = privilege_give_money
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_jews_indebted_to_jews
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
+		add_mercantilism = -1
+		tooltip = {
+			add_inflation = 0.5
+		}
+		hidden_effect = {
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+		}
+	}
+	penalties = {
+		tolerance_own = -2
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jews_lighter_jewish_taxes = {
+	icon = privilege_lighten_dhimmi_tax_burden
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	is_valid = {
+		any_owned_province = {
+			NOT = { religion_group = root }
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_jews_lighter_jewish_taxes_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { religion_group = root }
+			}
+			add_province_modifier = {
+				name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_jews_lighter_jewish_taxes_revoke_effect_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_jews_lighter_jewish_taxes_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jews_jewish_nobles = {
+	icon = privilege_promoto_dhimmi_nobles
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.10
+	influence = 0.10
+	on_granted = {
+		estate_action = {
+			estate_action = RECRUIT_FORT_MASTER_JEWS
+		}
+	}
+	penalties = {
+		nobles_loyalty_modifier = -0.20
+		nobles_influence_modifier = -0.20
+	}
+	benefits = {
+		free_leader_pool = 1
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_jews_jewish_nobles
+	}
+	cooldown_years = 20
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jews_manpower = {
+	icon = privilege_demand_more_troops
+	land_share = 5
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = -0.05
+	influence = 0.05
+	is_valid = {
+		any_owned_province = {
+			NOT = { religion_group = root }
+		}
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_jews_manpower_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { religion_group = root }
+			}
+			add_province_modifier = {
+				name = estate_dhimmi_manpower_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
+			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_jews_manpower_revoke_effect_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
+			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_jews_manpower_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
+			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jews_tolerance = {
+	icon = privilege_promoto_dhimmi_nobles
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	is_valid = {
+		any_owned_province = {
+			NOT = { religion = root }
+		}
+		NOT = { has_estate_privilege = estate_burghers_enforced_interfaith_dialogue }
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_church_enforced_one_faith }
+	}
+	penalties = {
+		church_loyalty_modifier = -0.05
+	}
+	benefits = {
+		tolerance_heathen = 2
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			num_of_owned_provinces_with = {
+				NOT = { religion_group = root }
+				is_state_core = root
+				value = 15
+			}
+		}
+		modifier = {
+			factor = 0.5
+			estate_influence = {
+				estate = estate_church
+				influence = 75
+			}
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_jews_contribution_demand = {
+	icon = privilege_ducats
+	loyalty = 0.0
+	influence = 0.10
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	can_select = {
+		estate_loyalty = { estate = estate_jews loyalty = 40 }
+	}
+	on_granted = {
+		estate_action = {
+			estate_action = DEMAND_CONTRIBUTION_JEWS
+		}
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_jews_contribution_demand
+	}
+	cooldown_years = 15
+	ai_will_do = {
+		factor = 0
+	}
+}
+estate_jews_grant_trading_privileges = {
+	icon = privilege_monopoly
+	loyalty = 0.10
+	influence = 0.10
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	can_select = {
+	}
+	on_granted = {
+		estate_action = {
+			estate_action = RECRUIT_MINISTER_JEWS
+		}
+	}
+	penalties = {
+		burghers_loyalty_modifier = -0.20
+		burghers_influence_modifier = -0.20
+	}
+	benefits = {
+		diplomats = 1
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_jews_grant_trading_privileges
+	}
+	cooldown_years = 20
+	ai_will_do = {
+		factor = 0
+	}
+}
+estate_jews_guaranteed_autonomy = {
+	icon = privilege_grant_autonomy
+	max_absolutism = 0	#-5→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.2
+	influence = 0.05
+	is_valid = {
+		any_owned_province = {
+			NOT = { religion = jewish }
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_jews_guaranteed_autonomy_effect_tooltip
+		hidden_effect = {
+			set_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = jewish
+			}
+			add_province_modifier = {
+				name = estate_dhimmi_guaranteed_autonomy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_jews_guaranteed_autonomy_revoke_effect_tooltip
+		hidden_effect = {
+			clr_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_jews_guaranteed_autonomy_revoke_effect_tooltip
+		hidden_effect = {
+			clr_country_flag = dhimmi_tolerates_wrong_religion
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
+	}
+}
+
+estate_jews_grant_liberties = {
+	icon = privilege_tolerance_heathen
+	max_absolutism = 0	#-10→0
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.10
+	loyalty = 0.10
+	is_valid = {
+	}
+	on_granted = {
+		estate_action = {
+			estate_action = RECRUIT_TREASURER_JEWS
+		}
+	}
+	penalties = {
+		church_loyalty_modifier = -0.20
+		church_influence_modifier = -0.20
+	}
+	benefits = {
+		advisor_pool = 1
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	on_cooldown_expires = {
+		remove_estate_privilege = estate_jews_grant_liberties
+	}
+	cooldown_years = 20
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_jews_expulsion = {
+	icon = privilege_tolerance_heathen
+
+	can_select = {
+		NOT = { dominant_religion = jewish }
+		has_any_disaster = no
+		NOT = {
+			estate_influence = {
+				estate = estate_jews
+				influence = 50
+			}
+		}
+		NOT = {
+			has_disaster_progress = {
+				disaster = estate_jews_disaster
+				value = 1
+			}
+		}
+	}
+	on_granted = {
+		add_stability = 3
+		add_years_of_income = 0.5
+		custom_tooltip = estate_jews_expulsion_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = jewish }
+				change_religion = root
+				add_province_modifier = {
+					name = expelled_jews_mod
+					duration = 7300
+				}
+			}
+			every_neighbor_country = {
+				limit = {
+					NOT = { religion = jewish }
+					NOT = { has_country_flag = expelled_jews }
+					any_owned_province = { NOT = { religion = jewish } }
+				}
+				country_event = { id = mod_triggered_events.63 }
+			}
+			set_country_flag = expelled_jews 
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				ruler_has_personality = zealot_personality
+				OR = {
+					is_bankrupt = yes
+					has_spawned_rebels = jewish_rebels
+				}
+			}
+		}
+	}
+}

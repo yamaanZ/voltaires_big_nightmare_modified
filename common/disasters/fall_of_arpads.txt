@@ -1,0 +1,134 @@
+fall_of_arpads = {
+	potential = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = had_fall_of_arpads }
+		NOT = { started_in = 1301.1.14 }
+		tag = HUN
+		always = no
+		is_emperor = no
+		is_emperor_of_china = no
+		num_of_owned_provinces_with = {
+			value = 50
+			superregion = carpathia_superregion
+		}
+	}
+
+
+	can_start = {
+		always = no
+		has_any_disaster = no
+		num_of_cities = 20
+		government = monarchy
+		has_consort_regency = no
+		is_lesser_in_union = no
+		OR = {
+			NOT = { legitimacy = 100 }
+			NOT = { dynasty = "Árpád" }
+		}
+	}
+	
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			NOT = { num_of_cities = 20 }
+			NOT = { government = monarchy }
+			has_consort_regency = yes
+			AND = {
+				legitimacy = 100
+				dynasty = "Árpád"
+			}
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy_equivalent = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy_equivalent = 40 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy_equivalent = 60 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy_equivalent = 80 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { legitimacy_equivalent = 100 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.5
+			has_heir = no
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { adm = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { dip = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { mil = 2 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { dynasty = "Árpád" }
+		}
+	}
+
+	modifier = {
+		global_autonomy = 0.25
+		global_unrest = 5
+		legitimacy = -1
+	}	
+	
+	can_end = {
+ 		custom_trigger_tooltip = {
+			tooltip = disaster_active_for_10_years_tooltip
+			had_country_flag = { flag = had_fall_of_arpads days = 3650 }
+		}
+		stability = 2
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = { num_of_rebel_armies = 1 }
+	}
+	
+	on_start = fall_of_arpads.1
+	on_end = fall_of_arpads.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			150 = fall_of_arpads.2 #The Magnates of x
+			100 = fall_of_arpads.3 #Pretender from Abroad
+			150 = fall_of_arpads.4 #Province demands autonomy
+			100 = fall_of_arpads.5 #The Cuman Question
+			100 = fall_of_arpads.6 #The Assassination of Amadé Aba
+			100 = fall_of_arpads.7 #Treachery in Ung
+			100 = fall_of_arpads.8 #The King's Rival
+			100 = fall_of_arpads.9 #Tyrrany in Transylvania
+			100 = fall_of_arpads.10 #Order of Saint George
+			100 = fall_of_arpads.11 #Unrests in Croatia
+		}
+	}
+}

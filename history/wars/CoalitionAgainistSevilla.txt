@@ -1,0 +1,16 @@
+name = "Berber Coalition War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = SEV
+}
+
+1044.1.1 = {
+	add_attacker = BDJ
+	add_defender = SEV
+}
+
+1051.8.1 = {
+	rem_attacker = BDJ
+	rem_defender = SEV
+}

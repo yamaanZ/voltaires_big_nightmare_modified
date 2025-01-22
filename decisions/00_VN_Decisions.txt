@@ -1,0 +1,2442 @@
+country_decisions = {
+
+	primi_adopt = {
+		major = yes
+		potential = {
+			has_dlc = "Conquest of Paradise"
+			primitives = no
+			technology_group = north_american
+		}
+		allow = {
+			primitives = no
+			technology_group = north_american
+			is_at_war = no
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						primary_culture = east_frisian
+						primary_culture = polabian
+						culture_group = germanic
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
+			if = {
+				limit = {
+					religion_group = muslim
+					NOT = { primary_culture = east_frisian }
+					NOT = { primary_culture = polabian }
+					NOT = { culture_group = germanic }
+				}
+				change_technology_group = muslim
+				change_unit_type = muslim
+			}
+			if = {
+				limit = {
+					NOT = { religion_group = muslim }
+					NOT = { primary_culture = east_frisian }
+					NOT = { primary_culture = polabian }
+					NOT = { culture_group = germanic }
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	elevate_canton = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				primary_culture = swiss
+				primary_culture = arpitan
+				primary_culture = romansch
+			}
+			capital_scope = { region = switzerland_region }
+			NOT = { has_global_flag = swi_formed_flag }
+			NOT = { exists = SWI }
+			NOT = { tag = SAV }
+			NOT = { tag = XAP }
+			NOT = { has_reform = canton_government }
+			NOT = { has_reform = steppe_horde }
+			NOT = { has_reform = free_city }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			adm_power = 200
+			stability = 2
+			OR = {
+				full_idea_group = economic_ideas
+				full_idea_group = innovativeness_ideas
+				full_idea_group = administrative_ideas
+				any_ally = {
+					has_reform = canton_government
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { government = republic } }
+				change_government_to_republic = yes
+				add_stability = -1
+			}
+			add_government_reform = canton_government
+			add_adm_power = -200
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	switch_italian = {
+		major = yes
+		potential = {
+			has_reform = italian_monarchy
+		}
+		allow = {
+			is_at_war = no
+			stability = 1
+			adm_tech = 12
+			is_orangists_in_power = yes
+			NOT = { republican_tradition = 40 }
+		}
+		effect = {
+			if = {
+				limit = { primary_culture = tuscan }
+				add_government_reform = signoria
+			}
+			else = {
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { ruler_has_personality = silver_tongue_personality }
+					NOT = { ruler_has_personality = charismatic_negotiator_personality }
+				}
+			}
+		}
+	}
+
+	end_kilkennystatutes = {
+		major = yes
+		potential = {
+			has_country_modifier = kilkennystatutesmod
+		}
+		allow = {
+			OR = {
+				AND = {
+					prestige = 15
+					stability = 1
+					is_subject = no
+				}
+				NOT = { primary_culture = hiberno_norman }
+			}
+		}
+		effect = {
+			remove_country_modifier = "kilkennystatutesmod"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	albanian_kingdom = {
+		potential = {
+			NOT = { exists = DRZ }
+			OR = {
+				primary_culture = langobardic
+				culture_group = latin
+				culture_group = french
+			}
+			arbanon_area = {
+				owned_by = ROOT
+			}
+			government = monarchy
+			NOT = { has_country_flag = formed_albania }
+			normal_or_historical_nations = yes
+			NOT = { capital_scope = { area = arbanon_area } }
+		}
+		provinces_to_highlight = {
+			area = arbanon_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			arbanon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = formed_albania
+			every_owned_province = {
+				limit = {
+					area = arbanon_area
+				}
+				add_core = DRZ
+				remove_core = ROOT
+				cede_province = DRZ
+			}
+			DRZ = {
+				set_government_rank = 5
+				define_ruler = {
+					dynasty = ROOT
+				}
+				add_opinion = { who = ROOT modifier = supported_independence }
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	end_eng_isolation = {
+		major = yes
+		potential = {
+			has_country_modifier = edwardian_isolation
+		}
+		allow = {
+			OR = {
+				adm = 5
+				adm_tech = 4
+			}
+		}
+		effect = {
+			remove_country_modifier = "edwardian_isolation"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	end_frankish_monarchy = {
+		major = yes
+		potential = { has_reform = feudal_france_reform }
+		allow = {
+			OR = {
+				current_age = age_of_absolutism
+				calc_true_if = {
+					desc = howtoendframo.tt
+					all_owned_province = {  
+						OR = {
+							superregion = french_superregion
+							region = lotharingia_region
+						}
+					}
+					amount = 200
+				}
+			}
+		}
+		effect = {
+			change_government = monarchy
+			add_government_reform = absolutist_france_reform
+			custom_tooltip = end_framo.tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = { is_vassal = yes }
+					overlord = { free_vassal = PREV }
+					every_owned_province = {
+    					limit = { NOT = { is_core = ROOT } }
+    					add_core = ROOT
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	assize_of_arms_act = {
+		potential = {
+			NOT = { has_country_modifier = assize_of_arms }
+			primitives = no
+		}
+		allow = {
+			mil_tech = 20
+		}
+		effect = {
+			add_country_modifier = {
+				name = "assize_of_arms"
+				duration = -1
+			}		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	all_graviates_titles = {
+        major = yes
+        potential = {
+            OR = {
+            	tag = REI
+            	tag = SXM
+            	tag = WGR
+            	tag = PAL
+            }
+            NOT = { has_country_modifier = all_graviates_titles_acquired }
+            NOT = { has_global_flag = graves_united }
+            normal_or_historical_nations = yes
+        }
+        allow = {
+            is_at_war = no
+            #Rheingrave
+            OR = {  tag = REI
+                REI = { is_subject_of = ROOT }
+                AND = { NOT = { exists = REI } owns_or_vassal_of = 1104 }
+            }
+            #Wildgrave
+            OR = {  tag = WGR
+                WGR = { is_subject_of = ROOT }
+                AND = { NOT = { exists = WGR } owns_or_vassal_of = 18 }
+            }
+            #Raugrave
+            OR = {  tag = SXM
+                SXM = { is_subject_of = ROOT }
+                AND = { NOT = { exists = SXM } owns_or_vassal_of = 2752 }
+            }
+            #Pfalzgrave
+            OR = {  tag = PAL
+                PAL = { is_subject_of = ROOT }
+                AND = { NOT = { exists = PAL } owns_or_vassal_of = 2732 }
+            }
+        }
+        effect = {
+        	override_country_name = ALLESGRAVIATE
+            add_country_modifier = {
+                name = all_graviates_titles_acquired
+                duration = -1
+            }
+            add_prestige = 25
+            add_legitimacy = 25
+            hidden_effect = {
+            	set_global_flag = graves_united
+                if = {
+                	limit = { tag = WGR }
+                	inherit = PAL
+                	inherit = REI
+                	inherit = SXM 
+                	every_province = { limit = {} remove_core = PAL remove_core = REI remove_core = SXM }
+                }
+                if = {
+                	limit = { tag = PAL }
+                	inherit = WGR
+                	inherit = REI
+                	inherit = SXM
+                	every_province = { limit = {} remove_core = WGR remove_core = REI remove_core = SXM }
+                }
+                if = {
+                	limit = { tag = REI }
+                	inherit = PAL
+                	inherit = WGR
+                	inherit = SXM
+                	every_province = { limit = {} remove_core = PAL remove_core = WGR remove_core = SXM }
+                }
+                if = {
+                	limit = { tag = SXM }
+                	inherit = PAL
+                	inherit = REI
+                	inherit = WGR
+                	every_province = { limit = {} remove_core = PAL remove_core = REI remove_core = WGR }
+                }
+            }
+        }
+        ai_will_do = {
+			factor = 1
+		}
+        ai_importance = 350
+    }
+
+    make_turin_capital = {
+		potential = {
+			tag = SAV
+			normal_or_historical_nations = yes
+			owns = 1009
+			NOT = { capital = 1009 }
+			NOT = { primary_culture = piedmontese }
+			NOT = { has_country_flag = relocated_capital_turin }
+		}
+		allow = {
+			is_core = 1009
+			OR = {
+				adm_tech = 46
+				stability = 3
+			}
+			is_at_war = no
+		}
+		effect = {
+			change_primary_culture = piedmontese
+			hidden_effect = { add_accepted_culture = arpitan }
+			set_capital = 1009
+			1009 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			set_country_flag = relocated_capital_turin
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	revoke_hansa_rights = {
+		potential = {
+			any_owned_province = { has_province_modifier = hanseatic_city }
+		}
+		allow = {
+			dip_tech = 35
+			NOT = { government = republic }
+			OR = {
+				NOT = { has_dlc = "The Cossacks" }
+				NOT = { has_estate = estate_burghers }
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 50
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "The Cossacks"
+					has_estate = estate_burghers
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = -20
+				}
+			}
+			random_owned_province = {
+				limit = { has_province_modifier = hanseatic_city }
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_modifier = hanseatic_city }
+				remove_province_modifier = hanseatic_city
+			}
+			every_country = {
+				limit = {
+					NOT = { num_of_cities = 2 }
+					government = republic
+					capital_scope = { has_province_modifier = hanseatic_city }
+				}
+				add_opinion = { who = ROOT modifier = opinion_declined_independent_state_support }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_year = 1700 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 5 }
+			}
+		}
+	}
+
+	reform_eastern_monarchy = {
+		major = yes
+		potential = {
+			has_reform = eastern_monarchy
+		}
+		allow = {
+			adm_tech = 12
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			change_government = monarchy
+			hidden_effect = {
+				unlock_government_reform = {
+					government_reform = reformed_byzantine_monarchy_reform
+				}
+			}
+			add_government_reform = reformed_byzantine_monarchy_reform
+			add_prestige = 25
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = { culture_group = ROOT }
+						any_core_country = {
+							NOT = { tag = ROOT }
+							NOT = { culture_group = ROOT }
+							exists = yes
+						}
+					}
+					random_core_country = {
+						limit = {
+							NOT = { tag = ROOT }
+							NOT = { culture_group = ROOT }
+							exists = yes
+						}
+						every_core_province = {
+							limit = {
+								owned_by = ROOT
+								NOT = { culture_group = ROOT }
+							}
+							cede_province = PREV
+						}
+					}
+				}
+				while = {
+					limit = {
+						any_owned_province = {
+							NOT = { culture_group = ROOT }
+							any_core_country = {
+								NOT = { tag = ROOT }
+								NOT = { culture_group = ROOT }
+								exists = no
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							NOT = { culture_group = ROOT }
+							any_core_country = {
+								NOT = { tag = ROOT }
+								NOT = { culture_group = ROOT }
+								exists = no
+							}
+						}
+						random_core_country = {
+							limit = {
+								NOT = { tag = ROOT }
+								NOT = { culture_group = ROOT }
+								exists = no
+							}
+							ROOT = { release = PREV }
+							every_owned_province = {
+								limit = {
+									culture_group = ROOT
+									is_core = ROOT
+								}
+								
+								cede_province = ROOT 
+							}
+							add_truce_with = ROOT 
+							change_government = monarchy
+							set_government_rank = 3
+							add_government_reform = feudalism_reform
+							capital_scope = {
+								build_to_forcelimit = {
+									infantry = 0.7
+									cavalry = 0.3
+								}
+							}	
+						}
+					}
+				}
+			}
+			custom_tooltip = reform_em.tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	curtail_templars = {
+		potential = {
+			tag = FRA
+			has_estate = estate_holy_orders
+		}
+		allow = {
+			adm_tech = 20
+			stability = 1
+			NOT = {
+				estate_influence = {
+					estate = estate_holy_orders
+					influence = 51
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = curtail_templars.tt
+			set_country_flag = disables_estate_holy_orders_flag
+			add_years_of_income = 1
+			add_inflation = 4
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	create_brandenburg = {
+		potential = {
+			NOT = { exists = BRA }
+			NOT = { exists = PRU }
+			NOT = { tag = PTH }
+			OR = {
+				culture_group = germanic
+				tag = SOR
+			}
+			OR = {
+				berlin_area = { owned_by = ROOT }
+				potsdam_area = { owned_by = ROOT }
+			}
+			government = monarchy
+			NOT = { has_country_flag = formed_brandenburg }
+			normal_or_historical_nations = yes
+			NOT = { is_year = 1160 }
+			NOT = { 
+				capital_scope = { 
+					OR = {
+						area = berlin_area 
+						area = potsdam_area
+					}	
+				} 
+			}
+			NOT = { any_owned_province = { is_core = BRA } }
+			NOT = { primary_culture = central_margravian }
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 5
+				area = berlin_area
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				area = potsdam_area
+			}
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = formed_brandenburg
+			every_owned_province = {
+				limit = { 
+					OR = {
+						area = berlin_area 
+						area = potsdam_area
+					}
+				}
+				add_core = BRA
+				remove_core = ROOT
+				cede_province = BRA
+			}
+			BRA = {
+				set_government_rank = 2
+				define_ruler = { dynasty = ROOT }
+				add_opinion = { who = ROOT modifier = supported_independence }
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_part_of_hre = yes }
+					BRA = { every_owned_province = { set_in_empire = yes } }
+				}
+			}
+			add_prestige = 15
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_brandenburg = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { exists = BRA }
+			NOT = { exists = PRU }
+			NOT = { tag = PTH }
+			if = {
+				limit = {
+					OR = {
+						tag = SAX
+						was_tag = SAX
+					}
+					NOT = { started_in = 1180.1.1 }
+				}
+				was_player = no
+			}
+			primitives = no
+			was_never_end_game_tag_trigger = yes
+			primary_culture = central_margravian
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 241
+				province_id = 2652
+				province_id = 2640
+				province_id = 843
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			adm_tech = 5
+			owns_core_province = 241 #Brandenburg
+			owns_core_province = 2652
+			owns_core_province = 2640
+			owns_core_province = 843
+		}
+		effect = {
+			change_tag = BRA
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = no
+						any_neighbor_country = { is_part_of_hre = yes }
+					}
+					every_owned_province = { set_in_empire = yes }
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	abandon_avignon = {
+		major = yes
+		potential = {
+			religion = catholique
+			NOT = { tag = AVI }
+			NOT = { has_reform = papacy_reform }
+			NOT = { is_religion_enabled = protestant }
+		}
+		allow = {
+			reverse_has_opinion = { who = PAP value = 0 }
+		}
+		effect = {
+			change_religion = catholic
+			reverse_add_opinion = { who = PAP modifier = accepted_supremacy_of_rome }
+			add_prestige = -15
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_subject = yes
+					war_with = PAP
+					is_rival = PAP
+					is_enemy = PAP
+					religious_unity = 0.9
+					is_papal_controller = yes
+					is_defender_of_faith = yes
+				}	
+			}
+		}
+	}
+
+	revive_iconoclasm = {
+		major = yes
+		potential = {
+			tag = BYZ
+			government = monarchy
+			religion = orthodox
+			NOT = { is_religion_enabled = protestant }
+		}
+		allow = {
+			stability = 1
+			has_regency = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = pentarchyicon.tt
+				num_of_owned_provinces_with = {
+					value = 2
+					OR = {
+						province_id = 2233
+						province_id = 2708
+						province_id = 3053
+						province_id = 5022
+						province_id = 4974
+					}
+				}
+			}
+		}
+		effect = {
+			add_stability = -1
+			change_religion = iconoclast
+			capital_scope = {
+				change_religion = iconoclast
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 1825
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { ruler_has_personality = babbling_buffoon_personality }
+					NOT = { ruler_has_personality = zealot_personality }
+				}
+			}
+		}
+	}
+
+	end_iconoclasm = {
+		major = yes
+		potential = {
+			religion = iconoclast
+			normal_or_historical_nations = yes
+			NOT = { is_religion_enabled = protestant }
+		}
+		allow = {
+			has_regency = yes
+			is_at_war = no
+		}
+		effect = {
+			add_stability = -1
+			change_religion = orthodox
+			capital_scope = { change_religion = orthodox }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	berberize_tribe = {
+		major = yes
+		potential = {
+			primary_culture = bedouin_arabic
+			capital_scope = {
+				continent = africa
+			}
+			always = no
+		}
+		allow = {
+			stability = 1
+			is_at_war = no
+			always = no
+		}
+		effect = {
+			if = {
+				limit = { religion = shiite }
+				change_religion = sunni
+				every_owned_province = {
+					limit = { religion = shiite }
+					change_religion = sunni
+				}
+			}
+			change_primary_culture = berber
+			every_owned_province = {
+				limit = { culture = bedouin_arabic }
+				change_culture = berber
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	revive_kemetism = {
+		major = yes
+		potential = {
+			NOT = { tag = FTM }
+			NOT = { tag = MAM }
+			NOT = { religion = egyptian_religion }
+			capital_scope = { continent = africa }
+			primary_culture = old_egyptian
+			ai = no
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = { ROOT = { tag = EGY } }
+				always = no
+			}
+			else = {
+				OR = {
+					province_id = 5022
+					province_id = 5050
+					province_id = 5033
+					province_id = 5047
+					province_id = 5055
+					province_id = 5054
+					province_id = 5059
+					province_id = 5065
+					province_id = 5069
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			OR = {
+				tag = EGY
+				AND = {
+					owns_core_province = 5022
+					owns_core_province = 5050
+					owns_core_province = 5033
+					owns_core_province = 5047
+					owns_core_province = 5055
+					owns_core_province = 5054
+					owns_core_province = 5059
+					owns_core_province = 5065
+					owns_core_province = 5069
+				}
+			}
+			stability = 0
+			has_regency = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+		}
+		effect = {
+			add_stability = -2
+			change_religion = egyptian_religion
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = kemetic_monarchy_reform
+			}
+			capital_scope = {
+				change_religion = egyptian_religion
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	create_israel = {
+		potential = {
+			NOT = { exists = ISR }
+			NOT = { exists = KOJ }
+			OR = {
+				religion_group = christian
+				religion = jewish
+			}
+			technology_group = western
+			judea_area = { owned_by = ROOT }
+			NOT = { has_country_flag = formed_israel }
+			normal_or_historical_nations = yes
+			is_year = 1600
+			NOT = { capital_scope = { continent = asia } }
+			NOT = { any_owned_province = { is_core = ISR } }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4986
+				province_id = 4974
+				province_id = 4971
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			owns_core_province = 4986 #Gazzah
+			owns_core_province = 4974 #Jerusalem
+			owns_core_province = 4971 #Jaffa
+			4974 = { is_state = yes }
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			add_prestige = 25
+			set_country_flag = formed_israel
+			every_province = {
+				limit = { area = judea_area }
+				add_core = ISR
+			}
+			4974 = { change_culture = hebrew }
+			release = ISR
+			ISR = {
+				set_capital = 4974
+				change_religion = jewish
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+					add_government_reform = feudalism_reform
+				}
+				if = {
+					limit = {
+						NOT = { government_rank = 5 }
+					}
+					set_government_rank = 5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { tag = GBR }
+			}
+		}
+	}
+
+	form_israel = {
+		major = yes
+		potential = {	
+			normal_or_historical_nations = yes
+			NOT = { exists = ISR }
+			NOT = { tag = KOJ }
+			NOT = { tag = MAM }
+			NOT = { tag = FTM }
+			NOT = { tag = EGY }
+			NOT = { tag = SYR }
+			primitives = no
+			was_never_end_game_tag_trigger = yes
+			religion = jewish
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4986
+				province_id = 4974
+				province_id = 4971
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = KOJ }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			owns_core_province = 4986 #Gaza
+			owns_core_province = 4974 #Jerusalem
+			owns_core_province = 4971 #Jaffa
+		}
+		effect = {
+			set_capital = 4974
+			4974 = { change_culture = hebrew }
+			every_owned_province = {
+				limit = { culture = ROOT }
+				change_culture = hebrew
+			}
+			change_primary_culture = hebrew
+			change_tag = ISR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+				add_government_reform = feudal_theocracy
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			judea_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_core = ISR
+			}
+			add_prestige = 10
+			if = {
+				limit = { NOT = { government_rank = 5 } }
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	curtail_estate_maratha = {
+		major = yes
+		potential = {
+			has_country_flag = estate_maratha_triggered
+		}
+		allow = {
+			stability = 1
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }			
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 60
+				}				
+			}
+		}
+		effect = {
+			add_stability = -3
+			add_prestige = -25
+			clr_country_flag = estate_maratha_triggered
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reform_elective_monarchy = {
+		major = yes
+		potential = {
+			has_reform = germanic_monarchy
+		}
+		allow = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			if = {
+				limit = {
+					has_heir = yes
+					heir_has_ruler_dynasty = no
+					is_lesser_in_union = no
+				}
+				remove_heir = {}
+			}
+			add_absolutism = 10
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	claim_irish_high_kingship = {
+		major = yes
+		potential = {
+			NOT = { exists = IRE }
+			NOT = { started_in = 1171.5.1 }
+			NOT = { has_country_modifier = irish_high_king }
+			NOT = { any_country = { has_country_flag = high_king_war_f } }
+			has_reform = tribal_kingdom
+			any_owned_province = { region = ireland_region }
+			OR = {
+        		primary_culture = dalcassian
+				primary_culture = eoganachta
+				primary_culture = laigin
+				primary_culture = erainn
+				primary_culture = ulaidh
+				primary_culture = connachta
+				primary_culture = gallowglass
+        	}
+		}
+		allow = {
+			NOT = { any_country = { has_country_modifier = irish_high_king } }
+			owns_or_vassal_of = 891 #Limerick
+			owns_or_vassal_of = 2737 #Dublin
+			owns_or_vassal_of = 2308 #Waterford
+			has_regency = no
+			is_female = no
+			is_subject = no
+		}
+		effect = {
+			add_country_modifier = {
+            	name = irish_high_king
+            	duration = -1
+        	}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	establish_warmia_diocese = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEU
+				tag = LIV
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { started_in = 1250.8.28 }
+			NOT = { has_global_flag = established_warmia_diocese_flag }
+			has_reform = crusader_order_reform
+			total_development = 100
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4824
+				province_id = 4826
+				province_id = 4827
+				province_id = 4859
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = WRM }
+			is_at_war = no
+			is_excommunicated = no
+			is_subject = no
+			num_of_cities = 20
+			owns_core_province = 4824
+			owns_core_province = 4826
+			owns_core_province = 4827
+			owns_core_province = 4859
+		}
+		effect = {
+			set_global_flag = established_warmia_diocese_flag
+			add_papal_influence = 25
+			add_prestige = 25
+			if = {
+				limit = { religion = catholic }
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_pleased
+				}
+			}
+			if = {
+				limit = { religion = catholique }
+				reverse_add_opinion = {
+					who = AVI
+					modifier = opinion_pleased
+				}
+			}
+			custom_tooltip = new_diocese.tt
+			hidden_effect = {
+				4824 = {
+					add_core = WRM
+					remove_core = ROOT
+				}
+				4826 = {
+					add_core = WRM
+					remove_core = ROOT
+				}
+				4827 = {
+					add_core = WRM
+					remove_core = ROOT
+				}
+				4859 = {
+					add_core = WRM
+					remove_core = ROOT
+				}
+				release = WRM
+				vassalize = WRM
+				WRM = {
+					add_liberty_desire = -50
+					set_government_rank = 4
+					add_government_reform = leading_clergy_reform
+					change_religion = ROOT
+					define_ruler = { }
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = catholic
+				OR = {
+					is_rival = PAP
+					is_enemy = PAP
+				}	
+			}
+			modifier = {
+				factor = 0
+				religion = catholique
+				OR = {
+					is_rival = AVI
+					is_enemy = AVI
+				}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 50 }
+			}
+		}
+	}
+
+	establish_kurland_diocese = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEU
+				tag = LIV
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { started_in = 1263.1.1 }
+			NOT = { has_global_flag = established_kurland_diocese_flag }
+			has_reform = crusader_order_reform
+			total_development = 100
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5798
+				province_id = 5799
+				province_id = 5804
+				province_id = 5806
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = KUR }
+			is_at_war = no
+			is_excommunicated = no
+			is_subject = no
+			num_of_cities = 20
+			owns_core_province = 5798
+			owns_core_province = 5799
+			owns_core_province = 5804
+			owns_core_province = 5806
+		}
+		effect = {
+			set_global_flag = established_kurland_diocese_flag
+			add_papal_influence = 25
+			add_prestige = 25
+			if = {
+				limit = { religion = catholic }
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_pleased
+				}
+			}
+			if = {
+				limit = { religion = catholique }
+				reverse_add_opinion = {
+					who = AVI
+					modifier = opinion_pleased
+				}
+			}
+			custom_tooltip = new_diocese.tt
+			hidden_effect = {
+				5798 = {
+					add_core = KUR
+					remove_core = ROOT
+				}
+				5799 = {
+					add_core = KUR
+					remove_core = ROOT
+				}
+				5804 = {
+					add_core = KUR
+					remove_core = ROOT
+				}
+				5806 = {
+					add_core = KUR
+					remove_core = ROOT
+				}
+				release = KUR
+				vassalize = KUR
+				KUR = {
+					add_liberty_desire = -50
+					set_government_rank = 4
+					add_government_reform = leading_clergy_reform
+					change_religion = ROOT
+					define_ruler = { }
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = catholic
+				OR = {
+					is_rival = PAP
+					is_enemy = PAP
+				}	
+			}
+			modifier = {
+				factor = 0
+				religion = catholique
+				OR = {
+					is_rival = AVI
+					is_enemy = AVI
+				}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 50 }
+			}
+		}
+	}
+
+	establish_riga_diocese = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEU
+				tag = LIV
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { started_in = 1199.1.1 }
+			NOT = { has_global_flag = established_riga_diocese_flag }
+			has_reform = crusader_order_reform
+			total_development = 100
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = jersika_area
+				province_id = 5821
+				province_id = 5822
+				province_id = 5824
+				province_id = 5832
+				province_id = 5836
+				province_id = 5837
+				province_id = 5838
+				province_id = 5839
+				province_id = 5841
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = RIG }
+			is_at_war = no
+			is_excommunicated = no
+			is_subject = no
+			num_of_cities = 20
+			jersika_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			owns_core_province = 5821
+			owns_core_province = 5822
+			owns_core_province = 5824
+			owns_core_province = 5832
+			owns_core_province = 5836
+			owns_core_province = 5837
+			owns_core_province = 5838
+			owns_core_province = 5839
+			owns_core_province = 5841
+		}
+		effect = {
+			set_global_flag = established_riga_diocese_flag
+			add_papal_influence = 25
+			add_prestige = 25
+			if = {
+				limit = { religion = catholic }
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_pleased
+				}
+			}
+			if = {
+				limit = { religion = catholique }
+				reverse_add_opinion = {
+					who = AVI
+					modifier = opinion_pleased
+				}
+			}
+			custom_tooltip = new_diocese.tt
+			hidden_effect = {
+				jersika_area = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5821 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5822 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5824 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5832 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5836 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5837 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5838 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5839 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				5841 = {
+					add_core = RIG
+					remove_core = ROOT
+				}
+				release = RIG
+				vassalize = RIG
+				RIG = {
+					add_liberty_desire = -50
+					set_government_rank = 4
+					add_government_reform = leading_clergy_reform
+					change_religion = ROOT
+					define_ruler = { }
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = catholic
+				OR = {
+					is_rival = PAP
+					is_enemy = PAP
+				}	
+			}
+			modifier = {
+				factor = 0
+				religion = catholique
+				OR = {
+					is_rival = AVI
+					is_enemy = AVI
+				}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 50 }
+			}
+		}
+	}
+
+	establish_osel_diocese = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEU
+				tag = LIV
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { started_in = 1227.1.1 }
+			NOT = { has_global_flag = established_osel_diocese_flag }
+			has_reform = crusader_order_reform
+			total_development = 100
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5842
+				province_id = 5845
+				province_id = 5848
+				province_id = 5846
+				province_id = 5849
+				province_id = 5852
+				province_id = 5853
+				province_id = 5854
+				province_id = 5855
+				province_id = 5856
+				province_id = 5857
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = OSL }
+			is_at_war = no
+			is_excommunicated = no
+			is_subject = no
+			num_of_cities = 20
+			owns_core_province = 5842
+			owns_core_province = 5845
+			owns_core_province = 5846
+			owns_core_province = 5848
+			owns_core_province = 5849
+			owns_core_province = 5852
+			owns_core_province = 5853
+			owns_core_province = 5854
+			owns_core_province = 5855
+			owns_core_province = 5856
+			owns_core_province = 5857
+		}
+		effect = {
+			set_global_flag = established_osel_diocese_flag
+			add_papal_influence = 25
+			add_prestige = 25
+			if = {
+				limit = { religion = catholic }
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_pleased
+				}
+			}
+			if = {
+				limit = { religion = catholique }
+				reverse_add_opinion = {
+					who = AVI
+					modifier = opinion_pleased
+				}
+			}
+			custom_tooltip = new_diocese.tt
+			hidden_effect = {
+				5842 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5845 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5846 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5848 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5849 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5852 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5853 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5854 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5855 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5856 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				5857 = {
+					add_core = OSL
+					remove_core = ROOT
+				}
+				release = OSL
+				vassalize = OSL
+				OSL = {
+					add_liberty_desire = -50
+					set_government_rank = 4
+					add_government_reform = leading_clergy_reform
+					change_religion = ROOT
+					define_ruler = { }
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = catholic
+				OR = {
+					is_rival = PAP
+					is_enemy = PAP
+				}	
+			}
+			modifier = {
+				factor = 0
+				religion = catholique
+				OR = {
+					is_rival = AVI
+					is_enemy = AVI
+				}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 50 }
+			}
+		}
+	}
+
+	establish_dorpat_diocese = {
+		major = yes
+		potential = {
+			OR = {
+				tag = TEU
+				tag = LIV
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { started_in = 1224.1.1 }
+			NOT = { has_global_flag = established_dorpat_diocese_flag }
+			has_reform = crusader_order_reform
+			total_development = 100
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5871
+				province_id = 5872
+				province_id = 5873
+				province_id = 5874
+				province_id = 5875
+				province_id = 5876
+				province_id = 5877
+				province_id = 5878
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = DPT }
+			is_at_war = no
+			is_excommunicated = no
+			is_subject = no
+			num_of_cities = 20
+			owns_core_province = 5871
+			owns_core_province = 5872
+			owns_core_province = 5873
+			owns_core_province = 5874
+			owns_core_province = 5875
+			owns_core_province = 5876
+			owns_core_province = 5877
+			owns_core_province = 5878
+		}
+		effect = {
+			set_global_flag = established_dorpat_diocese_flag
+			add_papal_influence = 25
+			add_prestige = 25
+			if = {
+				limit = { religion = catholic }
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_pleased
+				}
+			}
+			if = {
+				limit = { religion = catholique }
+				reverse_add_opinion = {
+					who = AVI
+					modifier = opinion_pleased
+				}
+			}
+			custom_tooltip = new_diocese.tt
+			hidden_effect = {
+				5871 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5872 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5873 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5874 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5875 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5876 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5877 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				5878 = {
+					add_core = DPT
+					remove_core = ROOT
+				}
+				release = DPT
+				vassalize = DPT
+				DPT = {
+					add_liberty_desire = -50
+					set_government_rank = 4
+					add_government_reform = leading_clergy_reform
+					change_religion = ROOT
+					define_ruler = { }
+					adopt_reform_progress = ROOT
+					capital_scope = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religion = catholic
+				OR = {
+					is_rival = PAP
+					is_enemy = PAP
+				}	
+			}
+			modifier = {
+				factor = 0
+				religion = catholique
+				OR = {
+					is_rival = AVI
+					is_enemy = AVI
+				}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 50 }
+			}
+		}
+	}
+
+	wendish_germanization = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = polabian
+				primary_culture = kashubian
+			}
+			always = no
+		}
+		allow = {
+			primitives = no
+			capital_scope = {
+				culture_group = germanic
+				has_owner_accepted_culture = yes
+			}
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			add_stability = -1
+			hidden_effect = {
+				restore_country_name = yes
+				export_to_variable = {
+					variable_name = formerprimaryculture
+					value = primary_culture
+					who = ROOT
+				}
+				capital_scope = {
+					owner = {
+						change_primary_culture = PREV
+						set_ruler_culture = PREV
+						set_heir_culture = PREV
+					}
+				}
+				add_accepted_culture = variable:formerprimaryculture
+			}
+			if = {
+				limit = { religion = slavic_pagan }
+				change_religion = catholic
+			}
+			custom_tooltip = wendish_germanization.tt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	unite_the_rus = {
+		major = yes
+		potential = {
+			always = no
+			has_dlc = "Mandate of Heaven"
+			has_global_flag = launched_oprichnina_flag
+			is_emperor_of_china = yes
+		}
+		allow = {
+			is_at_war = no
+			stability = 3
+			meritocracy = 100
+			imperial_mandate = 100
+			any_subject_country = {
+				is_subject_of_type = tributary_state
+			}
+		}
+		effect = {
+			country_event = {
+				id = fbievents.122
+				tooltip = can_form_rus_rut.tt
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	byz_aristocrats_d = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_country_modifier = byz_aristocrats_m
+		}
+		allow = {
+			stability = 1
+			NOT = {
+				has_estate_privilege = estate_nobles_emboldened_aristocrats
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 40
+			}
+		}
+		effect = {
+			add_prestige = 5
+			remove_country_modifier = byz_aristocrats_m
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	byz_bureaucrats_d = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_country_modifier = byz_bureaucrats_m
+		}
+		allow = {
+			government_reform_progress = 10
+			NOT = { num_of_states = 25 }
+			has_3_lv2_advisors_trigger = yes
+			NOT = { corruption = 1 }
+			NOT = { inflation = 1 }
+			is_bankrupt = no
+		}
+		effect = {
+			add_prestige = 5
+			remove_country_modifier = byz_bureaucrats_m
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	byz_defenses_d = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_country_modifier = byz_defenses_m
+		}
+		allow = {
+			#calc_true_if = {
+				#desc = byz_defenses_d.tt2
+				#all_owned_province = {
+				#	controlled_by = ROOT
+				#	has_fort_trigger = yes
+				#	garrison = 1000
+				#}
+				#amount = 60
+			#}
+			if = {
+				limit = {
+					OR = {
+						any_owned_province = {
+							any_neighbor_province = {
+								owner = { religion_group = muslim }
+							}
+						}
+						any_subject_country = {
+							any_owned_province = {
+								any_neighbor_province = {
+									owner = { religion_group = muslim }
+								}
+							}
+						}
+					}
+				}
+				calc_true_if = {
+					desc = byz_defenses_d.tt2
+					east_anatolia_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+						controlled_by = owner
+						has_fort_trigger = yes
+						garrison = 1000
+					}
+					amount = 6
+				}
+				calc_true_if = {
+					desc = byz_defenses_d.tt3
+					sophene_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+						controlled_by = owner
+						has_fort_trigger = yes
+						garrison = 1000
+					}
+					amount = 6
+				}
+				calc_true_if = {
+					desc = byz_defenses_d.tt4
+					corduene_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+						controlled_by = owner
+						has_fort_trigger = yes
+						garrison = 1000
+					}
+					amount = 6
+				}
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = byz_defenses_d.tt
+					OR = {
+						num_of_owned_provinces_with = {
+							value = 5
+							any_neighbor_province = {
+								NOT = { owned_by = ROOT }
+								owner = {
+									religion_group = muslim
+									capital_scope = { superregion = mesopotamia_superregion }
+								}
+							}
+							controlled_by = ROOT
+							has_fort_trigger = yes
+							garrison = 1000
+						}
+						any_subject_country = {
+							num_of_owned_provinces_with = {
+								value = 5
+								any_neighbor_province = {
+									owner = {
+										NOT = { is_subject_of = ROOT }
+										religion_group = muslim
+										capital_scope = { superregion = mesopotamia_superregion }
+									}
+								}
+								controlled_by = owner
+								has_fort_trigger = yes
+								garrison = 1000
+							}
+						}
+					}
+					
+				}
+				custom_trigger_tooltip = {
+					tooltip = byz_crisis_stop.tt
+					NOT = {
+						any_owned_province = {
+							any_neighbor_province = {
+								owner = { religion_group = muslim }
+							}
+						}
+						any_subject_country = {
+							any_owned_province = {
+								any_neighbor_province = {
+									owner = { religion_group = muslim }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_prestige = 5
+			remove_country_modifier = byz_defenses_m
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	byz_army_d = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_country_modifier = byz_army_m
+		}
+		allow = {
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				OR = {
+					army_professionalism = 0.05
+					army_tradition = 10
+				}
+			}
+			else = {
+				army_tradition = 10
+			}
+			army_size_percentage = 1
+			NOT = { num_of_mercenaries = 1 }
+			land_maintenance = 1.0
+			manpower_percentage = 0.6
+			NOT = { war_exhaustion = 1 }
+		}
+		effect = {
+			add_prestige = 5
+			remove_country_modifier = byz_army_m
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	byz_unrest_d = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_country_modifier = byz_unrest_m
+		}
+		allow = {
+			is_at_war = no
+			NOT = { average_autonomy_above_min = 1 }
+			NOT = {
+				any_owned_province = {
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = byz_unrest_d.tt
+							is_in_capital_area = yes
+						}
+						superregion = anatolia_superregion
+					}
+					unrest = 1
+				}
+			}
+			development_in_provinces = {
+				value = 2500
+				OR = {
+					superregion = anatolia_superregion
+					superregion = balkans_superregion
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 35
+				OR = {
+					superregion = anatolia_superregion
+					superregion = balkans_superregion
+				}
+				development = 10
+			}
+		}
+		effect = {
+			add_prestige = 5
+			remove_country_modifier = byz_unrest_m
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	church_pagan_deity_decision = {
+		potential = {
+			has_dlc = "Wealth of Nations"
+			OR = {
+				religion = egyptian_religion
+				religion = hellenic_pagan
+				religion = norse_pagan_reformed
+				religion = slavic_pagan
+				religion = animism
+				religion = druwi
+				religion = dievturiba
+				religion = uralinusko
+			}
+			has_estate = estate_church
+		}
+		allow = {
+			has_regency = no
+			has_estate_privilege = estate_church_flexible_deities
+			custom_trigger_tooltip = {
+				tooltip = decision_once_every_twenty_years
+				OR = {
+					NOT = { has_country_flag = church_pagan_deity_decision }
+					had_country_flag = {
+						flag = church_pagan_deity_decision
+						days = 7300
+					}
+				}
+			}
+		}
+		effect = {
+			reduce_legitimacy_large_effect = yes
+			set_country_flag = church_deity_interaction
+			clr_country_flag = church_pagan_deity_decision
+			set_country_flag = church_pagan_deity_decision
+			country_event = { id = vn_religious_events.0 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	almoravid_invasion = {
+		major = yes
+		potential = {
+			always = no
+			normal_or_historical_nations = yes
+			NOT = { started_in = 1061.1.1 }
+			tag = DAA
+			NOT = { exists = MOR }
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4677
+				province_id = 4678
+				province_id = 4680
+				province_id = 4681
+				province_id = 4682
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			always = no
+			dynasty = "al-Murâbit"
+			religion = sunni
+			has_regency = no
+			is_at_war = no
+			owns_core_province = 4677
+			owns_core_province = 4678
+			owns_core_province = 4680
+			owns_core_province = 4681
+			owns_core_province = 4682
+		}
+		effect = {
+			country_event = {
+				id = almoravids_events.1
+				tooltip = almoravid_invasion.tt
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	reorganize_theocracy = {
+		major = yes
+		potential = {
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			OR = {
+				has_reform = leading_clergy_reform
+				has_reform = monastic_order_reform
+				has_reform = crusader_order_reform
+			}
+		}
+		allow = {
+			is_at_war = no
+			papacy_active = yes
+			papal_influence = 100
+			if = {
+				limit = {
+					religion = catholic
+				}
+				NOT = { war_with = PAP }
+				reverse_has_opinion = {
+					who = PAP
+					value = 0
+				}
+			}
+			else = {
+				NOT = { war_with = AVI }
+				reverse_has_opinion = {
+					who = AVI
+					value = 0
+				}
+			}
+			NOT = { has_country_modifier = the_statue_in_restraint_of_appeals }
+		}
+		effect = {
+			country_event = {
+				id = fbievents.153
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	great_fitna_high_authority = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_disaster = great_fitna
+			NOT = { has_country_flag = ended_fitna_by_high_authority }
+			NOT = { has_country_flag = ended_fitna_by_low_authority }
+		}
+		allow = {
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = great_fitna.tt
+				check_variable = {
+					which = fatimid_authority
+					value = 10
+				}
+			}
+		}
+		effect = {
+			tooltip = { end_disaster = great_fitna }
+			country_event = { id = great_fitna.101 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	great_fitna_low_authority = {
+		color = { 100 0 0 }
+		major = yes
+		potential = {
+			has_disaster = great_fitna
+			NOT = { has_country_flag = ended_fitna_by_high_authority }
+			NOT = { has_country_flag = ended_fitna_by_low_authority }
+		}
+		allow = {
+			stability = 1
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = disaster_active_for_20_years_tooltip
+					had_country_flag = {
+						flag = had_great_fitna
+						days = 7300
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = great_fitna.tt2
+					NOT = {
+						check_variable = {
+							which = fatimid_authority
+							value = -9
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			tooltip = { end_disaster = great_fitna }
+			country_event = { id = great_fitna.102 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

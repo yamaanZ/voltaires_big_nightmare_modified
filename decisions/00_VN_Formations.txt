@@ -1,0 +1,3824 @@
+country_decisions = {
+
+	yugoslav_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MGF }
+			NOT = { tag = BYZ }
+			culture_group = south_slavic
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 539
+				province_id = 2066
+				province_id = 137
+				province_id = 2236
+				province_id = 2433
+				province_id = 2118
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			adm_tech = 10
+			NOT = { exists = BYZ }
+			owns_core_province = 539 #Belgrade
+			owns_core_province = 2066 #Skopje
+			owns_core_province = 137 #Dubrovnik
+			owns_core_province = 2236 #Zagreb
+			owns_core_province = 2433 #Bobovac
+			owns_core_province = 2118 #Zeta
+		}
+		effect = {
+			change_tag = MGF
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			balkans_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MGF
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }
+			}
+		}
+		ai_importance = 100
+	}
+
+	arpitan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = SAV }
+			NOT = { exists = XAP }
+			OR = {
+				primary_culture = arpitan
+				primary_culture = vivaro_alpine
+				primary_culture = provencal
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 989
+				AND = {
+					OR = {
+						area = savoy_area
+						area = forez_area
+						area = besancon_area
+						area = dauphine_area
+						area = vaud_area
+						area = wallis_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = savoy_area
+									area = forez_area
+									area = besancon_area
+									area = dauphine_area
+									area = vaud_area
+									area = wallis_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 989 #Arles
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = savoy_area
+					area = forez_area
+					area = besancon_area
+					area = dauphine_area
+					area = vaud_area
+					area = wallis_area
+				}
+			}
+		}
+		effect = {
+			change_tag = XAP
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = ARP_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 100
+	}
+
+	wurttemberg_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				tag = URC
+				tag = SGT
+			}
+			primary_culture = swabian
+			OR = {
+				ai = no
+				NOT = { exists = WUR }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2458
+				province_id = 351
+				province_id = 350
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = WUR }
+			owns_core_province = 2458 #stuttgart
+			owns_core_province = 351 #urach
+			owns_core_province = 350 #calw
+		}
+		effect = {
+			change_tag = WUR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			wurttemburg_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WUR
+			}
+			add_prestige = 10
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	franconian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = FKN }
+			OR = {
+				primary_culture = franconian
+				primary_culture = moselle_franconian
+				primary_culture = pfalzish
+				primary_culture = hessian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1943 #frankfirt
+				AND = {
+					OR = {
+						area = nassau_area
+						area = hessesouth_area
+						area = darmstadt_area
+						area = wurzburg_area
+						area = hohenlohe_area
+						area = pfalzeast_area
+					}
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 500
+								OR = {
+									area = nassau_area
+									area = hessesouth_area
+									area = darmstadt_area
+									area = wurzburg_area
+									area = hohenlohe_area
+									area = pfalzeast_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			owns_core_province = 2523 #wurzburg
+			num_of_owned_provinces_with = {
+				value = 500
+				OR = {
+					area = nassau_area
+					area = hessesouth_area
+					area = darmstadt_area
+					area = wurzburg_area
+					area = hohenlohe_area
+					area = pfalzeast_area
+				}
+			}
+		}
+		effect = {
+			change_tag = FKN
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 15
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					NOT = { is_part_of_hre = yes }
+				}
+				hidden_effect = {
+					every_owned_province = {
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	lombardian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			capital_scope = { superregion = italy_superregion }
+			NOT = { exists = XKK }
+			OR = {
+				culture_group = latin
+				primary_culture = langobardic
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				owns_core_province = 1818 #milano
+				AND = {
+					OR = {
+						area = milan_area
+						area = pavia_area
+						area = monferrato_area
+						area = brescia_area
+						area = bellinzona_area
+						area = como_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = milan_area
+									area = pavia_area
+									area = monferrato_area
+									area = brescia_area
+									area = bellinzona_area
+									area = como_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 1818 #milano
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = milan_area
+					area = pavia_area
+					area = monferrato_area
+					area = brescia_area
+					area = bellinzona_area
+					area = como_area
+				}
+			}
+		}
+		effect = {
+			change_tag = XKK
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			custom_tooltip = langobardic_culture_provinces_tooltip
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = ROOT
+					}
+					change_culture = langobardic
+				}
+			}
+			change_primary_culture = langobardic
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			north_italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = XKK
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = KLK_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { is_part_of_hre = yes }
+				}
+				hidden_effect = {
+					every_owned_province = {
+						set_in_empire = no
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm = 5 }
+				NOT = { dip = 5 }
+				NOT = { mil = 5 }
+			}
+		}
+	}
+
+	sicilian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				NOT = { exists = SIC }
+				tag = APL
+			}
+			NOT = { tag = LBV }
+			was_never_end_game_tag_trigger = yes
+			capital_scope = { region = south_italy_region }
+			OR = {
+				culture_group = latin
+				primary_culture = langobardic
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2041 #palermo
+				AND = {
+					OR = {
+						area = messina_area
+						area = syracuse_area
+						area = palermo_area
+						area = terranova_area
+						area = calabria_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces  = {
+								value = 500
+								OR = {
+									area = messina_area
+									area = syracuse_area
+									area = palermo_area
+									area = terranova_area
+									area = calabria_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SIC }
+			is_at_war = no
+			is_nomad = no
+			owns_core_province = 2041 #palermo
+			development_in_provinces  = {
+				value = 500
+				OR = {
+					area = messina_area
+					area = syracuse_area
+					area = palermo_area
+					area = terranova_area
+					area = calabria_area
+				}
+			}
+		}
+		effect = {
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			change_tag = SIC
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = { 
+					NOT = { was_tag = APL } 
+				}
+				swap_non_generic_missions = yes
+			}
+			south_italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SIC
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = sicilian }
+				}
+				change_primary_culture = sicilian
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = SIC_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	romagna_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			NOT = { exists = RMG }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = XKK }
+			OR = {
+				primary_culture = romagnan
+				tag = BLG
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				owns_core_province = 1048 #ravenna
+				AND = {
+					OR = {
+						area = ferrara_area
+						area = cesena_area
+						area = urbino_area
+						area = modena_area
+						area = bologna_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = ferrara_area
+									area = cesena_area
+									area = urbino_area
+									area = modena_area
+									area = bologna_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 1048 #ravenna
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = ferrara_area
+					area = cesena_area
+					area = urbino_area
+					area = modena_area
+					area = bologna_area
+				}
+			}
+		}
+		effect = {
+			change_tag = RMG
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			cesena_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_core = RMG
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	belgian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = BGU }
+			NOT = { tag = NED }
+			OR = {
+				primary_culture = wallonian
+				primary_culture = flemish
+				primary_culture = brabantian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 930
+				AND = {
+					OR = {
+						area = antwerp_area
+						area = liege_area
+						area = hainaut_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = antwerp_area
+									area = liege_area
+									area = hainaut_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 930 #brussels
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = antwerp_area
+					area = liege_area
+					area = hainaut_area
+				}
+			}
+		}
+		effect = {
+			change_tag = BGU
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = BGU_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { adm_tech = 10 }
+			}
+		}
+	}
+
+	slovenian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = SLV }
+			primary_culture = slovenian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 958
+				AND = {
+					OR = {
+						area = carniola_area
+						area = sannmark_area
+						area = zagreb_area
+						area = trieste_area
+						area = istria_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = carniola_area
+									area = sannmark_area
+									area = zagreb_area
+									area = trieste_area
+									area = istria_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 958 #ljubljana
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = carniola_area
+					area = sannmark_area
+					area = zagreb_area
+					area = trieste_area
+					area = istria_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SLV
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			croatia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SLV
+			}
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 50
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sgc_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = SGC }
+			culture_group = germanic
+			capital_scope = {
+				region = south_germany_region
+			}
+			NOT = { has_country_flag = super_formable_flag }
+		}
+		provinces_to_highlight = {
+			AND = {
+				region = south_germany_region
+				root = {
+					NOT = {
+						num_of_owned_provinces_with = {
+							is_core = ROOT
+							region = south_germany_region
+							value = 146		#	 146/222 south germany region
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = south_germany_region
+				value = 146		#	 146/222 south germany region
+			}
+		}
+		effect = {
+			change_tag = SGC
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				change_government = monarchy
+				add_government_reform = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { has_dlc = "Rights of Man" } }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			south_germany_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SGC
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = SGC_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = super_formable_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ngc_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = NGC }
+			culture_group = germanic
+			capital_scope = {
+				region = north_germany_region
+			}
+			NOT = { has_country_flag = super_formable_flag }
+		}
+		provinces_to_highlight = {
+			AND = {
+				region = north_germany_region
+				root = {
+					NOT = {
+						num_of_owned_provinces_with = {
+							is_core = ROOT
+							region = north_germany_region
+							value = 101		#	 101/154 north germany region
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = north_germany_region
+				value = 101		#	 101/154 north germany region
+			}
+		}
+		effect = {
+			change_tag = NGC
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				change_government = monarchy
+				add_government_reform = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { has_dlc = "Rights of Man" } }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			north_germany_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NGC
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = NGC_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = super_formable_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mecklenburg_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				tag = SWX
+				tag = SGX
+				tag = RST
+				tag = PCH
+				tag = WRL
+			}
+			primary_culture = pommeranian
+			OR = {
+				AND = {
+					ai = no
+					tag = MKL
+				}
+				NOT = { exists = MKL }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 854
+				province_id = 2643
+				province_id = 2309
+				province_id = 410
+				province_id = 2996
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = MKL }
+			owns_core_province = 854 #mecklenburg
+			owns_core_province = 2643 #rostock
+			owns_core_province = 2309 #gustrow
+			owns_core_province = 410 #waren
+			owns_core_province = 2996 #wismar
+		}
+		effect = {
+			change_tag = MKL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			lubeck_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MKL
+			}
+			wismar_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MKL
+			}
+			werle_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MKL
+			}
+			add_prestige = 10
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	holstein_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				tag = RSB
+				tag = KIL
+			}
+			primary_culture = low_elbish
+			OR = {
+				AND = {
+					ai = no
+					tag = SHL
+				}
+				NOT = { exists = SHL }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1084
+				AND = {
+					OR = {
+						area = kiel_area
+						area = holstein_area
+						area = slesvig_area
+						area = sonderborg_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = kiel_area
+									area = holstein_area
+									area = slesvig_area
+									area = sonderborg_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = SHL }
+			owns_core_province = 1084 #Hamburg
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = kiel_area
+					area = holstein_area
+					area = slesvig_area
+					area = sonderborg_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SHL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	palatine_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				AND = {
+					tag = UPA
+					dynasty = "von Wittelsbach"
+				}
+				AND = {
+					tag = ZWB
+					dynasty = "von Wittelsbach"
+				}
+			}
+			OR = {
+				AND = {
+					ai = no
+					tag = PAL
+				}
+				NOT = { exists = PAL }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2962
+				AND = {
+					OR = {
+						area = pfalzwest_area
+						area = pfalzeast_area
+						area = mainz_area
+						area = darmstadt_area
+						area = hohenlohe_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = pfalzwest_area
+									area = pfalzeast_area
+									area = mainz_area
+									area = darmstadt_area
+									area = hohenlohe_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = PAL }
+			owns_core_province = 2962 #worms
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = pfalzwest_area
+					area = pfalzeast_area
+					area = mainz_area
+					area = darmstadt_area
+					area = hohenlohe_area
+				}
+			}
+		}
+		effect = {
+			change_tag = PAL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			pfalzwest_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PAL
+			}
+			pfalzeast_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PAL
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brunswick_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = eastphalian
+			OR = {
+				ai = no
+				NOT = { exists = BRU }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2794
+				AND = {
+					OR = {
+						area = brunswick_area
+						area = calenberg_area	
+						area = luneburg_area
+						area = altmark_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = brunswick_area
+									area = calenberg_area	
+									area = luneburg_area
+									area = altmark_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = BRU }
+			owns_core_province = 2794 #brunswick
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = brunswick_area
+					area = calenberg_area	
+					area = luneburg_area
+					area = altmark_area
+				}
+			}
+		}
+		effect = {
+			change_tag = BRU
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+
+	silesia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			primary_culture = schlesian
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = BOH }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SIL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 822 #wroclaw
+				AND = {
+					region = silesia_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = silesia_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = SIL }
+			owns_core_province = 822 #wroclaw
+			development_in_provinces = {
+				value = 500
+				region = silesia_region
+			}
+		}
+		effect = {
+			change_tag = SIL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			silesia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SIL
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	alsace_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			primary_culture = boden_alemannic
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ALS }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1959 #strasbourg
+				AND = {
+					OR = {
+						area = hagenau_area
+						area = nordgau_area
+						area = strassburg_area
+						area = sundgau_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = hagenau_area
+									area = nordgau_area
+									area = strassburg_area
+									area = sundgau_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = ALS }
+			owns_core_province = 1959 #strasbourg
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = hagenau_area
+					area = nordgau_area
+					area = strassburg_area
+					area = sundgau_area
+				}
+			}
+		}
+		effect = {
+			change_tag = ALS
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = ALS_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	aquitaine_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				primary_culture = occitain
+				primary_culture = gascon
+				primary_culture = auvergnat
+				primary_culture = limousin
+			}
+			NOT = { tag = FRA }
+			NOT = { tag = KNI }
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = AQT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2324		# Bordeaux
+				AND = {
+					region = aquitaine_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = aquitaine_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = AQT }
+			government = monarchy
+			owns_core_province = 2324		# Bordeaux
+			development_in_provinces = {
+				value = 750
+				region = aquitaine_region
+			}
+		}
+		effect = {
+			change_tag = AQT
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			aquitaine_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AQT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = AQT_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 50
+	}
+
+	welsh_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = welsh
+			was_never_end_game_tag_trigger = yes
+			government = monarchy
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = WLS }
+			NOT = { tag = ASE }
+			NOT = { tag = ENG }
+			NOT = { tag = GBR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1067 #glamorgan
+				AND = {
+					OR = {
+						area = walessouth_area
+						area = montgomery_area
+						area = walesnorth_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = walessouth_area
+									area = montgomery_area
+									area = walesnorth_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = WLS }
+			owns_core_province = 1067 #glamorgan
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = walessouth_area
+					area = montgomery_area
+					area = walesnorth_area
+				}
+			}
+		}
+		effect = {
+			change_tag = WLS
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sardinian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = sardinian
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = SIC }
+			NOT = { tag = SPI }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SAR }
+			NOT = { exists = SPI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 655
+				province_id = 651
+				province_id = 1187
+				AND = {
+					province_id = 530
+					ROOT = { NOT = { owns_core_province = 2089 } }
+				}
+				AND = {
+					province_id = 2089
+					ROOT = { NOT = { owns_core_province = 530 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = SAR }
+			owns_core_province = 655 #arborea
+			owns_core_province = 651 #cagliari
+			owns_core_province = 1187 #gallura
+			OR = {
+				owns_core_province = 530 #sassari
+				owns_core_province = 2089 #alghero
+			}
+		}
+		effect = {
+			change_tag = SAR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			sassari_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SAR
+			}
+			gallura_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SAR
+			}
+			arborea_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SAR
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = SAR_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 15
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	moldovan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = moldovan
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MOL }
+			NOT = { tag = RMN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5630 #bacau
+				AND = {
+					region = moldavia_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = moldavia_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = MOL }
+			owns_core_province = 5630 #bacau
+			development_in_provinces = {
+				value = 500
+				region = moldavia_region
+			}
+		}
+		effect = {
+			change_tag = MOL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = { is_tribal = yes }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			moldavia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOL
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = MOL_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wallachian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = wallachian
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = WAL }
+			NOT = { tag = RMN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5685 #tirgoviste
+				AND = {
+					OR = {
+						area = ilfov_area
+						area = buzau_area
+						area = teleorman_area
+						area = oltenia_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = ilfov_area
+									area = buzau_area
+									area = teleorman_area
+									area = oltenia_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = WAL }
+			owns_core_province = 5685 #tirgoviste
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = ilfov_area
+					area = buzau_area
+					area = teleorman_area
+					area = oltenia_area
+				}
+			}
+		}
+		effect = {
+			change_tag = WAL
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = { is_tribal = yes }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = WAL_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	serbian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = serbian
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SER }
+			NOT = { tag = MGF }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5530 	#smederevo
+				AND = {
+					OR = {
+						area = branicevo_area
+						area = rashka_area
+						area = nis_area
+						area = zlatibor_area
+						area = belgrade_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = branicevo_area
+									area = rashka_area
+									area = nis_area
+									area = zlatibor_area
+									area = belgrade_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			OR = {
+				adm_tech = 10
+				tag = KSV
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = SER }
+			owns_core_province = 5530 	#smederevo
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = branicevo_area
+					area = rashka_area
+					area = nis_area
+					area = zlatibor_area
+					area = belgrade_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SER
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = SER_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	albanian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = albanian
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ALB }
+			NOT = { tag = DRZ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 595
+				province_id = 2391
+				province_id = 503
+				province_id = 2394
+				AND = {
+					province_id = 2332
+					ROOT = { NOT = { owns_core_province = 707 } }
+				}
+				AND = {
+					province_id = 707
+					ROOT = { NOT = { owns_core_province = 2332 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {	
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = ALB }
+			owns_core_province = 595 #himare
+			owns_core_province = 2391 #berat
+			owns_core_province = 503 #durres
+			owns_core_province = 2394 #Tirana
+			OR = {
+				owns_core_province = 2332 #lezhe
+				owns_core_province = 707 #puke
+			}
+		}
+		effect = {
+			change_tag = ALB
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			if = {
+				limit = { is_tribal = yes }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	macedonian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			culture_group = south_slavic
+			OR = {
+				tag = PRP
+				tag = VZH
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MXD }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 562
+				province_id = 613
+				province_id = 2066
+				province_id = 2355
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = MXD }
+			owns_core_province = 562
+			owns_core_province = 613
+			owns_core_province = 2066
+			owns_core_province = 2355
+		}
+		effect = {
+			change_tag = MXD
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	hungarian_nation = {
+		major = yes
+		potential = {
+			primitives = no
+			normal_or_historical_nations = yes
+			primary_culture = hungarian
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HUN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 444
+				province_id = 471
+				province_id = 2068
+				province_id = 478
+				province_id = 2428
+				province_id = 1968
+				AND = {
+					province_id = 442
+					ROOT = { NOT = { owns_core_province = 448 } }
+				}
+				AND = {
+					province_id = 448
+					ROOT = { NOT = { owns_core_province = 442 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = HUN }
+			owns_core_province = 444 #pest
+			owns_core_province = 471 #trencsen
+			owns_core_province = 2068 #vas
+			owns_core_province = 478 #bihar
+			owns_core_province = 2428 #temes
+			owns_core_province = 1968 #ung
+			OR = {
+				owns_core_province = 442 #pressburg
+				owns_core_province = 448 #torda
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+				}
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			change_tag = HUN
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			hungary_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = HUN
+			}
+			transylvania_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = HUN
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = HUN_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dalmatian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primary_culture = dalmatian
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = DLM }
+			NOT = { tag = LBV }
+			NOT = { tag = XKK }
+			NOT = { tag = SIC }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 137
+				province_id = 1083
+				province_id = 507
+				province_id = 1804
+				AND = {
+					province_id = 2421
+					ROOT = { NOT = { owns_core_province = 2418 } }
+				}
+				AND = {
+					province_id = 2418
+					ROOT = { NOT = { owns_core_province = 2421 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = DLM }
+			owns_core_province = 137 #dubrovnik
+			owns_core_province = 1083 #zadar
+			owns_core_province = 507 #split
+			owns_core_province = 1804 #poljicka
+			OR = {
+				owns_core_province = 2421 #brac
+				owns_core_province = 2418 #krk
+			}
+		}
+		effect = {
+			change_tag = DLM
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	normand_english_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			tag = NRM
+			primary_culture = normand
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			exists = ASE
+			ASE = { ai = yes }
+			always = no
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			senior_union_with = ASE
+			ASE = { ai = yes }
+			ASE = { owns = 2268 }
+			always = no
+		}
+		effect = {
+			custom_tooltip = normand_english_tooltip
+			hidden_effect = {
+				remove_non_electors_emperors_from_empire_effect = yes
+				overlord = { free_vassal = NRM }
+				ASE = {
+					every_subject_country = {
+						limit = { is_lesser_in_union = yes }
+						set_country_flag = was_ase_junior
+					}
+					every_subject_country = {
+						limit = { is_lesser_in_union = no }
+						set_country_flag = was_ase_vassal
+					}
+					grant_independence = yes
+				}
+				free_vassal = XEV
+				FRA = {
+					create_subject = {
+						subject_type = appanage
+						who = XEV
+					}
+				}
+				free_vassal = ALE
+				FRA = {
+					create_subject = {
+						subject_type = appanage
+						who = ALE
+					}
+				}
+				free_vassal = XAU
+				FRA = {
+					create_subject = {
+						subject_type = appanage
+						who = XAU
+					}
+				}
+				free_vassal = EUU
+				FRA = {
+					create_subject = {
+						subject_type = appanage
+						who = EUU
+					}
+				}
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+					add_government_reform = feudalism_reform
+				}
+				ENG = {
+					inherit = ASE
+					add_country_modifier = {
+						name = nrm_invasion_m
+						duration = -1
+					}
+				}
+				every_province = {
+					remove_core = ASE
+					remove_core = WSX
+					remove_core = MCI
+					discover_country = ENG
+				}
+				exile_heir_as = nrm_conquest_heir
+				exile_ruler_as = { name = nrm_conquest_ruler }
+				switch_tag = ENG
+				set_capital = 2268
+				set_ruler = nrm_conquest_ruler
+				set_heir = nrm_conquest_heir
+				if = {
+					limit = {
+						NOT = { government_rank = 5 }
+					}
+					set_government_rank = 5
+				}
+				every_country = {
+					limit = { has_country_flag = was_ase_junior }
+					ENG = { create_union = PREV }
+					add_liberty_desire = -50
+				}
+				every_country = {
+					limit = { has_country_flag = was_ase_vassal }
+					ENG = { vassalize = PREV }
+					add_liberty_desire = -50
+				}
+				create_union = NRM
+				NRM = {
+					add_liberty_desire = -50
+					complete_mission = vn_nrm_english_succession
+					complete_mission = vn_nrm_alea_iacta_est
+					complete_mission = vn_nrm_subjugate_england
+				}
+			}
+			2268 = { change_culture = english }
+			add_legitimacy = -20
+			add_prestige = 25
+			set_country_flag = normandy_conquered_england_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 500
+		do_not_integrate = ASE
+	}
+
+	lithuanian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				primary_culture = lithuanian
+				primary_culture = samogitian
+				primary_culture = sudovian
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = PLC }
+			NOT = { tag = LIT }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = LIT }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5732
+				province_id = 5752
+				province_id = 5739
+				province_id = 5744
+				AND = {
+					province_id = 5725
+					ROOT = { NOT = { owns_core_province = 5764 } }
+				}
+				AND = {
+					province_id = 5764
+					ROOT = { NOT = { owns_core_province = 5725 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = LIT }
+			owns_core_province = 5732 #Vilna
+			owns_core_province = 5752 #Kaunas
+			owns_core_province = 5739 #Svencionys
+			owns_core_province = 5744 #Trakai
+			OR = {
+				owns_core_province = 5725 #Smurgainys
+				owns_core_province = 5764 #Panevezys
+			}
+		}
+		effect = {
+			change_tag = LIT
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { government = native }
+				change_government = tribal
+				add_government_reform = tribal_despotism
+			}
+			if = {
+				limit = { NOT = { primary_culture = lithuanian } }
+				change_primary_culture = lithuanian
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	african_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				primary_culture = tunisian
+				primary_culture = algerian
+				culture_group = maghrebi
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = MOR }
+			NOT = { tag = EGY }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = IFQ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 586 #Tunis
+				AND = {
+					region = tunis_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								region = tunis_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			is_nomad = no
+			NOT = { exists = IFQ }
+			owns_core_province = 586 #Tunis
+			development_in_provinces = {
+				value = 500
+				region = tunis_region
+			}
+		}
+		effect = {
+			change_tag = IFQ
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+				add_government_reform = iqta
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = IFQ_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	iraqi_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = ILK }
+			NOT = { tag = GLH }
+			NOT = { tag = PER }
+			NOT = { tag = TIM }
+			NOT = { tag = SJK }
+			NOT = { exists = IRQ }
+			NOT = { has_reform = celestial_empire }
+			primary_culture = al_iraqiya_arabic
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6301
+				province_id = 6294
+				province_id = 3690
+				province_id = 6306
+				province_id = 6370
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 6301 #Baghdad
+			owns_core_province = 6294 #Basra
+			owns_core_province = 3690 #Mosul
+			owns_core_province = 6306 #Najaf
+			owns_core_province = 6370 #Sulaymaniyya
+		}
+		effect = {
+			change_tag = IRQ
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			set_capital = 6301
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			lower_mesopotamia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = IRQ
+			}
+			assyria_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = IRQ
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = IRQ_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	syrian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = ILK }
+			NOT = { tag = GLH }
+			NOT = { tag = PER }
+			NOT = { tag = MAM }
+			NOT = { tag = EGY }
+			NOT = { tag = KOJ }
+			NOT = { tag = ISR }
+			NOT = { tag = JOR }
+			NOT = { exists = SYR }
+			NOT = { has_reform = celestial_empire }
+			primary_culture = al_suryah_arabic
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3065
+				province_id = 3111
+				province_id = 3037
+				province_id = 3036
+				province_id = 3119
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3065 #Damascus
+			owns_core_province = 3111 #Aleppo
+			owns_core_province = 3037 #Homs
+			owns_core_province = 3036 #Hama
+			owns_core_province = 3119 #Raqqa
+		}
+		effect = {
+			change_tag = SYR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			set_capital = 3065
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			al_jazira_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SYR
+			}
+			syria_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SYR
+			}
+			transjordan_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = SYR
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = SYR_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	assyrian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = ILK }
+			NOT = { tag = GLH }
+			NOT = { tag = PER }
+			NOT = { tag = IRQ }
+			NOT = { tag = TIM }
+			NOT = { tag = SJK }
+			NOT = { tag = ASY }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				religion = nestorian
+				religion = mandaeism
+				religion = yazidi
+				primary_culture = aramaic
+			}
+			OR = {
+				ai = no
+				NOT = { exists = ASY }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6330
+				province_id = 3690
+				province_id = 6320
+				province_id = 3127
+				AND = {
+					province_id = 6375
+					ROOT = { NOT = { owns_core_province = 3119 } }
+				}
+				AND = {
+					province_id = 3119
+					ROOT = { NOT = { owns_core_province = 6375 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ASY }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 6330 #Assur
+			owns_core_province = 3690 #Nineveh
+			owns_core_province = 6320 #Haditha
+			owns_core_province = 3127 #Deirezzor
+			OR = {
+				owns_core_province = 3119 #Raqqa
+				owns_core_province = 6375 #Erbil
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { primary_culture = aramaic } }
+				change_primary_culture = aramaic
+			}
+			change_tag = ASY
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			set_capital = 6330
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 6 }
+				}
+				set_government_rank = 6
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			assyria_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ASY
+			}
+			al_jazira_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ASY
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = ASY_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	circassian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = ILK }
+			NOT = { tag = GLH }
+			NOT = { exists = CIR }
+			NOT = { has_reform = celestial_empire }
+			culture_group = abkhazian_group
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3650
+				province_id = 3742
+				province_id = 6219
+				province_id = 3653
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3650 #Sochi
+			owns_core_province = 3742 #Labinsk
+			owns_core_province = 6219 #Cherkessk
+			owns_core_province = 3653 #Tuapse
+		}
+		effect = {
+			change_tag = CIR
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			circassia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = CIR
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = CIR_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	finnish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = GLH }
+			NOT = { exists = FIN }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				primary_culture = finnish
+				primary_culture = tavastian
+				primary_culture = karelian
+				primary_culture = ingrian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3252
+				province_id = 3264
+				province_id = 3265
+				province_id = 3275
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3252 #Turku
+			owns_core_province = 3264 #Helsinki
+			owns_core_province = 3265 #Porvoo
+			owns_core_province = 3275 #Kouvola
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { primary_culture = finnish }
+				}
+				change_primary_culture = finnish
+			}
+			change_tag = FIN
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			finland_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = FIN
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = FIN_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	estonian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = EST }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				primary_culture = estonian
+				primary_culture = livlander
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5889
+				province_id = 5875
+				province_id = 5879
+				province_id = 5863
+				province_id = 5845
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 5889 #Reval
+			owns_core_province = 5875 #Tartu
+			owns_core_province = 5879 #Narva
+			owns_core_province = 5863 #Parnu
+			owns_core_province = 5845 #Osel
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { primary_culture = estonian }
+				}
+				change_primary_culture = estonian
+			}
+			change_tag = EST
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			estonia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = EST
+			}
+			livonia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = EST
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = EST_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	letonian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = LTG }
+			NOT = { tag = LIT }
+			NOT = { tag = LIV }
+			NOT = { tag = TEU }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				primary_culture = latvian
+				primary_culture = semigallian
+				primary_culture = selonian
+				primary_culture = curonian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5793
+				province_id = 5811
+				province_id = 5809
+				province_id = 5840
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 5793 #Riga
+			owns_core_province = 5811 #Daugavpils
+			owns_core_province = 5809 #Kuldiga
+			owns_core_province = 5840 #Sigulda
+		}
+		effect = {
+			if = {
+				limit = { NOT = { primary_culture = latvian } }
+				every_owned_province = {
+					limit = { culture = ROOT }
+					change_culture = latvian
+				}
+				change_primary_culture = latvian
+			}
+			change_tag = LTG
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 4 }
+				}
+				set_government_rank = 4
+			}
+			if = {
+				limit = { government = tribal }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			latvian_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = LVA
+			}
+			curoniasemigallia_region = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = LVA
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mazovian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MAZ }
+			was_never_end_game_tag_trigger = yes
+			NOT = { tag = POL }
+			NOT = { tag = PTH }
+			primary_culture = mazovian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1138
+				province_id = 2770
+				province_id = 1218
+				province_id = 706
+				AND = {
+					province_id = 1213
+					ROOT = { NOT = { owns_core_province = 1223 } }
+				}
+				AND = {
+					province_id = 1223
+					ROOT = { NOT = { owns_core_province = 1213 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = MAZ }
+			owns_core_province = 1138 #Warsaw
+			owns_core_province = 2770 #Rawa
+			owns_core_province = 1218 #Plock
+			owns_core_province = 706 #Dobrzyn
+			OR = {
+				owns_core_province = 1213 #Wizna
+				owns_core_province = 1223 #Nur
+			}
+		}
+		effect = {
+			change_tag = MAZ
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			set_capital = 1138
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = MAZ_ideas }}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	piedmontese_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = PIE }
+			NOT = { exists = SPI }
+			NOT = { tag = SPI }
+			NOT = { tag = SAV }
+			NOT = { tag = LBV }
+			NOT = { tag = XKK }
+			primary_culture = piedmontese
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1009 #Turin
+				AND = {
+					OR = {
+						area = aosta_area
+						area = poirino_area
+						area = fossano_area
+						area = torino_area
+						area = monferrato_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = aosta_area
+									area = poirino_area
+									area = fossano_area
+									area = torino_area
+									area = monferrato_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = PIE }
+			owns_core_province = 1009 #Turin
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = aosta_area
+					area = poirino_area
+					area = fossano_area
+					area = torino_area
+					area = monferrato_area
+				}
+			}
+		}
+		effect = {
+			change_tag = PIE
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			set_capital = 1009
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = PIE_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	breton_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			primitives = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = BRI }
+			}
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = BRI }
+			primary_culture = breton
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2173	#Nantes
+				AND = {
+					OR = {
+						area = raozhon_area
+						area = nantes_area
+						area = finistere_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = raozhon_area
+									area = nantes_area
+									area = finistere_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = BRI }
+			owns_core_province = 2173	#Nantes
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = raozhon_area
+					area = nantes_area
+					area = finistere_area
+				}
+			}
+		}
+		effect = {
+			change_tag = BRI
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			set_capital = 2173
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no NOT = { has_idea_group = BRI_ideas } }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	latin_empire = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_latin_empire }
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = LAE }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { government = republic }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				owns = 2233
+				AND = {
+					ai = no
+					OR = {
+						tag = KNI
+						tag = NAP
+						tag = SIC
+						tag = TEU
+						tag = LIV
+					}
+				}
+			}
+			OR = {
+				NOT = { is_year = 1600 }
+				has_country_flag = can_form_latin_empire_later_too
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2233 #Constantinople
+				province_id = 573 #Adrianople
+				province_id = 2398 #Thessaloniki
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 2233 #Constantinople
+			owns_core_province = 573 #Adrianople
+			owns_core_province = 2398 #Thessaloniki
+			2233 = { is_state = yes }
+		}
+		effect = {
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { tag = KNI }
+					NOT = { tag = NAP }
+					NOT = { tag = SIC }
+					NOT = { tag = TEU }
+					NOT = { tag = LIV }
+					NOT = { capital_scope = { superregion = balkans_superregion } }
+				}
+				release = LAE
+				LAE = { define_ruler = { culture = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = KNI
+						tag = NAP
+						tag = SIC
+						tag = TEU
+						tag = LIV
+						capital_scope = { superregion = balkans_superregion }
+					}
+				}
+				change_tag = LAE
+				on_change_tag_effect = yes
+				change_primary_culture = outremer
+				if = {
+					limit = { has_custom_ideas = no }
+					country_event = { id = ideagroups.1 }
+				}
+			}
+			2233 = {
+				if = {
+					limit = { ROOT = { religion = catholic } }
+					change_religion = catholic
+				}
+				else = {
+					change_religion = catholique
+				}
+			}
+			LAE = {
+				hidden_effect = { restore_country_name = yes }
+				set_capital = 2233 #Constantinople
+				if = {
+					limit = { ROOT = { religion = catholic } }
+					change_religion = catholic
+				}
+				else = {
+					change_religion = catholique
+				}
+				if = {
+					limit = { NOT = { government = monarchy } }
+					change_government = monarchy
+					add_government_reform = feudalism_reform
+				}
+				if = {
+					limit = {
+						NOT = { government_rank = 6 }
+					}
+					set_government_rank = 6
+				}
+				set_country_flag = formed_latin_empire
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,128 @@
+black_death = {
+	potential = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = had_black_death }
+		always = no
+		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
+	}
+
+
+	can_start = {
+		has_any_disaster = no
+		always = no
+		any_owned_province = {
+			development = 4
+		}
+	}
+	
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			NOT = {
+				any_owned_province = {
+					development = 4
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 3
+			war_exhaustion = 4
+		}
+		modifier = {
+			factor = 1
+			any_owned_province = {
+				development = 15
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_ports = 1
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				all_neighbor_country = {
+					has_disaster = black_death
+				}
+				amount = 1
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				all_neighbor_country = {
+					has_disaster = black_death
+				}
+				amount = 2
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				all_neighbor_country = {
+					has_disaster = black_death
+				}
+				amount = 3
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				all_neighbor_country = {
+					has_disaster = black_death
+				}
+				amount = 4
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				all_neighbor_country = {
+					has_disaster = black_death
+				}
+				amount = 5
+			}
+		}
+	}
+	
+	can_end = {
+		OR = {
+			NOT = {
+				any_owned_province = {
+					development = 4
+				}
+			}
+		}
+	}
+
+	modifier = {
+		development_cost = 1.0
+		global_manpower_modifier = -0.5
+		global_trade_power = -0.5
+	}	
+	
+	
+	on_start = black_death.1
+	on_end = black_death.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			400 = black_death.2	#Mass Death Strikes Province
+			100 = black_death.3	#Minor Outbreak
+			100 = black_death.4	#Troops Infected
+			100 = black_death.5	#Monarch Contracts Plague
+			100 = black_death.6 #Heir Contracts Plague
+			100 = black_death.7	#A Papal Missal
+			100 = black_death.8	#Research Breakthrough
+			50 = black_death.9	#Paranoid Unrest
+		}
+	}
+}
+

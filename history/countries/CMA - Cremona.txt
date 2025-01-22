@@ -1,0 +1,70 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = lombard
+religion = catholic
+capital = 5920
+
+#Counts of Sabbioneta
+1054.1.1 = {
+	override_country_name = SABBIONETA_NAME
+	monarch = {
+		name = "Ugo II"
+		dynasty = "Ugoning"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+1069.1.1 = {
+	monarch = {
+		name = "Bosone II"
+		dynasty = "Ugoning"
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+}
+1085.7.7 = {
+	monarch = {
+		name = "Ugo III"
+		dynasty = "Ugoning"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1105.1.1 = {
+	monarch = {
+		name = "Alberto I"
+		dynasty = "Ugoning"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+1116.1.1 = {
+	monarch = {
+		name = "Uberto I"
+		dynasty = "Ugoning"
+		adm = 0
+		dip = 0
+		mil = 1
+	}
+}
+
+1119.1.1 = {
+	restore_country_name = yes
+	capital = 499
+	government = republic
+	add_government_reform = italian_monarchy
+	add_army_professionalism = 0.05
+	monarch = {
+		name = "Repubblica"
+		regent = yes
+		dip = 2
+		mil = 2
+		adm = 2
+	}
+}

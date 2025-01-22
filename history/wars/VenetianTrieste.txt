@@ -1,0 +1,18 @@
+name = "Venetian-Triestine Trade War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = TST
+}
+
+1368.7.1 = {
+	add_attacker = VEN
+	add_attacker = CRT
+	add_defender = TST
+}
+
+1381.8.8 = {
+	rem_attacker = VEN
+	rem_attacker = CRT
+	rem_defender = TST
+}

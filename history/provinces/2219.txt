@@ -1,0 +1,62 @@
+owner = EVE
+controller = EVE
+culture = eastphalian
+religion = catholic
+hre = yes
+base_tax = 1
+base_production = 1
+trade_goods = fur
+base_manpower = 1
+capital = "Everstein"
+is_city = yes
+add_core = EVE
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = western
+discovered_by = muslim
+
+1408.1.1 = {
+	owner = WFB
+	controller = WFB
+	add_core = WFB
+	remove_core = EVE
+}
+1444.11.12 = {	#BERTUS MOD
+	owner = LUN
+	controller = LUN
+	add_core = LUN
+	set_base_tax = 2
+	set_base_production = 2
+	set_base_manpower = 2
+}
+1473.12.7 = {
+	owner = CLB
+	controller = CLB
+	add_core = CLB
+}
+1483.8.1 = {
+	owner = WFB
+	controller = WFB
+	remove_core = CLB
+}
+1529.1.1 = { religion = protestant }
+1807.7.9 = {
+	owner = WES
+	controller = WES
+	add_core = WES
+}
+1813.10.13 = {
+	owner = BRU
+	controller = BRU
+	add_core = BRU
+	remove_core = WFB
+	remove_core = WES
+}
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+	hre = no
+}
+discovered_by = nomad_group
+discovered_by = north_american

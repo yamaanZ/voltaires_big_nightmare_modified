@@ -1,0 +1,320 @@
+estate_holy_orders = {
+	icon = 16
+	
+	# Used for when declaring independence
+	independence_government = theocracy
+	starting_reform = crusader_order_reform
+	independence_tech_group = western
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { religion = ROOT }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { development = 10 }
+		}
+		modifier = {
+			factor = 1.5
+			OR = { 
+				has_building = barracks
+				has_building = training_fields
+			}
+		}
+		modifier = {
+			factor = 0.75
+			development = 15
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+
+	# If true, country will get estate
+	
+	trigger = {	
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
+		NOT = { has_government_attribute = disables_estate_holy_orders }
+		NOT = { has_disabled_estate = { estate = estate_holy_orders } }
+		OR = {
+			has_government_attribute = enables_estate_holy_orders
+			has_enabled_estate = { estate = estate_holy_orders }
+			has_unlocked_estate = { estate = estate_holy_orders }
+			AND = {
+				OR = {
+					religion = catholic
+					religion = catholique
+				}
+				government = monarchy
+				primitives = no
+				is_nomad = no
+				NOT = { has_reform = cossacks_reform }
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { has_reform = revolutionary_empire_reform }
+			}
+		}
+		OR =  {
+			current_age = age_of_discovery
+			current_age = age_of_reformation
+			#has_country_flag = enables_holy_orders_after_age_limit_flag
+		}
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		army_tradition_from_battle = 0.50
+		cavalry_power = 0.10
+	}
+	country_modifier_neutral = {
+		army_tradition_from_battle = 0.50
+	}	
+	country_modifier_angry = {
+		cavalry_power = -0.10
+		army_tradition_from_battle = -0.50
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		holy_orders_loyalty_modifier = 0.2
+	}
+
+	# Influence modifiers
+	base_influence = 0
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_holy_orders }
+		}
+		influence = -40
+	}
+	influence_modifier = {
+		desc = EST_VAL_TEUTON_INF
+		trigger = {
+			any_country = {
+				has_reform = crusader_order_reform
+				OR = {
+					religion = catholic
+					religion = catholique
+				}
+				alliance_with = ROOT
+			}
+		}
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_KINGDOM
+		trigger = {
+			government_rank = 5
+			NOT = { has_reform = feudal_france_reform }
+			NOT = { tag = FRA }
+		}
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_HO_GRANTED
+		trigger = {
+			any_owned_province = {
+				has_holy_order_trigger = yes
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_FRANKS
+		trigger = {
+			OR = {
+				has_reform = feudal_france_reform
+				tag = FRA
+			}
+		}
+		influence = 20
+	}
+	influence_modifier = {
+		desc = EST_VAL_OUTREMER
+		trigger = {
+			primary_culture = outremer
+		}
+		influence = 5
+	}
+
+	influence_from_dev_modifier = 2.0
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_holy_orders }
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_TEUTON_LOY
+		trigger = {
+			any_country = {
+				has_reform = crusader_order_reform
+				OR = {
+					religion = catholic
+					religion = catholique
+				}
+				war_with = ROOT
+			}
+		}
+		loyalty = -40
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_HO_GRANTED
+		trigger = {
+			any_owned_province = {
+				has_holy_order_trigger = yes
+			}
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OUTREMER
+		trigger = {
+			primary_culture = outremer
+		}
+		loyalty = 10
+	}
+
+	#Names
+	custom_name = {
+		desc = estate_ospitalieri
+		trigger = {
+			primary_culture = tuscan
+		}
+	}
+	custom_name = {
+		desc = estate_templars
+		trigger = {
+			culture_group = french
+			NOT = { primary_culture = vivaro_alpine }
+			NOT = { primary_culture = outremer }
+			NOT = { primary_culture = provencal }
+			NOT = { primary_culture = arpitan }
+		}
+	}
+	custom_name = {
+		desc = estate_avis
+		trigger = {
+			primary_culture = portugese
+		}
+	}
+	custom_name = {
+		desc = estate_saint_esprit
+		trigger = {
+			OR = {
+				primary_culture = vivaro_alpine
+				primary_culture = provencal
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_calatravos
+		trigger = {
+			primary_culture = castillian
+		}
+	}
+	custom_name = {
+		desc = estate_teutons
+		trigger = {
+			culture_group = germanic
+		}
+	}
+	custom_name = {
+		desc = estate_dobrzynski
+		trigger = {
+			OR = {
+				primary_culture = polish
+				primary_culture = mazovian
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_krizovnicky
+		trigger = {
+			OR = {
+				primary_culture = czech
+				primary_culture = moravian
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_maurizio
+		trigger = {
+			OR = {
+				primary_culture = piedmontese
+				primary_culture = arpitan
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_crosiers
+		trigger = {
+			primary_culture = outremer
+			capital_scope = {
+				superregion = levant_superregion
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_hospitallers
+		trigger = {
+			primary_culture = outremer
+			capital_scope = {
+				OR = {
+					superregion = balkans_superregion
+					superregion = anatolia_superregion
+				}
+			}
+		}
+	}
+
+	privileges = {
+		estate_holy_orders_liberties
+		estate_holy_orders_land_rights
+		estate_holy_orders_indebted_to_holy_orders
+		estate_holy_orders_settle_templars
+		estate_holy_orders_enable
+		estate_holy_orders_expand_the_cossack_regiments
+		estate_holy_orders_banking_rights
+		estate_holy_orders_court_representation
+		estate_holy_orders_development_of_hospitals
+		estate_holy_orders_grant_military_leadership
+		estate_holy_orders_heir_knight
+		estate_holy_orders_noble_promotion
+		estate_holy_orders_military_service
+		#taken from vanilla
+		estate_nobles_cawa_peace_keepers
+		estate_nobles_cawa_offensive_fighters
+		estate_holy_orders_monopoly_of_beer
+	}
+
+	agendas = {
+		estate_holy_orders_develop_x
+		estate_holy_orders_build_hospital_in_y
+		estate_holy_orders_build_temple_in_y
+		estate_holy_orders_build_university_in_y
+		estate_holy_orders_crusade
+		estate_holy_orders_grand_crusade
+		estate_holy_orders_convert_province_x
+		estate_holy_orders_three_privileges
+		estate_holy_orders_relations_with_crusaders
+		estate_holy_orders_hire_advisor
+		estate_holy_orders_fire_advisor
+	}
+
+	color = { 0 100 100 }
+}

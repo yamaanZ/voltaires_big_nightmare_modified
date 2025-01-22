@@ -1,0 +1,93 @@
+graphical_culture = westerngfx
+color = { 70 40 240 }
+
+historical_idea_groups = {
+	
+	
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	
+	
+	
+	
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+	
+	
+}
+
+monarch_names = {
+	"Amanieu #0" = 30
+	"Bernard #0" = 10
+	"Bernard-Ezy #0" = 10
+	"Arnaud-Amanieu #0" = 10
+	"Charles #0" = 10
+	"Alain #0" = 10
+	"Henri #0" = 10
+	"César #0" = 10
+	
+	"Jeanne #0" = -1
+	"Peregrine #0" = -1
+	"Assalide #0" = -1
+	"Vianne #0" = -1
+	"Mathé #0" = -1
+}
+
+leader_names = {
+	"d'Albret" "de Labrit" "de Tartas"
+	"de Gabarret" "de Périgueux"
+	"de Limoges"
+}
+
+ship_names = {
+	"le $PROVINCE$" 
+    Achille Agréable Alcyon Alouette
+    Altier Aquilon Ardente Assuré Avenant
+    Aventurier Baleine Bécasse Bienvenu Bizarre
+    Borée Brillant Bucentaure Caché
+    Caille Capable Centaure César Coche Conquérant
+    Constant Content Croissant Dauphine Diamant
+    Dieppoise Dur Dromadaire Eclatant Eole
+    Espérance Fantasque Ferme Fidèle Fier
+    Florissant Formidable Fort Foudroyant Gaillard
+    Heureux Héros Jason Lion Mignon
+    Minerve Océan Orphée Parfait Phénix
+    Poli Pompeux Portefaix Protecteur
+    Prudent Puissant Réale Redoutable
+    Requin Sage Sagittaire Sardine Sceptre
+    "Saint Esprit" "Saint Joseph" "Saint Philippe" 
+    Séduisant Seine Sérieux Solide Souverain
+    Suffisant Téméraire Terrible Tigre Tonnant
+    Toulon Trident Triomphant Triton
+    Union Vaillant Vigilant Volontaire Zélé
+}
+
+army_names = { 
+	"Armée de $PROVINCE$" 
+}
+
+fleet_names = { 
+	"Flotte de $PROVINCE$" 
+}

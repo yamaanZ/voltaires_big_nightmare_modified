@@ -1,0 +1,118 @@
+graphical_culture = westerngfx
+color = { 241 45 53 }
+
+historical_idea_groups = {
+	
+	
+	administrative_ideas
+	diplomatic_ideas
+	quality_ideas
+	maritime_ideas
+	economic_ideas
+	expansion_ideas
+	trade_ideas
+	naval_ideas
+}
+
+historical_units = {
+	
+	
+	
+	
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+	
+	
+}
+
+monarch_names = {
+	"Elesa #0" = 1
+	"Cyneheard #0" = 1
+	"Cynewulf #1" = 21
+	"Ecgberht #0" = 1
+	"Beorhtric #0" = 1
+	"Ealhmund #0" = 1
+	"Creoda #0" = 1
+	"Cerdic #2" = 18
+	"Cynric #1" = 27
+	"CuﬁrÊd #1" = 24
+	"Cuﬁa #0" = 1
+	"Ceawlin #1" = 18
+	"Cuﬁwine #0" = 1
+	"Ceol #1" = 18
+	"Ceolwulf #1" = 18
+	"Cwichelm #0" = 1
+	"Cynegils #1" = 18
+	"Cuﬁgils #0" = 1
+	"∆ﬁelheard #1" = 21
+	"Cedda #0" = 1
+	"Sigeberht #1" = 21
+	"Cynewald #0" = 1
+	"Coenfer #0" = 1
+	"Coenberht #0" = 1
+	"Cenfus #0" = 1
+	"Coenwalh #1" = 18
+	"Ceolwald #0" = 1
+	"∆scwine #1" = 18
+	"Coenred #0" = 1
+	"Coenheard #0" = 1
+	"Centwine #1" = 18
+	"Mul #0" = 1
+	"CÊdwalla #1" = 18
+	"Sigeheard #0" = 1
+	"Ingild #0" = 1
+	"∆ﬁelrÊd #0" = 1
+	"Ine #1" = 18
+	"Beorhtwulf #0" = 1
+	"Eoppa #0" = 1
+	"Eafa #0" = 1
+	"Elaf #1" = 0
+
+	"Cuﬁburh #0" = -1
+	"Eafe #0" = -1
+}
+
+leader_names = {
+	"of Westseaxe" "of Mierce" "of Norﬁhymbre"
+	"of CernwÊle" "of Eastseaxe" "of Cent"
+	"of Suﬁseaxe" "of Hwicce" "of PecsÊte"
+	"of Lindesege" "of Meonwara" "of Withwara"
+	∆ﬁeling Cenwalhson Godwining Godhelming
+	Beorming Eorling Wiglafing Coenwalhing
+	∆bbing HÊsting ∆lling Eadricing Eadwulfing
+	Leodwalding Ciesla Rowe Borthwick Wuffing
+	∆ﬁelfrithing Yffing Ingving Offing Oswalding
+	Cerdicing Wihtgilsing Ross Beorning Iceling
+}
+
+ship_names = {
+	"$PROVINCE$" 
+	"Westseaxe" "Hwicce" "Cerdic" "Mierce" "Norﬁhymbre"
+	"Suﬁseaxe" "Eastseaxe" "Lindesege" "Beowulf" "Hrothgar" "Grendel"
+	"Wyrm" "Byrhtnoth" "Brut" "Arthur" "Augustine" "Middleseaxe" "Rood"
+	"Heofonrice" "Mickel" "Christe" "∆ﬁelingas" "Scyld Scefing"
+	"Gardena" "Offa" "Wiglaf" "Fitela" "Freawaru" "Sigemund" "Unferth"
+	"God Cyning" "Maldon"
+}
+
+army_names = {
+	"Eorlic Here" "Westseaxe Here" "$PROVINCE$ Here"
+}
+
+fleet_names = {
+	"Eorlic Flotta" "Westseaxe Flotta"
+}

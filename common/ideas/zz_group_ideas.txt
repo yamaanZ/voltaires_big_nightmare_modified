@@ -1,0 +1,746 @@
+# These ideas are loaded after all country ideas, but before default idea.
+
+client_ideas = {
+	start = {
+		land_morale = 0.1
+		core_creation = -0.10
+	}
+	
+	bonus = {
+		build_cost = -0.1
+	}
+	
+	trigger = {
+		is_client_nation = yes
+	}
+	free = yes
+		
+	client_self_rule = {
+		global_unrest = -2
+	}
+	foreign_tax_collectors = {	
+		global_tax_modifier = 0.10
+	}
+	fortified_borders = {
+		defensiveness = 0.15
+	}
+	magnate_landowners = {
+		production_efficiency = 0.1
+	}	
+	mercantile_privileges = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	mercenary_recruitment_center = {
+		merc_maintenance_modifier = -0.15
+	}	
+	foreign_advisors_client = {
+		advisor_pool = 1
+	}
+}
+
+trading_city_ideas = {
+	start = {
+		development_cost = -0.05
+		build_cost = -0.1
+	}
+	
+	bonus = {
+		production_efficiency = 0.1
+	}
+	
+	trigger = {
+		has_reform = trading_city
+	}
+	free = yes
+		
+	tc_city_of_commerce = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	tc_self_defense = {	
+		garrison_size = 0.25
+	}
+	tc_merchant_guild = {
+		merchants = 1
+	}
+	tc_citys_artisans = {
+		global_trade_goods_size_modifier = 0.1
+	}	
+	tc_city_mercenary_contracts = {
+		mercenary_cost = -0.15
+	}
+	tc_merchant_range = {
+		trade_range_modifier = 0.25
+	}	
+	tc_trade_fleet = {
+		global_ship_trade_power = 0.15
+	}
+}
+
+colonial_ideas = {
+	start = {
+		development_cost = -0.1
+		no_religion_penalty = yes
+	}
+	
+	bonus = {
+		land_morale = 0.10
+	}
+	
+	trigger = {
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	founding_fathers = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.5
+		meritocracy = 1
+		horde_unity = 1
+	}
+	continental_trade = {
+		global_prov_trade_power_modifier = 0.25
+	}
+	religious_outposts = {
+		global_missionary_strength = 0.02
+	}
+	free_thinkers = {
+		idea_cost = -0.1
+	}
+	colonial_militia = {
+		global_regiment_cost = -0.1
+	}
+	new_frontiers = {
+		core_creation = -0.10
+	}
+	liberty_heroes = {
+		global_unrest = -1
+		free_leader_pool = 1
+	}
+}
+
+horde_ideas = {
+	start = {
+		ae_impact = -0.10
+		years_of_nationalism = -5
+	}
+	
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+	
+	trigger = {
+		has_reform = steppe_horde
+	}
+	free = yes
+	
+	life_of_steppe_warrior = {
+		land_attrition = -0.2
+	}
+	traditions_of_the_great_khan = {
+		cavalry_power = 0.2
+	}
+	horse_supplies = {
+		land_maintenance_modifier = -0.1
+	}
+	steppe_leaders = {
+		leader_land_shock = 1
+	}
+	tradition_of_conquest = {
+		core_creation = -0.25
+	}
+	logistics_of_khan = {
+		manpower_recovery_speed = 0.2
+	}
+	glory_of_conquest = {
+		global_manpower_modifier = 0.25
+	}
+}
+
+barbary_pirate_ideas = {
+	start = {
+		galley_power = 0.2
+		privateer_efficiency = 0.2
+	}
+	bonus = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.5
+		meritocracy = 1
+		horde_unity = 1
+	}
+	trigger = {
+		has_government_attribute = is_pirate_republic_reform
+		OR = {
+			culture_group = maghrebi
+			tag = TET
+			tag = SLE
+		}
+	}
+	free = yes
+	barbary_slave_trade = {
+		trade_efficiency = 0.1
+	}
+	galley_slaves = {
+		global_sailors_modifier = 0.2
+		galley_cost = -0.2
+		has_geobukseon = yes
+	}
+	vengeful_refugees = {
+		own_coast_naval_combat_bonus = 1
+	}
+	mazmorras = {
+		diplomatic_reputation = 1
+	}
+	barbary_fortified_strongholds = {
+		defensiveness = 0.2
+	}
+	heirs_of_al_andalus = {
+		unjustified_demands = -0.25
+	}
+	barbary_board_of_captains = {
+		pr_captains_influence = 0.1
+		possible_mil_policy = 1
+	}
+}
+
+pirate_ideas = {
+	start = {
+		navy_tradition = 0.5
+		naval_maintenance_modifier = -0.1
+	}
+	bonus = {
+		unjustified_demands = -0.25
+	}
+	trigger = {
+		has_government_attribute = is_pirate_republic_reform
+		NOT = { culture_group = maghrebi }
+		NOT = { tag = TET }
+		NOT = { tag = SLE }
+	}
+	free = yes
+	
+	pirates_religious_apathy = {
+		no_religion_penalty = yes
+	}	
+	pirates_plunder = {
+		loot_amount = 0.25
+		coast_raid_range = 2	#3→2
+	}
+	pirates_bucanneers_ideas = {	
+		infantry_cost = -0.1
+		free_leader_pool = 1
+	}
+	pirates_sail_in_consort = {
+		global_naval_engagement_modifier = 0.2
+	}
+	pirates_elected_quartermasters = {
+		global_unrest = -2
+		naval_morale = 0.1
+	}
+	pirate_bays = {
+		own_coast_naval_combat_bonus = 1
+	}
+	pirate_life_of_liberty = {
+		rebel_support_efficiency = 0.25
+		sailors_recovery_speed = 0.1
+	}
+}
+
+cossack_ideas = {
+	start = {
+		global_unrest = -2
+		loot_amount = 0.25
+	}
+	bonus = {
+		shock_damage = 0.1
+	}
+	trigger = {
+		has_reform = cossacks_reform
+	}
+	free = yes
+	cossacks_escaped_serfs = {
+		manpower_recovery_speed = 0.2
+	}
+	cossacks_hetmanate = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.5
+		meritocracy = 1
+		horde_unity = 1
+	}
+	zaz_steppe_riders = {
+		land_attrition = -0.15
+	}
+	cossacks_insults = {
+		power_projection_from_insults = 1
+	}
+	cossacks_military_society = {
+		army_tradition = 0.5
+	}
+	cossacks_free_the_serfs = {
+		years_of_nationalism = -5
+	}
+	cossacks_registered = {
+		possible_mil_policy = 1
+	}
+}
+
+berber_ideas = {
+	start = {
+		enemy_core_creation = 0.5
+		land_morale = 0.1
+	}
+	
+	bonus = {
+		global_trade_power = 0.10
+	}
+	
+	trigger = {
+		culture_group = maghrebi
+		NOT = { primary_culture = andalucian }
+		NOT = { tag = MOR }
+	}
+	free = yes
+	
+	ber_barbary_pirates = {
+		naval_forcelimit_modifier = 0.25
+	}
+	desert_warfare = {
+		hostile_attrition = 1
+	}
+	trans_saharan_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+	corsairs = {
+		navy_tradition = 0.5
+		privateer_efficiency = 0.10
+		has_geobukseon = yes
+	}
+	tuareg_cavalry = {
+		cavalry_power = 0.10
+		loot_amount = 0.10
+	}
+	dual_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	brothers_barbarossa = {
+		galley_power = 0.20
+	}
+}
+
+anatolian_beyliks_ideas = {
+	start = {
+		discipline = 0.05
+		core_creation = -0.20
+	}
+	
+	bonus = {
+		army_tradition = 0.5
+	}
+	
+	trigger = {
+		has_reform = beylik_government
+	}
+	free = yes
+	
+	travelling_ozan= {
+		global_unrest = -1
+	}
+	seljuq_marches = {
+		global_manpower_modifier = 0.10
+	}
+	akinci_cavalry = {
+		cavalry_power = 0.15
+		loot_amount = 0.10
+	}
+	ghazi = {
+		manpower_recovery_speed = 0.2
+	}
+	caravanserais = {
+		trade_efficiency = 0.1
+	}
+	anatolian_architecture = {
+		build_cost = -0.10
+	}
+	legacy_seljuqs_empire = {
+		prestige = 0.5
+	}
+}	
+
+BAV_ideas = {
+	start = {
+		cavalry_power = 0.1
+		heir_chance = 0.5
+	}
+	
+	bonus = {
+		development_cost = -0.1
+	}
+	
+	trigger = {
+		primary_culture = bavarian
+	}
+	free = yes
+	
+	everlating_succeession = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	bavarian_purity_law = {
+		production_efficiency = 0.1
+	}
+	bavarian_state_orchestra = {
+		prestige = 0.5
+	}
+	geistlicher_rat = {
+		global_heretic_missionary_strength = 0.03
+		papal_influence = 1
+	}
+	brewmaster_general = {
+        #33% EXTRA BASE TAX
+		global_tax_modifier = 0.1
+	}
+	professional_army = {
+		discipline = 0.05
+	}
+	royal_order_of_st_george = {
+		army_tradition = 0.5
+	}
+}
+
+swabian_ideas = {
+	start = {
+		manpower_recovery_speed = 0.15
+		merc_maintenance_modifier = -0.15
+	}
+	bonus = {
+		improve_relation_modifier = 0.25
+	}
+	trigger = {
+		primary_culture = swabian
+	}
+	free = yes
+	swabian_mercenaries = {
+		mercenary_manpower = 0.4
+	}
+	swabian_river_iller = {
+		defensiveness = 0.2
+	}
+	swabian_bavarian_resistance = {
+		land_morale = 0.1
+	}
+	swabian_decapole = {
+		diplomatic_upkeep = 1
+	}
+	swabian_reclaiming_the_duchy = {
+		ae_impact = -0.1
+	}
+	swabian_thorn_of_the_empire = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	swabian_habsburg_league = {
+		global_unrest = -1
+	}
+}	
+
+german_ideas = {
+	start = {
+		infantry_power = 0.1
+		merc_maintenance_modifier = -0.15
+	}
+	
+	bonus = {
+		technology_cost = -0.05
+	}
+	
+	trigger = {
+		culture_group = germanic
+	}
+	free = yes        #will be added at load.
+	
+	zunft = {
+		production_efficiency = 0.10
+	}
+	fruhlings_und_herbstmesse = {
+		global_own_trade_power = 0.10
+		trade_efficiency = 0.05
+	}
+	reichskreis = {
+		diplomatic_reputation = 1
+	}
+	polizeiordnung = {
+		global_unrest = -1
+	}
+	cuius_regio_eius_religio = {
+		global_missionary_strength = 0.01
+	}
+	thurn_und_taxis = {
+		diplomatic_upkeep = 1
+	}
+	residenzstadt = {
+		prestige = 0.5
+	}
+}
+
+arabian_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		land_attrition = -0.15
+	}
+	
+	bonus = {
+		leader_land_shock = 1
+	}
+	
+	trigger = {
+		culture_group = turko_semitic
+	}
+	free = yes
+	
+	arab_indian_ocean_trade = {
+		trade_steering = 0.15
+	}
+	arabian_horses = {
+		cavalry_cost = -0.1
+		cavalry_flanking = 0.25
+	}
+	land_of_the_prophet = {
+		global_unrest = -1
+	}
+	spreading_the_prophets_word = {
+		global_missionary_strength = 0.01
+	}
+	bedouin_traders = {
+		global_trade_power = 0.1
+	}
+	arab_clan_loyalties = {
+		leader_land_manuever = 1
+	}
+	arabia = {
+		prestige = 0.5
+	}
+}
+
+latin_ideas = {
+	start = {
+		papal_influence = 2
+		trade_efficiency = 0.1
+	}
+	
+	bonus = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	
+	trigger = {
+		culture_group = latin
+		OR = {
+			capital_scope = { superregion = italy_superregion }
+			tag = TST
+		}
+	}
+	free = yes
+	
+	italian_condottieri = {
+		merc_maintenance_modifier = -0.15
+	}
+	italian_renaissance = {
+		idea_cost = -0.05
+	}
+	italian_aristocracy = {
+		global_spy_defence = 0.2
+ 	}
+	tracee_italienne = {
+		defensiveness = 0.05
+		garrison_size = 0.1
+	}
+	high_renaissance_art_and_architecture = {
+		prestige = 0.5
+	}
+	italian_diplomacy = {
+		diplomatic_upkeep = 1
+		spy_offence = 0.1
+	}
+	commedia_del_arte = {
+		stability_cost_modifier = -0.10
+	}
+}
+
+caucasus_ideas = {
+	start = {
+		hostile_attrition = 1
+		global_manpower_modifier = 0.15
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.10
+	}
+	
+	trigger = {
+		OR = {
+			culture_group = caucasian
+			culture_group = dagestani_group
+			culture_group = abkhazian_group
+			primary_culture = alan_culture
+			primary_culture = karachay
+			primary_culture = khazar
+			primary_culture = hunnic
+		}
+	}
+	free = yes
+	
+	crossroads_of_cultures = {
+		num_accepted_cultures = 1
+	}
+	alan_mercenaries = {
+		merc_maintenance_modifier = -0.10
+		mercenary_manpower = 0.15
+	}
+	caucasus_hit_and_run = {
+		leader_land_manuever = 1		
+	}
+	persian_poetry = {
+		prestige = 0.5
+	}
+	highland_khans = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	eastern_influence = {
+		army_tradition = 0.5
+	}
+	caucasus_cavalry_armies = {
+		cavalry_power = 0.1
+	}
+}
+
+kurdish_ideas = {
+	start = {
+		diplomats = 1
+		defensiveness = 0.15
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+	
+	trigger = {
+		primary_culture = kurdish
+	}
+	free = yes
+	
+	kurdish_warriors = {
+		hostile_attrition = 1
+	}
+	li_gora_gawiri_kurd_misilman = {
+		tolerance_heretic = 2
+	}
+	kurdish_tribes = {
+		global_manpower_modifier = 0.1
+	}
+	kurdish_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	kurdish_mercenaries = {
+		merc_maintenance_modifier = -0.15
+	}
+	legacy_of_the_kurdish_dynasties = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
+	}
+	gorani_literature = {
+		prestige_decay = -0.01
+	}
+}
+
+greek_ideas = {
+	start = {
+		galley_cost = -0.2
+		sailor_maintenance_modifer = -0.1
+	}	
+	bonus = {
+		core_creation = -0.1
+	}	
+	trigger = {
+		culture_group = byzantine
+	}
+	free = yes
+	greek_orthodox_faith = {
+		tolerance_own = 2
+	}
+	greek_maritime_heritage = {
+		navy_tradition = 0.5
+	}
+	greek_klephtic_irregulars = {
+		infantry_power = 0.1
+	}
+	greek_phanariotes = {
+		advisor_cost = -0.1
+	}
+	greek_strengthen_control_over_the_trade_routes = {
+		trade_efficiency = 0.1
+	}
+	greek_philhellenism = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
+	greek_enlightenment = {
+		idea_cost = -0.1
+	}
+}
+
+french_culture_ideas = {
+	start = {
+		fort_maintenance_modifier = -0.1
+		cavalry_cost = -0.1
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	
+	trigger = {
+		culture_group = french
+	}
+	free = yes
+	
+	french_men_of_trade = {
+		global_own_trade_power = 0.10
+	}
+	french_renaissance_palaces = {
+		prestige_decay = -0.01 
+	}
+	french_qui_ruit_et_lethum = {
+		infantry_power = 0.1
+	}
+	french_religious_conviction = {
+		tolerance_own = 2
+	}
+	french_cuisine = {
+		prestige = 0.5
+	}
+	french_enlightenment = {
+		diplomatic_upkeep = 1
+	}
+	french_la_petite_nation = {
+		land_morale = 0.1
+	}
+}

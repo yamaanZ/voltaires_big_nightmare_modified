@@ -1,0 +1,69 @@
+graphical_culture = easterngfx
+color = { 195  149  155 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	spy_ideas
+	innovativeness_ideas
+	administrative_ideas
+	
+	
+}
+
+historical_units = {
+	
+	
+	
+	
+	bardiche_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	hungarian_hussar
+	polish_musketeer
+	polish_hussar
+	polish_tercio
+	polish_winged_hussar
+	russian_lancer
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+	
+	
+}
+
+monarch_names = {
+	"Janusz #0" = 40
+	"Boleslaw #0" = 20
+	"Konrad #0" = 20
+	"Stanislaw #0" = 20
+	"Kazimierz #0" = 15
+	"Ziemowit #0" = 10
+	"Trojden #0" = 10
+	
+	"Anatola #0" = -1
+	"Jadzia #0" = -1
+	"Michalina #0" = -1
+}
+
+leader_names = { 
+	Jagiellon
+	Kedzierzawy
+	Leszczynski Lubomirski
+	Piast Poniatowski Premyslid
+	Radziwill
+	Sapieha
+	Wisniowiecki 
+}
+
+ship_names = {
+	Narew Wkra Wisla Bzura Pilica
+	Radomka Bug Liwiec Biebrza Warszawa
+	Lowicz Mlawa Kolno Wizna
+}

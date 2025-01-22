@@ -1,0 +1,1155 @@
+#Luxemburg Mission Tree
+#By Historyperson 
+
+vn_lux_missions_slot_1 = {
+    slot = 6
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    vn_lux_integrate_neighbors = {
+        icon = generality_lands
+        position = 1
+        required_missions = {  }
+        provinces_to_highlight = {
+            area = luxemburg_area
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            luxemburg_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+			luxemburg_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			chiny_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			liege_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			limburg_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }  
+        }
+    }
+    vn_lux_elevate_to_duchy = {
+        icon = mission_duchy
+        position = 2
+        required_missions = { vn_lux_integrate_neighbors }
+        trigger = {
+            government_rank = 3
+			grown_by_development = 50
+        }
+        effect = {
+            add_country_modifier = {
+                name = lux_elevate_to_duchy_mission
+                duration = 9125 
+            }            
+        }
+    }
+    vn_lux_acquire_limburg = {
+        icon = mission_unite_home_region
+        position = 4
+        required_missions = { vn_lux_elevate_to_duchy }
+        provinces_to_highlight = {
+            OR = {
+				area = luxemburg_area
+				area = chiny_area
+				area = liege_area
+				area = limburg_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 20
+                OR = {
+                    area = luxemburg_area
+                    area = chiny_area
+                    area = liege_area
+                    area = limburg_area
+                }
+            }  
+        }
+        effect = {
+            brabant_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            } 
+            antwerp_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }            
+        }
+    }
+    vn_lux_acquire_brabant = {
+        icon = mission_unite_home_region
+        position = 6
+        required_missions = { vn_lux_acquire_limburg }
+        provinces_to_highlight = {
+			OR = {
+				area = antwerp_area
+				area = brabant_area
+			}
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 5
+                area = antwerp_area
+            } 
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 5
+                area = brabant_area
+            } 
+        }
+        effect = {
+			antwerp_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			hainaut_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			flanders_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            brabant_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            holland_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            utrecht_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            guelders_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+        }
+    }
+}
+
+vn_lux_missions_slot_2 = {
+    slot = 7
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    vn_lux_religious_influence = {
+        icon = mission_hands_praying
+        position = 1
+        required_missions = {  }
+        trigger = {
+            OR = {
+                papal_influence = 50
+                invested_papal_influence = 50
+				is_papal_controller = yes
+            }
+        }
+        effect = {
+            add_country_modifier = {
+                name = lux_religious_influence_mission
+                duration = 9125
+            }            
+        }
+    }
+    vn_lux_rule_over_trier = {
+        icon = rhineland_conquest
+        position = 2
+        required_missions = { vn_lux_integrate_neighbors vn_lux_religious_influence }
+        provinces_to_highlight = {
+			OR = {
+            	area = triernorth_area
+            	area = triersouth_area
+			}
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 5
+                area = triernorth_area
+            } 
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 5
+                area = triersouth_area
+            }
+        }
+        effect = {
+			cologne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+            }
+			aachen_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+            }
+			triernorth_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+            }
+			triersouth_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+            }
+			berg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+            } 
+        }
+    }
+    vn_lux_influence_in_the_empire = {
+        icon = influence_the_princes
+        position = 3
+        required_missions = { vn_lux_elevate_to_duchy }
+        trigger = {
+            grown_by_development = 100
+            calc_true_if = {
+                desc = gen_hre_electors.tooltip
+                all_elector = {
+                    preferred_emperor = ROOT
+                }
+                amount = 3
+            }
+        }
+        effect = {
+            add_dip_power = 25
+            add_country_modifier = {
+                name = lux_influence_in_the_empire_mission
+                duration = 9125
+            }            
+        }
+    }
+    vn_lux_emperorship = {
+        icon = mission_empire
+        position = 4
+        required_missions = { vn_lux_influence_in_the_empire vn_lux_dynastic_success }
+        trigger = {
+            is_emperor = yes 
+			imperial_influence = 50
+        }
+        effect = {
+            add_dip_power = 50
+			add_imperial_influence = 10
+            add_country_modifier = {
+                name = lux_emperorship_mission
+                duration = 9125
+            }
+        }
+    }
+    vn_lux_golden_bull_of_1356 = {
+        icon = mission_luther_theses
+        position = 5
+        required_missions = { vn_lux_emperorship }
+        trigger = {
+            is_emperor = yes
+            imperial_influence = 50
+        }
+        effect = {
+            add_power_projection = {
+                type = mission_rewards_power_projection
+                amount = 15
+            }
+            country_event = { id = vn_missions.203 } #Makes countries electors    
+        }
+    }
+}
+
+vn_lux_missions_slot_3 = {
+    slot = 8
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    vn_lux_societas_draconistarum = {
+        icon = mission_defend_the_faith
+        position = 2
+        required_missions = { vn_lux_religious_influence }
+        trigger = {
+            at_war_with_religious_enemy = yes
+        }
+        effect = {
+            add_country_modifier = {
+                name = lux_societas_draconistarum_mission
+                duration = 9125
+            }            
+        }
+    }
+    vn_lux_dynastic_success = {
+        icon = mission_alliances
+        position = 3
+        required_missions = { vn_lux_masters_of_diplomacy }
+        trigger = {
+			prestige = 25
+            if = {
+                limit = { has_dlc = "Common Sense" }
+                legitimacy_equivalent = 100
+            }
+            else_if = {
+                limit = { government = monarchy }
+                legitimacy = 100
+            }
+            NOT = { num_of_free_diplomatic_relations = 1 }
+			num_of_royal_marriages = 3
+        }
+        effect = {
+            add_dip_power = 50
+			if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					781 = { owner = { valid_for_personal_unions_trigger = yes } }		
+				}
+				781 = { #Owner of Prague
+					owner = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_fabricated_claims
+							months = 240
+						}
+					}
+				}
+			}
+			else = {
+				bohemia_region = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+            add_country_modifier = {
+                name = lux_dynastic_success_mission
+                duration = 9125
+            }            
+        }
+    }
+    vn_lux_king_of_bohemia = {
+        icon = bohemian_commonwealth
+        position = 4
+        required_missions = { vn_lux_dynastic_success }
+        provinces_to_highlight = {
+	        region = bohemia_region
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 20
+                region = bohemia_region
+            } 
+        }
+        effect = {
+            moravia_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            zlin_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            olomouc_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			lusatiasouth_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lusatianorth_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+    vn_lux_lusatia = {
+        icon = bohemian_borderlands
+        position = 5
+        required_missions = { vn_lux_king_of_bohemia }
+        provinces_to_highlight = {
+			OR = {
+				area = lusatiasouth_area
+				area = lusatianorth_area
+			}
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+			lusatiasouth_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+			lusatianorth_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+			if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					2652 = { owner = { valid_for_personal_unions_trigger = yes } }		
+				}
+				2652 = { #Owner of Berlin
+					owner = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_fabricated_claims
+							months = 240
+						}
+					}
+				}
+			}
+			else = {
+                berlin_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                ruppin_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                potsdam_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                south_berlin_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+			}
+        }
+    }
+    vn_lux_elector_of_brandenburg = {
+        icon = electorate_of_brandenburg
+        position = 6
+        required_missions = { vn_lux_lusatia }
+        provinces_to_highlight = {
+            OR = {
+                area = berlin_area
+                area = ruppin_area
+                area = potsdam_area
+                area = south_berlin_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            berlin_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = root
+            }
+            ruppin_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = root
+            }
+            potsdam_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = root
+            }
+            south_berlin_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = root
+            }
+        }
+        effect = {
+            add_adm_power = 50             
+            add_dip_power = 50             
+            add_mil_power = 50             
+            if = {
+				limit = { 
+					NOT = { num_of_electors = 7 }
+					is_elector = no
+				}
+				elector = yes
+			}
+            else = {
+				add_prestige_or_monarch_power = { amount = 10 } 	
+				add_legitimacy = 25 
+			}
+        }
+    }
+}
+
+vn_lux_missions_slot_4 = {
+    slot = 9
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    vn_lux_improve_our_reputation = {
+        icon = mission_alliances
+        position = 1
+        required_missions = {  }
+        trigger = {
+			diplomatic_reputation = 3
+			OR = {
+				advisor = statesman
+				advisor = diplomat
+			}
+        }
+        effect = {
+            add_dip_power = 25
+            add_country_modifier = {
+                name = lux_improve_our_reputation_mission
+                duration = 9125
+            }            
+        }
+    }
+    vn_lux_masters_of_diplomacy = {
+        icon = friends_in_high_places
+        position = 2
+        required_missions = { vn_lux_improve_our_reputation }
+        trigger = {
+            dip = 4
+			NOT = { num_of_free_diplomatic_relations = 1 }
+			any_ally = {
+				total_development = 100
+			}
+        }
+        effect = {
+            add_prestige_or_monarch_power = { amount = 10 } 
+			add_legitimacy = 10
+			change_dip = 1
+            add_country_modifier = {
+                name = lux_masters_of_diplomacy_mission
+                duration = -1
+            }            
+        }
+    }
+    vn_lux_fight_the_habsburgs = {
+        icon = humiliate_austria
+        position = 3
+        required_missions = { vn_lux_masters_of_diplomacy }
+        trigger = {
+			OR = {
+				owns_core_province = 2172
+				2172 = { #owner of Vienna
+					owner = {
+						is_in_war = {
+							participants = ROOT
+						}
+					}
+				}
+			}
+        }
+        effect = {
+			add_mil_power = 50
+            austria_region = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_claim = ROOT }
+                }
+                add_claim = ROOT
+            } 
+            add_country_modifier = {
+                name = lux_fight_the_habsburgs_mission
+                duration = 9125
+            }           
+        }
+    }
+    vn_lux_margravate_of_moravia = {
+        icon = mission_duchy
+        position = 5
+        required_missions = { vn_lux_king_of_bohemia }
+        provinces_to_highlight = {
+            OR = {
+                area = moravia_area
+                area = zlin_area
+                area = olomouc_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            moravia_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            zlin_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            olomouc_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+			if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					444 = { owner = { valid_for_personal_unions_trigger = yes } }		
+				}
+				444 = { #Owner of Pest
+					owner = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_fabricated_claims
+							months = 240
+						}
+					}
+				}
+			}
+			else = {
+                pest_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                kiskun_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                bacs_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                heves_area = {
+                    limit = {
+                        NOT = { is_core = ROOT }
+                        NOT = { is_permanent_claim = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+			}
+            silesia_region = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }           
+        }
+    }
+    vn_lux_hungarian_realm = {
+        icon = king_of_hungary
+        position = 6
+        required_missions = { vn_lux_margravate_of_moravia }
+        provinces_to_highlight = {
+            OR = {
+                area = pest_area
+                area = kiskun_area
+                area = bacs_area
+                area = heves_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            pest_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            kiskun_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            bacs_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            heves_area = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+            nyitra_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            trencsin_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            hont_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            abauj_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            zemplen_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            nagyatad_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            sopron_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            veszprem_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            fejer_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            } 
+        }
+    }
+}
+
+vn_lux_missions_slot_5_a = {
+    slot = 10
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    vn_lux_draei_eechelen = {
+        icon = mission_fort
+        position = 1
+        required_missions = {  }
+        provinces_to_highlight = {
+            province_id = 2530
+        }
+        trigger = {
+			advisor = fortification_expert
+            2530 = { #Luxemburg
+				owned_by = ROOT
+				development = 20
+				has_fort_trigger = yes
+			}            
+        }
+        effect = {
+			add_mil_power = 50	
+            2530 = {
+                add_base_manpower = 2
+                if = {
+                    limit = { 
+                        has_building = fort_17th  
+                    }
+                    remove_building = fort_17th
+                    add_building = fort_18th
+                }
+                if = {
+                    limit = { 
+                        has_building = fort_16th  
+                    }
+                    remove_building = fort_16th
+                    add_building = fort_17th
+                }
+                if = {
+                    limit = { 
+                        has_building = fort_15th  
+                    }
+                    remove_building = fort_15th
+                    add_building = fort_16th
+                }
+                if = {
+                    limit = { 
+                        has_building = fort_14th  
+                    }
+                    remove_building = fort_14th
+                    add_building = fort_15th
+                }
+                add_province_modifier = {
+                    name = lux_draei_eechelen_mission
+                    duration = 18250
+                }
+            }            
+        }
+    }
+    vn_lux_gibraltar_of_the_north = {
+        icon = mission_conquer_50_development
+        position = 2
+        required_missions = { vn_lux_draei_eechelen }
+        provinces_to_highlight = {
+            province_id = 2530
+        }
+        trigger = {
+			fortification_expert = 3
+            2530 = { #Luxemburg
+				owned_by = ROOT
+				development = 25
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}             
+        }
+        effect = {
+			add_mil_power = 100
+            2530 = {
+                add_base_manpower = 2
+                add_province_modifier = {
+                    name = lux_gibraltar_of_the_north_mission
+                    duration = -1
+                }
+            }            
+        }
+    }
+    vn_lux_french_alliance = {
+        icon = king_of_france
+        position = 3
+        required_missions = { vn_lux_masters_of_diplomacy }
+		provinces_to_highlight = {
+			province_id = 548
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+		}
+        trigger = {
+			OR = {
+				548 = {
+					owner = {
+						OR = {
+							alliance_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 10
+					superregion = french_superregion
+				}				
+			}
+        }
+        effect = {
+            add_dip_power = 25
+			if = {
+				limit = {
+					alliance_with = FRA
+				}
+				548 = { 
+					owner = {
+						add_opinion = {
+							who = ROOT
+							modifier = lux_french_alliance_opinion
+						}
+						reverse_add_opinion = {
+							who = ROOT
+							modifier = lux_french_alliance_opinion #Common Habsburg Enemy
+						}
+						add_trust = {
+							who = ROOT
+							value = 10
+							mutual = yes
+						}
+					}
+				}
+			} 
+			else = {
+				314 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT #May change to claims
+					}
+				}
+				1201 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT #May change to claims
+					}
+				}	
+				1199 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT #May change to claims
+					}
+				}
+				4116 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+						add_permanent_claim = ROOT #May change to claims
+					}
+				}
+				set_country_flag = mission_lux_own_paris
+				add_country_modifier = {
+					name = lux_french_alliance_mission
+					duration = 9125
+				}   
+			}
+        }
+    }
+}
+
+vn_lux_missions_slot_5_b = {
+    slot = 10
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+		has_country_flag = mission_lux_own_paris
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+	
+    vn_lux_french_holdings = {
+        icon = mission_european_church
+        position = 4
+        required_missions = { vn_lux_french_alliance }
+        provinces_to_highlight = {
+			OR = { 
+				province_id = 314 #Saint-Pol
+				province_id = 1201 #Soissons
+				province_id = 1199 #Brienne
+				province_id = 4116 #Ligny	
+			}
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            314 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            1201 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            1199 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+            4116 = {
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+            reims_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            valois_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            troyes_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            rethel_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+			picardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			artois_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vermandois_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+        }
+    }
+}
+
+vn_lux_missions_slot_5_c = {
+    slot = 10
+    generic = no
+    ai = yes
+    potential = {
+        tag = LUX
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+	
+    vn_lux_fight_silesian_piasts = {
+        icon = mission_crusade_for_varna
+        position = 6
+        required_missions = { vn_lux_margravate_of_moravia }
+        provinces_to_highlight = {
+	        region = silesia_region
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }          
+        }
+        trigger = {
+            silesia_region = {
+                type = all
+                country_or_non_sovereign_subject_holds = ROOT
+            }
+        }
+        effect = {
+            add_country_modifier = {
+                name = lux_fight_silesian_piasts_mission
+                duration = 9125
+            }           
+        }
+    }
+}

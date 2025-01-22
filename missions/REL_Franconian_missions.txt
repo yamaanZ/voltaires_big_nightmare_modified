@@ -1,0 +1,880 @@
+vn_franconia_conquest_group_1 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		primary_culture = franconian
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = no
+	
+	fkn_defeat_rivals = {
+		position = 5
+		icon = assert_our_sovereignty
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				area = ansbach_area
+				area = bamberg_area
+				area = wurzburg_area
+				area = hohenlohe_area
+				area = bayreuth_area
+			}
+			OR = {
+				NOT = { owned_by = root }
+				NOT = { is_core = root }
+			}
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 10
+						OR = {
+							area = ansbach_area
+							area = bamberg_area
+							area = wurzburg_area
+							area = hohenlohe_area
+							area = bayreuth_area
+						}
+						is_core = root
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = ansbach_area
+					area = bamberg_area
+					area = wurzburg_area
+					area = hohenlohe_area
+					area = bayreuth_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			ansbach_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			bamberg_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			wurzburg_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			hohenlohe_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			bayreuth_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	fkn_liberty = {
+		icon = mission_noble_council
+		required_missions = { fkn_defeat_rivals }
+		provinces_to_highlight = {
+			OR = {
+				area = ansbach_area
+				area = bamberg_area
+				area = wurzburg_area
+				area = hohenlohe_area
+				area = bayreuth_area
+			}
+			NOT = { owner = { primary_culture = franconian } }
+		}
+		trigger = {
+			ansbach_area = {
+				type = all
+				owner = { primary_culture = franconian }
+			}
+			bamberg_area = {
+				type = all
+				owner = { primary_culture = franconian }
+			}
+			wurzburg_area = {
+				type = all
+				owner = { primary_culture = franconian }
+			}
+			hohenlohe_area = {
+				type = all
+				owner = { primary_culture = franconian }
+			}
+			bayreuth_area = {
+				type = all
+				owner = { primary_culture = franconian }
+			}
+		}
+		effect = {
+			hessesouth_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			hessenorth_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			nassau_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			marburg_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			pfalzwest_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			pfalzeast_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			mainz_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			darmstadt_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	fkn_greater_franconia = {
+		icon = conquer_franconia
+		required_missions = { fkn_liberty }
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 1943
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { is_core = root }
+					}
+				}
+				AND = {
+					OR = {
+						area = hessesouth_area
+						area = hessenorth_area
+						area = nassau_area
+						area = marburg_area
+						area = pfalzwest_area
+						area = pfalzeast_area
+						area = mainz_area
+						area = darmstadt_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = root }
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 20
+								OR = {
+									area = hessesouth_area
+									area = hessenorth_area
+									area = nassau_area
+									area = marburg_area
+									area = pfalzwest_area
+									area = pfalzeast_area
+									area = mainz_area
+									area = darmstadt_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				area = hessesouth_area
+				area = hessenorth_area
+				area = nassau_area
+				area = marburg_area
+				area = pfalzwest_area
+				area = pfalzeast_area
+				area = mainz_area
+				area = darmstadt_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = root }
+		}
+		
+		trigger = {
+			owns_core_province = 1943
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					area = hessesouth_area
+					area = hessenorth_area
+					area = nassau_area
+					area = marburg_area
+					area = pfalzwest_area
+					area = pfalzeast_area
+					area = mainz_area
+					area = darmstadt_area
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fkn_franconia_ascendant
+				duration = 9125
+			}
+			ingolstadt_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			innkreis_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			munich_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			straubing_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			landshut_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			oberpfalz_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			leuchtenburg_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			bayreuth_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			eichstadt_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = ING
+						owned_by = LSH
+						owned_by = XMU
+						owned_by = BAV
+					}
+					NOT = { area = oberpfalz_area }
+					NOT = { area = leuchtenburg_area }
+					NOT = { area = bayreuth_area }
+					NOT = { area = eichstadt_area }
+					NOT = { area = landshut_area }
+					NOT = { area = oberpfalz_area }
+					NOT = { area = leuchtenburg_area }
+					NOT = { area = bayreuth_area }
+					NOT = { area = eichstadt_area }
+					NOT = { is_claim = root }
+					NOT = { country_or_non_sovereign_subject_holds = root }
+				}
+				add_claim = root
+			}
+		}
+	}
+	fkn_subjugate_bavaria = {
+		icon = duchy_of_bavaria
+		required_missions = { fkn_greater_franconia }
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = ingolstadt_area
+						area = innkreis_area
+						area = munich_area
+						area = straubing_area
+						area = landshut_area
+						area = oberpfalz_area
+						area = leuchtenburg_area
+						area = bayreuth_area
+						area = eichstadt_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = root }
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 25
+								OR = {
+									area = ingolstadt_area
+									area = innkreis_area
+									area = munich_area
+									area = straubing_area
+									area = landshut_area
+									area = oberpfalz_area
+									area = leuchtenburg_area
+									area = bayreuth_area
+									area = eichstadt_area
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						owned_by = UPA
+						owned_by = ING
+						owned_by = LSH
+						owned_by = XMU
+						owned_by = BAV
+					}
+					NOT = { country_or_non_sovereign_subject_holds = root }
+				}
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = UPA
+				}
+				UPA = {
+					OR = {
+						exists = no
+						is_subject_of = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = ING
+				}
+				ING = {
+					OR = {
+						exists = no
+						is_subject_of = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = LSH
+				}
+				LSH = {
+					OR = {
+						exists = no
+						is_subject_of = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = XMU
+				}
+				XMU = {
+					OR = {
+						exists = no
+						is_subject_of = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = BAV
+				}
+				BAV = {
+					OR = {
+						exists = no
+						is_subject_of = root
+					}
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 30
+				OR = {
+					area = ingolstadt_area
+					area = innkreis_area
+					area = munich_area
+					area = straubing_area
+					area = landshut_area
+					area = oberpfalz_area
+					area = leuchtenburg_area
+					area = bayreuth_area
+					area = eichstadt_area
+				}
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = { amount = 20 } 
+			paris_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			orleans_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			nemours_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			reims_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			valois_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			troyes_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			rethel_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+}
+
+vn_franconia_conquest_group_2 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		primary_culture = franconian
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = no
+	
+	fkn_kingdom_of_the_franks = {
+		icon = king_of_the_franks
+		position = 9
+		required_missions = { fkn_subjugate_bavaria }
+		provinces_to_highlight = {
+			province_id = 548
+			OR = {
+				NOT = { owned_by = root }
+				NOT = { is_core = root }
+			}
+		}
+		trigger = {
+			is_or_was_tag = { tag = FKN }
+			owns_core_province = 548 #Paris
+			total_own_and_non_tributary_subject_development = FRA
+			army_size = FRA
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+					OR = {
+						is_part_of_hre = no
+						is_elector = yes
+					}
+				}
+				set_government_rank = 5
+			}
+			add_country_modifier = {
+				name = fkn_kingdom_of_the_franks_mod
+				duration = -1
+			}
+			if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					exists = FRA
+					FRA = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_fabricated_claims
+					months = 300
+					target = FRA
+				}
+			}
+			else = {
+				french_superregion = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+		}
+	}
+}
+
+vn_franconia_splendour_group = {
+	slot = 4
+	generic = yes
+	ai = yes
+	potential = {
+		primary_culture = franconian
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = no
+	
+	fkn_franconian_prosperity = {
+		position = 9
+		icon = prosperity_for_all
+		required_missions = {  }
+		provinces_to_highlight = {
+			owned_by = root
+			OR = {
+				AND = {
+					is_capital = yes
+					NOT = { num_of_buildings_in_province = 2 }
+				}
+				NOT = { development = 10 }
+				NOT = { num_of_times_improved_by_owner = 3 }
+			}
+		}
+		trigger = {
+			capital_scope = {
+				num_of_buildings_in_province = 2
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				development = 10
+				num_of_times_improved_by_owner = 3
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fkn_we_prosper
+				duration = 9125
+			}
+		}
+	}
+	fkn_patronage_of_the_arts = {
+		icon = sponsor_the_arts
+		required_missions = { fkn_franconian_prosperity }
+		trigger = {
+			has_adm_advisor_2 = yes
+			has_dip_advisor_2 = yes
+			has_mil_advisor_2 = yes
+			is_in_deficit = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = fkn_arts_patronised
+				duration = 9125
+			}
+		}
+	}
+	fkn_industrial_revolution = {
+		icon = saxon_manufacturing
+		required_missions = { fkn_patronage_of_the_arts }
+		provinces_to_highlight = {
+			owned_by = root
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 5
+						has_manufactory_trigger = yes
+						development = 10
+					}
+				}
+			}
+			OR = {
+				AND = {
+					ROOT = {
+						num_of_owned_provinces_with = {
+							value = 5
+							has_manufactory_trigger = yes
+						}
+					}
+					has_manufactory_trigger = yes
+					NOT = { development = 10 }
+				}
+				AND = {
+					ROOT = {
+						num_of_owned_provinces_with = {
+							value = 5
+							development = 10
+						}
+					}
+					has_manufactory_trigger = no
+					development = 10
+				}
+				AND = {
+					NOT = {
+						ROOT = {
+							num_of_owned_provinces_with = {
+								value = 5
+								has_manufactory_trigger = yes
+							}
+						}
+					}
+					NOT = {
+						ROOT = {
+							num_of_owned_provinces_with = {
+								value = 5
+								development = 10
+							}
+						}
+					}
+					OR = {
+						has_manufactory_trigger = no
+						NOT = { development = 10 }
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_manufactory_trigger = yes
+				development = 10
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fkn_we_produce_stuff
+				duration = 9125
+			}
+		}
+	}
+}
+
+vn_franconia_splendour_group_2 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	potential = {
+		primary_culture = franconian
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = no
+	
+	fkn_sanspareil = {
+		icon = mission_monarch_in_throne_room
+		position = 10
+		required_missions = { }
+		provinces_to_highlight = {
+			is_capital_of = root
+			NOT = { num_of_buildings_in_province = 5 }
+		}
+		trigger = {
+			OR = {
+				is_or_was_tag = { tag = FKN }
+				is_or_was_tag = { tag = ANS }
+				is_or_was_tag = { tag = NUO }
+			}
+			prestige = 80
+			legitimacy_equivalent = 95
+			capital_scope = {
+				num_of_buildings_in_province = 5
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = fkn_franconian_palace
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					OR = {
+						dynasty = "von Hohenzollern"
+						tag = ANS
+						tag = NUO
+						was_tag = ANS
+						was_tag = NUO
+					}
+					exists = BRA
+					BRA = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_fabricated_claims
+					months = 300
+					target = BRA
+				}
+			}
+			else_if = {
+				limit = {
+					valid_for_personal_unions_trigger = yes
+					OR = {
+						dynasty = "von Hohenzollern"
+						tag = ANS
+						tag = NUO
+						was_tag = ANS
+						was_tag = NUO
+					}
+					exists = PRU
+					PRU = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				add_casus_belli = {
+					type = cb_fabricated_claims
+					months = 300
+					target = PRU
+				}
+			}
+			else = {
+				berlin_area = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				ruppin_area = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				potsdam_area = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				south_berlin_area = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+		}
+	}
+	fkn_union_with_brandenburg = {
+		icon = electorate_of_brandenburg
+		required_missions = { fkn_sanspareil }
+		provinces_to_highlight = {
+			area = berlin_area
+			area = ruppin_area
+			area = potsdam_area
+			area = south_berlin_area
+			NOT = { country_or_non_sovereign_subject_holds = root }
+		}
+		trigger = {
+			OR = {
+				is_or_was_tag = { tag = FKN }
+				is_or_was_tag = { tag = ANS }
+				is_or_was_tag = { tag = NUO }
+			}
+			berlin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			ruppin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			potsdam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			south_berlin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = fkn_expansionist_ambition
+				duration = 10950
+			}
+		}
+	}
+}

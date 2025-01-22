@@ -1,0 +1,77 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = eastphalian
+religion = catholic
+technology_group = western
+capital = 2442
+
+1214.1.1 = {
+	monarch = {
+		name = "Gebhard I"
+		dynasty = "von Arnstein"
+		birth_date = 1209.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = entrepreneur_personality
+}
+1230.1.1 = {
+	heir = {
+		name = "Günther"
+		monarch_name = "Günther I"
+		dynasty = "von Arnstein"
+		birth_date = 1230.1.1
+		death_date = 1284.1.1
+		claim = 90
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+1256.1.1 = {
+	monarch = {
+		name = "Günther I"
+		dynasty = "von Arnstein"
+		birth_date = 1230.1.1
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ulrich"
+		monarch_name = "Ulrich I"
+		dynasty = "von Arnstein"
+		birth_date = 1253.1.1
+		death_date = 1316.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1284.1.1 = {
+	monarch = {
+		name = "Ulrich I"
+		dynasty = "von Arnstein"
+		birth_date = 1253.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1300.1.1 = {
+	heir = {
+		name = "Ulrich"
+		monarch_name = "Ulrich II"
+		dynasty = "von Arnstein"
+		birth_date = 1300.1.1
+		death_date = 1356.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

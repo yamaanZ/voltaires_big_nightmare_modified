@@ -1,0 +1,44 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = neapolitan
+capital = 4517
+fixed_capital = 4517
+
+1035.1.1 = {
+    monarch = {
+        name = "Guido"
+        dynasty = "Landulfing"
+        culture = langobardic
+        birth_date = 1012.1.1
+        adm = 4
+        dip = 4
+        mil = 0
+    }
+}
+#1073 to Naples
+
+#Reestablished
+1076.1.1 = {
+    government_rank = 4
+	government = republic
+	add_government_reform = merchants_reform
+	mercantilism = 25
+	monarch = {
+        name = "Repubblica"
+        regent = yes
+        adm = 2
+        dip = 2
+        mil = 2
+    }
+}
+1100.1.1 = {
+	monarch = {
+        name = "Sergio"
+        adm = 1
+        dip = 3
+        mil = 2
+    }
+}

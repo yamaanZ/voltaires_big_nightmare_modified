@@ -1,0 +1,48 @@
+culture = swabian
+religion = catholic
+hre = yes
+base_tax = 1
+base_production = 1
+trade_goods = grain
+base_manpower = 1
+capital = "Illertissen" 
+is_city = yes	
+owner = BGX
+controller = BGX
+add_core = BGX
+add_core = GTZ
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = western
+discovered_by = muslim
+
+1172.4.3 = {
+	owner = GTZ
+	controller = GTZ
+	remove_core = BGX
+}
+1281.1.1 = {
+	owner = KXR
+	controller = KXR
+	add_core = KXR
+	remove_core = GTZ
+}
+1444.11.12 = {	#BERTUS MOD
+	owner = AUG
+	controller = AUG
+	add_core = AUG
+}
+1803.3.25 = {
+	owner = BAV
+	controller = BAV
+	add_core = BAV
+	remove_core = KXR
+}
+1866.8.23 = { hre = no }
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+}
+discovered_by = nomad_group
+discovered_by = north_american

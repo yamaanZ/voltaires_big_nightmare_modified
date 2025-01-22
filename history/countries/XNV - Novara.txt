@@ -1,0 +1,75 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = lombard
+religion = catholic
+capital = 1014
+add_army_professionalism = 0.05
+
+#Counts of Pombia
+1035.1.1 = {
+	monarch = {
+		name = "Guido"
+		dynasty = "Confalonieri"
+		birth_date = 1020.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Ottone"
+		monarch_name = "Ottone"
+		dynasty = "Confalonieri"
+		birth_date = 1034.1.1
+		death_date = 1093.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+1070.1.1 = {
+	monarch = {
+		name = "Ottone"
+		dynasty = "Confalonieri"
+		birth_date = 1034.1.1
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Alberto"
+		monarch_name = "Alberto"
+		dynasty = "Confalonieri"
+		birth_date = 1070.1.1
+		death_date = 1134.1.1
+		claim = 95
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+1094.1.1 = {
+	monarch = {
+		name = "Alberto"
+		dynasty = "Confalonieri"
+		birth_date = 1070.1.1
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+
+#Commune
+1110.1.1 = {
+	government = republic
+	add_government_reform = italian_monarchy
+	monarch = {
+		name = "Repubblica"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

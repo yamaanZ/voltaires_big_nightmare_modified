@@ -1,0 +1,118 @@
+capital = "Esens"
+culture = east_frisian
+religion = catholic
+trade_goods = iron
+base_tax = 0
+base_production = 1
+base_manpower = 0
+is_city = yes
+hre = no
+owner = NRD
+controller = NRD
+add_core = NRD
+add_core = HLX
+
+1101.4.10 = {
+	owner = HLX
+	controller = HLX
+	remove_core = NRD
+}
+1370.1.1 = {
+	#1-1-1
+	base_tax = 1
+	base_manpower = 1
+}
+1444.11.12 = {	#BERTUS MOD
+	owner = AUC
+	controller = AUC
+	add_core = AUC
+	hre = yes
+	add_base_tax = 1
+	add_base_production = 1
+	add_base_manpower = 1
+}
+1464.1.1 = { hre = yes }
+1530.1.1 = {
+	owner = EFR
+	controller = EFR
+}
+1531.1.1 = {
+	owner = HLX
+	controller = HLX
+}
+1536.1.1 = { religion = protestant }
+1540.10.16 = {
+	owner = RTG
+	controller = RTG
+	add_core = RTG
+}
+1576.9.27 = {
+	owner = HLX
+	controller = HLX
+	remove_core = RTG
+}
+1584.7.13 = {
+	owner = RTG
+	controller = RTG
+	add_core = RTG
+}
+1600.1.28 = {
+	owner = EFR
+	controller = EFR
+	add_core = EFR
+	remove_core = RTG
+	remove_core = HLX
+}
+1744.5.26 = {
+	owner = PRU
+	controller = PRU
+	remove_core = EFR
+	add_core = PRU
+}
+1757.1.1 = { controller = FRA }
+1758.1.1 = { controller = PRU }
+1806.7.12 = { hre = no }
+1807.1.1 = {
+	owner = NED
+	controller = NED
+	add_core = NED
+	remove_core = PRU
+}
+1810.7.10 = {
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	remove_core = NED
+}
+1813.10.13 = {
+	owner = PRU
+	controller = PRU
+	add_core = PRU
+	remove_core = FRA
+}
+1815.3.16 = {
+	owner = HAN
+	controller = HAN
+	add_core = HAN
+	remove_core = PRU
+	hre = yes
+}
+1866.9.20 = {
+	owner = PRU
+	controller = PRU
+	add_core = PRU
+}
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+	remove_core = PRU
+	hre = no
+}
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

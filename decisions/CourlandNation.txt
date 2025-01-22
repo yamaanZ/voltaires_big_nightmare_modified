@@ -1,0 +1,200 @@
+country_decisions = {
+
+	couronian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				tag = RIG
+				tag = RGS
+				tag = LIV
+				tag = DPT
+				tag = OSL
+			}
+			NOT = { tag = LVA }
+			NOT = { exists = KUR }
+			OR = {
+				ai = no
+				is_religion_enabled = protestant
+				is_religion_enabled = hussite
+				is_religion_enabled = reformed
+				is_religion_enabled = anglican
+				is_religion_enabled = anabaptist
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5809
+				province_id = 5790
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10		
+			is_at_war = no
+			is_nomad = no
+			OR = {
+				religion = reformed
+				religion = hussite
+				religion = protestant
+				religion = anglican
+				religion = anabaptist
+			}
+			owns_core_province = 5809	 # Kurland
+			owns_core_province = 5790	 # Semigallia
+			5790 = { is_state = yes }
+		}
+		effect = {
+			change_tag = KUR
+			on_change_tag_effect = yes
+			add_prestige = 10
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_capital = 5790		# Semigallia
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					government = theocracy
+				}
+				change_government = monarchy
+				every_neighbor_country = {
+					limit = { government = monarchy }
+					add_opinion = { who = ROOT modifier = secularized_monastic_order }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { owns_core_province = 5809 }
+				NOT = { owns_core_province = 5790 }
+			}
+		}
+	}
+
+	couronian_nation_baltic_german = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_courland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = {
+				OR = {
+					tag = RIG
+					tag = RGS
+					tag = LIV
+					tag = DPT
+					tag = OSL
+				}
+			}
+			primary_culture = baltic_german
+			NOT = { tag = LVA }
+			NOT = { exists = KUR }
+			OR = {
+				ai = no
+				is_religion_enabled = protestant
+				is_religion_enabled = reformed
+				is_religion_enabled = hussite
+				is_religion_enabled = anglican
+				is_religion_enabled = anabaptist
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5809	 # Kurland
+				province_id = 5790	 # Semigallia
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_nomad = no			
+			is_at_war = no
+			OR = {
+				religion = protestant
+				religion = anabaptist
+				religion = reformed
+				religion = hussite
+				religion = anglican
+			}
+			owns_core_province = 5809	 # Kurland
+			owns_core_province = 5790	# Semigallia
+			5790 = { 					# Semigallia
+				is_state = yes
+			}
+		}
+		effect = {
+			5790 = { # Semigallia
+				move_capital_effect = yes
+			}
+			change_tag = KUR
+			on_change_tag_effect = yes
+			if = {
+				limit = {
+					NOT = { accepted_culture = latvian }
+				}
+				add_accepted_culture = latvian
+			}
+			restore_country_name_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_prestige = 10	
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					government = theocracy
+				}
+				change_government = monarchy
+			}
+			every_neighbor_country = {
+				limit = { government = monarchy }
+				add_opinion = { who = ROOT modifier = secularized_monastic_order }
+			}
+			set_country_flag = formed_courland_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { owns_core_province = 5809 }
+				NOT = { owns_core_province = 5790 }
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+incident_elevation_of_bohemia = {
+	event = incident_elevation_of_bohemia.2
+	default_option = 2
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				exists = BOH
+			}
+			BOH = {
+				is_elector = yes
+			}
+			BOH = {
+				is_subject = yes
+			}
+			BOH = {
+				NOT = { government = monarchy }
+			}
+			BOH = {
+				is_part_of_hre = no
+			}
+		}
+	}
+	
+	0 = { #Elevate Bohemia to an hre kingdom and electorate
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_friendly
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_loyal
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_allied
+				}
+			}
+		}
+	}
+	
+	1 = { #Electorate but not Kingdom
+		factor = 1
+		modifier = {
+			factor = 100
+			ai_attitude = {
+				who = BOH
+				attitude = attitude_neutral
+			}
+		}
+	}
+
+	2 = { #Reject A Change
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_rivalry
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_hostile
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_threatened
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_outraged
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_disloyal
+				}
+				ai_attitude = {
+					who = BOH
+					attitude = attitude_rebellious
+				}
+			}
+		}
+		modifier = {
+			factor = 1000
+			is_elector = yes
+		}
+		modifier = {
+			factor = 50
+			OR = {
+				alliance_with = emperor
+				total_development = BOH
+				government_rank = 4
+			}
+		}
+	}
+}

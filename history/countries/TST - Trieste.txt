@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = venetian
+capital = 954
+fixed_capital = 954
+
+1050.1.1 = {
+	monarch = {
+		name = "Adalgero I"
+		dynasty = "von Tybein"
+		adm = 3
+		dip = 2
+		mil = 2
+	
+	}
+}
+
+#to AQU
+1077.1.1 = {
+	government = republic
+	add_government_reform = free_city
+	government_rank = 1
+	mercantilism = 25
+	monarch = {
+		name = "Repubblica"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}

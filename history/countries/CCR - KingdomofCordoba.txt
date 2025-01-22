@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 5
+primary_culture = mozarabic
+religion = catholic
+technology_group = western
+capital = 2670	# Cordoba
+
+1444.11.12 = {	#bertus mod
+	monarch = {
+		name = "Ruben I"
+		dynasty = "El Moro"
+		culture = andalucian
+		birth_date = 1414.1.13
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}

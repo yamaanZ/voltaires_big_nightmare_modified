@@ -1,0 +1,76 @@
+#Dhimmi
+country_decisions = {	
+	estate_holy_orders_recruit_minister = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_HOLY_ORDERS
+			}
+			has_estate = estate_holy_orders
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_holy_orders
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_MINISTER_HOLY_ORDERS
+				days = 10950
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_HOLY_ORDERS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_HOLY_ORDERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_holy_orders
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	estate_holy_orders_raise_cossack_host = {
+		color = { 195 160 20 }
+		potential = {
+			has_enabled_estate_action = {
+				estate_action = RAISE_COSSACK_HOST_HOLY_ORDERS
+			}
+			has_estate = estate_holy_orders
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_holy_orders
+				influence = 20
+			}
+			estate_loyalty = {
+				estate = estate_holy_orders
+				loyalty = 30
+			}
+			estate_action_off_cooldown = {
+				estate_action = RAISE_COSSACK_HOST_HOLY_ORDERS
+				days = 3650
+			}
+			manpower = 10
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = RAISE_COSSACK_HOST_HOLY_ORDERS
+			}
+			estate_action = {
+				estate_action = RAISE_COSSACK_HOST_HOLY_ORDERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_holy_orders
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

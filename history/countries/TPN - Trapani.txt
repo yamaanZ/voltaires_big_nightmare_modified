@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = barbary_sultanate_reform
+government_rank = 3
+technology_group = muslim
+primary_culture = tunisian
+add_accepted_culture = sicilian
+religion = sunni
+capital = 559
+religious_school = maliki_school
+historical_rival = AGR
+historical_rival = PLM
+historical_rival = SYC
+
+1053.1.1 = {
+	monarch = {
+		name = "‘Abd Allâh"
+		dynasty = "Banû Mankut"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

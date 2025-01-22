@@ -1,0 +1,83 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = piedmontese
+religion = catholic
+capital = 1000
+fixed_capital = 1000
+
+#Valperga Counts
+1041.1.1 = {
+	monarch = {
+		name = "Guido I"
+		dynasty = "Anskaring"
+		adm = 1
+		dip = 4
+		mil = 1
+	}
+}
+1069.2.16 = {
+	monarch = {
+		name = "Arduino III"
+		dynasty = "Anskaring"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1102.1.1 = {
+	monarch = {
+		name = "Guido II"
+		dynasty = "Anskaring"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1140.1.1 = {
+	monarch = {
+		name = "Arduino IV"
+		dynasty = "Anskaring"
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}
+1177.1.1 = {
+	monarch = {
+		name = "Arduino V"
+		dynasty = "Anskaring"
+		adm = 3
+		dip = 4
+		mil = 4
+	}
+}
+1206.1.1 = {
+	monarch = {
+		name = "Reghino II"
+		dynasty = "Anskaring"
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+}
+1242.1.1 = {
+	monarch = {
+		name = "Reghino III"
+		dynasty = "Anskaring"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1276.1.1 = {
+	monarch = {
+		name = "Guido III"
+		dynasty = "Anskaring"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+#done 1313.1.1

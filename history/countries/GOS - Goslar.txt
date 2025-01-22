@@ -1,0 +1,28 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+primary_culture = eastphalian
+religion = catholic
+technology_group = western
+capital = 3002
+fixed_capital = 3002
+historical_friend = HAM
+historical_friend = CYB
+historical_friend = HSA
+historical_friend = DNZ
+historical_friend = KOF
+historical_friend = DMD
+historical_friend = SOE
+historical_friend = RGS
+mercantilism = 25
+
+1054.1.1 = {
+	monarch = {
+		name = "Stadtrat"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}
+1528.1.1 = { religion = protestant }

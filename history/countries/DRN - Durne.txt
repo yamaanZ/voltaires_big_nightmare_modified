@@ -1,0 +1,92 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+technology_group = western
+primary_culture = franconian
+religion = catholic
+capital = 2099
+
+#They rest of y'all know when I durn to yah
+1168.1.1 = {
+	monarch = {
+		name = "Ruprecht I"
+		dynasty = "von Dürn"
+		adm = 4
+		dip = 6
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = charismatic_negotiator_personality
+
+}
+1197.1.1 = {
+	monarch = {
+		name = "Ulrich I"
+		dynasty = "von Dürn"
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Konrad"
+		monarch_name = "Konrad I"
+		dynasty = "von Dürn"
+		birth_date = 1193.1.1
+		death_date = 1253.9.17
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1204.1.1 = {
+	monarch = {
+		name = "Konrad I"
+		dynasty = "von Dürn"
+		birth_date = 1193.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1220.1.1 = {
+	heir = {
+		name = "Boppo"
+		monarch_name = "Boppo I"
+		dynasty = "von Dürn"
+		birth_date = 1220.1.1 #est
+		death_date = 1262.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1253.9.17 = {
+	monarch = {
+		name = "Boppo I"
+		dynasty = "von Dürn"
+		birth_date = 1220.1.1 #est
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1262.1.1 = {
+	monarch = {
+		name = "Boppo II"
+		dynasty = "von Dürn"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1300.1.1 = {
+	monarch = {
+		name = "Albrecht I"
+		dynasty = "von Dürn"
+		adm = 2
+		dip = 0
+		mil = 1
+	}
+}

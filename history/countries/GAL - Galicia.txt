@@ -1,0 +1,207 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = galician
+religion = catholic
+technology_group = western
+capital = 4328
+historical_friend = CAS
+historical_friend = LON
+add_army_professionalism = 0.1
+
+#Counts of Trastamara
+1054.1.1 = {
+	monarch = {
+		name = "Berm�do Froilaz"
+		dynasty = "de Traba"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Froila"
+		monarch_name = "Froila Berm�dez"
+		dynasty = "de Traba"
+		birth_date = 1045.1.1
+		death_date = 1091.1.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+
+#King of Galicia
+1065.12.24 = {
+	government_rank = 5
+	monarch = {
+		name = "Garc�a II"
+		dynasty = "Jim�nez"
+		birth_date = 1042.1.1
+		culture = castillian
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+#Counts of Trastamara
+1072.1.1 = {
+	government_rank = 1
+	monarch = {
+		name = "Froila Berm�dez"
+		dynasty = "de Traba"
+		birth_date = 1045.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+1075.1.1 = {
+	heir = {
+		name = "Pedro"
+		monarch_name = "Pedro Froilaz"
+		dynasty = "de Traba"
+		birth_date = 1075.1.1
+		death_date = 1128.1.1
+		claim = 95
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}
+
+#Counts of GAL
+1090.3.22 = {
+	monarch = {
+		name = "Raimundo I"
+		dynasty = "de Ivrea"
+		birth_date = 1070.1.1
+		culture = burgundian
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1105.3.1 = {
+	heir = {
+		name = "Afonso"
+		monarch_name = "Afonso I"
+		dynasty = "de Ivrea"
+		birth_date = 1105.3.1
+		death_date = 1157.8.21
+		claim = 75
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1107.9.20 = {
+	monarch = {
+		name = "Afonso I"
+		dynasty = "de Ivrea"
+		birth_date = 1105.3.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+#to CAS 1126.3.8
+
+#Trastamara
+1126.3.8 = {
+	monarch = {
+		name = "Pedro Froilaz"
+		dynasty = "de Traba"
+		birth_date = 1075.1.1
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+	heir = {
+		name = "Fernando"
+		monarch_name = "Fernando P�rez"
+		dynasty = "de Traba"
+		birth_date = 1100.1.1
+		death_date = 1155.11.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1128.1.1 = {
+	monarch = {
+		name = "Fernando P�rez"
+		dynasty = "de Traba"
+		birth_date = 1100.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1155.11.1 = {
+	monarch = {
+		name = "Gonzalo Fern�ndez"
+		dynasty = "de Traba"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}
+1164.1.1 = {
+	monarch = {
+		name = "Fernando Gonz�lez"
+		dynasty = "de Traba"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+1184.1.1 = {
+	monarch = {
+		name = "G�mez Gonz�lez"
+		dynasty = "de Traba"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1211.1.1 = {
+	monarch = {
+		name = "Rodrigo G�mez"
+		dynasty = "de Traba"
+		adm = 4
+		dip = 1
+		mil = 1
+	}
+}
+#done 1261.1.1
+1261.1.1 = { government_rank = 5 }
+
+1350.3.26 = {
+	government_rank = 1
+	monarch = {
+		name = "Enrique I"
+		dynasty = "de Trast�mara"
+		culture = castillian
+		birth_date = 1334.1.13
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}
+#to CAS 1369.4.23
+1369.4.23 = { government_rank = 5 }
+1444.11.12 = {	#bertus mod
+	set_capital = 4328 #santiago
+	monarch = {
+		name = "Emilio I"
+		dynasty = "de Santiago"
+		culture = galician
+		birth_date = 1414.1.13
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}

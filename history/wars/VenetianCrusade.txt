@@ -1,0 +1,28 @@
+name = "Venetian Crusade"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 4948
+}
+
+1122.8.8 = {
+	add_attacker = VEN
+	add_attacker = TPI
+	add_attacker = KOJ
+	add_attacker = HBR
+	add_attacker = OTJ
+	add_attacker = GEE
+	add_defender = FTM
+	add_defender = DSC
+}
+
+1124.7.7 = {
+	rem_attacker = VEN
+	rem_attacker = TPI
+	rem_attacker = KOJ
+	rem_attacker = HBR
+	rem_attacker = OTJ
+	rem_attacker = GEE
+	rem_defender = FTM
+	rem_defender = DSC
+}

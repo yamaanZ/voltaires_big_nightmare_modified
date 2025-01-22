@@ -1,0 +1,600 @@
+base_flagship_modification = {
+    trigger = {
+    }
+    modifier = {
+        flagship_durability = 1
+        number_of_cannons_flagship_modifier = 0.5
+        flagship_morale = 0.5
+    }
+    base_modification = yes
+}
+
+mass_load_cannons = {
+    trigger = {
+        OR = {
+            NOT = {
+                OR = {
+                    culture = castillian
+                    culture = leonese
+                    culture = asturian
+                    culture = mozarabic
+                    culture = aragonese
+                    culture = catalan
+                    culture = balearic
+                    culture = valencian
+                }
+            }
+            normal_or_historical_nations = no
+        }
+    }
+	modifier = {
+        number_of_cannons_flagship_modifier = 0.50
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+trade_route_map = {
+    trigger = {
+        OR = {
+            NOT = {
+                OR = {
+                    culture = galician
+                    culture = portugese
+                }
+            }
+            normal_or_historical_nations = no
+        }
+    }
+	modifier = {
+        trade_power_in_fleet_modifier = 1
+        naval_maintenance_flagship_modifier = 0.25
+	}
+    ai_trade_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}
+
+command_aftercastle = {
+    trigger = {
+        OR = {
+            NOT = {
+                OR = {
+                    culture_group = dutch
+                    culture_group = french
+                }
+            }
+            normal_or_historical_nations = no
+        }
+    }
+	modifier = {
+        morale_in_fleet_modifier = 0.05
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+improved_crows_nest = {
+	modifier = {
+        flagship_naval_engagement_modifier = 3
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+mortars = {
+	modifier = {
+        blockade_impact_on_siege_in_fleet_modifier = 1
+        naval_maintenance_flagship_modifier = 1
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+standardized_signal_book = {
+	modifier = {
+        movement_speed_in_fleet_modifier = 1
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}
+
+hull_sheating = {
+	modifier = {
+        flagship_durability = 0.5
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+
+portuguese_navigators = {
+    trigger = {
+        OR = {
+            culture = galician
+            culture = portugese
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        exploration_mission_range_in_fleet_modifier = 1.25
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = galician
+                culture = portugese
+            }
+        }
+    }
+    ai_war_score = {
+        factor = 0
+    }
+}
+
+portuguese_bombardier = {
+    trigger = {
+        OR = {
+            culture = galician
+            culture = portugese
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        barrage_cost_in_fleet_modifier = -0.4
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = galician
+                culture = portugese
+            }
+        }
+    }
+}
+
+portuguese_trade_route_map = {
+    trigger = {
+        OR = {
+            culture = galician
+            culture = portugese
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        trade_power_in_fleet_modifier = 2
+        naval_maintenance_flagship_modifier = 0.25
+	}
+    ai_trade_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = galician
+                culture = portugese
+            }
+        }
+    }
+    ai_war_score = {
+        factor = 0
+    }
+}
+
+spanish_grand_armada = {
+    trigger = {
+        OR = {
+            culture = castillian
+            culture = leonese
+            culture = asturian
+            culture = mozarabic
+            culture = aragonese
+            culture = catalan
+            culture = balearic
+            culture = valencian
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        naval_attrition_in_fleet_modifier = -0.3
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = castillian
+                culture = leonese
+                culture = asturian
+                culture = mozarabic
+                culture = aragonese
+                culture = catalan
+                culture = balearic
+                culture = valencian
+            }
+        }
+    }
+}
+
+spanish_treasure_fleet = {
+    trigger = {
+        OR = {
+            culture = castillian
+            culture = leonese
+            culture = asturian
+            culture = mozarabic
+            culture = aragonese
+            culture = catalan
+            culture = balearic
+            culture = valencian
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        cannons_for_hunting_pirates_in_fleet = 1
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = castillian
+                culture = leonese
+                culture = asturian
+                culture = mozarabic
+                culture = aragonese
+                culture = catalan
+                culture = balearic
+                culture = valencian
+            }
+        }
+    }
+}
+
+spanish_mass_load_cannons = {
+    trigger = {
+        OR = {
+            culture = castillian
+            culture = leonese
+            culture = asturian
+            culture = mozarabic
+            culture = aragonese
+            culture = catalan
+            culture = balearic
+            culture = valencian
+        }
+        normal_or_historical_nations = yes
+    }
+	modifier = {
+        number_of_cannons_flagship_modifier = 1.0
+        naval_maintenance_flagship_modifier = 0.5
+	}
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = castillian
+                culture = leonese
+                culture = asturian
+                culture = mozarabic
+                culture = aragonese
+                culture = catalan
+                culture = balearic
+                culture = valencian
+            }
+        }
+    }
+}
+
+dutch_courage = {
+    trigger = {
+        OR = {
+            culture_group = dutch
+            culture_group = french
+        }
+        normal_or_historical_nations = yes
+    }
+    modifier = {
+        morale_in_fleet_modifier = 0.1
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture_group = dutch
+                culture_group = french
+            }
+        }
+    }
+ }
+
+portuguese_corps_of_fusiliers = {
+    trigger = {
+        OR = {
+            culture = galician
+            culture = portugese
+        }
+        normal_or_historical_nations = yes
+    }
+    modifier = {   #bertus mod
+        movement_speed_onto_off_boat_modifier = 0.33    #0.66→0.33
+        landing_penalty = -2
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture = galician
+                culture = portugese
+            }
+        }
+    }
+}
+
+integrated_marines = {
+    trigger = {
+        OR = {
+            NOT = {
+                OR = {
+                    culture = galician
+                    culture = portugese
+                }
+                OR = {  #bertus mod
+                    culture_group = maghrebi
+                    culture = moroccan
+                    culture = andalucian
+                    culture = tunisian
+                    culture = algerian
+                }
+            }
+            normal_or_historical_nations = no
+        }
+    }
+    modifier = {
+        movement_speed_onto_off_boat_modifier = 0.33
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+scandinavian_flag_officers = {
+    trigger = {
+        OR = {
+            culture_group = scandinavian
+            culture_group = finno_ugric
+            culture_group = baltic
+        }
+        normal_or_historical_nations = yes
+    }
+    modifier = {
+        admiral_skill_gain_modifier = 0.03
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture_group = scandinavian
+                culture_group = finno_ugric
+                culture_group = baltic
+            }
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            OR = {
+                culture_group = scandinavian
+                culture_group = finno_ugric
+                culture_group = baltic
+            }
+        }
+    }
+}
+
+flag_officers = {
+    trigger = {
+        OR = {
+            NOT = {
+                OR = {
+                    culture_group = scandinavian
+                    culture_group = finno_ugric
+                    culture_group = baltic
+                }
+            }
+            normal_or_historical_nations = no
+        }
+    }
+    modifier = {
+        admiral_skill_gain_modifier = 0.01
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 1
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+spare_jolly_roger = {  #bertus mod
+    trigger = {
+        NOT = {
+            culture_group = maghrebi
+            culture = moroccan
+            culture = andalucian
+            culture = tunisian
+            culture = algerian
+        }
+    }
+    modifier = {
+        privateering_efficiency_in_fleet_modifier = 0.10
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}
+
+captains_log = {
+    modifier = {
+        naval_tradition_in_fleet_modifier = 1
+        prestige_from_battles_in_fleet_modifier = 1
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+maghreb_integrated_marines = {  #bertus mod
+    trigger = {
+        OR = {
+            culture_group = maghrebi
+            culture = moroccan
+            culture = andalucian
+            culture = tunisian
+            culture = algerian
+        }
+    }
+    modifier = {
+        movement_speed_onto_off_boat_modifier = 0.66
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+        factor = 0
+    }
+    ai_war_score = {
+        factor = 1
+    }
+}
+
+maghreb_spare_jolly_roger = {  #bertus mod
+    trigger = {
+        OR = {
+            culture_group = maghrebi
+            culture = moroccan
+            culture = andalucian
+            culture = tunisian
+            culture = algerian
+        }
+    }
+    modifier = {
+        privateering_efficiency_in_fleet_modifier = 0.10
+        coast_raid_range = 1
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}

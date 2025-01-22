@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = piedmontese
+religion = catholic
+technology_group = western
+capital = 2010
+
+#Count
+1091.12.19 = {
+	monarch = {
+		name = "Ottone I"
+		dynasty = "Aleraming"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
+#Commune
+1095.1.1 = { 
+	government = republic
+	add_government_reform = italian_monarchy
+	add_army_professionalism = 0.05
+	monarch = {
+		name = "Repubblica"
+		regent = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1392.1.1 = { religion = catholique }
+1407.11.27 = { religion = catholic }

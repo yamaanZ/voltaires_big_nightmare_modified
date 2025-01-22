@@ -1,0 +1,140 @@
+estate_jews = {
+	icon = 6
+	other_religion_group_only = yes
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			religion_group = christian
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = repression_of_influential_dhimmi
+		}
+	}
+
+	# If true, country will get estate
+	trigger = {
+		OR = {	#bertus mod
+			ai = no
+			overlord = { ai = no }
+			was_player = yes
+		}
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = revolutionary_empire_reform }
+		religion_group = christian
+		NOT = { has_country_flag = expelled_jews }
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		inflation_action_cost = -0.25
+		interest = -0.5
+	}
+	country_modifier_neutral = {
+		inflation_action_cost = -0.25
+	}	
+	country_modifier_angry = {
+		inflation_action_cost = 0.25
+		interest = 0.5
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		jews_loyalty_modifier = 0.2
+	}
+
+
+	# Influence modifiers
+	base_influence = 0
+	influence_modifier = {
+		desc = EST_VAL_RELIGIOUS_MINORITY
+		trigger = {
+			any_owned_province = {
+				NOT = { religion_group = christian }
+			}
+		}
+		influence = 10		
+	}
+	influence_modifier = {
+		desc = EST_VAL_RULED_BY_RELIGIOUS_MINORITY
+		trigger = {
+			NOT = { dominant_religion = ROOT }
+			any_owned_province = {
+				NOT = { religion_group = christian }
+			}
+		}
+		influence = 20
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_holy_orders_disaster
+			}
+		}
+		influence = -40
+	}
+
+	influence_from_dev_modifier = 0.5
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_holy_orders_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_HEATHEN_PEACE_LOYALTY
+		trigger = {
+			NOT = {
+				any_known_country = {
+					war_with = ROOT
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+		loyalty = 10
+	}
+	
+	privileges = {
+		estate_jews_land_rights
+		estate_jews_indebted_to_jews
+		estate_jews_lighter_jewish_taxes
+		estate_jews_guaranteed_autonomy
+		estate_jews_jewish_nobles
+		estate_jews_manpower
+		estate_jews_tolerance
+		estate_burghers_jewish_sanctuary
+		estate_jews_grant_liberties
+		estate_jews_grant_trading_privileges
+		estate_jews_contribution_demand
+		estate_jews_expulsion
+	}
+
+	agendas = {
+		estate_jews_develop_x
+		estate_jews_build_temple_in_y
+		estate_jews_build_university_in_y
+		estate_jews_pay_off_loans
+		estate_jews_stop_converting_province_x
+		estate_jews_increase_autonomy_in_province_x
+		estate_jews_three_privileges
+		estate_jews_relations_with_X
+		estate_jews_hire_advisor
+		estate_jews_fire_advisor
+	}
+
+	color = { 100 125 150 }
+}

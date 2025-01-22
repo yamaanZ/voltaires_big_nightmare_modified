@@ -1,0 +1,49 @@
+########################################
+# DLC Events for Riga
+#
+# written by Ogulcan Yildirim
+# localised by Big Boss
+########################################
+
+namespace = flavor_rig
+normal_or_historical_nations = yes
+
+#flavor_rig.1 - 4 removed
+
+#Transfer Money event
+country_event = {
+	id = flavor_rig.5
+	title = none
+	desc = none
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+	hidden = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        hidden_effect = {
+            export_to_variable = {
+                which = rig_money_to_transfer
+                value = monthly_income
+                who = ROOT
+            }
+            multiply_variable = {
+                which = rig_money_to_transfer
+                value = 3
+            }
+        }
+    }
+	
+	option = {
+		transfer_treasury = {
+            giver = ROOT
+            taker = FROM
+            variable = rig_money_to_transfer
+		}
+		
+		ai_chance = { 
+			factor = 1
+		}
+    }
+}
+
+#flavor_rig.6 - 13 removed

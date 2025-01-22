@@ -1,0 +1,738 @@
+country_decisions = {
+	bavaria_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_bavaria_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { exists = BAV }
+			primary_culture = bavarian
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = landshut_area
+				area = munich_area
+				area = ingolstadt_area
+				area = innkreis_area
+				area = straubing_area
+				area = oberpfalz_area
+				area = eichstadt_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			if = {
+				limit = {
+					calc_true_if = {
+						amount = 2
+						senior_union_with = ING
+						senior_union_with = LSH
+						senior_union_with = XMU
+					}
+				}
+				development_in_provinces = {
+					value = 300
+					OR = {
+						area = landshut_area
+						area = munich_area
+						area = ingolstadt_area
+						area = innkreis_area
+						area = straubing_area
+						area = oberpfalz_area
+						area = eichstadt_area
+					}
+				}
+				calc_true_if = {
+					amount = 2
+					senior_union_with = ING
+					senior_union_with = LSH
+					senior_union_with = XMU
+				}
+			}
+			else = {
+				development_in_provinces = {
+					value = 500
+					OR = {
+						area = landshut_area
+						area = munich_area
+						area = ingolstadt_area
+						area = innkreis_area
+						area = straubing_area
+						area = oberpfalz_area
+						area = eichstadt_area
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = BAV
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_capital = 65
+			65 = {
+				add_base_tax = 2
+				center_of_trade = 2
+			}
+			set_country_flag = formed_bavaria_flag
+			if = {	
+				limit = { 	
+					has_custom_ideas = no	
+					NOT = { has_idea_group = BAV_ideas }	
+				}	
+				country_event = { id = ideagroups.1 } #Swap Ideas	
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+
+			if = {
+				limit = {
+					NOT = { tag = UBV }
+					NOT = { tag = LBV }
+					NOT = { tag = ING }
+					NOT = { was_tag = UBV }
+					NOT = { was_tag = LBV }
+					NOT = { was_tag = ING }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+
+	pomerania_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_pomerania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { exists = POM }
+			primary_culture = pommeranian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4804
+				AND = {
+					OR = {
+						area = kolberg_area
+						area = stolp_area
+						area = neumark_area
+						area = pomerania_area
+						area = werle_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = kolberg_area
+									area = stolp_area
+									area = neumark_area
+									area = pomerania_area
+									area = werle_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 4804 #stettin
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = kolberg_area
+					area = stolp_area
+					area = neumark_area
+					area = pomerania_area
+					area = werle_area
+				}
+			}
+		}
+		effect = {
+			change_tag = POM
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_non_generic_missions = yes
+			set_country_flag = formed_pomerania_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = POM_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	franconia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_franconia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { exists = FKN }
+			primary_culture = franconian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 131 	#Rothenburch
+				AND = {
+					OR = {
+						area = hohenlohe_area
+						area = wurzburg_area
+						area = bamberg_area
+						area = darmstadt_area
+						area = pfalzeast_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = hohenlohe_area
+									area = wurzburg_area
+									area = bamberg_area
+									area = darmstadt_area
+									area = pfalzeast_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 131 	#Rothenburch
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = hohenlohe_area
+					area = wurzburg_area
+					area = bamberg_area
+					area = darmstadt_area
+					area = pfalzeast_area
+				}
+			}
+		}
+		effect = {
+			change_tag = FKN
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_franconia_flag
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	swabia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_swabia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { exists = SWA }
+			OR = {
+				primary_culture = swabian
+				primary_culture = alemannic
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 58	#ulm
+				AND = {
+					OR = {
+						area = ulm_area
+						area = burgau_area
+						area = drachgau_area
+						area = wurttemburg_area
+						area = bertoldsbaar_area
+					}
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 500
+								OR = {
+									area = ulm_area
+									area = burgau_area
+									area = drachgau_area
+									area = wurttemburg_area
+									area = bertoldsbaar_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 58 	#ulm
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = ulm_area
+					area = burgau_area
+					area = drachgau_area
+					area = wurttemburg_area
+					area = bertoldsbaar_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SWA
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_swabia_flag
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	saxony_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_saxony_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			OR = {
+				ai = no
+				NOT = { exists = SAX }
+			}
+			OR = {
+				primary_culture = saxon
+				primary_culture = thuringian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2803
+				AND = {
+					OR = {
+						area = meissen_area
+						area = osterland_area
+						area = merseburg_area
+						area = zeitz_area
+						area = west_anhalt_area
+					}
+					ROOT = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = meissen_area
+									area = osterland_area
+									area = merseburg_area
+									area = zeitz_area
+									area = west_anhalt_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = SAX }
+			owns_core_province = 2803			#Dresden
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = meissen_area
+					area = osterland_area
+					area = merseburg_area
+					area = zeitz_area
+					area = west_anhalt_area
+				}
+			}
+		}
+		effect = {
+			change_tag = SAX
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_saxony_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { tag = THU }
+					NOT = { was_tag = THU }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	hannoverian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_hannover_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { tag = HSA }
+			NOT = { exists = HAN }
+			primary_culture = eastphalian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2230
+				AND = {
+					OR = {
+						area = calenberg_area
+						area = brunswick_area
+						area = luneburg_area
+						area = stade_area
+						area = osnabruck_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = calenberg_area
+									area = brunswick_area
+									area = luneburg_area
+									area = stade_area
+									area = osnabruck_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2230	# Hannover
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = calenberg_area
+					area = brunswick_area
+					area = luneburg_area
+					area = stade_area
+					area = osnabruck_area
+				}
+			}
+		}
+		effect = {
+			1758 = {
+				move_capital_effect = yes
+			}
+			change_tag = HAN
+			restore_country_name_effect = yes
+			1758 = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_hannover_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 5
+			}
+			else_if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	westfalian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_westphalia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			NOT = { exists = WES }
+			primary_culture = hannoverian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2972	# Westfalen
+				AND = {
+					OR = {
+						area = westfalen_area
+						area = munster_area
+						area = mark_area
+						area = dortmund_area
+						area = marburg_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 500
+								OR = {
+									area = westfalen_area
+									area = munster_area
+									area = mark_area
+									area = dortmund_area
+									area = marburg_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2972	# Westfalen
+			development_in_provinces = {
+				value = 500
+				OR = {
+					area = westfalen_area
+					area = munster_area
+					area = mark_area
+					area = dortmund_area
+					area = marburg_area
+				}
+			}
+		}
+		effect = {
+			change_tag = WES
+			restore_country_name_effect = yes
+			set_country_flag = formed_westphalia_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 5
+			}
+			else_if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "decentralization_modifier"
+				duration = 7300
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

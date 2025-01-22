@@ -1,0 +1,38 @@
+capital = "Vernio"
+culture = tuscan
+religion = catholic
+trade_goods = cloth
+base_tax = 1
+base_production = 2
+base_manpower = 1
+is_city = yes
+hre = yes
+owner = VNO
+controller = VNO
+add_core = VNO
+
+1495.1.1 = { hre = no }
+1797.6.29 = {
+	owner = ITA
+	controller = ITA
+	add_core = ITA
+}
+1814.4.11 = { 
+	owner = TUS
+	controller = TUS
+	add_core = TUS
+	remove_core = ITA
+}
+1861.3.20 = {
+	owner = ITA
+	controller = ITA
+	add_core = ITA
+	remove_core = VNO
+}
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

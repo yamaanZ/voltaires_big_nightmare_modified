@@ -1,0 +1,40 @@
+name = "Second Margrave War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = NUO
+}
+
+1552.1.1 = {
+	add_attacker = NUM
+	add_attacker = BAM
+	add_attacker = SAX
+	add_defender = NUO
+}
+
+1553.7.9 = {
+	battle = {
+		name = "Sievershausen"
+		location = 2647
+		attacker = {
+			commander = "Albrecht Alcibiades"
+			infantry = 18000
+			losses = 50	# percent
+			country = NUO
+		}
+		defender = {
+			commander = "Mauritz von Wettin"
+			infantry = 15500
+			losses = 10	# percent
+			country = SAX
+		}
+		result = no
+	}
+	rem_attacker = SAX
+}
+
+1554.7.1 = {
+	rem_attacker = NUM
+	rem_attacker = BAM
+	rem_defender = NUO
+}

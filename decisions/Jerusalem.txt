@@ -1,0 +1,146 @@
+country_decisions = {
+
+	kingdom_of_jerusalem = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_jerusalem }
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = KOJ }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				religion = catholic
+				religion = catholique
+			}
+			NOT = { government = republic }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				owns = 4974
+				AND = {
+					ai = no
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = PRO
+						tag = TEU
+						tag = LIV
+					}
+				}
+			}
+			OR = {
+				NOT = { is_year = 1600 }
+				has_country_flag = can_form_jerusalem_later_too
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4986 #Gazzah
+				province_id = 4974 #Jerusalem
+				province_id = 4971 #Jaffa
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 4986 #Gazzah
+			owns_core_province = 4974 #Jerusalem
+			owns_core_province = 4971 #Jaffa
+			4974 = { is_state = yes }
+		}
+		effect = {
+			add_prestige = 25
+			every_province = {
+				limit = { region = palestine_region }
+				add_core = KOJ
+			}
+			if = {
+				limit = {
+					NOT = { tag = KNI }
+					NOT = { tag = CYP }
+					NOT = { tag = PRO }
+					NOT = { tag = TEU }
+					NOT = { tag = LIV }
+					NOT = { capital_scope = { continent = asia } }
+				}
+				release = KOJ
+				KOJ = { define_ruler = { culture = ROOT } }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = PRO
+						tag = TEU
+						tag = LIV
+						capital_scope = { continent = asia }
+					}
+				}
+				change_tag = KOJ
+				on_change_tag_effect = yes
+				change_primary_culture = outremer
+				if = {
+					limit = { has_custom_ideas = no }
+					country_event = { id = ideagroups.1 }
+				}
+			}
+			if = {
+				limit = { tag = KNI }
+				set_country_flag = knights_formed_jerusalem
+			}
+			4974 = {
+				if = {
+					limit = { ROOT = { religion = catholic } }
+					change_religion = catholic
+				}
+				else = {
+					change_religion = catholique
+				}
+			}
+			KOJ = {
+				hidden_effect = { restore_country_name = yes }
+				set_capital = 4974 #Jerusalem
+				if = {
+					limit = { ROOT = { religion = catholic } }
+					change_religion = catholic
+				}
+				else = {
+					change_religion = catholique
+				}
+				if = {
+					limit = { NOT = { government = theocracy } }
+					change_government = monarchy
+					add_government_reform = holy_state_reform
+				}
+				else_if = {
+					limit = {
+						government = theocracy
+						NOT = { has_reform = holy_horde_reform }
+						NOT = { has_reform = militarized_crusader_order_reform }
+					}
+					add_government_reform = holy_state_reform
+				}
+				if = {
+					limit = {
+						NOT = { government_rank = 5 }
+					}
+					set_government_rank = 5
+				}
+				set_country_flag = formed_jerusalem
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

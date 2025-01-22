@@ -1,0 +1,83 @@
+capital = "Kaiserswerth"
+culture = ripuarian
+religion = catholic
+trade_goods = cloth
+base_tax = 2
+base_production = 2
+base_manpower = 1
+is_city = yes
+hre = yes
+owner = BRG
+controller = BRG
+add_core = BRG
+add_core = KSW
+
+1180.1.1 = {
+	owner = KSW
+	controller = KSW
+	remove_core = BRG
+}
+1273.1.1 = {
+	owner = KOL
+	controller = KOL
+	add_core = KOL
+	remove_core = KSW
+}
+1444.11.12 = {	#BERTUS MOD
+	owner = KOF
+	controller = KOF
+	remove_core = KOL
+	add_permanent_province_modifier = {
+		name = hanseatic_city
+		duration = -1
+	}
+	set_base_tax = 8
+	set_base_production = 8
+	set_base_manpower = 5
+	fort_14th = yes
+	add_permanent_province_modifier = {
+		name = great_artisans
+		duration = -1
+	}
+	add_province_modifier = {
+		name = strong_city
+		duration = -1
+	}
+}
+1772.1.1 = {
+	owner = PAL
+	controller = PAL
+	add_core = PAL
+	remove_core = KOL
+}
+1777.12.30 = {
+	owner = BAV
+	controller = BAV
+	add_core = BAV
+	remove_core = PAL
+}
+1803.2.25 = {
+	owner = BRG
+	controller = BRG
+	add_core = BRG
+	remove_core = BAV
+}
+1813.10.13 = {
+	owner = PRU
+	controller = PRU
+	add_core = PRU
+}
+1871.1.18 = {
+	owner = GER
+	controller = GER
+	add_core = GER
+	remove_core = PRU
+	hre = no
+}
+
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+discovered_by = north_american

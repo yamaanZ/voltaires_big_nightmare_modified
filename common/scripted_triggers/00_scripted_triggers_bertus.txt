@@ -1,0 +1,174 @@
+# SOME META SCRIPT EXAMPLES
+# This also works for Scripted effects the same. Provided arguments will be pasted in
+# wherever the key occurs. If it fails to compile you should get a proper error message
+# and the source generated in the error log. There is no added overhead during runtime but
+# if used extensivley it might make loading time longer.
+#
+#GENERAL TRIGGERS Se elimiaron todo los que no sean de anbennar
+has_adm_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_4_tooltip
+		OR = {
+			treasurer = 4
+			philosopher = 4
+			artist = 4
+			theologian = 4
+			master_of_mint = 4
+			inquisitor = 4
+		}
+	}
+}
+has_adm_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_5_tooltip
+		OR = {
+			treasurer = 5
+			philosopher = 5
+			artist = 5
+			theologian = 5
+			master_of_mint = 5
+			inquisitor = 5
+		}
+	}
+}
+has_adm_advisor_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_6_tooltip
+		OR = {
+			treasurer = 6
+			philosopher = 6
+			artist = 6
+			theologian = 6
+			master_of_mint = 6
+			inquisitor = 6
+		}
+	}
+}
+has_adm_advisor_7 = {
+	custom_trigger_tooltip = {
+		tooltip = has_adm_advisor_7_tooltip
+		OR = {
+			treasurer = 7
+			philosopher = 7
+			artist = 7
+			theologian = 7
+			master_of_mint = 7
+			inquisitor = 7
+		}
+	}
+}
+
+has_dip_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_4_tooltip
+		OR = {
+			statesman = 4
+			naval_reformer = 4
+			trader = 4
+			spymaster = 4
+			colonial_governor = 4
+			diplomat = 4
+			navigator = 4
+		}
+	}
+}
+has_dip_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_5_tooltip
+		OR = {
+			statesman = 5
+			naval_reformer = 5
+			trader = 5
+			spymaster = 5
+			colonial_governor = 5
+			diplomat = 5
+			navigator = 5
+		}
+	}
+}
+has_dip_advisor_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_6_tooltip
+		OR = {
+			statesman = 6
+			naval_reformer = 6
+			trader = 6
+			spymaster = 6
+			colonial_governor = 6
+			diplomat = 6
+			navigator = 6
+		}
+	}
+}
+has_dip_advisor_7 = {
+	custom_trigger_tooltip = {
+		tooltip = has_dip_advisor_7_tooltip
+		OR = {
+			statesman = 7
+			naval_reformer = 7
+			trader = 7
+			spymaster = 7
+			colonial_governor = 7
+			diplomat = 7
+			navigator = 7
+		}
+	}
+}
+has_mil_advisor_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_4_tooltip
+		OR = {
+			army_reformer = 4
+			army_organiser = 4
+			commandant = 4
+			quartermaster = 4
+			recruitmaster = 4
+			fortification_expert = 4
+			grand_captain = 4
+		}
+	}
+}
+has_mil_advisor_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_5_tooltip
+		OR = {
+			army_reformer = 5
+			army_organiser = 5
+			commandant = 5
+			quartermaster = 5
+			recruitmaster = 5
+			fortification_expert = 5
+			grand_captain = 5
+		}
+	}
+}
+has_mil_advisor_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_6_tooltip
+		OR = {
+			army_reformer = 6
+			army_organiser = 6
+			commandant = 6
+			quartermaster = 6
+			recruitmaster = 6
+			fortification_expert = 6
+			grand_captain = 6
+		}
+	}
+}
+has_mil_advisor_7 = {
+	custom_trigger_tooltip = {
+		tooltip = has_mil_advisor_7_tooltip
+		OR = {
+			army_reformer = 7
+			army_organiser = 7
+			commandant = 7
+			quartermaster = 7
+			recruitmaster = 7
+			fortification_expert = 7
+			grand_captain = 7
+		}
+	}
+}
+
+

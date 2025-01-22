@@ -1,0 +1,2583 @@
+########################################
+# EUROPE                               #
+########################################
+
+#Maghreb
+sus_region = {
+	areas = {
+		#macaronesia_area
+		#guelmim_area
+		#draa_area
+		#taroudant_area
+	}
+}
+
+high_atlas_region = {
+	areas = {
+		#marrakesh_area
+		#khouribga_area
+		#tadla_area
+	}
+}
+
+gharb_region = {
+	areas = {
+		#safi_area
+		#jadida_area
+		#rabat_area
+	}
+}
+
+middle_atlas_region = {
+	areas = {
+		#meknes_area
+		#fez_area
+		#debdou_area
+	}
+}
+
+rif_region = {
+	areas = {
+		#tangiers_area
+		#tetouan_area
+		#melilla_area
+		#oujda_area
+	}
+}
+
+tlemcen_region = {
+	areas = {
+		#oran_area
+		#algiers_area
+		#saida_area
+	}
+}
+
+kabylia_region = {
+	areas = {
+		#bejaia_area
+		#constantine_area
+		#setif_area
+		#tebessa_area
+	}
+}
+
+inner_algeria_region = {
+	areas = {
+		#sahara_oases
+	}
+}
+
+#Ifriqiya
+inner_tunisia_region = {
+	areas = {
+		#kef_area
+		#kairouan_area
+		#djerid_area
+	}
+}
+
+coastal_tunisia_region = {
+	areas = {
+		#tunis_area
+		#sousse_area
+		#mahdia_area
+		#djerba_area
+	}
+}
+
+coastal_libya_region = {
+	areas = {
+		#tripolitania_area
+		#sirte_area
+		#cyrenaica_area
+	}
+}
+
+inner_libya_region = {
+	areas = {
+		#jufra_area
+		#fezzan_area
+	}
+}
+
+inner_egypt_region = {
+	areas = {
+		#al_wahat_area
+	}
+}
+
+middle_egypt_region = {
+	areas = {
+		#vostani_area
+		#said_area
+		#red_sea_coast_area
+	}
+}
+
+lower_egypt_region = {
+	areas = {
+		#bahari_area
+		#delta_area
+		#alexandria_area
+		#damietta_area
+	}
+}
+
+#Levant
+outremer_region = {
+	areas = {
+		#lebanon_area
+		#tartus_area
+	}
+}
+
+cyprus_region = {
+	areas = {
+		#cyprus_area
+	}
+}
+
+nabatea_region = {
+	areas = {
+		#tabuk_area
+		#aqaba_area
+		#sinai_area
+	}
+}
+
+arabia_region = {
+	areas = {
+		bahrain_area
+		nafud_area
+		syrian_desert_area
+	}
+}
+
+transjordan_region = {
+	areas = {
+		#celesyria_area
+		#daraa_area
+		#kerak_area
+	}
+}
+
+palestine_region = {
+	areas = {
+		#simeon_area
+		#judea_area
+		#galilee_area
+		#philistia_area
+	}
+}
+
+syria_region = {
+	areas = {
+		#aleppo_area
+		#homs_area
+		#idlib_area
+	}
+}
+
+cilicia_region = {
+	areas = {
+		#teluch_area
+		#antioch_area
+		#tarsos_area
+		#seleukeia_area
+	}
+}
+
+#Mesopotamia
+lower_mesopotamia_region = {
+	areas = {
+		khuzestan_area
+		basra_area
+		najaf_area
+		baghdad_area
+	}
+}
+
+assyria_region = {
+	areas = {
+		dulaim_area
+		shahrizor_area
+		zagros_area
+		zab_area
+		mosul_area
+	}
+}
+
+al_jazira_region = {
+	areas = {
+		osrhoene_area
+		deir_ezzor_area
+		al_hasakah_area
+	}
+}
+
+sophene_region = {
+	areas = {
+		arzanene_area
+		commagene_area
+		upper_armenia_area
+		mardin_area
+	}
+}
+
+corduene_region = {
+	areas = {
+		maku_area
+		sasun_area
+		vaspurakan_area
+		taron_area
+		van_area
+	}
+}
+
+#Anatolia
+chaldia_region = {
+	areas = {
+		#trebizond_area
+		#polemonion_area
+		#karin_area
+	}
+}
+
+paphlagonia_region = {
+	areas = {
+		#sinope_area
+		#kastamone_area
+		#bithynia_area
+	}
+}
+
+opsikion_region = {
+	areas = {
+		#optimaton_area
+		#nikaia_area
+		#mysia_area
+		#troas_area
+	}
+}
+
+thrakesion_region = {
+	areas = {
+		#lydia_area
+		#ionia_area
+		#caria_area
+		#doris_area
+	}
+}
+
+kibyrraioton_region = {
+	areas = {
+		#lycia_area
+		#pamphylia_area
+		#anemorion_area
+	}
+}
+
+cappadokia_region = {
+	areas = {
+		#lykandos_area
+		#sebasteia_area
+		#koloneia_area
+		#antitaurus_area
+	}
+}
+
+anatolikon_region = {
+	areas = {
+		#isauria_area
+		#lycaonia_area
+		#tyana_area
+	}
+}
+
+phrygia_region = {
+	areas = {
+		#parorea_area
+		#pisidia_area
+		#kotiaeion_area
+	}
+}
+
+bukellarion_region = {
+	areas = {
+		#amorion_area
+		#galatia_area
+		#ancyra_area
+	}
+}
+
+charsianon_region = {
+	areas = {
+		#armeniakon_area
+		#chammanene_area
+		#komana_area
+	}
+}
+
+#Central Asia
+khwarezmia_region = {
+	areas = {
+		transcaspia_area
+		transoxiana_area
+	}
+}
+
+kazakhstan_region = {
+	areas = {
+		mangystau_area
+		atyrau_area
+		oral_area
+	}
+}
+
+lower_volga_region = {
+	areas = {
+		astrakhan_area
+		sarai_area
+		saratov_area
+	}
+}
+
+bashkiria_region = {
+	areas = {
+		orenburg_area
+		samara_area
+		ufa_area
+	}
+}
+
+#Caucasia
+tao_region = {
+	areas = {
+		kari_area
+		samtskhe_area
+		panaskerti_area
+	}
+}
+
+azerbaijan_region = {
+	areas = {
+		shirvan_area
+		shaki_area
+		khachen_area
+		ganja_area
+	}
+}
+
+armenia_region = {
+	areas = {
+		hayk_area
+		syunik_area
+		lori_area
+		gegham_area
+	}
+}
+
+hiberia_region = {
+	areas = {
+		hereti_area
+		kakheti_area
+		kartli_area
+	}
+}
+
+georgia_region = {
+	areas = {
+		argveti_area
+		imereti_area
+		abkhazia_area
+	}
+}
+
+dagestan_region = {
+	areas = {
+		derbent_area
+		lekia_area
+		kumykia_area
+		chechnya_area
+		alania_area
+	}
+}
+
+circassia_region = {
+	areas = {
+		kabardia_area
+		adygea_area
+		abazin_area
+		shapsug_area
+	}
+}
+
+#Pontic Steppe
+crimea_region = {
+	areas = {
+		cherson_area
+		taman_area
+		qirim_area
+		qale_area
+	}
+}
+
+azov_region = {
+	areas = {
+		krasnodar_area
+		kuban_area
+		pryazovia_area
+		maeotida_area
+	}
+}
+
+wild_fields_region = {
+	areas = {
+		zaporizhia_area
+		budjak_area
+		yedisan_area
+	}
+}
+
+sloboda_region = {
+	areas = {
+		poltava_area
+		oskol_area
+		tambov_area
+	}
+}
+
+lower_don_region = {
+	areas = {
+		donbass_area
+		sarkel_area
+		terkin_area
+		luhansk_area
+	}
+}
+
+khopyor_region = {
+	areas = {
+		yelan_area
+		uryup_area
+		karai_area
+	}
+}
+
+#Ural
+kazan_region = {
+	areas = {
+		kama_area
+		bolghar_area
+		volga_area
+		kargala_area
+	}
+}
+
+mordovia_region = {
+	areas = {
+		erzya_area
+		moksha_area
+		meshchera_area
+		pyana_area
+	}
+}
+
+perm_region = {
+	areas = {
+		chuvashia_area
+		mari_area
+		udmurtia_area
+		ustyug_area
+		vyatka_area
+	}
+}
+
+vologda_region = {
+	areas = {
+		nizhny_area
+		galich_area
+		kostroma_area
+		velsk_area
+		vozhega_area
+	}
+}
+
+north_karelia_region = {
+	areas = {
+		veps_area
+		vyborg_area
+	}
+}
+
+finland_region = {
+	areas = {
+		#suomi_area
+		#uusimaa_area
+		#tavastia_area
+		#kymenlaakso_area
+	}
+}
+
+#Scandinavia
+balticislands_region = {
+	areas = {
+		#gotland_area
+	}
+}
+
+austlandet_region = {
+	areas = {
+		#oslo_area
+		#bohuslan_area
+		#akershus_area
+	}
+}
+
+vestlandet_region = {
+	areas = {
+		#agder_area
+		#rogaland_area
+		#telemark_area
+	}
+}
+
+gotaland_region = {
+	areas = {
+		#ostergotland_area
+		#vastergotland_area
+		#dalsland_area
+	}
+}
+
+svealand_region = {
+	areas = {
+		#dalarna_area
+		#vastmanland_area
+		#varmland_area
+	}
+}
+
+uppland_region = {
+	areas = {
+		#stockholm_area
+		#uppsala_area
+		#sodermanland_area
+	}
+}
+
+#Baltic
+estonia_region = {
+	areas = {
+		#saaremaa_area
+		#laanemaa_area
+		#revala_area
+		#virumaa_area
+	}
+}
+
+livonia_region = {
+	areas = {
+		tartu_area
+		jarva_area
+		sakala_area
+		saaremaa_area
+		laanemaa_area
+		revala_area
+		virumaa_area
+		latvia_area
+		jersika_area
+		turaida_area
+		samogitia_area
+		siauliai_area
+		karsovia_area
+		curonia_area
+		piemare_area
+		semigallia_area
+		selia_area
+		sudovia_area
+		trakai_area
+		vilna_area
+		birzai_area
+	}
+}
+
+#Ruthenia
+siveria_region = {
+	areas = {
+		#chernigov_area
+		#seversk_area
+		#pereyaslavl_area
+	}
+}
+
+#Russia
+kryvia_region = {
+	areas = {
+		pskov_area
+		opochka_area
+		luki_area
+		toropets_area
+	}
+}
+
+rostov_region = {
+	areas = {
+		naporozhe_area
+		beloozero_area
+		ustyuzhna_area
+		yaroslavl_area
+	}
+}
+
+smolensk_region = {
+	areas = {
+		rzhev_area
+		vyazma_area
+		demena_area
+		dorogobuzh_area
+	}
+}
+
+vladimir_region = {
+	areas = {
+		suzdal_area
+		dmitrov_area
+		moscow_area
+		tver_area
+	}
+}
+
+kursk_region = {
+	areas = {
+		starodub_area
+		bryansk_area
+		rylsk_area
+	}
+}
+
+oka_region = {
+	areas = {
+		obolensk_area
+		mosalsk_area
+		odoyev_area
+		oryol_area
+	}
+}
+
+ryazan_region = {
+	areas = {
+		yelets_area
+		pronsk_area
+		murom_area
+		kolomna_area
+	}
+}
+
+novgorod_region = {
+	areas = {
+		torzhok_area
+		serafimovka_area
+		parfino_area
+		okhona_area
+	}
+}
+
+south_karelia_region = {
+	areas = {
+		neva_area
+		ingria_area
+		ladoga_area
+		ivangorod_area
+	}
+}
+
+#Old Regions
+turovpinsk_region = {
+	areas = {
+		#turov_area
+		#pinsk_area
+		#brest_area
+		#melnik_area
+	}
+}
+
+polotsk_region = {
+	areas = {
+		#polotsk_area
+		#minsk_area
+		#barysaw_area
+	}
+}
+
+minsk_region = {
+	areas = {
+		#vitebsk_area
+		#mogilev_area
+		#mazyr_area
+	}
+}
+
+kiev_region = {
+	areas = {
+		#kiev_area
+		#zhitomir_area
+		#chernobyl_area
+	}
+}
+
+treviso_region = {
+	areas = {
+		#venice_area
+		#bassano_area
+		#verona_area
+		#padua_area
+		#friuli_area
+		#tolmezzo_area
+		#belluno_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+northern_ireland_region = {
+	areas = {
+		#ulster_area
+		#tyrconnell_area
+	}
+}
+
+ireland_region = {
+	areas = {
+		desmond_area
+		mhumhain_area
+		connacht_area
+		sligo_area
+		meath_area
+		leinster_area
+		ulster_area
+		tyrconnell_area
+	}
+}
+
+westireland_region = {
+	areas = {
+		#connacht_area
+		#sligo_area
+	}
+}
+
+mhumhain_region = {
+	areas = {
+		#desmond_area
+		#mhumhain_area
+	}
+}
+
+romagna_region = {
+	areas = {
+		#bologna_area
+		#ferrara_area
+		#cesena_area
+		#urbino_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+umbria_region = {
+	areas = {
+		#ancona_area
+		#spoleto_area
+		#latium_area
+		#viterbo_area
+		#san_severino_area	#bertus mod
+	}
+}
+
+campania_region = {
+	areas = {
+		#abruzzo_area
+		#molise_area
+		#salerno_area
+		#naples_area
+		#capua_area
+		#sirente_velino_area
+	}
+}
+
+apulia_region = {
+	areas = {
+		#salento_area
+		#north_salento_area
+		#foggia_area
+		#calabria_area
+		#cosenza_area
+		#basilicata_area
+		#ariano_area
+	}
+}
+
+insular_region = {
+	areas = {
+		#corsica_area
+		#sassari_area
+		#gallura_area
+		#central_sardinia_area
+		#arborea_area
+	}
+}
+
+tuscany_region = {
+	areas = {
+		#arezzo_area
+		#florence_area
+		#piombino_area
+		#siena_area
+		#scansano_area
+		#pisa_area
+		#lucca_area
+		#speza_area
+	}
+}
+
+liguria_region = {
+	areas = {
+		#albenga_area
+		#savona_area
+		#genoa_area
+	}
+}
+
+provence_region = {
+	areas = {
+		#arles_area
+		#forcalquier_area
+		#venessin_area
+		#nice_area
+	}
+}
+
+piedmont_region = {
+	areas = {
+		#torino_area
+		#aosta_area
+		#monferrato_area
+		#poirino_area
+		#fossano_area
+		#novara_area
+	}
+}
+
+dauphine_region = {
+	areas = {
+		#forez_area
+		#dauphine_area
+		#savoy_area
+	}
+}
+
+lombardy_region = {
+	areas = {
+		#brescia_area
+		#milan_area
+		#como_area
+		#bellinzona_area
+		#pavia_area
+		#modena_area
+		#parma_area
+		#mantua_area
+	}
+}
+
+carniola_region = {
+	areas = {
+		#sannmark_area
+		#carniola_area
+		#istria_area
+		#trieste_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+dalmatian_region = {
+	areas = {
+		#dalmatia_area
+		#split_area
+		#ragusa_area
+		#senj_area
+	}
+}
+
+croatia_region = {
+	areas = {
+		zagreb_area
+		varazdin_area
+		slavonia_area
+		srijem_area
+		south_hum_area
+		sannmark_area
+		carniola_area
+		istria_area
+		trieste_area
+		dalmatia_area
+		split_area
+		ragusa_area
+		senj_area
+		donji_area
+		hum_area
+		kupres_area
+		bobovac_area
+		doboj_area
+	}
+}
+
+bosnia_region = {
+	areas = {
+		#donji_area
+		#hum_area
+		#kupres_area
+		#bobovac_area
+		#doboj_area
+	}
+}
+
+transdanubia_region = {
+	areas = {
+		#nagyatad_area
+		#sopron_area
+		#veszprem_area
+		#fejer_area
+	}
+}
+
+danubia_region = {
+	areas = {
+		#pest_area
+		#kiskun_area
+		#bacs_area
+		#heves_area
+	}
+}
+
+alfold_region = {
+	areas = {
+		#bihar_area
+		#bekes_area
+		#torontal_area
+		#szabolcs_area
+		#szatmar_area
+		#orsova_area
+	}
+}
+
+slovakia_region = {
+	areas = {
+		#nyitra_area
+		#trencsin_area
+		#hont_area
+		#abauj_area
+		#zemplen_area
+	}
+}
+
+transylvania_region = {
+	areas = {
+		maramaros_area
+		haromszek_area
+		torda_area
+		hunyad_area
+		kukullo_area
+		severin_area
+		dambovita_area
+		szatmar_area
+		bihar_area
+		orsova_area
+	}
+}
+
+inneraustria_region = {
+	areas = {
+		#salzburg_area
+		#carinthia_area
+		#styria_area
+		#murmark_area
+	}
+}
+
+austria_region = {
+	areas = {
+		linz_area
+		ostmarch_area
+		wien_area
+		raabs_area
+		salzburg_area
+		carinthia_area
+		styria_area
+		murmark_area
+		tirol_area
+		vorarlberg_area
+		lienz_area
+	}
+}
+
+tirolia_region = {
+	areas = {
+		#tirol_area
+		#vorarlberg_area
+		#lienz_area
+		#trent_area
+	}
+}
+
+swisseast_region = {
+	areas = {
+		#chur_area
+		#waldstatte_area
+		#ticino_area
+		#stgallen_area
+		#thurgau_area
+	}
+}
+
+swisswest_region = {
+	areas = {
+		#wallis_area
+		#bern_area
+		#basel_area
+		#vaud_area
+	}
+}
+
+luxemburg_region = {
+	areas = {
+		#luxemburg_area
+		#chiny_area
+		#liege_area
+		#limburg_area
+	}
+}
+
+wallonian_region = {
+	areas = {
+		#antwerp_area
+		#hainaut_area
+		#flanders_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+picard_region = {
+	areas = {
+		#picardy_area
+		#artois_area
+		#vermandois_area
+	}
+}
+
+netherlands_region = {
+	areas = {
+		#brabant_area
+		#holland_area
+		#utrecht_area
+		#guelders_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+friesland_region = {
+	areas = {
+		#eastfrisia_area
+		#westfrisia_area
+		#overijssel_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+alsace_region = {
+	areas = {
+		#nordgau_area
+		#sundgau_area
+		#strassburg_area
+		#hagenau_area
+	}
+}
+
+lorraine_region = {
+	areas = {
+		#barrois_area
+		#saar_area
+		#toul_area
+		#metz_area
+	}
+}
+
+baden_region = {
+	areas = {
+		#baden_area
+		#breisgau_area
+		#albgau_area
+	}
+}
+
+wurttemburg_region = {
+	areas = {
+		#bertoldsbaar_area
+		#wurttemburg_area
+		#drachgau_area
+		#riesgau_area
+		#ulm_area
+	}
+}
+
+swabia_region = {
+	areas = {
+		#rammgau_area
+		#argengau_area
+		#hegau_area
+		#burgau_area
+		#augsburg_area
+	}
+}
+
+bavaria_region = {
+	areas = {
+		#ingolstadt_area
+		#innkreis_area
+		#munich_area
+		#straubing_area
+		#landshut_area
+	}
+}
+
+nordgau_region = {
+	areas = {
+		#oberpfalz_area
+		#leuchtenburg_area
+		#bayreuth_area
+		#eichstadt_area
+	}
+}
+
+palatinate_region = {
+	areas = {
+		#pfalzwest_area
+		#pfalzeast_area
+		#mainz_area
+		#darmstadt_area
+	}
+}
+
+nurnburg_region = {
+	areas = {
+		#ansbach_area
+		#bamberg_area
+		#wurzburg_area
+		#hohenlohe_area
+	}
+}
+
+saxony_region = {
+	areas = {
+		#merseburg_area
+		#anhalt_area
+		#west_anhalt_area	#bertus mod
+		#meissen_area
+		#osterland_area
+	}
+}
+
+thuringia_region = {
+	areas = {
+		#westergau_area
+		#ostergau_area
+		#helmegau_area
+		#zeitz_area
+	}
+}
+
+brandenburg_region = {
+	areas = {
+		#berlin_area
+		#ruppin_area
+		#potsdam_area
+		#south_berlin_area	#bertus mod
+	}
+}
+
+westpreussen_region = {
+	areas = {
+		#kulmerland_area
+		#westpreussensouth_area
+		#westpreussennorth_area
+		#warmia_area
+	}
+}
+
+ostpreussen_region = {
+	areas = {
+		konigsberg_area
+		ostpreusseneast_area
+		memel_area
+		stolp_area
+		kolberg_area
+		neumark_area
+		kulmerland_area
+		westpreussensouth_area
+		westpreussennorth_area
+		warmia_area
+	}
+}
+
+lithuania_region = {
+	areas = {
+		#vilna_area
+		#pastovys_area
+		#birzai_area
+	}
+}
+
+sudovia_region = {
+	areas = {
+		#grodno_area
+		#sudovia_area
+		#trakai_area
+	}
+}
+
+samogitian_region = {
+	areas = {
+		#samogitia_area
+		#siauliai_area
+		#karsovia_area
+	}
+}
+
+curoniasemigallia_region = {
+	areas = {
+		#curonia_area
+		#piemare_area
+		#semigallia_area
+		#selia_area
+	}
+}
+
+latvian_region = {
+	areas = {
+		#latvia_area
+		#jersika_area
+		#turaida_area
+	}
+}
+
+hinterpommern_region = {
+	areas = {
+		#stolp_area
+		#kolberg_area
+		#neumark_area
+	}
+}
+
+mecklenburg_region = {
+	areas = {
+		#wismar_area
+		#werle_area
+		#pomerania_area
+		#lubeck_area
+	}
+}
+
+holstein_region = {
+	areas = {
+		#slesvig_area
+		#sonderborg_area
+		#holstein_area
+		#kiel_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+lowelb_region = {
+	areas = {
+		#oldenburg_area
+		#stade_area
+		#osnabruck_area
+		#tecklenburg_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+brunswick_region = {
+	areas = {
+		#brunswick_area
+		#calenberg_area	
+		#luneburg_area
+		#altmark_area
+	}
+}
+
+rhenish_region = {
+	areas = {
+		#cologne_area
+		#aachen_area
+		#triernorth_area
+		#triersouth_area
+		#berg_area
+	}
+}
+
+westphalia_region = {
+	areas = {
+		#westfalen_area
+		#munster_area
+		#dortmund_area
+		#mark_area
+	}
+}
+
+hesse_region = {
+	areas = {
+		#hessesouth_area
+		#hessenorth_area
+		#nassau_area
+		#marburg_area
+	}
+}
+
+silesia_region = {	#bertus mod
+	areas = {
+		silesiaeast_area
+		silesiawest_area
+		glogow_area
+		legnica_area
+		opole_area
+		opava_area
+		lusatiasouth_area
+		lusatianorth_area
+	}
+}
+
+lusatia_region = {
+	areas = {
+		#lusatiasouth_area
+		#lusatianorth_area
+	}
+}
+
+moravia_region = {
+	areas = {
+		#moravia_area
+		#zlin_area
+		#olomouc_area
+	}
+}
+
+bohemia_region = {	#bertus mod
+	areas = {
+		praha_area
+		hradecko_area
+		tabor_area
+		erz_area
+		plzen_area
+		eger_area
+		moravia_area
+		zlin_area
+		olomouc_area
+	}
+}
+
+scotland_region = {	#bertus mod
+	areas = {
+		ayrshire_area
+		edinburgh_area
+		galloway_area
+		angus_area
+		fife_area
+		hebrides_area
+		morvern_area
+		caithness_area
+	}
+}
+
+highlands_region = {
+	areas = {
+		#hebrides_area
+		#morvern_area
+		#caithness_area
+	}
+}
+
+northumbria_region = {
+	areas = {
+		#east_riding_area
+		#west_riding_area
+		#cumberland_area
+		#northumberland_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+midlands_region = {
+	areas = {
+		#west_midlands_area
+		#cheshire_area
+		#lincoln_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+southeast_england_region = {
+	areas = {
+		#norwich_area
+		#middlesex_area
+		#sussex_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+southwest_england_region = {
+	areas = {
+		#wessex_area
+		#devon_area
+		#somerset_area
+	}
+}
+
+wales_region = {
+	areas = {
+		#walesnorth_area
+		#walessouth_area
+		#montgomery_area
+	}
+}
+
+normandy_region = {
+	areas = {
+		#normandy_area
+		#caux_area
+		#alencon_area
+	}
+}
+
+brittany_region = {
+	areas = {
+		#raozhon_area
+		#nantes_area
+		#finistere_area
+	}
+}
+
+angevin_region = {
+	areas = {
+		#maine_area
+		#tours_area
+	}
+}
+
+berrichon_region = {
+	areas = {
+		#berry_area
+		#nevers_area
+		#bourbon_area
+	}
+}
+
+champagne_region = {
+	areas = {
+		#reims_area
+		#valois_area
+		#troyes_area
+		#rethel_area
+	}
+}
+
+paris_region = {
+	areas = {
+		#paris_area
+		#orleans_area
+		#nemours_area
+	}
+}
+
+burgundy_region = {
+	areas = {
+		#burgundy_area
+		#charolais_area
+		#dole_area
+		#besancon_area
+	}
+}
+
+aquitaine_region = {
+	areas = {
+		angouleme_area
+		bordeaux_area
+		poitou_area
+		labourd_area
+		armagnac_area
+		perigord_area
+		cahors_area
+		raozhon_area
+		nantes_area
+		finistere_area
+		bearn_area
+		limousin_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+guyenne_region = {
+	areas = {
+		#perigord_area
+		#limousin_area
+		#cahors_area
+	}
+}
+
+auvergne_region = {
+	areas = {
+		#auvergne_area
+		#viviers_area
+		#rodez_area
+		#montlaur_area	#bertus mod
+	}
+}
+
+gascony_region = {
+	areas = {
+		#bearn_area
+		#labourd_area
+		#armagnac_area
+	}
+}
+
+toulouse_region = {
+	areas = {
+		#narbonne_area
+		#toulouse_area
+		#montpellier_area
+	}
+}
+
+catalunya_region = {
+	areas = {
+		#barcelona_area
+		#tarragona_area
+		#lerida_area
+	}
+}
+
+valencian_region = {
+	areas = {
+		#denia_area
+		#valencia_area
+		#balears_area
+	}
+}
+
+aragon_region = {	#bertus mod
+	areas = {
+		zaragoza_area
+		teruel_area
+		huesca_area
+		denia_area
+		valencia_area
+		balears_area
+		barcelona_area
+		tarragona_area
+		lerida_area
+	}
+}
+
+castile_region = {
+	areas = {
+		#madrid_area
+		#soria_area
+		#segovia_area
+	}
+}
+
+toledan_region = {
+	areas = {
+		#toledo_area
+		#ciudad_area
+		#cuenca_area
+		#murcia_area
+	}
+}
+
+basque_region = {
+	areas = {
+		#vizcaya_area
+		#navarra_area
+		#rioja_area
+	}
+}
+
+leonese_region = {
+	areas = {
+		#leon_area
+		#salamanca_area
+		#palencia_area
+	}
+}
+
+extremadura_region = {
+	areas = {
+		#badajoz_area
+		#plasencia_area
+		#caceres_area
+	}
+}
+
+andalusia_region = {
+	areas = {
+		#sevilla_area
+		#cordoba_area
+		#huelva_area
+		#granada_area
+		#almeria_area
+		#malaga_area
+	}
+}
+
+asturian_region = {
+	areas = {
+		#galicia_area
+		#asturias_area
+		#ourense_area
+	}
+}
+
+beiras_region = {
+	areas = {
+		#porto_area
+		#braganca_area
+		#coimbra_area
+	}
+}
+
+alentejo_region = {
+	areas = {
+		#algarve_area
+		#alentejo_area
+		#avis_area
+		#lisboa_area
+	}
+}
+
+halicia_region = {
+	areas = {
+		#peremyshl_area
+		#halych_area
+		#lviv_area
+	}
+}
+
+volhynia_region = {
+	areas = {
+		#volodymyr_area
+		#belz_area
+		#lutsk_area
+	}
+}
+
+podolia_region = {
+	areas = {
+		#podolia_area
+		#letychiv_area
+		#bratslav_area
+	}
+}
+
+scandinavia_region = {	#bertus mod
+	areas = {
+		gotland_area
+		kalmar_area
+		jonkoping_area
+		kronoberg_area
+		ronneby_area
+		lund_area
+		oslo_area
+		bohuslan_area
+		akershus_area
+		agder_area
+		rogaland_area
+		telemark_area
+		stockholm_area
+		uppsala_area
+		sodermanland_area
+		dalarna_area
+		vastmanland_area
+		varmland_area
+		ostergotland_area
+		vastergotland_area
+		dalsland_area
+		suomi_area
+		uusimaa_area
+		tavastia_area
+		kymenlaakso_area
+	}
+}
+
+skania_region = {
+	areas = {
+		#ronneby_area
+		#lund_area
+	}
+}
+
+danishislands_region = {
+	areas = {
+		#sjaelland_area
+		#fyn_area
+		#lolland_area
+	}
+}
+
+jutland_region = {
+	areas = {
+		arhus_area
+		viborg_area
+		holstebro_area
+		vendsyssel_area
+		slesvig_area
+		sonderborg_area
+		sjaelland_area
+		fyn_area
+		lolland_area
+	}
+}
+
+wallachia_region = {
+	areas = {
+		#buzau_area
+		#teleorman_area
+		#oltenia_area
+		#severin_area
+		#dambovita_area
+		#ilfov_area
+	}
+}
+
+albania_region = {
+	areas = {
+		#arbanon_area
+		#durres_area
+		#vlore_area
+	}
+}
+
+sicilia_region = {	#bertus mod
+	areas = {
+		palermo_area
+		syracuse_area
+		terranova_area
+		messina_area
+		corsica_area
+		sassari_area
+		gallura_area
+		central_sardinia_area
+		arborea_area
+	}
+}
+
+hellas_region = {
+	areas = {
+		morea_area
+		athens_area
+		achaea_area
+		messinia_area
+		thessalia_area
+		epirus_area
+		aetolia_area
+		euboia_area
+		cyclades_area
+		chios_area
+		crete_area
+		chalkidiki_area
+		serres_area
+		kastoria_area
+		skopia_area
+		prilep_area
+		arbanon_area
+		durres_area
+		vlore_area
+	}
+}
+
+greekislands_region = {
+	areas = {
+		#euboia_area
+		#cyclades_area
+		#chios_area
+		#crete_area
+	}
+}
+
+macedonia_region = {
+	areas = {
+		#chalkidiki_area
+		#serres_area
+		#kastoria_area
+		#skopia_area
+		#prilep_area
+	}
+}
+
+thrace_region = {
+	areas = {
+		#thrace_area
+		#traianople_area
+		#hellespont_area
+		#sozopol_area
+	}
+}
+
+furthergreece_region = {
+	areas = {
+		#thessalia_area
+		#epirus_area
+		#aetolia_area
+	}
+}
+
+moldavia_region = {
+	areas = {
+		bukovina_area
+		bessarabia_area
+		soroca_area
+		barlad_area
+		adjud_area
+		iasi_area
+	}
+}
+
+bulgaria_region = {
+	areas = {
+		tarnovo_area
+		silistra_area
+		vidin_area
+		dobruja_area
+		plovdiv_area
+		kran_area
+		zagore_area
+		sophia_area
+		buzau_area
+		teleorman_area
+		oltenia_area
+		ilfov_area
+		thrace_area
+		traianople_area
+		hellespont_area
+		sozopol_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.04.30
+	}
+}
+
+bulgariasouth_region = {
+	areas = {
+		#plovdiv_area
+		#kran_area
+		#zagore_area
+		#sophia_area
+	}
+}
+
+
+rashkan_region = {
+	areas = {
+		#zeta_area
+		#rashka_area
+		#kosovo_area
+	}
+}
+
+serbia_region = {
+	areas = {
+		nis_area
+		belgrade_area
+		branicevo_area
+		zlatibor_area
+		zeta_area
+		rashka_area
+		kosovo_area
+	}
+}
+
+malopolska_region = {
+	areas = {
+		#lublin_area
+		#sandomierz_area
+		#radom_area
+		#krakow_area
+		#sacz_area
+	}
+}
+
+mazovia_region = {
+	areas = {
+		#warsaw_area
+		#dobrzyn_area
+		#wizna_area
+		#nur_area
+	}
+}
+
+wielkopolska_region = {
+	areas = {
+		#posen_area
+		#czarnkow_area
+		#gniezno_area
+		#sieradz_area
+		#leczyca_area
+	}
+}
+
+#SEAS
+
+atlantic_region = {
+    areas = {
+    	north_sea_area
+    	english_sea_area
+    	celtic_sea_area
+    	northatl_sea_area
+    	southatl_sea_area
+    	biscay_sea_area
+    	norwegian_sea_area
+    }
+}
+
+baltic_sea_region = {
+    areas = {
+    	baltic_sea_area
+    	kattegat_sea_area
+    	gulf_of_finland_area
+    }
+}
+
+mediterranean_region = {
+    areas = {
+    	westernmed_sea_area
+    	eastern_mediterrenean_area
+    	libyan_sea_area
+    	tyrrhenian_sea_area
+    	ionian_sea_area
+    	adriatic_sea_area
+    	aegean_sea_area
+    	black_sea_area
+    	sea_of_azov_area
+    }
+}
+
+west_african_sea_region = {
+	areas = {
+		west_african_coast_sea_area
+	}
+}
+
+arabian_sea_region = {
+	areas = {
+		persian_gulf_area
+		red_sea_area
+	}
+}
+
+#unused
+maghreb_region = {}
+italy_region = { }
+mashriq_region = { }
+balkan_region = { }
+france_region = { 
+	areas = {
+		paris_area
+		orleans_area
+		nemours_area
+		picardy_area
+		artois_area
+		vermandois_area
+		normandy_area
+		caux_area
+		alencon_area
+		valois_area
+		maine_area
+		tours_area
+		berry_area
+		nevers_area
+		bourbon_area
+	}
+}
+south_france_region = { 
+	areas = {
+		narbonne_area
+		toulouse_area
+		montpellier_area
+		auvergne_area
+		viviers_area
+		rodez_area
+		montlaur_area	#bertus mod
+		arles_area
+		forcalquier_area
+		venessin_area
+		nice_area
+		dauphine_area
+	}
+}
+iberia_region = { }
+pomerania_region = { }
+veneto_region = {}
+upper_saxony_region = {}
+persia_region = {}
+khorasan_region = {}
+east_siberia_region = {}
+west_siberia_region = {}
+mediterrenean_region = {}
+british_isles_region = {
+	areas = {
+		east_riding_area
+		west_riding_area
+		cumberland_area
+		northumberland_area
+		west_midlands_area
+		cheshire_area
+		lincoln_area
+		norwich_area
+		middlesex_area
+		sussex_area
+		walesnorth_area
+		walessouth_area
+		montgomery_area
+		wessex_area
+		devon_area
+		somerset_area
+	}
+}
+low_countries_region = {
+	areas = {
+		brabant_area
+		holland_area
+		utrecht_area
+		guelders_area
+		eastfrisia_area
+		westfrisia_area
+		overijssel_area
+		antwerp_area
+		hainaut_area
+		flanders_area
+		liege_area
+		limburg_area
+	}
+}
+portugal_region = {
+	areas = {
+		algarve_area
+		alentejo_area
+		avis_area
+		lisboa_area
+		porto_area
+		braganca_area
+		coimbra_area
+	}
+}
+north_castille_region = {
+	areas = {
+		galicia_area
+		asturias_area
+		ourense_area
+		madrid_area
+		soria_area
+		segovia_area
+		vizcaya_area
+		navarra_area
+		rioja_area
+		leon_area
+		salamanca_area
+		palencia_area
+	}
+}
+south_castille_region = {
+	areas = {
+		sevilla_area
+		cordoba_area
+		huelva_area
+		granada_area
+		almeria_area
+		malaga_area
+		badajoz_area
+		plasencia_area
+		caceres_area
+		toledo_area
+		ciudad_area
+		cuenca_area
+		murcia_area
+	}
+}
+lotharingia_region = {
+	areas = {
+		burgundy_area
+		charolais_area
+		dole_area
+		besancon_area
+		forez_area
+		savoy_area
+		barrois_area
+		saar_area
+		toul_area
+		metz_area
+		luxemburg_area
+		chiny_area
+		rethel_area
+		reims_area
+		troyes_area
+	}
+}
+north_italy_region = {
+	areas = {
+		torino_area
+		aosta_area
+		monferrato_area
+		poirino_area
+		fossano_area
+		novara_area
+		brescia_area
+		milan_area
+		como_area
+		bellinzona_area
+		pavia_area
+		modena_area
+		parma_area
+		mantua_area
+		arezzo_area
+		florence_area
+		piombino_area
+		siena_area
+		scansano_area
+		pisa_area
+		lucca_area
+		speza_area
+		albenga_area
+		savona_area
+		genoa_area
+		venice_area
+		verona_area
+		padua_area
+		friuli_area
+		tolmezzo_area
+		belluno_area
+		bologna_area
+		ferrara_area
+		cesena_area
+		urbino_area
+		trent_area
+	}
+}
+south_italy_region = {
+	areas = {
+		salento_area
+		north_salento_area
+		foggia_area
+		calabria_area
+		cosenza_area
+		basilicata_area
+		ariano_area
+		abruzzo_area
+		molise_area
+		salerno_area
+		naples_area
+		capua_area
+		sirente_velino_area
+		ancona_area
+		spoleto_area
+		latium_area
+		viterbo_area
+		san_severino_area	#bertus mod
+	}
+}
+switzerland_region = {
+	areas = {
+		wallis_area
+		bern_area
+		basel_area
+		vaud_area
+		chur_area
+		waldstatte_area
+		ticino_area
+		stgallen_area
+		thurgau_area
+	}
+}
+north_germany_region = {
+	areas = {
+		berlin_area
+		ruppin_area
+		potsdam_area
+		south_berlin_area	#bertus mod
+		brunswick_area
+		calenberg_area	
+		luneburg_area
+		altmark_area
+		brunswick_area
+		calenberg_area	
+		luneburg_area
+		altmark_area
+		oldenburg_area
+		stade_area
+		osnabruck_area
+		tecklenburg_area
+		holstein_area
+		kiel_area
+		wismar_area
+		werle_area
+		pomerania_area
+		lubeck_area
+		anhalt_area
+	}
+}
+central_germany_region = {
+	areas = {
+		hessesouth_area
+		hessenorth_area
+		nassau_area
+		marburg_area
+		leuchtenburg_area
+		bayreuth_area
+		mainz_area
+		darmstadt_area
+		bamberg_area
+		wurzburg_area
+		merseburg_area
+		west_anhalt_area	#bertus mod
+		meissen_area
+		osterland_area
+		westergau_area
+		ostergau_area
+		helmegau_area
+		zeitz_area
+		cologne_area
+		aachen_area
+		triernorth_area
+		triersouth_area
+		berg_area
+		westfalen_area
+		munster_area
+		dortmund_area
+		mark_area
+		pfalzeast_area
+		hohenlohe_area
+		pfalzwest_area
+	}
+}
+south_germany_region = {
+	areas = {
+		ingolstadt_area
+		innkreis_area
+		munich_area
+		straubing_area
+		landshut_area
+		rammgau_area
+		argengau_area
+		hegau_area
+		burgau_area
+		augsburg_area
+		bertoldsbaar_area
+		wurttemburg_area
+		drachgau_area
+		riesgau_area
+		ulm_area
+		baden_area
+		breisgau_area
+		albgau_area
+		oberpfalz_area
+		eichstadt_area
+		ansbach_area
+		hagenau_area
+		nordgau_area
+		strassburg_area
+		sundgau_area
+	}
+}
+hungary_region = {
+	areas = {
+		nagyatad_area
+		sopron_area
+		veszprem_area
+		fejer_area
+		nyitra_area
+		trencsin_area
+		hont_area
+		abauj_area
+		zemplen_area
+		bekes_area
+		torontal_area
+		szabolcs_area
+		pest_area
+		kiskun_area
+		bacs_area
+		heves_area
+	}
+}
+morocco_region = {
+	areas = {
+		marrakesh_area
+		khouribga_area
+		tadla_area
+		macaronesia_area
+		guelmim_area
+		draa_area
+		taroudant_area
+		tangiers_area
+		tetouan_area
+		melilla_area
+		oujda_area
+		meknes_area
+		fez_area
+		debdou_area
+		safi_area
+		jadida_area
+		rabat_area
+		oran_area
+		algiers_area
+		saida_area
+	}
+}
+tunis_region = {
+	areas = {
+		jufra_area
+		fezzan_area
+		tripolitania_area
+		sirte_area
+		bejaia_area
+		constantine_area
+		setif_area
+		tebessa_area
+		sahara_oases
+		tunis_area
+		sousse_area
+		mahdia_area
+		djerba_area
+		kef_area
+		kairouan_area
+		djerid_area
+	}
+}
+egypt_region = {
+	areas = {
+		bahari_area
+		delta_area
+		alexandria_area
+		damietta_area
+		vostani_area
+		said_area
+		red_sea_coast_area
+		al_wahat_area
+		cyrenaica_area
+	}
+}
+levant_region = {
+	areas = {
+		teluch_area
+		aleppo_area
+		homs_area
+		idlib_area
+		simeon_area
+		judea_area
+		galilee_area
+		philistia_area
+		celesyria_area
+		daraa_area
+		kerak_area
+		bahrain_area
+		nafud_area
+		syrian_desert_area
+		tabuk_area
+		aqaba_area
+		sinai_area
+		cyprus_area
+		lebanon_area
+		tartus_area
+	}
+}
+west_anatolia_region = {
+	areas = {
+		kastamone_area
+		bithynia_area
+		lycia_area
+		pamphylia_area
+		lydia_area
+		ionia_area
+		caria_area
+		doris_area
+		optimaton_area
+		nikaia_area
+		mysia_area
+		troas_area
+		amorion_area
+		galatia_area
+		ancyra_area
+		parorea_area
+		pisidia_area
+		kotiaeion_area
+	}
+}
+east_anatolia_region = {
+	areas = {
+		trebizond_area
+		polemonion_area
+		karin_area
+		sinope_area
+		anemorion_area
+		lykandos_area
+		sebasteia_area
+		koloneia_area
+		antitaurus_area
+		isauria_area
+		lycaonia_area
+		tyana_area
+		armeniakon_area
+		chammanene_area
+		komana_area		
+		teluch_area
+		tarsos_area
+		seleukeia_area
+		antioch_area
+	}
+}
+central_poland_region = {
+	areas = {
+		posen_area
+		czarnkow_area
+		gniezno_area
+		sieradz_area
+		leczyca_area
+		lublin_area
+		sandomierz_area
+		radom_area
+		krakow_area
+		sacz_area
+		warsaw_area
+		dobrzyn_area
+		wizna_area
+		nur_area
+	}
+}
+ruthenia_region = {
+	areas = {
+		volodymyr_area
+		belz_area
+		lutsk_area
+		chernigov_area
+		seversk_area
+		pereyaslavl_area
+		turov_area
+		pinsk_area
+		brest_area
+		melnik_area
+		polotsk_area
+		minsk_area
+		barysaw_area
+		vitebsk_area
+		mogilev_area
+		mazyr_area
+		kiev_area
+		zhitomir_area
+		chernobyl_area
+		podolia_area
+		letychiv_area
+		bratslav_area
+		peremyshl_area
+		halych_area
+		lviv_area
+		pastovys_area
+		grodno_area
+	}
+}

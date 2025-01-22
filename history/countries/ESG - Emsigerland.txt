@@ -1,0 +1,83 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = east_frisian
+religion = catholic
+capital = 1238
+
+#Count in Emsgau
+1044.7.12 = {
+	monarch = {
+		name = "Hermann III"
+		dynasty = "von Werl"
+		culture = hannoverian
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+
+#Tribes
+1055.1.1 = {
+	set_country_flag = natives_flag
+	government = native
+	add_government_reform = native_clan_council_reform
+	technology_group = north_american
+	monarch = {
+		name = "Fryske frijheid"
+		regent = yes
+		dip = 2
+		mil = 2
+		adm = 2
+	}
+}
+1300.1.1 = {
+	monarch = {
+		name = "Wiard"
+		dynasty = "Abdena"
+		dip = 2
+		mil = 2
+		adm = 4
+	}
+}
+1315.1.1 = {
+	monarch = {
+		name = "Luerd"
+		dynasty = "Abdena"
+		dip = 1
+		mil = 0
+		adm = 2
+	}
+}
+1345.1.1 = {
+	monarch = {
+		name = "Luerd"
+		dynasty = "Abdena"
+		dip = 2
+		mil = 2
+		adm = 2
+	}
+}
+1370.1.1 = {
+	clr_country_flag = natives_flag
+	government = tribal
+	add_government_reform = tribal_despotism
+	technology_group = western
+	monarch = {
+		name = "Kampo"
+		dynasty = "Abdena"
+		dip = 2
+		mil = 2
+		adm = 2
+	}
+}
+1381.1.1 = {
+	monarch = {
+		name = "Hisko"
+		dynasty = "Abdena"
+		dip = 3
+		mil = 3
+		adm = 2
+	}
+}

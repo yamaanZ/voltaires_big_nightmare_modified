@@ -1,0 +1,53 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = eastern
+religion = catholic
+primary_culture = mazovian
+capital = 2770
+
+#First Creation
+1313.4.20 = {
+	monarch = {
+		name = "Siemowit II"
+		dynasty = "Piast"
+		birth_date = 1283.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1345.2.18 = {
+	monarch = {
+		name = "Kazimierz I"
+		dynasty = "Piast"
+		birth_date = 1329.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#done 1355.12.5
+
+#Second Creation
+1381.1.1 = {
+	monarch = {
+		name = "Siemowit IV"
+		dynasty = "Piast"
+		birth_date = 1356.1.1
+		adm = 1
+		dip = 4
+		mil = 1
+	}
+}
+1426.1.21 = {
+	monarch = {
+		name = "Siemowit V"
+		dynasty = "Piast"
+		birth_date = 1389.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+#1442.2.17 done

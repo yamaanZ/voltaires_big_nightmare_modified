@@ -1,0 +1,89 @@
+country_decisions = {
+
+	catalan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = catalan
+			NOT = { exists = CAT }
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1955 	#barcelona
+				AND = {
+					OR = {
+						area = lerida_area
+						area = tarragona_area
+						area = barcelona_area
+					}
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 300
+								OR = {
+									area = lerida_area
+									area = tarragona_area
+									area = barcelona_area
+								}
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = CAT }
+			adm_tech = 10	
+			is_at_war = no
+			is_nomad = no
+			owns_core_province = 1955 	#barcelona
+			development_in_provinces = {
+				value = 300
+				OR = {
+					area = lerida_area
+					area = tarragona_area
+					area = barcelona_area
+				}
+			}
+		}
+		effect = {
+			change_tag = CAT
+			on_change_tag_effect = yes
+			hidden_effect = { restore_country_name = yes }
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 10
+			set_capital = 1955 # Barcelona
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

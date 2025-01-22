@@ -1,0 +1,57 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+primary_culture = schlesian
+religion = catholic
+capital = 815
+
+1138.10.28 = {
+	monarch = {
+		name = "Wladyslaw II"
+		dynasty = "Piast"
+		birth_date = 1105.1.1
+		adm = 1
+		dip = 0
+		mil = 1
+	}
+	heir = {
+		name = "Boleslaw"
+		monarch_name = "Boleslaw I"
+		dynasty = "Piast"
+		birth_date = 1127.1.1
+		death_date = 1201.12.8
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#1146-1163 under MAZ
+1163.1.1 = {
+	monarch = {
+		name = "Boleslaw I"
+		dynasty = "Piast"
+		birth_date = 1127.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+#done 1173.1.5
+1173.1.5 = { capital = 812 }
+1201.12.8 = { add_accepted_culture = saxon }
+
+1444.11.12 = {	#bertus mod
+	monarch = {
+		name = "Konrad II"
+		dynasty = "Piast"
+		culture = moravian
+		birth_date = 1414.1.13
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+}

@@ -1,0 +1,31 @@
+name = "Russo-Lithuanian War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = LIT
+}
+
+1512.3.25 = {
+	add_attacker = RUS
+	add_defender = LIT
+	add_defender = POL
+	add_defender = MAZ
+	add_defender = TEU
+}
+
+1519.1.1 = {
+	rem_defender = TEU
+}
+
+1521.4.1 = {
+	add_defender = TEU
+}
+
+# Peace
+1522.1.1 = {
+	rem_attacker = RUS
+	rem_defender = LIT
+	rem_defender = POL
+	rem_defender = MAZ
+	rem_defender = TEU
+}

@@ -1,0 +1,261 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = piedmontese
+capital = 1798
+
+#Counts of Biandrate
+1110.1.1 = {
+	monarch = {
+		name = "Alberto"
+		dynasty = "Confalonieri"
+		birth_date = 1070.1.1
+		adm = 1
+		dip = 0
+		mil = 2
+	}
+}
+1134.1.1 = {
+	monarch = {
+		name = "Guido"
+		dynasty = "Confalonieri"
+		birth_date = 1119.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+1167.1.1 = {
+	monarch = {
+		name = "Uberto"
+		dynasty = "Confalonieri"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1204.1.1 = {
+	monarch = {
+		name = "Gozio"
+		dynasty = "Confalonieri"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+1240.1.1 = {
+	monarch = {
+		name = "Gottofredo"
+		dynasty = "Confalonieri"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1270.1.1 = {
+	monarch = {
+		name = "Ottone"
+		dynasty = "Confalonieri"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+1281.1.1 = {
+	monarch = {
+		name = "Iocelino"
+		dynasty = "Confalonieri"
+		birth_date = 1266.1.1
+		adm = 3
+		dip = 1
+		mil = 0
+	}
+}
+1315.1.1 = {
+	monarch = {
+		name = "Antonio"
+		dynasty = "Confalonieri"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+#1334 annexed
+
+#Counts of Masserano
+1394.5.20 = {
+	monarch = {
+		name = "Antonio"
+		dynasty = "Fieschi"
+		birth_date = 1350.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+	heir = {
+		name = "Ibleto"
+		monarch_name = "Ibleto"
+		dynasty = "Fieschi"
+		birth_date = 1370.1.1
+		death_date = 1437.1.1
+		claim = 80
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+1423.1.1 = {
+	monarch = {
+		name = "Ibleto"
+		dynasty = "Fieschi"
+		birth_date = 1370.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+1437.1.1 = {
+	monarch = {
+		name =  "Giuseppe"
+		dynasty = "Fieschi"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1471.1.1 = {
+	monarch = {
+		name = "Sebastiano"
+		dynasty = "Fieschi"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1506.1.1 = {
+	monarch = {
+		name = "Annibale"
+		dynasty = "Fieschi"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+1512.1.1 = {
+	monarch = {
+		name = "Ludovico"
+		dynasty = "Fieschi"
+		adm = 2
+		dip = 0
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+}
+1517.1.1 = {
+	monarch = {
+		name = "Filiberto"
+		dynasty = "Ferrero"
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1547.8.6 = { 
+	government_rank = 2
+	monarch = {
+		name = "Besso"
+		dynasty = "Ferrero"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1584.1.1 = {
+	monarch = {
+		name = "Claudia di Savoia (Regent)"
+		regent = yes
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	heir = {
+		name = "Francesco"
+		monarch_name = "Francesco Filiberto"
+		dynasty = "Ferrero"
+		birth_date = 1584.1.1
+		death_date = 1629.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1598.8.13 = {
+	government_rank = 4
+	monarch = {
+		name = "Francesco Filiberto"
+		dynasty = "Ferrero"
+		birth_date = 1584.1.1
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+}
+1629.1.1 = {
+	monarch = {
+		name = "Paulo Besso"
+		dynasty = "Ferrero"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1667.1.1 = {
+	monarch = {
+		name = "Francesco Ludovico"
+		dynasty = "Ferrero"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+1685.1.1 = {
+	monarch = {
+		name = "Carlo Besso"
+		dynasty = "Ferrero"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1720.1.1 = {
+	monarch = {
+		name = "Vittorio Amedeo"
+		dynasty = "Ferrero"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+1745.1.1 = {
+	monarch = {
+		name = "Vittorio Filippo"
+		dynasty = "Ferrero"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1767.1.1 = {
+	monarch = {
+		name = "Carlo Sebastiano"
+		dynasty = "Ferrero"
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+}

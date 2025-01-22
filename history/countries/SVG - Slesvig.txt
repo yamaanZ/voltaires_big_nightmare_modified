@@ -1,0 +1,129 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+technology_group = western
+religion = catholic
+primary_culture = jutlandic
+capital = 2384
+
+1444.11.12 = {	#bertus mod
+	monarch = {
+		name = "Henrik II"
+		dynasty = "Astridsunr"
+		birth_date = 1414.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+	set_capital = 1027
+	kill_heir = {}
+}
+#PU under RSB later DAN
+1536.1.1 = { religion = protestant }
+
+#Duchy of Schlesvig-Holstein-Sonderburg
+1564.1.1 = {
+	monarch = {
+		name = "Hans I"
+		dynasty = "von Oldenburg"
+		birth_date = 1545.3.25
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+1573.1.20 = {
+	heir = {
+		name = "Alexander"
+		monarch_name = "Alexander I"
+		dynasty = "von Oldenburg"
+		birth_date = 1573.1.20
+		death_date = 1627.5.13
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+1622.10.9 = {
+	monarch = {
+		name = "Alexander I"
+		dynasty = "von Oldenburg"
+		birth_date = 1573.1.20
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+	heir = {
+		name = "Ernst Gÿnther"
+		monarch_name = "Ernst Gÿnther"
+		dynasty = "von Oldenburg"
+		birth_date = 1609.10.14
+		death_date = 1689.1.18
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+1627.5.13 = {
+	monarch = {
+		name = "Ernst Gÿnther"
+		dynasty = "von Oldenburg"
+		birth_date = 1609.10.14
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+1668.11.18 = {
+	heir = {
+		name = "Frederik Vilhelm"
+		monarch_name = "Frederik Vilhelm"
+		dynasty = "von Oldenburg"
+		birth_date = 1668.11.18
+		death_date = 1714.6.3
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1689.1.18 = {
+	monarch = {
+		name = "Frederik Vilhelm"
+		dynasty = "von Oldenburg"
+		birth_date = 1668.11.18
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1696.8.4 = {
+	heir = {
+		name = "Christian August"
+		monarch_name = "Christian August"
+		dynasty = "von Oldenburg"
+		birth_date = 1696.8.4
+		death_date = 1754.1.20
+		claim = 95
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
+#annexed 1713.1.1
+
+#Revolt
+1848.1.1 = {
+	monarch = {
+		name = "Friedrich I"
+		dynasty = "von Oldenburg"
+		birth_date = 1800.8.23
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}

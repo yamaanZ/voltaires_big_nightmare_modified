@@ -1,0 +1,131 @@
+byz_crisis = {
+	potential = {
+		normal_or_historical_nations = yes
+		NOT = { has_country_flag = manzikert_happened }
+		NOT = { started_in = 1071.8.26 }
+		tag = BYZ
+		always = no
+		any_owned_province = { superregion = anatolia_superregion }
+	}
+
+
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = byz_crisis_start.tt
+			OR = {
+				any_owned_province = {
+					any_neighbor_province = {
+						owner = { religion_group = muslim }
+					}
+				}
+				any_subject_country = {
+					any_owned_province = {
+						any_neighbor_province = {
+							owner = { religion_group = muslim }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			custom_trigger_tooltip = {
+				tooltip = byz_crisis_stop.tt2
+				NOT = {
+					OR = {
+						has_country_modifier = byz_aristocrats_m
+						has_country_modifier = byz_bureaucrats_m
+						has_country_modifier = byz_defenses_m
+						has_country_modifier = byz_army_m
+						has_country_modifier = byz_unrest_m
+					}
+				}
+			}
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_country_modifier = byz_aristocrats_m
+				has_country_modifier = byz_bureaucrats_m
+				has_country_modifier = byz_defenses_m
+				has_country_modifier = byz_army_m
+				has_country_modifier = byz_unrest_m
+			}
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 5
+		}
+		modifier = {
+			factor = 0.5
+			war_exhaustion = 10
+		}
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 0.01
+		}
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 0.5
+		}
+		modifier = {
+			factor = 0.5
+			overextension_percentage = 1
+		}
+	}
+
+	modifier = {
+		infantry_cost = 0.5
+		cavalry_cost = 0.5
+		discipline = -0.05
+	}	
+	
+	can_end = {
+ 		custom_trigger_tooltip = {
+			tooltip = had_disaster_for_five_years
+			had_country_flag = { flag = manzikert_happened days = 1825 }
+		}
+	}
+	
+	on_start = byz_crisis.1
+	on_end = byz_crisis.100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1000 = 0
+			100 = byz_crisis.2 #
+			100 = byz_crisis.3 #
+			100 = byz_crisis.4 #
+			100 = byz_crisis.5 #
+			100 = byz_crisis.6 #
+			100 = byz_crisis.7 #
+			150 = byz_crisis.8 #
+			150 = byz_crisis.9 #
+			150 = byz_crisis.10 #
+			150 = byz_crisis.11 #
+			150 = byz_crisis.12 #
+			100 = byz_crisis.13 #
+			150 = byz_crisis.14 #
+			150 = byz_crisis.15 #
+			150 = byz_crisis.16 #
+			150 = byz_crisis.17 #
+			100 = byz_crisis.18 #
+			100 = byz_crisis.19 #
+			100 = byz_crisis.20 #
+			150 = byz_crisis.21 #
+			150 = byz_crisis.22 #
+			150 = byz_crisis.23 #
+			150 = byz_crisis.24 #
+			150 = byz_crisis.25 #
+		}
+	}
+}

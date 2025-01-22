@@ -1,0 +1,18 @@
+name = "Friedrich's Third Crusade"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = BYZ
+}
+
+1189.7.1 = {
+	add_attacker = SWA
+	add_attacker = FCM
+	add_defender = BYZ
+}
+
+1190.6.10 = {
+	rem_attacker = SWA
+	rem_attacker = FCM
+	rem_defender = BYZ
+}

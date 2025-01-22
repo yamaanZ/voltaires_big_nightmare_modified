@@ -1,0 +1,100 @@
+country_decisions = {
+
+	lotharingia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_lotharingia_flag }
+			NOT = { has_country_flag = super_formable_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {	
+				is_free_or_tributary_trigger = yes	
+				ai = no	
+			}
+			OR = {
+				ai = no
+				NOT = { exists = LOT }
+			}
+			capital_scope = {	#bertus mod
+				superregion = lotharingia_region
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = lotharingia_region
+					root = {
+						NOT = {
+							development_in_provinces = {
+								value = 1500
+								superregion = lotharingia_region
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes	
+			NOT = { exists = LOT }
+			development_in_provinces = {
+				value = 1500
+				superregion = lotharingia_region
+			}
+		}
+		effect = {
+			if = {
+				limit = { NOT = { primary_culture = lorrainian } }
+				change_primary_culture = lorrainian
+			}
+			change_tag = LOT
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 5 }
+				}
+				set_government_rank = 5
+			}
+			lowlands_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = LOT
+			}
+			french_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = LOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_lotharingia_flag
+			set_country_flag = super_formable_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

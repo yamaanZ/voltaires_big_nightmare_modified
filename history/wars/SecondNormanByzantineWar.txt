@@ -1,0 +1,29 @@
+name = "Second Norman-Byzantine War"
+
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = BYZ
+}
+
+1081.10.18 = {
+	add_attacker = APL
+	add_attacker = LRN
+	add_attacker = GGN
+	add_attacker = TNC
+	add_attacker = CPU
+	add_attacker = GAE
+	add_attacker = AML
+	add_defender = BYZ
+}
+
+1085.7.17 = {
+	rem_attacker = APL
+	rem_attacker = LRN
+	rem_attacker = GGN
+	rem_attacker = TNC
+	rem_attacker = CPU
+	rem_attacker = GAE
+	rem_attacker = AML
+	rem_defender = BYZ
+}

@@ -1,0 +1,16 @@
+name = "First Bavarian War"
+war_goal = {
+	type = humiliate_rotw
+	casus_belli = cb_humiliate_rotw
+	tag = ING
+}
+
+1420.1.1 = {
+	add_attacker = LSH
+	add_defender = ING
+}
+
+1422.10.2 = {
+	rem_attacker = LSH
+	rem_defender = ING
+}
