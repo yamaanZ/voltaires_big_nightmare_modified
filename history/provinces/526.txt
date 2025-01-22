@@ -21,6 +21,11 @@ add_core = FRZ
 }
 1444.11.12 = {	#bertus mod
 	fort_15th = yes
+	owner = FRZ
+	controller = FRZ
+	add_core = FRZ
+	remove_core = BOU
+	remove_core = FRA
 }
 1523.1.1 = {
 	owner = FRA

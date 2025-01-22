@@ -26,9 +26,10 @@ discovered_by = ottoman
 1368.4.20 = { controller = GAL }
 1369.4.23 = { controller = CAS }
 1444.11.12 = {	#BERTUS MOD
-	owner = GAL
-	controller = GAL
-	add_core = GAL
+	owner = ASU
+	controller = ASU
+	add_core = ASU
+	remove_core = GAL
 	remove_core = CAS
 }
 1475.6.2 = { controller = POR }

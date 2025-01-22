@@ -83,10 +83,11 @@ fort_14th = yes
 	culture = mozarabic
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = CCR
-	controller = CCR
-	add_core = CCR
-	remove_core = CAS
+	owner = XJA
+	controller = XJA
+	add_core = XJA
+	remove_core = CCR
+	remove_core = CCR
 	remove_core = CTL
 }
 1464.5.1 = { unrest = 3 }

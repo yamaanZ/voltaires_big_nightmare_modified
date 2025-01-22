@@ -78,9 +78,10 @@ discovered_by = ottoman
 	remove_core = JAE
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = CCR
-	controller = CCR
-	add_core = CCR
+	owner = XJA
+	controller = XJA
+	add_core = XJA
+	remove_core = CCR
 	remove_core = CAS
 	remove_core = CTL
 }

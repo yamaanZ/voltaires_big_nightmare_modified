@@ -54,9 +54,10 @@ discovered_by = north_american
 	remove_core = BOU
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = BOU
-	controller = BOU
-	add_core = BOU
+	owner = XCB
+	controller = XCB
+	add_core = XCB
+	remove_core = BOU
 	remove_core = FRA
 	fort_15th = yes
 }

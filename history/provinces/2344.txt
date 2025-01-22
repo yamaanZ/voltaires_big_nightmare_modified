@@ -54,9 +54,10 @@ fort_14th = yes
 }
 1337.1.1 = { fort_14th = no fort_15th = yes }
 1444.11.12 = {	#BERTUS MOD
-	owner = CSE
-	controller = CSE
-	add_core = CSE
+	owner = AGV
+	controller = AGV
+	add_core = AGV
+	remove_core = CSE
 	remove_core = POR
 }
 1640.1.1 = { unrest = 8 }

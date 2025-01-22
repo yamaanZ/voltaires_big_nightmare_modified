@@ -45,9 +45,10 @@ add_core = MTL
 	culture = portugese
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = CSE
-	controller = CSE
-	add_core = CSE
+	owner = AGV
+	controller = AGV
+	add_core = AGV
+	remove_core = CSE
 	remove_core = POR
 }
 1580.8.25 = { controller = SPA }

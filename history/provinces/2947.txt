@@ -23,9 +23,9 @@ discovered_by = north_american
 	add_core = FRA
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = BOU
-	controller = BOU
-	add_core = BOU
+	owner = VLY
+	controller = VLY
+	add_core = VLY
 	remove_core = FRA
 }
 1560.1.1 = { religion = reformed }

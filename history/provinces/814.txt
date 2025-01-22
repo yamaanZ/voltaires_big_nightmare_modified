@@ -23,9 +23,9 @@ add_core = XBL
 	add_core = FRA
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = BOU
-	controller = BOU
-	add_core = BOU
+	owner = BER
+	controller = BER
+	add_core = BER
 	remove_core = FRA
 }
 1461.1.1 = {

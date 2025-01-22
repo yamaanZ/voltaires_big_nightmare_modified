@@ -37,9 +37,9 @@ discovered_by = north_american
 	remove_core = XTH
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = BOU
-	controller = BOU
-	add_core = BOU
+	owner = AUV
+	controller = AUV
+	add_core = AUV
 	remove_core = FRA
 }
 1523.1.1 = { owner = FRA controller = FRA add_core = FRA remove_core = BOU }

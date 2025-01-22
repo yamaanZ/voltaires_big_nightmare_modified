@@ -14,9 +14,9 @@ center_of_trade = 1
 extra_cost = 8
 
 1444.11.12 = {	#BERTUS MOD
-	owner = BOU
-	controller = BOU
-	add_core = BOU
+	owner = AUV
+	controller = AUV
+	add_core = AUV
 	remove_core = FRA
 }
 1547.3.31 = {

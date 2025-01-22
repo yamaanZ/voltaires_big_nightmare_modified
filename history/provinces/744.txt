@@ -49,9 +49,10 @@ add_core = SIV
 }
 1249.1.1 = { add_core = AGV }
 1444.11.12 = {	#BERTUS MOD
-	owner = CSE
-	controller = CSE
-	add_core = CSE
+	owner = AGV
+	controller = AGV
+	add_core = AGV
+	remove_core = CSE
 	remove_core = POR
 	fort_14th = yes
 }

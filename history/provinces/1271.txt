@@ -42,7 +42,11 @@ add_core = XTH
 	add_core = BOU
 	remove_core = BER
 }
-1444.11.12 = {	#bertus mod
+1444.11.12 = {	#BERTUS MOD
+	owner = AUV
+	controller = AUV
+	add_core = AUV
+	remove_core = FRA
 	fort_15th = yes
 	add_base_tax = 1
 	add_base_production = 2
