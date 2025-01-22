@@ -332,7 +332,7 @@ country_decisions = {
 			NOT = { exists = SWA }
 			OR = {
 				primary_culture = swabian
-				primary_culture = alemannic
+				primary_culture = boden_alemannic
 			}
 		}
 		provinces_to_highlight = {

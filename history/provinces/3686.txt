@@ -44,8 +44,8 @@ add_core = MSL
 	owner = BHT
 	controller = BHT
 	remove_core = ILK
-	culture = kurdish
-	religion = sunni
+	change_culture = kurdish
+	change_religion = sunni
 }
 1444.11.12 = {	#bertus mod
 	cede_province = ---

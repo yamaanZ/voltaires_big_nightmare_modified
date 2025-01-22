@@ -308,6 +308,17 @@ fixed_capital = 1951
 	add_ruler_personality = greedy_personality
 	add_ruler_personality = obsessive_perfectionist_personality
 }
+1444.11.12 = {
+	monarch = {
+		name = "Dietrich III"
+		dynasty = "von Mörs"
+		birth_date = 1414.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	clear_scripted_personalities = yes
+}
 1463.2.14 = {
 	monarch = {
 		name = "Ruprecht I"

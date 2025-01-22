@@ -4,7 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			primary_culture = frisian
+			primary_culture = east_frisian
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
 			OR = {
@@ -86,7 +86,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			primary_culture = frisian
+			primary_culture = east_frisian
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
 			OR = {
@@ -174,7 +174,7 @@ country_decisions = {
 				tag = EFR
 				tag = FRI
 			}
-			primary_culture = frisian
+			primary_culture = east_frisian
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -608,7 +608,7 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
 			NOT = { exists = RHI }
-			primary_culture = rhenish
+			primary_culture = ripuarian
 		}
 		provinces_to_highlight = {
 			OR = {

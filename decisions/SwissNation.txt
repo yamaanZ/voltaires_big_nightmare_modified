@@ -20,8 +20,6 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = swiss
-				primary_culture = suisse
-				primary_culture = romansh
 			}
 			OR = {
 				NOT = { has_dlc = "Mandate of Heaven" }
