@@ -23,7 +23,7 @@ vn_cas_missions_slot_1_a = {
 
     vn_cas_patronize_holy_orders = {
         icon = mission_european_church
-        completed_by = 1172.1.1
+       
         required_missions = {  }
         trigger = {
             if = {
@@ -58,7 +58,7 @@ vn_cas_missions_slot_1_a = {
 	}
     vn_cas_cortes_of_castile = {
         icon = mission_noble_council
-        completed_by = 1188.1.1
+        
 		required_missions = { vn_cas_patronize_holy_orders }
 		provinces_to_highlight = {
 			OR = {
@@ -102,7 +102,7 @@ vn_cas_missions_slot_1_a = {
     }
 	vn_cas_establish_mesta = {
         icon = mission_trade_company_region_abroad
-        completed_by = 1273.1.1
+        
 		required_missions = { vn_cas_cortes_of_castile }
 		position = 4
         trigger = {
@@ -150,7 +150,7 @@ vn_cas_missions_slot_1_b = {
 
     vn_cas_dynastic_claims = {
         icon = mission_empire
-        completed_by = 1072.1.1
+        
         required_missions = { }
         position = 5
         trigger = {
@@ -269,7 +269,7 @@ vn_cas_missions_slot_1_b = {
     }
     vn_cas_subjugate_galicia = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1072.1.1
+        
         required_missions = { vn_cas_dynastic_claims }
         provinces_to_highlight = {
             OR = {
@@ -317,7 +317,6 @@ vn_cas_missions_slot_1_b = {
     }
     vn_cas_crown_of_castile = {
         icon = mission_castillian_aggression
-        completed_by = 1445.1.1 #bertus mod
         required_missions = { 
             vn_cas_subjugate_galicia
             vn_cas_subjugate_leon 
@@ -454,7 +453,7 @@ vn_cas_missions_slot_1_b = {
     }
     vn_cas_subjugate_aragon = {
         icon = king_of_aragon
-        completed_by = 1479.9.4
+        
         required_missions = { vn_cas_crown_of_castile }
         provinces_to_highlight = {
             OR = {
@@ -490,7 +489,7 @@ vn_cas_missions_slot_1_b = {
     }
     vn_cas_invade_baleares = {
         icon = mission_invade_island
-        completed_by = 1479.9.4
+        
         required_missions = { vn_cas_subjugate_aragon }
         position = 9
 		provinces_to_highlight = {
@@ -555,7 +554,7 @@ vn_cas_missions_slot_2_a = {
 
     vn_cas_extremadura_campaign = {
         icon = dom_ara_remensa_war
-        completed_by = 1243.1.1
+        
         required_missions = { vn_cas_prepare_reconquista }
         position = 2
         provinces_to_highlight = {
@@ -622,7 +621,7 @@ vn_cas_missions_slot_2_a = {
     }
     vn_cas_claim_sevilla = {
         icon = mission_unite_home_region    #placeholder
-         completed_by = 1264.9.22
+       
 		required_missions = { vn_cas_extremadura_campaign }
 		position = 4
         provinces_to_highlight = {
@@ -683,7 +682,7 @@ vn_cas_missions_slot_2_b = {
 
     vn_cas_subjugate_leon = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1085.1.1
+    
         required_missions = { vn_cas_dynastic_claims }
         position = 6
         provinces_to_highlight = {
@@ -866,7 +865,7 @@ vn_cas_missions_slot_2_c = {
 
     vn_cas_school_of_salamanca = {
         icon = hispanic_monarchy
-        completed_by = 1550.1.1
+        
         required_missions = { vn_cas_triumph_over_islam }
         position = 7
         provinces_to_highlight = {
@@ -916,7 +915,7 @@ vn_cas_missions_slot_2_d = {
 
     vn_cas_portuguese_question = {
         icon = mission_union_with_portugal
-        completed_by = 1580.8.26
+        
         required_missions = { vn_cas_crown_of_castile }
         position = 8
         provinces_to_highlight = {
@@ -1018,7 +1017,7 @@ vn_cas_missions_slot_2_d = {
 	}
 	vn_cas_islas_canarias = {	
         icon = mission_claim_the_canaries
-        completed_by = 1496.2.1
+      
         required_missions = { }
         position = 8
         provinces_to_highlight = {
@@ -1075,7 +1074,6 @@ vn_cas_missions_slot_3_a = {
     vn_cas_prepare_reconquista = {
         icon = mission_build_up_to_force_limit
         required_missions = { }
-        completed_by = 1055.1.1
 		position = 1
 		provinces_to_highlight = {
 			OR = {
@@ -1188,7 +1186,7 @@ vn_cas_missions_slot_3_b = {
 
     vn_cas_conquer_la_mancha = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1266.1.1
+        
         required_missions = {
             vn_cas_extremadura_campaign
             vn_cas_conquer_toledo
@@ -1246,7 +1244,7 @@ vn_cas_missions_slot_3_b = {
     vn_cas_capture_cordoba = {
         icon = mission_develop_cordoba
         required_missions = { vn_cas_conquer_la_mancha }
-        completed_by = 1446.1.1 #bertus mod
+        
         provinces_to_highlight = {
             area = cordoba_area
             NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1288,7 +1286,7 @@ vn_cas_missions_slot_3_b = {
     }
     vn_cas_gates_of_granada = {
         icon = mission_develop_alhambra
-        completed_by = 1492.1.2
+        
         required_missions = { 
 			vn_cas_capture_cordoba
 			vn_cas_claim_sevilla
@@ -1345,7 +1343,7 @@ vn_cas_missions_slot_3_b = {
     }
     vn_cas_triumph_over_islam = {
         icon = mission_golden_century
-        completed_by = 1492.1.2
+        
         required_missions = { vn_cas_gates_of_granada }
         provinces_to_highlight = {
             superregion = iberia_superregion
@@ -1656,7 +1654,7 @@ vn_cas_missions_slot_4_a = {
 
     vn_cas_conquer_toledo = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1213.1.1
+        
         required_missions = { vn_cas_prepare_reconquista }
         position = 2
         provinces_to_highlight = {
@@ -1704,7 +1702,7 @@ vn_cas_missions_slot_4_a = {
     }
     vn_cas_conquer_almeria = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1492.1.2
+        
 		required_missions = { vn_cas_conquer_la_mancha }
 		position = 4
         provinces_to_highlight = {
@@ -2010,7 +2008,7 @@ vn_cas_missions_slot_5_a = {
 
     vn_cas_conquer_rioja = {
         icon = mission_unite_home_region    #placeholder
-        completed_by = 1476.6.4 #bertus mod
+      
         required_missions = { }
         position = 1
         provinces_to_highlight = {
@@ -2042,7 +2040,7 @@ vn_cas_missions_slot_5_a = {
     }
     vn_cas_subjugate_navarra = {
         icon = mission_subjugate_navarra
-        completed_by = 1512.7.24
+        
         required_missions = { vn_cas_conquer_rioja }
         position = 4
         provinces_to_highlight = {

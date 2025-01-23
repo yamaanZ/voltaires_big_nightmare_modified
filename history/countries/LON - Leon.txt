@@ -5,8 +5,6 @@ primary_culture = leonese
 religion = catholic
 technology_group = western
 capital = 844 #Leon
-historical_friend = CAS
-historical_friend = GAL
 add_army_professionalism = 0.1
 
 1037.9.4 = {
