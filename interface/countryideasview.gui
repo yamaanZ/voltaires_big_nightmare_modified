@@ -8,7 +8,7 @@ guiTypes = {
 		hide_position = { x=-600 y =140 }	
 		animation_type = "decelerated"
 		animation_time = 300	
-		size = { x=1024 y=100 }
+		size = { x=1024 y=700 }
 		moveable = 0
 		Orientation = "UPPER_LEFT"
 		upsound = tab_ideas
@@ -33,7 +33,7 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "close_button"
-			position = { x = 514 y = -1 }
+			position = { x = 514 y = -1 } #561 11 for the thick version, 514 -1 for long version
 			quadTextureSprite ="GFX_closebutton2"	
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_LEFT"
@@ -112,7 +112,7 @@ guiTypes = {
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}	
-			text = ""	
+			text = "17"	
 			maxWidth = 60
 			maxHeight = 32
 			format = left
@@ -166,25 +166,92 @@ guiTypes = {
 		listboxType = {
 			name = "ideagroups_listbox_left"
 			backGround = ""
-			position = { x=25 y=243 }
-			size = { x=270 y=420 }
+			position = { x=25 y=243 } #25 243
+			size = { x=270 y=660 }
+			#IDV thick version with scroll 252 410
+			#IDV  long version size: 270 660
+			#vanilla 270 420
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
+			if_resolution = {
+        		max_height = 900
+        		position = { x = 25 y = 243 }
+				size = { x = 270 y = 450 }
+    		}
+			if_resolution = {
+        		max_height = 864
+        		position = { x = 25 y = 243 }
+				size = { x = 270 y = 450 }
+    		}
+			if_resolution = {
+        		max_height = 800
+        		position = { x = 25 y = 243 }
+				size = { x = 270 y = 450 }
+    		}	
+			if_resolution = {
+        		max_height = 768
+        		position = { x = 25 y = 243}
+				size = { x = 270 y = 350 }
+    		}
+			if_resolution = {
+        		max_height = 720
+        		position = { x = 25 y = 243 }
+				size = { x = 270 y = 350 }
+    		}
+			if_resolution = {
+        		max_height = 600
+        		position = { x = 25 y = 243 }
+				size = { x = 270 y = 350 }
+    		}
+			
 		}
 		
 		listboxType = {
 			name = "ideagroups_listbox_right"
 			backGround = ""
-			position = { x=276 y=243 }
-			size = { x=270 y=420 }
+			position = { x=276 y=243 } # 305 243
+			size = { x=270 y=660 }
+			#IDV thick version with scroll size:252 410 position:305 243
+			#IDV  long version size: 270 660, position: 276 243
+			#vanilla size:270 420, position: 276 243
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
 			scrollbartype = "standardlistbox_slider"
 			borderSize = {x = 0 y = 0}
+			if_resolution = {
+        		max_height = 900
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 450 }
+    		}
+			if_resolution = {
+        		max_height = 864
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 450 }
+    		}
+			if_resolution = {
+        		max_height = 800
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 450 }
+    		}
+			if_resolution = {
+        		max_height = 768
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 350 }
+    		}
+			if_resolution = {
+        		max_height = 720
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 350 }
+    		}
+			if_resolution = {
+        		max_height = 600
+        		position = { x = 276 y = 243 }
+				size = { x = 270 y = 350 }
+    		}
 		}		
 
 		################################################################################################
@@ -202,7 +269,7 @@ guiTypes = {
 			iconType =
 			{
 				name ="domesticpanel_overlay"
-				spriteType = "GFX_new_choose_idea_bg"
+				spriteType = "GFX_choose_idea_bg"
 				position = { x= -7 y = -10 }
 				Orientation = "UPPER_LEFT"
 			}				
@@ -221,7 +288,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "adm_header"
-				position = { x = 20 y = 23 }
+				position = { x = 20 y = 25 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -233,7 +300,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "dip_header"
-				position = { x = 350 y = 23 }
+				position = { x = 350 y = 25 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -245,7 +312,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mil_header"
-				position = { x = 670 y = 23 }
+				position = { x = 670 y = 25 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 4 y = 4}	
@@ -258,40 +325,107 @@ guiTypes = {
 			listboxType = {
 				name = "adm_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=26 y=63 }
-				size = { x=313 y=600 }
+				position = { x=18 y=65 }
+				size = { x=310 y=840 } #515
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
+				if_resolution = {
+        		max_height = 900
+        		position = { x = 18 y = 65 }
+				size = { x = 310 y = 550 }
+				}
+				if_resolution = {
+        		max_height = 800
+        		position = { x = 18 y = 65 }
+				size = { x = 310 y = 550 }
+				}	
+				if_resolution = {
+        		max_height = 768
+        		position = { x = 18 y = 65 }
+				size = { x = 310 y = 550 }
+				}
+				if_resolution = {
+        		max_height = 600
+        		position = { x = 18 y = 65 }
+				size = { x = 310 y = 550 }
+				}
 			}			
 			listboxType = {
 				name = "dip_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=344 y=63 }
-				size = { x=313 y=600 }
+				position = { x=341 y=65 }
+				size = { x=310 y=840 } #515
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
+				if_resolution = {
+        		max_height = 900
+        		position = { x = 341 y = 65 }
+				size = { x = 310 y = 550 }
+				}				
+				if_resolution = {
+        		max_height = 800
+        		position = { x = 341 y = 65 }
+				size = { x = 310 y = 550 }
+				}			
+				if_resolution = {
+        		max_height = 768
+        		position = { x = 341 y = 65 }
+				size = { x = 310 y = 550 }
+				}				
+				if_resolution = {
+        		max_height = 600
+        		position = { x = 341 y = 65 }
+				size = { x = 310 y = 550 }
+				}
 			}			
 			listboxType = {
 				name = "mil_ideaunlockgroups_listbox"
 				backGround = ""
-				position = { x=663 y=63 }
-				size = { x=313 y=600 }
+				position = { x=665 y=65	 }
+				size = { x=310 y=840 } #515
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 1.5
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
+				if_resolution = {
+        		max_height = 900
+        		position = { x = 665 y = 65 }
+				size = { x = 310 y = 550 }
+				}					
+				if_resolution = {
+        		max_height = 800
+        		position = { x = 665 y = 65 }
+				size = { x = 310 y = 550 }
+				}			
+				if_resolution = {
+        		max_height = 768
+        		position = { x = 665 y = 65 }
+				size = { x = 310 y = 550 }
+				}				
+				if_resolution = {
+        		max_height = 600
+        		position = { x = 665 y = 65 }
+				size = { x = 310 y = 550 }
+				}
 			}			
+
+			iconType =
+			{
+				name ="close_gold"
+				spriteType = "GFX_close_gold2"
+				position = { x=961 y =6 }
+			}	
 			
 			guiButtonType = {
 				name = "back_button"
-				position = { x=966 y =11}
+				position = { x=965 y =9}
 				SpriteType ="GFX_button_close"	
 				tooltip = ""
 				tooltipText =""
@@ -634,7 +768,7 @@ guiTypes = {
 			quadTextureSprite= "GFX_ideas_view_unlockideabg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			clicksound = click
+			clicksound = click #DOESNT WORK
 		}
 		
 		iconType =
@@ -643,7 +777,7 @@ guiTypes = {
 			spriteType = "GFX_idea_empty"
 			position = { x= 9 y = 11 }
 			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
+
 		}		
 		
 		iconType =
@@ -664,7 +798,6 @@ guiTypes = {
 			maxWidth = 280
 			maxHeight = 32
 			format = centre
-			alwaystransparent = yes
 		}	
 
 		iconType =
