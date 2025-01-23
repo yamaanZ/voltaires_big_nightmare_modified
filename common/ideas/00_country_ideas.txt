@@ -9018,8 +9018,7 @@ LON_ideas = {	#bertus mod
 	free = yes
 	
 	lon_heritage_of_the_reconquista = {
-		army_tradition = 0.5
-		tolerance_own = 2
+		infantry_power = 0.10
 	}
 	lon_leonese_cortes = {
 		global_unrest = -1
@@ -9033,14 +9032,16 @@ LON_ideas = {	#bertus mod
 		culture_conversion_cost = -0.10
 	}
 	lon_nationalism = {
-		infantry_power = 0.10
+		army_tradition = 0.5
+		tolerance_own = 2
 	}
 	lon_expand_navy = {
 		naval_forcelimit_modifier = 0.25
 	}
 	lon_conquistadores = {
 		#colonits = 1 	#1→0
-		land_morale = 0.15 	#0→0.15 
+		#land_morale = 0.15 	#0.15 -> 0
+		morale_damage = 0.20
 	}
 }
 
