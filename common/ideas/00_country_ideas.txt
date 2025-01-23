@@ -862,7 +862,7 @@ NED_ideas = {
 
 	start = {
 		#naval_forcelimit_modifier = 0.50	#0.50→0
-		#military_tactics = 0.25	#0→0.25
+		# military_tactics = 0.25	#0.25 -> 0
 		global_trade_goods_size_modifier = 0.15 #removed duplicate military tactics, brought back goods produced from holland ideas
 		regiment_manpower_usage = -0.20	#0→-0.20
 	}
@@ -910,7 +910,7 @@ NED_ideas = {
 	embrace_humanism = {
 		tolerance_heretic = 3
 		tolerance_own = 2	#0→2
-		land_morale = 0.10	#0→0.10
+		#land_morale = 0.10	#0.1->0
 	}
 	amsterdam_wisselbank = {
 		inflation_reduction = 0.1
