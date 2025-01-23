@@ -55,7 +55,7 @@ is_city = yes
 	controller = CAS
 	add_core = CAS
 	remove_core = MOR
-	capital = "And�jar"
+	capital = "And jar"
 	religion = catholic
 	culture = mozarabic
 }
@@ -67,7 +67,6 @@ is_city = yes
 	owner = XJA
 	controller = XJA
 	add_core = XJA
-	remove_core = CCR
 	remove_core = CAS
 	remove_core = CTL
 }

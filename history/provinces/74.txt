@@ -78,7 +78,7 @@ fort_14th = yes
 	add_core = CAS
 	remove_core = JAE
 	remove_core = GRA
-	capital = "Ja�n"
+	capital = "Ja n"
 	religion = catholic
 	culture = mozarabic
 }
@@ -86,8 +86,6 @@ fort_14th = yes
 	owner = XJA
 	controller = XJA
 	add_core = XJA
-	remove_core = CCR
-	remove_core = CCR
 	remove_core = CTL
 }
 1464.5.1 = { unrest = 3 }

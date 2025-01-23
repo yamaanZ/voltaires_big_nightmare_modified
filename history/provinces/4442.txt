@@ -81,7 +81,6 @@ discovered_by = ottoman
 	owner = XJA
 	controller = XJA
 	add_core = XJA
-	remove_core = CCR
 	remove_core = CAS
 	remove_core = CTL
 }
