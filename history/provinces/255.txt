@@ -27,10 +27,10 @@ add_core = FLA
 	fort_15th = yes
 }
 1549.11.4 = {
-	owner = NED
-	controller = NED
-	add_core = NED
-	remove_core = ZEE
+	owner = ZEE
+	controller = ZEE
+	add_core = ZEE
+	remove_core = FLA
 	remove_core = HOL
 }
 1572.1.1 = { religion = reformed }
