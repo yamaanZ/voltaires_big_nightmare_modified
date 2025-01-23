@@ -41,11 +41,11 @@ add_core = MYU
 	add_core = ARA
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = AVL
-	controller = AVL
-	add_core = AVL
+	owner = MJO
+	controller = MJO
+	add_core = MJO
 	remove_core = ARA
-	fort_14th = yes
+	remove_core = AVL
 }
 1462.1.1 = { unrest = 2 }
 1472.1.1 = { unrest = 0 }
