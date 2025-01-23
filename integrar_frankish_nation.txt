@@ -1,2 +1,0 @@
-
-on_action_culture_promotion_effect = yes

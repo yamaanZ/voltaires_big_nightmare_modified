@@ -3532,7 +3532,7 @@ MAR_ideas = {
 			tag = MAR	#Marathas
 			tag = BDA	#Baroda
 			AND = {
-				TAG = GWA
+				tag = GWA
 				primary_culture = marathi
 			} #Sindhias of Gwalior
 		}
@@ -4333,7 +4333,7 @@ KNI_ideas = {
 	}
 	
 	trigger = {
-        	tag = KNI
+        tag = KNI
     }
 	free = yes        #will be added at load.
 	
@@ -5168,7 +5168,7 @@ AZT_ideas = {
 	}
 	
 	trigger = {
-			tag = AZT
+		tag = AZT
 	}
 	free = yes		#wibe added at load.
 	
@@ -5210,7 +5210,7 @@ DAH_ideas = {
 	}
 	
 	trigger = {
-			tag = DAH
+		tag = DAH
 	}
 	free = yes		#wibe added at load.
 	
@@ -5820,7 +5820,7 @@ AIR_ideas = {
 	}
 	
 	trigger = {
-		TAG = AIR
+		tag = AIR
 	}
 	
 	free = yes		#will be added at load.
@@ -5915,7 +5915,7 @@ fulani_jihad_ideas = {
 	
 	trigger = {
 		OR = {
-			TAG = SOK
+			tag = SOK
 			has_country_flag = fulani_jihad_state
 		}
 	}
@@ -5967,7 +5967,7 @@ TAR_ideas = {
 	}
 	
 	trigger = {
-		TAG = TAR
+		tag = TAR
 	}
 	
 	free = yes		#will be added at load.
@@ -7006,10 +7006,10 @@ hausa_ideas = {
 	
 	trigger = {
 		OR = {
-			TAG = KTS
-			TAG = KAN
-			TAG = ZZZ
-			TAG = HAU
+			tag = KTS
+			tag = KAN
+			tag = ZZZ
+			tag = HAU
 		}
 	}
 	
@@ -7986,7 +7986,6 @@ BRE_ideas = {
 	trigger = {
 		OR = {
 			tag = BRE
-			tag = VER
 		}
 	}
 	
@@ -8321,7 +8320,6 @@ CAT_ideas = {	#BERTUS MOD
 			tag = CAT
 			tag = VAL
 			tag = AVL
-			tag = MJO
 		}
     }
     free = yes
