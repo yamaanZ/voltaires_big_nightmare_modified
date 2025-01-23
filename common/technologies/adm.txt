@@ -142,10 +142,10 @@ technology = { #The Scythe
 		renaissance = 0.5
 		new_world_i = 0.15
 	}
-	
+
 	#The Scythe
 	production_efficiency 	=	0.02
-	allowed_idea_groups = 4	
+	
 	
 
 }
@@ -160,6 +160,7 @@ technology = { #Modern Theocracy
 	}
 	
 	theocratic_government = yes
+	allowed_idea_groups = 4	
 }
 
 technology = { #Textile Manufactory
@@ -171,7 +172,6 @@ technology = { #Textile Manufactory
 		new_world_i = 0.5
 	}
 	
-	allowed_idea_groups = 5
 	#Textile Manufactory
 	textile = yes  
 
@@ -190,6 +190,7 @@ technology = { #Early Modern Administration
 	administrative_republic	= yes
 	governing_capacity = 100
 	state_house = yes
+	allowed_idea_groups = 5	
 }
 
 technology = { #Improved Drainage
@@ -204,7 +205,7 @@ technology = { #Improved Drainage
 	
 	#Improved Drainage
 	production_efficiency 	=	0.02
-	allowed_idea_groups = 6
+	
 }
 
 technology = { #Scientific Experimentation
@@ -218,7 +219,7 @@ technology = { #Scientific Experimentation
 	}
 	
 	plantations = yes
-	
+	allowed_idea_groups = 6	
 }
 
 technology = { #Military Administration
@@ -233,7 +234,8 @@ technology = { #Military Administration
 	
 	may_force_march = yes
 	soldier_households = yes
-	allowed_idea_groups = 7
+	allowed_idea_groups = 7	
+	
 }
 
 technology = { #Metallurgy
@@ -249,6 +251,7 @@ technology = { #Metallurgy
 	mills = yes
 	production_efficiency 	=	0.02
 	arsenal = yes
+	
 
 }
 
@@ -268,6 +271,7 @@ technology = { #University
 	
 	administrative_efficiency = 0.1
 	development_cost_modifier = -0.1
+
 	allowed_idea_groups = 8
 }
 
@@ -295,10 +299,11 @@ technology = { #Cathedral
 		printing_press = 0.5
 		global_trade = 0.5
 	}
-	
+
 	#Cathedral
 	cathedral = yes
 	allowed_idea_groups = 9
+	
 }
 
 technology = { #Absolute Rulership
@@ -327,11 +332,13 @@ technology = { #Land Clearance
 		global_trade = 0.5
 		manufactories = 0.15
 	}
-	
+
+	allowed_idea_groups = 10
+
 	#Land Clearance
 	production_efficiency 	=	0.02
 	furnace = yes
-	allowed_idea_groups = 10
+	
 }
 
 technology = { #The Constitution
@@ -364,9 +371,11 @@ technology = { #Measuring the World
 		manufactories = 0.5
 	}
 	
+	allowed_idea_groups = 11
+
 	administrative_efficiency = 0.1
 	development_cost_modifier = -0.1
-	allowed_idea_groups = 11
+	
 }
 
 technology = { #Bonds and Tontines
@@ -399,9 +408,11 @@ technology = { #Improved Production
 		enlightenment = 0.3
 	}
 	
+	allowed_idea_groups = 12
+
 	#Improved Farm Animals
 	production_efficiency 	=	0.02
-	allowed_idea_groups = 12
+	
 }
 
 technology = { #Separation of Powers
@@ -416,6 +427,7 @@ technology = { #Separation of Powers
 		manufactories = 0.5
 		enlightenment = 0.5
 	}
+	
 	
 	
 }
@@ -452,7 +464,8 @@ technology = { #Rotherham Plough
 		enlightenment = 0.5
 		industrialization = 0.25
 	}
-	
+	allowed_idea_groups = 14
+
 	#Rotherham Plough
 	production_efficiency 	=	0.02
 }
@@ -471,9 +484,11 @@ technology = { #Rights of Man
 		industrialization = 0.5
 	}
 
+	allowed_idea_groups = 15
+
 	enlightened_despotism = yes
 	bureaucratic_despotism = yes
-	allowed_idea_groups = 13
+
 }
 
 technology = { #Advanced Production
@@ -489,7 +504,7 @@ technology = { #Advanced Production
 		enlightenment = 0.5
 		industrialization = 1
 	}
-	
+	allowed_idea_groups = 16
 	#Improved Draft Animals
 	production_efficiency 	=	0.02
 }
@@ -511,7 +526,8 @@ technology = { #Revolutionary Ideals
 	revolutionary_republic = yes
 	revolutionary_empire = yes
 	governing_capacity = 500
-	allowed_idea_groups = 14
+
+	
 }
 
 technology = { #Four Field Rotation
@@ -530,4 +546,5 @@ technology = { #Four Field Rotation
 	
 	#Four field rotation
 	production_efficiency 	=	0.02
+	
 }

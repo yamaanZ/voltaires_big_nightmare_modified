@@ -228,9 +228,14 @@ NDefines.NNationDesigner.MANDATE_SUBCONTINENT_NAME = "ruthenia_superregion"
 -- For Ideas Expanded
 
 NDefines.NCountry.PS_BUY_IDEA = 300
-NDefines.NCountry.FREE_IDEA_GROUP_COST  = 7
+NDefines.NCountry.FREE_IDEA_GROUP_COST  = 5 -- This amount of ideas needed for a national idea to unlock
 NDefines.NCountry.IDEA_TO_TECH = -0.01
 NDefines.NCountry.MAX_ACTIVE_POLICIES = 12
 NDefines.NCountry.BASE_POSSIBLE_POLICIES = 4
 NDefines.NCountry.MINIMUM_POLICY_TIME = 2
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.35 --35
+
+-- Innovativeness
+NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 1 -- 2.0
+NDefines.NCountry.INNOVATIVENESS_DAYS_AFTER_FIRST_PICK_VIABLE = 60 --90
+NDefines.NCountry.INNOVATIVENESS_FIRST_REACHED_TECH_LEVEL = 2 -- 4.0

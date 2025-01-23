@@ -288,6 +288,7 @@ guiTypes = {
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
 			}			
+			
 			guiButtonType = {
 				name = "back_button"
 				position = { x=966 y =11}
@@ -298,7 +299,7 @@ guiTypes = {
 				buttonFont = "vic_18"
 				clicksound = back_click
 			}			
-		}			
+		}		
 	}	
 
 	################################################################################################
@@ -370,7 +371,6 @@ guiTypes = {
 			spriteType = "GFX_idea_empty"
 			position = { x= 0 y = 19 }
 			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
 		}	
 		
 		
@@ -393,7 +393,6 @@ guiTypes = {
 			maxWidth = 185
 			maxHeight = 32
 			format = left
-			alwaystransparent = yes
 		}
 		
 		iconType =
@@ -635,7 +634,7 @@ guiTypes = {
 			quadTextureSprite= "GFX_ideas_view_unlockideabg"
 			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
-			clicksound = click #DOESNT WORK
+			clicksound = click
 		}
 		
 		iconType =
@@ -644,7 +643,7 @@ guiTypes = {
 			spriteType = "GFX_idea_empty"
 			position = { x= 9 y = 11 }
 			Orientation = "UPPER_LEFT"
-
+			alwaystransparent = yes
 		}		
 		
 		iconType =
@@ -665,6 +664,7 @@ guiTypes = {
 			maxWidth = 280
 			maxHeight = 32
 			format = centre
+			alwaystransparent = yes
 		}	
 
 		iconType =
