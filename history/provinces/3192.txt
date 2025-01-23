@@ -12,10 +12,10 @@ controller = UTR
 add_core = UTR
 
 1444.11.12 = {	#BERTUS MOD
-	owner = HOL
-	controller = HOL
-	add_core = HOL
-	remove_core = UTR
+	owner = UTR
+	controller = UTR
+	add_core = UTR
+	remove_core = HOL
 }
 1549.11.4 = {
 	owner = NED

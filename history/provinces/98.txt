@@ -14,10 +14,10 @@ fort_14th = yes
 
 1337.1.1 = { fort_14th = no fort_15th = yes }
 1444.11.12 = {	#BERTUS MOD
-	owner = HOL
-	controller = HOL
-	add_core = HOL
-	remove_core = UTR
+	owner = UTR
+	controller = UTR
+	add_core = UTR
+	remove_core = HOL
 	fort_15th = no
 }
 1549.11.4 = { 

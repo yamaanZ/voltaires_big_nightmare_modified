@@ -18,11 +18,11 @@ add_core = GEL
 	}
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = BRB
-	controller = BRB
-	add_core = BRB
-	remove_core = GEL
-	fort_15th = yes
+	owner = GEL
+	controller = GEL
+	add_core = GEL
+	remove_core = BRA
+	fort_14th = yes
 }
 1549.11.4 = { 
 	owner = NED 
