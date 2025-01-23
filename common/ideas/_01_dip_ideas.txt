@@ -215,10 +215,6 @@ trade_ideas = {
 			factor = 3.0
 			ROOT = { government = republic }
 		}
-		modifier = {
-			factor = 3.5
-			xorme_wealthy_region_trigger = yes
-		}
 		#IDEAS
 		modifier = {
 			factor = 3.0
@@ -227,14 +223,6 @@ trade_ideas = {
 		modifier = {
 			factor = 3.0
 			has_idea_group = quantity_ideas
-		}
-		modifier = {
-			factor = 5.0
-			xorme_can_select_fifth_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_can_select_seventh_idea_group_trigger = yes
 		}
 	}
 }
@@ -557,22 +545,7 @@ galle0 = {
 			tag = VEN
 			tag = GEN
 			}
-		}
-		modifier = {
-			factor = 5
-			capital_scope = {
-				OR = {
-					region = italy_region
-					region = baltic_region
-					region = balkan_region
-					region = maghreb_region
-					region = anatolia_region
-					
-				}
-			}
-			NOT = { technology_group = high_american }
-		}
-		
+		}		
 	}
 }
 

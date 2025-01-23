@@ -255,18 +255,6 @@ vn_pru_missions_slot_1_c = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-			3210 = { country_or_non_sovereign_subject_holds = ROOT }
-			2783 = { country_or_non_sovereign_subject_holds = ROOT }
-			5251 = { country_or_non_sovereign_subject_holds = ROOT }
-			5246 = { country_or_non_sovereign_subject_holds = ROOT }
-			2795 = { country_or_non_sovereign_subject_holds = ROOT }
-			2768 = { country_or_non_sovereign_subject_holds = ROOT }
-			5249 = { country_or_non_sovereign_subject_holds = ROOT }
-			5250 = { country_or_non_sovereign_subject_holds = ROOT }
-			5252 = { country_or_non_sovereign_subject_holds = ROOT }
-			5905 = { country_or_non_sovereign_subject_holds = ROOT }
-			2756 = { country_or_non_sovereign_subject_holds = ROOT }
-        }
         effect = {
 			posen_area = {
 				limit = {

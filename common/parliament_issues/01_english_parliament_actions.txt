@@ -58,7 +58,7 @@ english_french_act_of_union = {
 					every_subject_country = {
 						limit = {
 							capital_scope = {
-								region = france_region
+								superregion = french_superregion
 							}
 							NOT = { num_of_cities = 5 }
 						}
@@ -183,7 +183,7 @@ english_scottish_act_of_union = {
 					every_subject_country = {
 						limit = {
 							capital_scope = {
-								region = british_isles_region
+								superregion = british_isles_superregion
 							}
 							NOT = { num_of_cities = 5 }
 						}
@@ -342,7 +342,7 @@ crown_of_iberia_act = {
 			issue = crown_of_iberia_act
 		}
 		num_of_owned_provinces_with = {
-			region = iberia_region
+			superregion = iberia_superregion
 			value = 15
 		}
 		OR = {
@@ -357,31 +357,22 @@ crown_of_iberia_act = {
 		}
 		custom_tooltip = crown_of_iberia_act_at
 		hidden_effect = {
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = iberia_region } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = iberia_superregion } add_base_production = 1 set_province_flag = received_reward }
 			every_owned_province = {
 				limit = {
 					has_province_flag = received_reward
 				}
 				clr_province_flag = received_reward
 			}
-			#iberia_region = {
-			#	limit = {
-			#	  owned_by = ROOT
-			#	}
-			#	add_base_production = 1
-			#  
-			#	type = random
-			#	amount = 10
-			#}
 		}
 		country_event = {
 			id = flavor_gbr.23
@@ -414,14 +405,7 @@ crown_of_italy_act = {
 			issue = crown_of_italy_act
 		}
 		num_of_owned_provinces_with = {
-			OR = {
-				area = piedmont_area
-				area = liguria_area
-				area = lombardy_area
-				area = emilia_romagna_area
-				area = po_valley_area
-				area = venetia_area
-			}
+			superregion = italy_superregion
 			value = 15
 		}
 		NOT = { exists = ITA }
@@ -433,31 +417,22 @@ crown_of_italy_act = {
 		}
 		custom_tooltip = crown_of_italy_act_at
 		hidden_effect = {
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
-			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } region = italy_region } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
+			random_owned_province = { limit = { NOT = { has_province_flag = received_reward } superregion = italy_superregion } add_base_production = 1 set_province_flag = received_reward }
 			every_owned_province = {
 				limit = {
 					has_province_flag = received_reward
 				}
 				clr_province_flag = received_reward
 			}
-			#italy_region = {
-			#	limit = {
-			#		owned_by = ROOT
-			#	}
-			#	add_base_production = 1
-			#  
-			#	type = random
-			#	amount = 10
-			#}
 		}
 		country_event = {
 			id = flavor_gbr.24
@@ -848,7 +823,7 @@ crush_french_nobles = {
 		OR = {
 			FRA = { is_subject_of = ROOT }
 			num_of_owned_provinces_with = {
-				region = france_region
+				superregion = french_superregion
 				value = 20
 			}
 		}
@@ -891,7 +866,7 @@ crush_french_nobles = {
 		else = {
 			random_owned_province = {
 				limit = {
-					region = france_region
+					superregion = french_superregion
 				}
 				spawn_rebels = {
 					type = noble_rebels
@@ -900,7 +875,7 @@ crush_french_nobles = {
 			}
 			random_owned_province = {
 				limit = {
-					region = france_region
+					superregion = french_superregion
 				}
 				spawn_rebels = {
 					type = noble_rebels

@@ -1669,13 +1669,6 @@ vn_sic_missions_slot_4 = {
                 }
                 add_permanent_claim = ROOT
             }
-            bassano_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-            }
             verona_area = {
                 limit = {
                     NOT = { is_core = ROOT }

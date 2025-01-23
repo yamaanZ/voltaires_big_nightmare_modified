@@ -624,9 +624,6 @@ vn_ath_missions_slot_2 = {
             prilep_area = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
-            } = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
             }
             serres_area = {
                 type = all
@@ -636,7 +633,6 @@ vn_ath_missions_slot_2 = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
             }
-            
             chalkidiki_area = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
@@ -654,9 +650,6 @@ vn_ath_missions_slot_2 = {
                 country_or_non_sovereign_subject_holds = ROOT
             }
             prilep_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            } = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
             }

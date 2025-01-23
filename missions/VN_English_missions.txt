@@ -1640,9 +1640,7 @@ vn_eng_missions_slot_3_a = {
             }
         }
         effect = {
-            country_event = { 
-                id = vn_missions.63
-            }
+			add_prestige_or_monarch_power = { amount = 50 } 
         }
     }
 }

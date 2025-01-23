@@ -48,28 +48,7 @@ country_event = {
 			swap_non_generic_missions = yes
 		}
 		custom_tooltip = flavor_liv.1.b.ct
-		lithuania_area = {
-			limit = {
-				NOT = { is_core = ROOT }
-				NOT = { is_permanent_claim = ROOT }
-			}
-			add_permanent_claim = ROOT
-		}
 		samogitia_area = {
-			limit = {
-				NOT = { is_core = ROOT }
-				NOT = { is_permanent_claim = ROOT }
-			}
-			add_permanent_claim = ROOT
-		}
-		karelia_area = {
-			limit = {
-				NOT = { is_core = ROOT }
-				NOT = { is_permanent_claim = ROOT }
-			}
-			add_permanent_claim = ROOT
-		}
-		novgorod_area = {
 			limit = {
 				NOT = { is_core = ROOT }
 				NOT = { is_permanent_claim = ROOT }

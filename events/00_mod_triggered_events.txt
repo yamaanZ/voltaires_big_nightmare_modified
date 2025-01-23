@@ -1623,15 +1623,6 @@ country_event = {
                 modifier = christian_brotherhood
             }
 		}
-		if = {
-			limit = {
-				COO = {
-					dynasty = "Colonna"
-					is_subject_of = ROOT
-				}
-			}
-			COO = { add_liberty_desire = -5 }
-		}
 	}
 
 	option = {

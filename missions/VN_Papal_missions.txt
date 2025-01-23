@@ -299,9 +299,7 @@ vn_pap_missions_slot_1 = {
             is_religion_enabled = fraticelli
         }
         effect = {
-            country_event = {
-                id = fbievents.74
-            }
+			add_prestige_or_monarch_power = { amount = 20 } 
         }
     }
     vn_pap_weather_the_reformation = {
@@ -1805,13 +1803,6 @@ vn_pap_missions_slot_5 = {
                 }
                 add_permanent_claim = ROOT
             }
-            bassano_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-            }
             verona_area = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -1856,7 +1847,6 @@ vn_pap_missions_slot_5 = {
         provinces_to_highlight = {
             OR = {
                 area = venice_area
-                area = bassano_area
                 area = verona_area
                 area = padua_area
                 area = friuli_area
@@ -1870,7 +1860,6 @@ vn_pap_missions_slot_5 = {
                 value = 16
                 OR = {
                     area = venice_area
-                    area = bassano_area
                     area = verona_area
                     area = padua_area
                     area = friuli_area

@@ -54,24 +54,12 @@ quality_ideas = {
 			is_great_power = yes
 		}
 		modifier = {
-			factor = 1.7
-			ROOT = {
-				capital_scope = {
-					region = italy_region
-				}
-			}
-		}
-		modifier = {
 			factor = 1.5
 			NOT = { total_development = 400 }
 		}
 		modifier = {
 			factor = 2.0
 			is_subject_other_than_tributary_trigger = yes
-		}
-		modifier = {
-			factor = 2.0
-			xorme_has_strong_military_potential_trigger = yes
 		}
 		#IDEAS
 		modifier = {
@@ -111,15 +99,6 @@ quality_ideas = {
 		modifier = {
 			factor = 4.0
 			has_idea_group = economic_ideas
-		}
-		#PRIORITY
-		modifier = {
-			factor = 2.5
-			xorme_can_select_third_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 30.0
-			xorme_can_select_first_idea_group_trigger = yes
 		}
 	}
 }
@@ -198,23 +177,8 @@ quantity_ideas = {
 			is_subject_other_than_tributary_trigger = yes
 		}
 		modifier = {
-			factor = 2.0
-			xorme_has_strong_military_potential_trigger = yes
-		}
-		modifier = {
 			factor = 3.0
 			technology_group = chinese
-		}
-		modifier = {
-			factor = 5.0
-			ROOT = {
-				AND = {
-					culture_group = east_asian
-					capital_scope = {
-						superregion = china_superregion
-					}
-				}
-			}
 		}
 		#IDEAS
 		modifier = {
@@ -258,15 +222,6 @@ quantity_ideas = {
 		modifier = {
 			factor = 4.0
 			has_idea_group = economic_ideas
-		}
-		#PRIORITY
-		modifier = {
-			factor = 3.5
-			xorme_can_select_third_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 30.0
-			xorme_can_select_first_idea_group_trigger = yes
 		}
 	}
 }
@@ -325,34 +280,6 @@ offensive_ideas = {
 			mil_tech = 7
 		}
 		modifier = {
-			factor = 1.5
-			ROOT = {
-				capital_scope = {
-					region = anatolia_region
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			ROOT = {
-				capital_scope = {
-					superregion = persia_superregion
-				}
-			}
-		}
-		modifier = {
-			factor = 1.6
-			ROOT = {
-				capital_scope = {
-					superregion = tartary_superregion
-				}
-			}
-		}
-		modifier = {
-			factor = 2.0
-			xorme_has_strong_military_potential_trigger = yes
-		}
-		modifier = {
 			factor = 2.0
 			is_subject_other_than_tributary_trigger = yes
 		}
@@ -360,19 +287,6 @@ offensive_ideas = {
 		modifier = {
 			factor = 2.0
 			has_idea_group = innovativeness_ideas
-		}
-		#PRIORITY
-		modifier = {
-			factor = 10.0
-			xorme_can_select_first_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 15.0
-			xorme_can_select_third_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 20.0
-			xorme_can_select_fourth_idea_group_trigger = yes
 		}
 	}
 }
@@ -454,27 +368,6 @@ defensive_ideas = {
 		modifier = {
 			factor = 2.0
 			is_subject_other_than_tributary_trigger = yes
-		}
-		modifier = {
-			factor = 2.0
-			xorme_has_strong_military_potential_trigger = yes
-		}
-		modifier = {
-			factor = 2.5
-			ROOT = {
-				capital_scope = {
-					region = japan_region
-				}
-			}
-		}
-		#PRIORITY
-		modifier = {
-			factor = 3.0
-			xorme_can_select_third_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 30.0
-			xorme_can_select_first_idea_group_trigger = yes
 		}
 	}
 }

@@ -1290,16 +1290,16 @@ industrialization = {
 			}
 			owner = {
 				OR = {
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = iron
 					}
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = cloth
 					}
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = coal
 					}
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = steel
 					}
 					num_of_trading_bonuses = 3
@@ -1318,10 +1318,10 @@ industrialization = {
 			}
 			owner = {
 				OR = {
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = iron
 					}
-					production_plumbumer = {
+					production_leader = {
 						trade_goods = cloth
 					}
 					num_of_trading_bonuses = 3

@@ -2284,52 +2284,6 @@ country_decisions = {
 		}
 	}
 
-	almoravid_invasion = {
-		major = yes
-		potential = {
-			always = no
-			normal_or_historical_nations = yes
-			NOT = { started_in = 1061.1.1 }
-			tag = DAA
-			NOT = { exists = MOR }
-			is_subject = no
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 4677
-				province_id = 4678
-				province_id = 4680
-				province_id = 4681
-				province_id = 4682
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			always = no
-			dynasty = "al-Murâbit"
-			religion = sunni
-			has_regency = no
-			is_at_war = no
-			owns_core_province = 4677
-			owns_core_province = 4678
-			owns_core_province = 4680
-			owns_core_province = 4681
-			owns_core_province = 4682
-		}
-		effect = {
-			country_event = {
-				id = almoravids_events.1
-				tooltip = almoravid_invasion.tt
-			}
-		}
-		ai_will_do = {
-			factor = 1000
-		}
-	}
-
 	reorganize_theocracy = {
 		major = yes
 		potential = {

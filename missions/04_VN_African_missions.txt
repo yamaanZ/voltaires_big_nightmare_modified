@@ -16,10 +16,10 @@ vn_gen_africa_1 = {
 		trigger = {
 			OR = {
 				AND = {
-					production_leader = {
+					trade_goods_produced_amount = { 	#bertus mod
 						trade_goods = slaves
+						amount = 25
 					}
-					slaves = 4
 				}
 				AND = {
 					has_country_modifier = the_abolish_slavery_act
@@ -58,6 +58,7 @@ vn_gen_africa_1 = {
 		trigger = {
 			is_tribal = no
 			NOT = { has_reform = iqta }
+			is_institution_enabled = renaissance	 #bertus mod
 			any_neighbor_country = {
 				technology_group = western
 				NOT = {
@@ -75,21 +76,21 @@ vn_gen_africa_1 = {
 		required_missions = { }
 		trigger = {
 			OR = {
-				num_of_owned_provinces_with = {
-					value = 3
-					OR = {
-						trade_goods = silver
-						trade_goods = gold
-					}
+				trade_goods_produced_amount = { 	#bertus mod
+					trade_goods = gold
+					amount = 10
 				}
-				AND = {
-					production_leader = {
-						trade_goods = ivory
-					}
-					ivory = 7
+				trade_goods_produced_amount = { 	#bertus mod
+					trade_goods = silver
+					amount = 10
 				}
-				production_leader = {
+				trade_goods_produced_amount = { 	#bertus mod
+					trade_goods = ivory
+					amount = 25
+				}
+				trade_goods_produced_amount = { 	#bertus mod
 					trade_goods = coffee
+					amount = 25
 				}
 			}
 		}

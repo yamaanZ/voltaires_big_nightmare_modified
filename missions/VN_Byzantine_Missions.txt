@@ -1323,25 +1323,25 @@ VN_BYZ_missions_slot_1_c = {
 		}
 		trigger = {
 			tripolitania_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				type = all
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			sirte_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				type = all
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			cyrenaica_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				type = all
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
 			inner_libya_region = {
 				type = all
@@ -1951,13 +1951,6 @@ VN_BYZ_missions_slot_2_c = {
                 }
                 add_permanent_claim = ROOT
             }
-            bassano_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-            }
             verona_area = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -2008,7 +2001,6 @@ VN_BYZ_missions_slot_2_c = {
 		provinces_to_highlight = {
             OR = {
                 area = venice_area
-                area = bassano_area
                 area = verona_area
                 area = padua_area
                 area = friuli_area
@@ -2020,10 +2012,6 @@ VN_BYZ_missions_slot_2_c = {
 		}
 		trigger = {
             venice_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-            bassano_area = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
             }

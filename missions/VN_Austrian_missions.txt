@@ -2094,7 +2094,6 @@ vn_hab_missions_slot_4 = {
         provinces_to_highlight = {
             OR = {
                 area = venice_area
-                area = bassano_area
                 area = verona_area
                 area = padua_area
                 area = friuli_area
@@ -2108,7 +2107,6 @@ vn_hab_missions_slot_4 = {
                 value = 10
                 OR = {
                     area = venice_area
-                    area = bassano_area
                     area = verona_area
                     area = padua_area
                     area = friuli_area
@@ -2763,13 +2761,6 @@ vn_hab_missions_slot_5 = {
         effect = {
             add_mil_power = 100
             venice_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-            }
-            bassano_area = {
                 limit = {
                     NOT = { is_core = ROOT }
                     NOT = { is_permanent_claim = ROOT }

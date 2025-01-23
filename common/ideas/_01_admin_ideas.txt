@@ -179,19 +179,6 @@ administrative_ideas = {
 			factor = 2.5
 			has_idea_group = quality_ideas
 		}
-		#PRIORITY
-		modifier = {
-			factor = 4.5
-			xorme_can_select_second_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 5.0
-			xorme_can_select_third_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 10.0
-			xorme_can_select_fifth_idea_group_trigger = yes
-		}
 	}
 }
 # HUMANIST IDEAS
@@ -302,15 +289,6 @@ humanist_ideas = {
 		modifier = {
 			factor = 3.0
 			has_idea_group = quantity_ideas
-		}
-		#PRIORITY
-		modifier = {
-			factor = 2.5
-			xorme_can_select_second_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 5.0
-			xorme_can_select_sixth_idea_group_trigger = yes
 		}
 	}
 }
@@ -455,10 +433,6 @@ economic_ideas = {
 			factor = 0.5
 			NOT = { tax_income_percentage = 0.3 }
 		}
-		modifier = {
-			factor = 0.9
-			xorme_can_select_first_idea_group_trigger = yes
-		}
 		#PERSONALITY
 		modifier = {
 			factor = 1.5
@@ -468,10 +442,6 @@ economic_ideas = {
 		modifier = {
 			factor = 1.5
 			is_great_power = yes
-		}
-		modifier = {
-			factor = 1.5
-			xorme_wealthy_region_trigger = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -505,15 +475,6 @@ economic_ideas = {
 		modifier = {
 			factor = 4.5
 			has_idea_group = quantity_ideas
-		}
-		#PRIORITY
-		modifier = {
-			factor = 4.5
-			xorme_can_select_second_idea_group_trigger = yes
-		}
-		modifier = {
-			factor = 5.0
-			xorme_can_select_third_idea_group_trigger = yes
 		}
 	}
 }

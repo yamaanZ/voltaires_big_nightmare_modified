@@ -319,13 +319,6 @@ vn_spi_missions_slot_2 = {
                 }
                 add_permanent_claim = ROOT
             }
-            bassano_area = {
-                limit = {
-                    NOT = { is_core = ROOT }
-                    NOT = { is_permanent_claim = ROOT }
-                }
-                add_permanent_claim = ROOT
-            }
             verona_area = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -639,7 +632,6 @@ vn_spi_missions_slot_3 = {
         provinces_to_highlight = {
             OR = {
                 area = venice_area
-                area = bassano_area
                 area = verona_area
                 area = padua_area
                 area = friuli_area
@@ -650,10 +642,6 @@ vn_spi_missions_slot_3 = {
         }
         trigger = {
             venice_area = {
-                type = all
-                country_or_non_sovereign_subject_holds = ROOT
-            }
-            bassano_area = {
                 type = all
                 country_or_non_sovereign_subject_holds = ROOT
             }

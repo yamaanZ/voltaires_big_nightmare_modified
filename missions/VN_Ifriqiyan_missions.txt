@@ -21,22 +21,40 @@ vn_ifq_missions_slot_1 = {
         trigger = {	
 			OR = {
 				1619 = { #Genoa
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 				640 = { #Firenze
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 				2671 = { #Marseille
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 				1642 = { #Napoli
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 				1334 = { #Montpellier
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 				1955 = { #Barcelona
-					has_most_province_trade_power = ROOT
+                    trade_share = {
+                        country = ROOT
+                        share = 25
+                    }
 				}
 			}
             1614 = { #Tunis
@@ -147,10 +165,9 @@ vn_ifq_missions_slot_1 = {
         }
         effect = {
             add_years_of_income = 0.5
-            add_country_modifier = {
-                name = ifq_subjugate_the_berbers_mission
-                duration = -1
-            } 			
+            unlock_estate_privilege = {
+                estate_privilege = estate_burghers_hydraulic_rights
+            }
         }
     }
     vn_ifq_profits_from_the_caravans = {
@@ -167,6 +184,10 @@ vn_ifq_missions_slot_1 = {
         }
         effect = {
             add_years_of_income = 0.5
+            add_country_modifier = {
+                name = ifq_subjugate_the_berbers_mission
+                duration = -1
+            }
             if = {
                 limit = {
                     has_dlc = "Dharma"
@@ -205,6 +226,12 @@ vn_ifq_missions_slot_2 = {
         }
         effect = {
 			add_navy_tradition = 10
+            define_admiral = {  #bertus mod
+                shock = 4
+                fire = 4
+                manuever = 6
+                siege = 2
+            }
             sicilia_region = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -391,24 +418,51 @@ vn_ifq_missions_slot_2 = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
         trigger = {
-			albenga_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			savona_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			genoa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+            if = {
+                limit = {
+                    exists = GEN
+                }
+                OR = {
+                    GEN = {
+                        humiliated_by = ROOT
+                    }
+                    AND = {
+                        has_won_war_against = {
+                            who = GEN
+                            max_years_since = 10
+                        }
+                        army_strength = {
+                            who = GEN
+                            value = 2.0
+                        }
+                    }
+                }
+            }
+            else = {
+                albenga_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds = ROOT
+                }
+                savona_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds = ROOT
+                }
+                genoa_area = {
+                    type = all
+                    country_or_non_sovereign_subject_holds = ROOT
+                }
+            }
         }
         effect = {
+            add_yearly_manpower = 2     #0→2
             add_country_modifier = {
                 name = ifq_subjugate_genoa_mission
                 duration = 9125
             }            
+            add_country_modifier = {
+                name = ifq_inroads_into_christendom_mission
+                duration = 9125
+            }
         }
     }
     vn_ifq_inroads_into_christendom = {
@@ -494,7 +548,7 @@ vn_ifq_missions_slot_2 = {
 			}
             add_country_modifier = {
                 name = ifq_taifat_gharnata_mission
-                duration = 9125
+                duration = -1   #9125→-1
             }
         }
     }
@@ -654,6 +708,7 @@ vn_ifq_missions_slot_3 = {
 			}
         }
         effect = {
+            add_yearly_manpower = 2     #0→2
             sahara_oases = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -723,6 +778,7 @@ vn_ifq_missions_slot_3 = {
 			}
         }
         effect = {
+            add_yearly_manpower = 2     #0→2
             tangiers_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -797,6 +853,7 @@ vn_ifq_missions_slot_3 = {
 			}
         }
         effect = {
+            add_yearly_manpower = 2     #0→2
             macaronesia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1018,7 +1075,7 @@ vn_ifq_missions_slot_3 = {
 			add_mil_power = 50
             add_country_modifier = {
                 name = ifq_conquest_of_morocco_mission
-                duration = 9125
+                duration = -1   #9125→-1
             }
         }
     }
@@ -1054,6 +1111,10 @@ vn_ifq_missions_slot_4 = {
 			}
         }
         effect = {
+            define_advisor = {  #bertus mod
+                type = commandant
+                cost_multiplier = 0.50
+            }
 			tripolitania_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -1113,6 +1174,12 @@ vn_ifq_missions_slot_4 = {
 			}
         }
         effect = {
+            define_general = {  #bertus mod
+                shock = 4
+                fire = 5
+                manuever = 6
+                siege = 2
+            }
             inner_libya_region = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -1194,6 +1261,10 @@ vn_ifq_missions_slot_4 = {
 			}
         }
         effect = { 
+            define_advisor = {  #bertus mod
+                type = theologian
+                cost_multiplier = 0.25
+            }
             al_wahat_area = {
                 limit = {
                     NOT = { is_core = ROOT }
@@ -1272,7 +1343,21 @@ vn_ifq_missions_slot_4 = {
                 type = mission_rewards_power_projection
                 amount = 15
             }
-            nabatea_region = {
+            tabuk_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            aqaba_area = {
+                limit = {
+                    NOT = { is_core = ROOT }
+                    NOT = { is_permanent_claim = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            sinai_area = {
                 limit = {
                     NOT = { is_core = ROOT }
                     NOT = { is_permanent_claim = ROOT }
@@ -1396,14 +1481,11 @@ vn_ifq_missions_slot_5 = {
 					is_rival = MAM
 					army_strength = {
 						who = MAM
-						value = 0.75
+						value = 1.5     #0.75→1.5
 					}
 					naval_strength = {
 						who = MAM
-						value = 0.75
-					}
-					any_ally = {
-						total_development = MAM
+						value = 1.5     #0.75→1.5
 					}
 				}
 			}

@@ -2785,21 +2785,6 @@ country_event = { #Negotiations of Lublin
 	option = {
 		name = flavor_pol.32.a 
 		
-		west_dniepr_area = {
-			limit = { country_or_non_sovereign_subject_holds = ROOT } 
-			cede_province = ROOT 
-			remove_core = LIT
-		}
-		east_dniepr_area = {
-			limit = { country_or_non_sovereign_subject_holds = ROOT } 
-			cede_province = ROOT 
-			remove_core = LIT
-		}
-		podolia_volhynia_area = {
-			limit = { country_or_non_sovereign_subject_holds = ROOT }  
-			cede_province = ROOT 
-			remove_core = LIT 
-		}
 		282 = {
 			if = { 
 				limit = {
