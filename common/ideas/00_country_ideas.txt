@@ -5147,8 +5147,8 @@ NAV_ideas = {	#bertus mod
 		technology_cost = -0.1
 	}
 	an_industrious_folk = {
-		culture_conversion_cost = -0.1
-		development_cost_in_primary_culture = -0.15
+		culture_conversion_cost = -0.2
+		development_cost_in_primary_culture = -0.20
 	}
 }
 
