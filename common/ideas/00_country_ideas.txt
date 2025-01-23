@@ -937,8 +937,7 @@ HOL_ideas = {	#bertus mod
 		global_trade_goods_size_modifier = 0.10
 		global_ship_cost = -0.10
 	}
-	dutch_trading_spirit = {
-		merchants = 1
+	hol_dutch_trading_spirit = {
 		trade_range_modifier = 0.25	#0.10→0.25
 		caravan_power = 0.20 	#0→0.20
 	}
@@ -978,15 +977,14 @@ HOL_ideas = {	#bertus mod
 		}
 	}
 	fla_land_reclamation = {
-		development_cost = -0.1
+		development_cost = -0.10
 	}
-	amsterdam_wisselbank = {
+	hol_amsterdam_wisselbank = {
 		inflation_reduction = 0.1
-		interest = -0.5	#0→-0.5
-		trade_efficiency = 0.15
+		interest = -0.25	#0→-0.25
+		trade_efficiency = 0.075
 	}
-	army_sappers = {
-		#barrage changes siege status by +2
+	hol_army_sappers = {
 		siege_ability = 0.10
 		leader_land_fire = 2	#0→2
 	}
@@ -2249,12 +2247,12 @@ BUR_Ideas = {
 
 GEN_Ideas = {
 	start = {
-		trade_efficiency = 0.10
 		interest = -0.5
+		infantry_power = 0.10 	#0→0.10
 	}
 	
 	bonus = {
-		naval_maintenance_modifier = -0.2
+		mercenary_discipline = 0.05 	#0→0.05
 	}
 	
 	trigger = {
@@ -2267,23 +2265,32 @@ GEN_Ideas = {
 		justify_trade_conflict_cost = -0.10
 	}
 	lessons_of_chiogga = {
-		naval_morale = 0.15	#0.20→0.15
+		naval_morale = 0.10	#0.20→0.10
+		land_morale = 0.10 	#0→0.10
 	}	
 	genoese_trade = {
 		global_foreign_trade_power = 0.10
-		global_sailors_modifier = 0.20
+		trade_efficiency = 0.10
+		#global_sailors_modifier = 0.20 	#0.20→0
 	}
 	the_genoese_arsenal = {
 		galley_cost = -0.33
+		galley_number_of_cannons_modifier = 0.20 	#0→0.20
 	}
 	overhauled_bureaucracy = {
-		global_tax_modifier = 0.1
+		#centralization give 1 dev
+		centralize_state_cost = -0.20 	#0→-0.20
+		#global_tax_modifier = 0.1 	#0.10→0
 	}
 	the_office_of_grand_admiral = {
+		landing_penalty = -2 	#0→-2
+		regiment_disembark_speed = 0.50 	#0→0.50
 		naval_forcelimit_modifier = 0.25
 	}
 	standardisation_of_designs = {
-		global_ship_recruit_speed = -0.10
+		sailor_maintenance_modifer = -0.20 	#0→-0.20
+		naval_maintenance_modifier = -0.20
+		#global_ship_recruit_speed = -0.10 	#-0.10→0
 	}
 }
 
@@ -3986,7 +3993,6 @@ TUS_ideas = {
 	trigger = {
 		OR = {
 			tag = TUS
-			tag = LAN #Florence
 		}
 	}
 	free = yes

@@ -5938,7 +5938,12 @@ on_centralized_state = {
 	}
 	if = {	#bertus mod
 		limit = {
-			owner = { has_idea = adu_taifa_adminstration }
+			owner = {
+				OR = {
+					has_idea = adu_taifa_adminstration
+					has_idea = overhauled_bureaucracy
+				}
+			}
 		}
 		area = {
 			limit = { owned_by = ROOT }

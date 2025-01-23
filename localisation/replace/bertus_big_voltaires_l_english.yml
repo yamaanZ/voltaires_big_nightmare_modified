@@ -242,6 +242,7 @@
  CB_ALLOWED_po_establish_appanage:0 "Establish Appanage"
  PEACE_po_establish_appanage:0 "Establish Appanage"
  adu_taifa_adminstration_desc:0 "Iberia was once divided between several powerful Muslim taifas who administered their domains autonomously. We should restore these taifas to ease the burden of administering our expanding realm.\n§YCentralize a State§! extra development on State: §G+1§!"
+ overhauled_bureaucracy_desc:0 "To be blunt money is power. If we wish to remain a player in the Mediterranean, we will need more of it to support our fleet and army. Thus we must overhaul our bureaucracy to ensure we can maximize our revenue.\n§YCentralize a State§! extra development on State: §G+1§!"
  mechanic_can_raise_manpower_from_home_region_yes:0 "§ORaise Ordenanças§! - Can Raise Manpower & Sailors from our Portuguese provinces"
  mechanic_increased_levies_give_cav_power_yes:0 "§ONoble Knights§! - Increased Levies Privilege give Scaled with estate Influence if Happy Cavalry Combat Ability: §G15%§!"
  british_industrialization_desc:0 "Rapid advances in technology are creating possibilities never before dreamt of. People flock to the cities to work in new, highly efficient factories outfitted with astonishing modern machinery. Britain must be at the heart of this industrial revolution, as any nation that fails to modernize will be swept away by those that do.\nExtra §YBase Production§! chance on deving provinces with a Manufactory: §G+20.0%§!"

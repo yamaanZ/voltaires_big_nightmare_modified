@@ -1690,6 +1690,9 @@ eastfrisian_ideas = {
     }
     
     trigger = {
+        NOT = {
+		    tag = EFR
+        }
         primary_culture = east_frisian
         capital_scope = {
             OR = {

@@ -1,6 +1,9 @@
 spriteTypes = {
 
-
+	spriteType = {
+		name = "GFX_icon_splendor_button"
+		texturefile = "gfx/interface/ages/icon_splendor_button.dds"
+	}
 	spriteType = {
 		name = "privilege_holy_orders_enable"
 		texturefile = "gfx/interface/privileges/privilege_holy_orders_enable.dds"
