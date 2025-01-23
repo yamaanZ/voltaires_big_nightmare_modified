@@ -16,7 +16,7 @@ center_of_trade = 2
 
 1337.1.1 = { fort_14th = no fort_15th = yes }
 1444.11.12 = {	#bertus mod
-	fort_15th = no
+	fort_15th = yes
 }
 1549.11.4 = { 
 	owner = NED 

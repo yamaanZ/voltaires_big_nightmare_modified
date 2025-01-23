@@ -1,4 +1,4 @@
-capital = "Quakenbrück"
+capital = "Quakenbrï¿½ck"
 culture = low_elbish
 religion = catholic
 trade_goods = rye
@@ -12,9 +12,10 @@ controller = OSN
 add_core = OSN
 
 1444.11.12 = {	#BERTUS MOD
-	owner = MUN
-	controller = MUN
-	add_core = MUN
+	owner = OSN
+	controller = OSN
+	add_core = OSN
+	remove_core = MUN
 }
 1803.2.25 = {
 	owner = HAN

@@ -24,7 +24,6 @@ add_core = HOL
 	owner = ZEE
 	controller = ZEE
 	add_core = ZEE
-	remove_core = HOL
 	remove_core = FLA
 }
 

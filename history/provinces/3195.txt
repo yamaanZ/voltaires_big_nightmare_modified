@@ -12,10 +12,10 @@ controller = GEL
 add_core = GEL
 
 1444.11.12 = {	#BERTUS MOD
-	owner = HOL
-	controller = HOL
-	add_core = HOL
-	remove_core = GEL
+	owner = GEL
+	controller = GEL
+	add_core = GEL
+	remove_core = HOL
 	fort_15th = yes
 }
 1549.11.4 = { 

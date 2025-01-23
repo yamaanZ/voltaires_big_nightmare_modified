@@ -7,7 +7,7 @@ base_tax = 3
 base_production = 3
 trade_goods = carpet
 base_manpower = 2
-capital = "Osnabrück"
+capital = "Osnabrï¿½ck"
 is_city = yes
 add_core = OSN
 fort_14th = yes
@@ -20,9 +20,10 @@ fort_14th = yes
 }
 1337.1.1 = { fort_14th = no fort_15th = yes }
 1444.11.12 = {	#BERTUS MOD
-	owner = MUN
-	controller = MUN
-	add_core = MUN
+	owner = OSN
+	controller = OSN
+	add_core = OSN
+	remove_core = MUN
 }
 1719.9.30 = { remove_province_modifier = hanseatic_city }
 1803.2.25 = {

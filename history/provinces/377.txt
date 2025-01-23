@@ -24,6 +24,9 @@ add_core = UTR
 		name = strong_city
 		duration = -1
 	}
+	owner = AHA
+	controller = AHA
+	add_core = AHA
 }
 1549.11.4 = {
 	owner = NED

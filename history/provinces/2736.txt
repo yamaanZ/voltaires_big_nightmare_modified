@@ -23,9 +23,10 @@ add_core = HBE
 	add_core = XMN
 }
 1444.11.12 = {	#BERTUS MOD
-	owner = MUN
-	controller = MUN
-	add_core = MUN
+	owner = XMN
+	controller = XMN
+	add_core = XMN
+	remove_core = MUN
 }
 1468.7.17 = { remove_core = HBE }
 1648.10.24 = {
