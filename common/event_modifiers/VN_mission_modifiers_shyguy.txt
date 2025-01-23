@@ -3074,8 +3074,10 @@ taifa_university_of_cordoba_mission = {
 	allowed_num_of_manufactories = 1
 }
 taifa_restore_andalusia_mission = {
-	prestige_decay = -0.01
+	prestige_decay = -0.02
 	global_prosperity_growth = 0.15
+	warscore_cost_vs_other_religion = -0.05
+
 }
 taifa_construct_castles_mission = {
 	defensiveness = 0.2
@@ -3107,6 +3109,7 @@ taifa_humiliate_rivals_mission= {
 	land_maintenance_modifier = -0.1
 }
 taifa_productive_continent_mission = {
+	development_cost = -0.05
 	build_cost = -0.1
 	global_tax_modifier = 0.1
 }

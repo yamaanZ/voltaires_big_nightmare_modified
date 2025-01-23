@@ -101,8 +101,13 @@ vn_taifa_missions_slot_2_a = {
 		OR = { 
 			tag = ADU
             AND = {
-                capital_scope = {
-                    superregion = iberia_superregion
+                OR = {
+                    capital_scope = {
+                        superregion = maghreb_superregion
+                    }
+                    capital_scope = {
+                            superregion = iberia_superregion
+                    }
                 }
                 religion_group = muslim
                 OR = {
@@ -121,11 +126,16 @@ vn_taifa_missions_slot_2_a = {
         required_missions = { }
         trigger = {
             calc_true_if = {
-                amount = 3
+                amount = 2
                 all_ally = {
+                    OR = {
                     capital_scope = {
-                        superregion = iberia_superregion
+                        superregion = maghreb_superregion
                     }
+                    capital_scope = {
+                            superregion = iberia_superregion
+                    }
+                }
                     has_opinion = {
                         who = ROOT
                         value = 150
@@ -135,7 +145,7 @@ vn_taifa_missions_slot_2_a = {
             }
         }
         effect = {
-            add_yearly_manpower = 1
+            add_yearly_manpower = 1.5
             add_country_modifier = {
                 name = taifa_gather_support_mission
                 duration = 9125
@@ -184,7 +194,7 @@ vn_taifa_missions_slot_3 = {
 		}
         effect = {
             capital_scope = {
-                add_base_tax = 1
+                add_base_manpower = 2
                 add_latest_building = {
 					trade = yes
 					builder = ROOT
@@ -334,7 +344,7 @@ vn_taifa_missions_slot_3 = {
             add_prestige_or_monarch_power = { amount = 25 } 
             add_country_modifier = {
                 name = taifa_restore_andalusia_mission
-                duration = 18250
+                duration = -1
             }
         }
     }
@@ -443,7 +453,6 @@ vn_taifa_missions_slot_4_b = {
 					is_capital_of = ROOT
 					OR = {
 						NOT = { development = 20 }
-						NOT = { num_of_times_improved_by_owner = 5 }
                         NOT = { culture = ROOT }
                         NOT = { religion = ROOT }
                     }
@@ -453,7 +462,6 @@ vn_taifa_missions_slot_4_b = {
 		trigger = {
             capital_scope = {
                 development = 20
-                num_of_times_improved_by_owner = 5 
                 culture = ROOT
                 religion = ROOT
             }
@@ -579,36 +587,11 @@ vn_taifa_missions_slot_5_a = {
         position = 3
         icon = mission_son_military_expertise
         required_missions = { vn_taifa_summon_a_council }
-        provinces_to_highlight = {
-            is_capital = yes
-            owner = {
-                culture_group = maghrebi
-                num_of_cities = 15
-                NOT = {
-                    has_opinion_modifier = {
-                        who = ROOT
-                        modifier = improved_relation
-                        value = 75
-                    }
-                }
-            }
-        }
         trigger = {
             OR = {
                 monthly_dip = 10
                 diplomat = 1
             }
-			any_country = {
-				capital_scope = {
-					culture_group = maghrebi
-				}
-                has_opinion_modifier = {
-                    who = ROOT
-                    modifier = improved_relation
-                    value = 75
-                }
-                num_of_cities = 15
-			}
         }
         effect = {
             add_country_modifier = {

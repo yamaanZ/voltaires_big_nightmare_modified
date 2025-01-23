@@ -102,7 +102,7 @@ vn_taifa_missions_slot_2_b = {
             treasury = 500
             if = {
                 limit = { has_dlc = "Art of War" }
-                num_of_war_reparations = 3
+                num_of_war_reparations = 1
             }
             else = {
                 share_of_starting_income = 5
@@ -116,19 +116,24 @@ vn_taifa_missions_slot_2_b = {
                 hidden_effect = {
                     if = {
                         limit = { num_of_war_reparations = 5 }
-                        add_treasury = 250
+                        add_treasury = 500
                     }
                     else_if = {
                         limit = { num_of_war_reparations = 4 }
-                        add_treasury = 200
+                        add_treasury = 400
                     }
-                    else = {
-                        add_treasury = 150
+                    else_if = {
+                        limit = { num_of_war_reparations = 3 }
+                        add_treasury = 300
+                    }
+                    else_if = {
+                        limit = { num_of_war_reparations = 2 }
+                        add_treasury = 200
                     }
                 }
             }
             else = {
-                add_treasury = 200
+                add_treasury = 100
             }
         }
     }
