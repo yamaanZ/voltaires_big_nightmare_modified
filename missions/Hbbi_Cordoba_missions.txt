@@ -1,0 +1,435 @@
+##BranchStart 0
+ = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CCR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	CCR_restore_cordoba = {
+		icon = Mission_develop_cordoba
+		required_missions {
+			CCR_take_back_lands
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_silver_standard = {
+		icon = Mission_african_gold
+		required_missions {
+			CCR_finish_siesta , CCR_restore_cordoba
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 0
+##BranchStart 1
+ = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CCR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	CCR_conquer_cadiz = {
+		icon = Mission_dominate_genoa
+		required_missions {
+			CCR_ready_for_more
+		}
+		position = 3
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_finish_siesta = {
+		icon = Mission_restore_faith_in_the_throne
+		required_missions {
+			CCR_conquer_cadiz
+		}
+		position = 5
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 1
+##BranchStart 2
+ = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CCR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	CCR_take_back_lands = {
+		icon = Mission_confront_the_lombards
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_ready_for_more = {
+		icon = Mission_plc_golden_liberty
+		required_missions {
+			CCR_take_back_lands
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_conquer_caceres = {
+		icon = Mission_reclaim_andalucia
+		required_missions {
+			CCR_ready_for_more
+		}
+		position = 3
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_conquer_caceres = {
+		icon = Mission_eliminate_pretenders
+		required_missions {
+			CCR_conquere_caceres
+		}
+		position = 4
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_fortify_cadiz = {
+		icon = Mission_guilds_of_barcelona
+		required_missions {
+			CCR_conquer_cadiz
+		}
+		position = 5
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_take_murcia = {
+		icon = Mission_boh_humiliate_austria
+		required_missions {
+			CCR_consolidate_toledo
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_final_reconquista = {
+		icon = Mission_united_knight_order
+		required_missions {
+			
+		}
+		position = 8
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_grenada_secured = {
+		icon = Mission_invade_island
+		required_missions {
+			CCR_final_reconquista
+		}
+		position = 9
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 2
+##BranchStart 3
+ = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CCR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	CCR_destroy_portugal = {
+		icon = Mission_unite_home_region
+		required_missions {
+			CCR_portugal_question
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_conquer_toledo = {
+		icon = Mission_found_arkhangelsk
+		required_missions {
+			CCR_ready_for_more
+		}
+		position = 4
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_consolidate_toledo = {
+		icon = Mission_rb_monopolize_the_channel
+		required_missions {
+			CCR_conquer_toledo
+		}
+		position = 5
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_vassalize_valencia = {
+		icon = Hispanic_monarchy
+		required_missions {
+			CCR_consoldiate_toledo
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 3
+##BranchStart 4
+ = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CCR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	CCR_portugal_question = {
+		icon = Mission_lusitanian_empire
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_portugal_alliance = {
+		icon = Mission_union_with_portugal
+		required_missions {
+			CCR_portugal_question
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_catalan_time = {
+		icon = Spa_infantes_aragon
+		required_missions {
+			CCR_consoldiate_toledo
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##Mission Start
+	CCR_iberian_conquerer = {
+		icon = Mission_castillian_aggression
+		required_missions {
+			CCR_grenada_secured, CCR_take_murcia, CCR_vassalize_valencia, CCR_catalan_time
+		}
+		position = 10
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			##MISSIONTRIGGER
+		}
+		effect = {
+			##MISSIONEFFECT
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 4

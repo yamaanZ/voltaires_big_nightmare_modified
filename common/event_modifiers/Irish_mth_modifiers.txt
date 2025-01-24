@@ -1,0 +1,27 @@
+
+mth_levies_raised = {
+
+	land_morale = 0.10
+	global_regiment_cost = -0.05
+
+}
+
+mth_dev_cost = {
+
+	development_cost = -0.1
+
+}
+
+mth_boat_buff = {
+
+	galley_power = 0.2
+	global_ship_cost = -0.05
+
+}
+
+mth_first_strike = {
+
+core_creation = -0.2
+province_warscore_cost = -0.2
+
+}

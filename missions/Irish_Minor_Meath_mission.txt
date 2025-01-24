@@ -1,0 +1,133 @@
+
+mth_column_7 = {
+
+	slot = 7
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = MTH
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	mth_raise_the_levies = {
+	
+		icon = mission_assemble_an_army
+		required_missions = {	}
+		position = 1
+		
+		trigger = {
+			army_size_percentage = 1
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mth_levies_raised
+				duration = 1825
+			}
+			add_army_tradition = 10
+		}
+			
+	
+	}
+
+}
+
+mth_column_8 = {
+
+	slot = 8
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = MTH
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	mth_unite_ireland = {
+	
+		icon = mission_rb_rule_britannia_irish_version
+		required_missions = {	}
+		position = 1
+		
+		trigger = {
+			owns_all_provinces = {
+				 region = ireland_region
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mth_dev_cost
+				duration = 1825
+			}
+			add_prestige = 10
+		}
+	
+	}
+	
+	mth_preemptive_strike = {
+	
+		icon = fra_great_britain
+		required_missions = {	mth_unite_ireland
+								mth_raise_the_levies
+								mth_build_a_navy	
+							}
+		position = 2
+		
+		trigger = {
+				num_of_owned_provinces_with = {
+					value = 20
+						OR = {
+							region = scotland_region
+							region = british_isles_region
+						}
+				}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mth_first_strike
+				duration = 7300
+			}
+		}
+	
+	}
+
+}
+
+mth_column_9 = {
+
+	slot = 9
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	
+	potential = {
+		tag = MTH
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	mth_build_a_navy = {
+	
+		icon = mission_rb_grow_the_channel
+		required_missions = {	}
+		position = 1
+		
+		trigger = {
+			navy_size_percentage = 1
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mth_boat_buff
+				duration = 3650
+			}
+			add_navy_tradition = 10
+		}
+	
+	}
+
+}
