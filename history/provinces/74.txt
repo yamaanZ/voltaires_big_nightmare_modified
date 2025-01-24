@@ -87,6 +87,7 @@ fort_14th = yes
 	controller = XJA
 	add_core = XJA
 	remove_core = CTL
+	add_core = CCR
 }
 1464.5.1 = { unrest = 3 }
 1468.9.18 = { unrest = 0 }
